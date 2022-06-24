@@ -6498,6 +6498,7 @@ function modemenu()
     end
 end
 function meshare()
+    local uu = {}
     local uu[1] = {
         address = guipt + gptoffsets.meshared,
         flags = 4,
