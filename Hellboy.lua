@@ -47,6 +47,7 @@ gptoffsets = {
     gamespeed = -10098176,
     scrres = -11493676,
     portal = 13414668,
+    meshare = 25071156,
 }
   do
     do
@@ -5378,6 +5379,7 @@ yellow = {
     {
         "[🗃]Mode Menu",
         content = {
+            "[🎥]Record Shared Memory"
             "[🧸]Icons & Borders Size",
             "[📸]ScreenShot Resolution",
             "[⏲]Game Speed",
@@ -6488,11 +6490,15 @@ function modemenu()
     tear = gg.choice(yellow[6].content, nil, header)
     if tear ~= nil then
         if tear == #yellow[6].content then yellowTears()
-        elseif tear == eye[1] then setIconSize()
-        elseif tear == eye[2] then sres()
-        elseif tear == eye[3] then setspeed()
+        elseif tear == eye[1] then meshare()
+        elseif tear == eye[2] then setIconSize()
+        elseif tear == eye[3] then sres()
+        elseif tear == eye[4] then setspeed()
         end
     end
+end
+function meshare()
+    settable({guipt + gptoffsets.meshared, 4, 1}, false, false)
 end
 function setIconSize(size)
     if size == nil then
