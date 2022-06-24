@@ -6499,12 +6499,12 @@ function modemenu()
 end
 function meshare()
     local uu = {}
-    local uu[1] = {
+    local uu = {
         address = guipt + gptoffsets.meshared,
         flags = 4,
         value = 1
     }
-    gg.setValues(uu)
+    gg.setValues({uu})
 end
 function setIconSize(size)
     if size == nil then
