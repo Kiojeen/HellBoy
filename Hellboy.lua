@@ -6623,8 +6623,7 @@ function wcharge()
     local wG = gg
       do
         do
-          local temp = pvof(libpbase + ptoffsets.wcharge, 16)
-          if temp > 12 then bfreeze = false else bfreeze = true end
+          if isfrozen(libpbase + ptoffsets.wcharge) then bfreeze = false else bfreeze = true end
           settable({{libpbase + ptoffsets.wcharge, 16, 20, true}}, true, bfreeze)
           wG.toast("Wing Charge: " .. switch)
         end
@@ -7336,6 +7335,18 @@ function offseter()
     }
     gg.addListItems(ls)
 end
+function isfrozen(add)
+    local temp = gg.getListItems()
+    for i, v in ipairs(temp) do
+        if v.address == add then
+            if v.freeze == true then
+                return true
+            elseif v.freeze == false then
+                return false
+            end
+        end
+    end
+end
 function launch()
     offseter()
     makeTable()
@@ -7348,9 +7359,8 @@ function launch()
             break
         end
     end
-    local temp = pvof(libpbase + ptoffsets.wcharge, 16)
-    if temp > 12 then 
-        configSign(1)
+    if isfrozen(libpbase + ptoffsets.wcharge) then 
+        configSign(2)
     end
     yellowTears()
     while true do
