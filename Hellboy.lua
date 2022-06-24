@@ -6498,14 +6498,14 @@ function modemenu()
     end
 end
 function meshare()
-    if mshtrigger ~= true then
+    mshtrigger = pvof(guipt + gptoffsets.meshared)
+    if mshtrigger == 0 then
         local uu = {}
         local uu = {
             address = guipt + gptoffsets.meshared,
             flags = 4,
             value = 1
         }
-        mshtrigger = true
         gg.setValues({uu})
     else
         local uu = {}
@@ -6514,7 +6514,6 @@ function meshare()
             flags = 4,
             value = 0
         }
-        mshtrigger = false
         gg.setValues({uu})  
     end
 end
