@@ -6498,13 +6498,25 @@ function modemenu()
     end
 end
 function meshare()
-    local uu = {}
-    local uu = {
-        address = guipt + gptoffsets.meshared,
-        flags = 4,
-        value = 1
-    }
-    gg.setValues({uu})
+    if mshtrigger ~= true then
+        local uu = {}
+        local uu = {
+            address = guipt + gptoffsets.meshared,
+            flags = 4,
+            value = 1
+        }
+        mshtrigger = true
+        gg.setValues({uu})
+    else
+        local uu = {}
+        local uu = {
+            address = guipt + gptoffsets.meshared,
+            flags = 4,
+            value = 0
+        }
+        mshtrigger = false
+        gg.setValues({uu})  
+    end
 end
 function setIconSize(size)
     if size == nil then
