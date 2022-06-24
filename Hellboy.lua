@@ -6623,7 +6623,8 @@ function wcharge()
     local wG = gg
       do
         do
-          if wchsignS then bfreeze = true else bfreeze = false end
+          local temp = pvof(libpbase + ptoffsets.wcharge, 16)
+          if temp > 12 then bfreeze = false else bfreeze = true end
           settable({{libpbase + ptoffsets.wcharge, 16, 20, true}}, true, bfreeze)
           wG.toast("Wing Charge: " .. switch)
         end
@@ -6657,6 +6658,11 @@ function configSign(v)
         end
     end
 end
+local temp = pvof(libpbase + ptoffsets.wcharge, 16)
+if temp > 12 then 
+    configSign(1)
+ end
+temp = nil
 function oobls(BUP)
     STAY = 'oobls'
     if BUP_ == nil then
