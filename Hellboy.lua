@@ -6498,7 +6498,7 @@ function modemenu()
     end
 end
 function meshare()
-    settable({guipt + gptoffsets.meshared, 4, 1}, false, false)
+    settable({{guipt + gptoffsets.meshared, 4, 1}}, false, false)
 end
 function setIconSize(size)
     if size == nil then
