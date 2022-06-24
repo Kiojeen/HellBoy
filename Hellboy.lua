@@ -6486,7 +6486,7 @@ function modemenu()
     STAY = 'modemenu'
     pmn()
     c_hw = '\t' .. toint(pvof(guipt + gptoffsets.scrres, gg.TYPE_FLOAT)) .. '::' .. toint(pvof(guipt + gptoffsets.scrres + 4, gg.TYPE_FLOAT))
-    yellow[6].content[2] = "[📸]ScreenShot Resolution" .. c_hw
+    yellow[6].content[3] = "[📸]ScreenShot Resolution" .. c_hw
     tear = gg.choice(yellow[6].content, nil, header)
     if tear ~= nil then
         if tear == #yellow[6].content then yellowTears()
