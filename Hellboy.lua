@@ -7339,10 +7339,6 @@ end
 function launch()
     offseter()
     makeTable()
-    local temp = pvof(libpbase + ptoffsets.wcharge, 16)
-    if temp > 12 then 
-        configSign(1)
-    end
     temp = nil
     while true do
         local almG = gg
@@ -7351,6 +7347,10 @@ function launch()
             pmn()
             break
         end
+    end
+    local temp = pvof(libpbase + ptoffsets.wcharge, 16)
+    if temp > 12 then 
+        configSign(1)
     end
     yellowTears()
     while true do
