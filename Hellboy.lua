@@ -6658,11 +6658,6 @@ function configSign(v)
         end
     end
 end
-local temp = pvof(libpbase + ptoffsets.wcharge, 16)
-if temp > 12 then 
-    configSign(1)
- end
-temp = nil
 function oobls(BUP)
     STAY = 'oobls'
     if BUP_ == nil then
@@ -7344,6 +7339,11 @@ end
 function launch()
     offseter()
     makeTable()
+    local temp = pvof(libpbase + ptoffsets.wcharge, 16)
+    if temp > 12 then 
+        configSign(1)
+    end
+    temp = nil
     while true do
         local almG = gg
         if almG.isVisible(true) then
