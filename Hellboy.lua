@@ -6498,7 +6498,12 @@ function modemenu()
     end
 end
 function meshare()
-    settable({{guipt + gptoffsets.meshared, 4, 1, false}}, false, false)
+    local uu[1] = {
+        address = guipt + gptoffsets.meshared,
+        flags = 4,
+        value = 1
+    }
+    gg.setValues(uu)
 end
 function setIconSize(size)
     if size == nil then
