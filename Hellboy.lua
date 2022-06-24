@@ -47,7 +47,7 @@ gptoffsets = {
     gamespeed = -10098176,
     scrres = -11493676,
     portal = 13414668,
-    meshare = 25071156,
+    meshared = 25071156,
 }
   do
     do
