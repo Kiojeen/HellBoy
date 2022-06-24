@@ -6498,7 +6498,7 @@ function modemenu()
     end
 end
 function meshare()
-    mshtrigger = pvof(guipt + gptoffsets.meshared)
+    mshtrigger = pvof(guipt + gptoffsets.meshared, gg.TYPE_DWORD)
     if mshtrigger == 0 then
         local uu = {}
         local uu = {
