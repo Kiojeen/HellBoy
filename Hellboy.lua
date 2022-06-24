@@ -5379,7 +5379,7 @@ yellow = {
     {
         "[🗃]Mode Menu",
         content = {
-            "[🎥]Record Shared Memory"
+            "[🎥]Record Shared Memory",
             "[🧸]Icons & Borders Size",
             "[📸]ScreenShot Resolution",
             "[⏲]Game Speed",
