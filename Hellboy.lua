@@ -1,10 +1,10 @@
 
 gg.setVisible(false)
 sockets = 6
-hellboy = 10020
+hellboy = 7376
 configs = {
     name = 'User x-hidden',
-    hellboy = 10000,
+    hellboy = 7376,
     cr_interval = 1500,
     sr_interval = 1500,
     portal_method = 'default',
@@ -33,7 +33,6 @@ ptoffsets = {
     zpos = 4519400,
     rad = 4519424,
     magic = 4581040,
-    closet = 22260036,
     closet = 22260036,
     cmdchat = 2396800,
     wcharge =  4542820,
@@ -6445,6 +6444,11 @@ function opencloset(closet)
     if closet ~= nil then
         local temp = {
             {
+                address = libpbase + ptoffsets.closet - 60,
+                flags = gg.TYPE_DWORD,
+                value = 0,
+            },
+            {
                 address = libpbase + ptoffsets.closet - 4,
                 flags = gg.TYPE_DWORD,
                 value = 0,
@@ -6468,11 +6472,6 @@ function opencloset(closet)
                 },
                 {
                     address = libpbase + ptoffsets.closet + 4,
-                    flags = gg.TYPE_DWORD,
-                    value = 0,
-                },
-                {
-                    address = libpbase + ptoffsets.closet - 4,
                     flags = gg.TYPE_DWORD,
                     value = 1,
                 },
