@@ -2,7 +2,6 @@
 gg.setVisible(false)
 sockets = 6
 hellboy = 7685
-easter1 = 0
 configs = {
     name = 'User x-hidden',
     hellboy = 7685,
@@ -6567,7 +6566,7 @@ end
              elseif tear == eye[5] then wcharge()
              elseif tear == eye[6] then tportal() 
              elseif tear == eye[7] then cordlist("c") 
-             elseif tear == eye[8] then type_ = eye[90] runChoice("s") easter1 = easter1 + 1
+             elseif tear == eye[8] then type_ = eye[90] runChoice("s")
              elseif tear == eye[9] then oobls('runChoice') 
              elseif tear == eye[10] then type_ = nil yellowTears() 
              elseif tear == eye[11] then runChoice("c")
@@ -6588,7 +6587,7 @@ end
              elseif tear == eye[5] then wcharge()
              elseif tear == eye[6] then tportal()
              elseif tear == eye[7] then cordlist("s")
-             elseif tear == eye[8] then type_ = eye[90] runChoice("c") easter1 = easter1 + 1
+             elseif tear == eye[8] then type_ = eye[90] runChoice("c")
              elseif tear == eye[9] then oobls('runChoice')
              elseif tear == eye[10] then type_ = nil yellowTears() 
              elseif tear == eye[11] then runChoice("s")
@@ -6608,11 +6607,7 @@ end
 end
 function yellowTears()
     STAY = 'yellowTears'
-    if easter1 < 3 then 
-        yellowCry[8] = nil
-    else
-        yellowCry[8] = "[📥]Commands"
-    end
+    yellowCry[8] = nil
     local ytG = gg
     tear = ytG.choice(yellowCry, nil, header)
     if     tear == eye[1] then tpmenu()
