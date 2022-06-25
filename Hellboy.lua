@@ -6467,8 +6467,9 @@ function runChoice(rtype)
         "[🕯]Run",
         "[🕯]Absorb wax",
         "[🔥]Burn"  .. signs.bSign,
-        "[🌕]Wing Charge" .. signs.wchsign,
         "[⬆️]Breach Walls",
+        "[🌕]Wing Charge" .. signs.wchsign,
+        "[🌀]Teleport",
         "[📃]Coordinates List",
         "[⭐]Semi Star Run",
         "[🧭]Out Of Borders",}
@@ -6484,7 +6485,9 @@ do
         "[➡️]Next Location",
         "[⬅️]Previous Location",
         "[⭐]Run",
+        "[⬆️]Breach Walls",
         "[🌕]Wing Charge" .. signs.wchsign,
+        "[🌀]Teleport",
         "[📃]Coordinates List",
         "[🕯]Semi Candle Run",
         "[🧭]Out Of Borders",}
@@ -6528,7 +6531,7 @@ end
                 else
                     cflag = false
                     type_ = "s"
-                    srunMenu[6] = nil
+                    srunMenu[8] = nil
                 end
             end
         end dontRemove = 'By: Kiojeen'
@@ -6539,7 +6542,7 @@ end
                 else
                     sflag = false
                     type_ = "c"
-                    crunMenu[7] = nil
+                    crunMenu[8] = nil
                 end
             end
         end dontRemove = 'By: Kiojeen'
@@ -6559,13 +6562,14 @@ end
              if     tear == eye[1] then run("c")
              elseif tear == eye[2] then absorbWax()
              elseif tear == eye[3] then burner()
-             elseif tear == eye[4] then wcharge()
-             elseif tear == eye[5] then bwall() 
-             elseif tear == eye[6] then cordlist("c")
-             elseif tear == eye[7] then type_ = eye[90] runChoice("s")
-             elseif tear == eye[8] then oobls('runChoice')
-             elseif tear == eye[9] then type_ = nil yellowTears()
-             elseif tear == eye[10] then runChoice("c")
+             elseif tear == eye[4] then bwall()
+             elseif tear == eye[5] then wcharge()
+             elseif tear == eye[6] then tportal() 
+             elseif tear == eye[7] then cordlist("c") 
+             elseif tear == eye[8] then type_ = eye[90] runChoice("s")
+             elseif tear == eye[9] then oobls('runChoice') 
+             elseif tear == eye[10] then type_ = nil yellowTears() 
+             elseif tear == eye[11] then runChoice("c")
              elseif tear ~= nil then
                  for i, v in ipairs(scrSoul) do
                      if scrSoul[i][1] == SkidLocation then
@@ -6579,12 +6583,14 @@ end
              if     tear == eye[1] then srun_add()
              elseif tear == eye[2] then srun_sub()
              elseif tear == eye[3] then run("s")
-             elseif tear == eye[4] then wcharge()
-             elseif tear == eye[5] then cordlist("s")
-             elseif tear == eye[6] then type_ = eye[90] runChoice("c")
-             elseif tear == eye[7] then oobls('runChoice')
-             elseif tear == eye[8] then type_ = nil yellowTears()
-             elseif tear == eye[9] then runChoice("s")
+             elseif tear == eye[4] then bwall()
+             elseif tear == eye[5] then wcharge()
+             elseif tear == eye[6] then tportal()
+             elseif tear == eye[7] then cordlist("s")
+             elseif tear == eye[8] then type_ = eye[90] runChoice("c")
+             elseif tear == eye[9] then oobls('runChoice')
+             elseif tear == eye[10] then type_ = nil yellowTears() 
+             elseif tear == eye[11] then runChoice("s")
              elseif tear ~= nil then
                  for i, v in ipairs(scrSoul) do
                      if scrSoul[i][1] == SkidLocation then
@@ -7425,7 +7431,9 @@ function makeTable()
  end
 function tportal()
     pmn()
-    STAY = 'tportal'
+    if STAY  ~= 'runChoice' then
+        STAY = 'tportal'
+    end
         do
           do
             realms = {}
@@ -7438,7 +7446,9 @@ function tportal()
            do
              do
                 table.insert(realms, 1, "[🔄]Refresh The Map")
-              table.insert(realms, back[1])
+                if STAY  ~= 'runChoice' then
+                    table.insert(realms, back[1])
+                end
             end
           end
         do
@@ -7452,7 +7462,7 @@ function tportal()
             setmap(SkidLocation)
         elseif tear == eye[2] then 
             setmap("CandleSpace")
-        elseif tear == #realms then
+        elseif tear == #realms and STAY  ~= 'runChoice' then
             yellowTears()
         else
             realms = {}
@@ -7461,9 +7471,11 @@ function tportal()
                 table.insert(realms, world[tear - 2][1] ..  v[1])
                 table.insert(name, v[2])
             end
-            table.insert(realms, back[1])
+            if STAY  ~= 'runChoice' then
+                table.insert(realms, back[1])
+            end
             tear = gg.choice(realms, nil, world[fhdr][1] .. world[fhdr][2])
-            if tear == #realms then
+            if tear == #realms and STAY  ~= 'runChoice' then
                 tportal()
             elseif tear ~= nil then
                 setmap(name[tear])
