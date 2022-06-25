@@ -6774,7 +6774,7 @@ end
 function meshare()
     mshtrigger = pvof(guipt + gptoffsets.meshared, gg.TYPE_DWORD)
     if mshtrigger == 0 then
-        local pointer = padof(guipt + 0xC2F37FC + gptoffsets.meshared, gg.TYPE_QWORD)
+        local pointer = padof(libpbase + 0x1517940, gg.TYPE_QWORD)
         local uu = {}
         local uu = {
             {
