@@ -6764,16 +6764,33 @@ function modemenu()
         end
     end
 end
+function padof(offset, flag)
+    local data = {
+        address = offset,
+        flags = flag
+    }
+    return gg.getValues({data})[1].address
+end
 function meshare()
     mshtrigger = pvof(guipt + gptoffsets.meshared, gg.TYPE_DWORD)
     if mshtrigger == 0 then
+        local pointer = padof(guipt + 0xC2F37FC + gptoffsets.meshared, gg.TYPE_QWORD)
         local uu = {}
         local uu = {
-            address = guipt + gptoffsets.meshared,
-            flags = 4,
-            value = 1
+            {
+                address = guipt + gptoffsets.meshared,
+                flags = 4,
+                value = 0  
+            },
+            {
+                address = guipt + 0x35C + gptoffsets.meshared,
+                flags = gg.TYPE_QWORD,
+                value = pointer
+            },
         }
-        gg.setValues({uu})
+        gg.setValues(uu)
+        gg.sleep(500)
+        settable({{guipt + gptoffsets.meshared, 4, 1, false}}, false, false)
     else
         local uu = {}
         local uu = {
