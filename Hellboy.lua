@@ -1,10 +1,10 @@
 
 gg.setVisible(false)
 sockets = 6
-hellboy = 7376
+hellboy = 7667
 configs = {
     name = 'User x-hidden',
-    hellboy = 7376,
+    hellboy = 7667,
     cr_interval = 1500,
     sr_interval = 1500,
     portal_method = 'default',
@@ -5918,7 +5918,268 @@ magics = {
       },
     },
 }
+world = {
+    {
+        "[🏝]","Isle of Dawn",
+        content = {
+            {
+                "Isle",
+                "Dawn"
+            },
+            {
+                "Trial of Water",
+                "Dawn_TrialsWater"
+            },
+            {
+                "Trial of Earth",
+                "Dawn_TrialsEarth"
+            },
+            {
+                "Trial of Air",
+                "Dawn_TrialsAir"
+            },
+            {
+                "Trial of Fire",
+                "Dawn_TrialsFire"
+            },
+        },
+    },
+    {
+        "[⛰]","Daylight Prairie",
+        content = {
+            {
+                "Butterfly Fields",
+                "Prairie_ButterflyFields" 
+            },
+            {
+                "Birds Nest",
+                "Prairie_NestAndKeeper"
+            },
+            {
+                "Sanctuary Island",
+                "Prairie_Island"
+            },
+            {
+                "Cave",
+                "Prairie_Cave"
+            },
+            {
+                "Village",
+                "Prairie_Village"
+            },
+            {
+                "8 Players Door",
+                "DayHubCave"
+            },
+            {
+                "Temple",
+                "DayEnd"
+            },
 
+        },
+    },
+    {
+        "[🏕]","Hidden Forest",
+        content = {
+            {
+                "Hidden Forest",
+                "Rain"
+            },
+            {
+                "Raining Forest",
+                "RainForest"
+            },
+            {
+                "Shelter",
+                "RainShelter"
+            },
+            {
+                "Cave",
+                "Rain_Cave"
+            },
+            {
+                "Middle Forest",
+                "RainMid"
+            },
+            {
+                "Assembly Base",
+                "Rain_BaseCamp"
+            },
+            {
+                "Wind Pathes",
+                "Skyway"
+            },
+            {
+                "Temple",
+                "RainEnd"
+            },
+        },
+    },
+    {
+        "[🗻]","Valley of Triumph",
+        content = {
+            {
+                "Valley",
+                "Sunset"
+            },
+            {
+                "Sliding Race",
+                "SunsetRace"
+            },
+            {
+                "Citadel",
+                "Sunset_Citadel"
+            },
+            {
+                "Flying Race",
+                "Sunset_FlyRace"
+            },
+            {
+                "Dream's Village",
+                "SunsetVillage"
+            },
+            {
+                "Yeti Cave",
+                "Sunset_YetiPark"
+            },
+            {
+                "Before Colosseum",
+                "SunsetEnd"
+            },
+            {
+                "Colosseum",
+                "SunsetColosseum"
+            },
+            {
+                "Temple",
+                "SunsetEnd2"
+            },
+        },
+    },
+    {
+        "[🏜]","Golden Wasteland",
+        content = {
+            {
+                "Social Space",
+                "DuskStart"
+            },
+            {
+                "Nintendo Park",
+                "Nintendo_CandleSpace"
+            },
+            {
+                "Abyss",
+                "Dusk_Triangle"
+            },
+            {
+                "Wasteland",
+                "Dusk"
+            },
+            {
+                "Forgotten Ark",
+                "DuskOasis"
+            },
+            {
+                "Graveyard",
+                "DuskGraveyard"
+            },
+            {
+                "Sinking Ship",
+                "Dusk_CrabField"
+            },
+            {
+                "Krills Field",
+                "DuskMid"
+            },
+            {
+                "Temple",
+                "DuskEnd"
+            },
+        },
+    },
+    {
+        "[🛕]","Vault of Knowledge",
+        content = {
+            {
+                "Vault",
+                "Night"
+            },
+            {
+                "Archives",
+                "NightArchive"
+            },
+            {
+                "Mantas Field",
+                "Night2"
+            },
+            {
+                "Starlight Desert",
+                "NightDesert"
+            },
+            {
+                "JellyFish Field",
+                "NightDesert_Beach"
+            },
+            {
+                "Jar Cave",
+                "Night_JarCave"
+            },
+            {
+                "Krill Desert",
+                "Night_InfiniteDesert"
+            },
+            {
+                "Planets",
+                "NightDesert_Planets"
+            },
+            {
+                "Halloween Cave",
+                "Event_DaysOfMischief"
+            },
+            {
+                "Office",
+                "TGCOffice"
+            },
+            {
+                "Thunder",
+                "NightEnd"
+            }
+        },
+    },
+    {
+        "[🌋]","Storm",
+        content = {
+            {
+                "Storm Gate",
+                "StormStart"
+            },
+            {
+                "Krills Field",
+                "Storm"
+            },
+            {
+                "Sacrifice",
+                "StormEnd"
+            },
+            {
+                "Rebirth",
+                "OrbitMid"
+            },
+            {
+                "Ancestors Galaxy",
+                "OrbitEnd"
+            },
+            {
+                "Heavin",
+                "CandleSpaceEnd"
+            },
+            {
+                "Credits",
+                "Credits"
+            },
+        },
+    },
+}
 ----
 function reqQ(fReq)
     local reqG = gg
@@ -7165,19 +7426,49 @@ function makeTable()
 function tportal()
     pmn()
     STAY = 'tportal'
-    local dd = {}
-    for i, v in ipairs(scrSoul) do
-        if SkidLocation == scrSoul[i][1] then 
-            kk =  " ✳️"
-        else kk = ""
+        do
+          do
+            realms = {}
+            table.insert(realms, "1 . [🏠]Home")
+            for i, v in ipairs(world) do
+                table.insert(realms, i + 1 .. ". " .. v[1] .. v[2])
+            end
+          end
         end
-        dd[i] = i .. ". " .. scrSoul[i][1] .. kk
-    end
-    table.insert(dd, back[1])
-    tear = gg.choice(dd, nil, header)
-    if tear == #dd then tpmenu()
-    elseif tear ~= nil then 
-        setmap(scrSoul[tear][1])
+           do
+             do
+                table.insert(realms, 1, "[🔄]Refresh The Map")
+              table.insert(realms, back[1])
+            end
+          end
+        do
+          do
+            tear = gg.choice(realms, nil, header)
+         end
+      end
+    if tear ~= nil then
+        fhdr = tear - 2
+        if tear == eye[1] then
+            setmap(SkidLocation)
+        elseif tear == eye[2] then 
+            setmap("CandleSpace")
+        elseif tear == #realms then
+            yellowTears()
+        else
+            realms = {}
+            name = {}
+            for i, v in ipairs(world[tear - 2].content) do
+                table.insert(realms, world[tear - 2][1] ..  v[1])
+                table.insert(name, v[2])
+            end
+            table.insert(realms, back[1])
+            tear = gg.choice(realms, nil, world[fhdr][1] .. world[fhdr][2])
+            if tear == #realms then
+                tportal()
+            elseif tear ~= nil then
+                setmap(name[tear])
+            end
+        end
     end
 end
 function acrun()
