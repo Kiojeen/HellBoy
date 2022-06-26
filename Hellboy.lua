@@ -1,7 +1,7 @@
 
 gg.setVisible(false)
 sockets = 6
-hellboy = 7685
+hellboy = 7792
 configs = {
     name = 'User x-hidden',
     hellboy = 7685,
@@ -25,6 +25,7 @@ liboffsets = {
     libpbase = 23197464,
     guipt = 25852864,
     iconsize = 17611184,
+    rcoulds = 22121792,
 }
 ptoffsets = {
     wings = 4407728,
@@ -5361,6 +5362,7 @@ yellow = {
         "[🔫]Trolls",
         content = {
             "[🧨]Force Light",
+            "[✨]Spam Magic",
         },                                     
     },
     {
@@ -6210,6 +6212,60 @@ function padof(offset, flag)
     }
     return gg.getValues({data})[1].address
 end
+function switch(values, oval, toast)
+    --{add, flag, nval, bfreeze}--
+    add = values[1]
+    flag = values[2]
+    nval = values[3]
+    bfreeze = values[4]
+    cval = pvof(add, flag)
+    if cval == oval then
+        pval = nval
+        gg.toast(toast .. "ON")
+    elseif cval == nval then
+        pval = oval
+        gg.toast(toast .. "OFF")
+    end
+    if pval ~= nil then
+        uu = {
+            address = add,
+            flags = flag,
+            value = pval,
+            freeze = bfreeze
+        }
+        if not pcall(gg.setValues, {uu}) then
+            gg.toast("Something went wrong")
+        end
+        if bfreeze then
+            if pval ~= cval then
+                gg.addListItems({uu})
+            else
+                gg.removeListItems({uu})
+            end
+        else
+            gg.removeListItems({uu})
+        end
+    end
+end
+function freeze_switch(values, toast)
+    --{add, flag, val}--
+    add = values[1]
+    flag = values[2]
+    val = values[3]
+    uu = {
+        address = add,
+        flags = flag,
+        value = val,
+        freeze = true
+    }
+    if isfrozen(add) then
+        gg.removeListItems({uu})
+        gg.toast(toast .. "OFF")
+    elseif pcall(gg.setValues, {uu}) then
+        gg.addListItems({uu})
+        gg.toast(toast .. "ON")
+    end
+end
 function pmn()
     mapBTable = {}
     mapLTable = {}
@@ -6635,7 +6691,7 @@ function tpmenu()
     STAY = 'tpmenu'
     local tpmG = gg
     tear = tpmG.choice(yellow[1].content, nil, header)
-    if tear == tableSize(yellow[1].content) then yellowTears()
+    if tear == #yellow[1].content then yellowTears()
     elseif tear == eye[1] then tportal()
     elseif tear == eye[2] then gotoMap()
     elseif tear == eye[3] then oobls('tpmenu')
@@ -6694,7 +6750,7 @@ function gotoMap()
     end
     table.insert(gtMenu.Name, back[1])
     tear = gtG.choice(gtMenu.Name, nil, header)
-    if tear == tableSize(gtMenu.Name) then tpmenu()
+    if tear == #gtMenu.Name then tpmenu()
     elseif tear ~= eye[69] then teleport(gtMenu.Cord[tear])
     end
 end
@@ -6748,7 +6804,6 @@ function opencloset(closet)
         end
     end
 end
-
 function modemenu()
     STAY = 'modemenu'
     pmn()
@@ -6761,38 +6816,25 @@ function modemenu()
         elseif tear == eye[2] then setIconSize()
         elseif tear == eye[3] then sres()
         elseif tear == eye[4] then setspeed()
+        elseif tear == eye[5] then switch({bootloader + liboffsets.rcoulds, 4, 0, false}, 1, "Remove Clouds: ")
         end
     end
-end
-function padof(offset, flag)
-    local data = {
-        address = offset,
-        flags = flag
-    }
-    return gg.getValues({data})[1].address
 end
 function meshare()
     mshtrigger = pvof(guipt + gptoffsets.meshared, gg.TYPE_DWORD)
     if mshtrigger == 0 then
-        local pointer = padof(libpbase + 0x1517940, gg.TYPE_QWORD)
-        local uu = {}
-        local uu = {
-            {
-                address = guipt + gptoffsets.meshared,
-                flags = 4,
-                value = 0  
-            },
-            {
-                address = guipt + 0x35C + gptoffsets.meshared,
+        local pointer = padof(libpbase + 22116672, gg.TYPE_QWORD)
+        if pvof(guipt + 860 + gptoffsets.meshared, gg.TYPE_QWORD) == 0 then
+            local uu = {
+                address = guipt + 860 + gptoffsets.meshared,
                 flags = gg.TYPE_QWORD,
                 value = pointer
-            },
-        }
-        gg.setValues(uu)
-        gg.sleep(500)
+            }
+            gg.setValues({uu})
+            gg.sleep(500)
+        end
         settable({{guipt + gptoffsets.meshared, 4, 1, false}}, false, false)
     else
-        local uu = {}
         local uu = {
             address = guipt + gptoffsets.meshared,
             flags = 4,
@@ -7045,29 +7087,23 @@ function sres()
 end
   do
     do
-      do
+      function srun_add()
+        if star.trace ~= nil then 
+            if star.trace >= star.limit then star.trace = star.limit else star.trace = star.trace + eye[1] end
+            teleport(scrSoul[star.realm].S_Runner[star.trace], true) 
+        end
+      end
         do
-        function srun_add()
-            if star.trace ~= nil then 
-                if star.trace >= star.limit then star.trace = star.limit else star.trace = star.trace + eye[1] end
-                teleport(scrSoul[star.realm].S_Runner[star.trace], true) 
+          do
+            function srun_sub()
+                if star.trace ~= nil then
+                    if star.trace <= 1 then star.trace = 1 else star.trace = star.trace - eye[1] end
+                    teleport(scrSoul[star.realm].S_Runner[star.trace], true)
+                end 
             end
         end
-          do
-            do
-              do
-                function srun_sub()
-                    if star.trace ~= nil then
-                        if star.trace <= 1 then star.trace = 1 else star.trace = star.trace - eye[1] end
-                        teleport(scrSoul[star.realm].S_Runner[star.trace], true)
-                    end 
-                end
-            end
-        end dontRemove = "BY: Kiojeen"
-            end
-         end
-      end
-   end
+    end dontRemove = "BY: Kiojeen"
+        end
 end
 function bwall(dis)
     local xcord = pvof(libpbase + ptoffsets.xpos, gg.TYPE_FLOAT)
@@ -7195,17 +7231,10 @@ function setspell(id, socket, spark)
     }
     gg.setValues(mProcess)
 end
-function tableSize(array)
-    local ilias = 0
-    for i, v in ipairs(array) do
-        ilias = i
-    end
-    return ilias
-end
 function trolls()
     STAY = 'trolls'
     tear = gg.choice(yellow[4].content, nil, "Be careful")
-    if tear == 1 then
+    if tear == eye[1] then
         if troll1 ~= true then 
             settable(showFlame, false, true)
             settable(showCandle, false, true)
@@ -7215,7 +7244,10 @@ function trolls()
             settable(showFlame, false, false)
             settable(showCandle, false, false)
         end
-    elseif tear == tableSize(yellow[4].content) then 
+    elseif tear == eye[2] then
+        setspell(-1463943689, 1)
+        freeze_switch({libpbase + ptoffsets.magic + 40, 4, 0}, "Spamming Magic: ")
+    elseif tear == #yellow[4].content then 
         yellowTears()
     end
  end
@@ -7670,7 +7702,7 @@ end
 function launch()
     offseter()
     makeTable()
-    temp = nil
+    setstr(bootloader + 18309856, 13, "By: Kiojeen")
     while true do
         local almG = gg
         if almG.isVisible(true) then
