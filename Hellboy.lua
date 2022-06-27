@@ -1,10 +1,10 @@
 
 gg.setVisible(false)
 sockets = 6
-hellboy = 7792
+hellboy = 7794
 configs = {
     name = 'User x-hidden',
-    hellboy = 7685,
+    hellboy = 7794,
     cr_interval = 1500,
     sr_interval = 1500,
     portal_method = 'default',
@@ -26,6 +26,7 @@ liboffsets = {
     guipt = 25852864,
     iconsize = 17611184,
     rcoulds = 22121792,
+    honksound = 18301748,
 }
 ptoffsets = {
     wings = 4407728,
@@ -5404,6 +5405,7 @@ yellow = {
             "[📸]ScreenShot Resolution",
             "[⏲]Game Speed",
             "[☁️]Remove Clouds",
+            "[📣]Calls 'Client side'",
         },  
     },
     {
@@ -6685,15 +6687,24 @@ function yellowTears()
     yellowCry[8] = nil
     local ytG = gg
     tear = ytG.choice(yellowCry, nil, header)
-    if     tear == eye[1] then tpmenu()
-    elseif tear == eye[2] then runType()
-    elseif tear == eye[3] then magic()
-    elseif tear == eye[4] then trolls()
-    elseif tear == eye[5] then 
-    elseif tear == eye[6] then modemenu()
-    elseif tear == eye[7] then ClosetMenu()
-    elseif tear == eye[8] then cmdactv()
+    if tear == eye[1] then 
+        tpmenu()
+    elseif tear == eye[2] then 
+        runType()
+    elseif tear == eye[3] then 
+        magic()
+    elseif tear == eye[4] then 
+        trolls()
+    elseif tear == eye[5] then
+
+    elseif tear == eye[6] then 
+        modemenu()
+    elseif tear == eye[7] then 
+        ClosetMenu()
+    elseif tear == eye[8] then 
+        cmdactv()
     elseif tear == eye[9] then 
+
     elseif tear == #yellowCry then os.exit()
     end
 end
@@ -6711,13 +6722,20 @@ function tpmenu()
     local tpmG = gg
     tear = tpmG.choice(yellow[1].content, nil, header)
     if tear == #yellow[1].content then yellowTears()
-    elseif tear == eye[1] then tportal()
-    elseif tear == eye[2] then gotoMap()
-    elseif tear == eye[3] then oobls('tpmenu')
-    elseif tear == eye[4] then bwall()
-    elseif tear == eye[5] then coordinater('move')
-    elseif tear == eye[6] then coordinater('copy')
-    elseif tear == eye[7] then coordinater('freeze')
+    elseif tear == eye[1] then 
+        tportal()
+    elseif tear == eye[2] then 
+        gotoMap()
+    elseif tear == eye[3] then 
+        oobls('tpmenu')
+    elseif tear == eye[4] then 
+        bwall()
+    elseif tear == eye[5] then 
+        coordinater('move')
+    elseif tear == eye[6] then 
+        coordinater('copy')
+    elseif tear == eye[7] then 
+        coordinater('freeze')
     end
 end
 function coordinater(rspType)
@@ -6822,7 +6840,37 @@ function opencloset(closet)
             gg.setValues(temp)
         end
     end
-end
+end                            
+shout = {
+    {
+        'Default Call', 
+        'ShoutDefault'
+    },
+    {
+        'LP Call',
+        'ShoutPrince'
+    },
+    {
+        'Crow Call',
+        'ShoutCrow'
+    },
+    {
+        'Turtle Call',
+        'ShoutTurtle'
+    },
+    {
+        'Kizuna Call',
+        'ShoutAi'
+    },
+    {
+        'Small Manta',
+        'ShoutMantaSmall',
+    },
+    {
+        'Anonymous Call',
+        'ShoutShade'
+    },
+}
 function modemenu()
     STAY = 'modemenu'
     pmn()
@@ -6830,12 +6878,30 @@ function modemenu()
     yellow[6].content[3] = "[📸]ScreenShot Resolution" .. c_hw
     tear = gg.choice(yellow[6].content, nil, header)
     if tear ~= nil then
-        if tear == #yellow[6].content then yellowTears()
-        elseif tear == eye[1] then meshare()
-        elseif tear == eye[2] then setIconSize()
-        elseif tear == eye[3] then sres()
-        elseif tear == eye[4] then setspeed()
-        elseif tear == eye[5] then switch({bootloader + liboffsets.rcoulds, 4, 0, false}, 1, "Remove Clouds: ")
+        if tear == #yellow[6].content then 
+            yellowTears()
+        elseif tear == eye[1] then 
+            meshare()
+        elseif tear == eye[2] then 
+            setIconSize()
+        elseif tear == eye[3] then 
+            sres()
+        elseif tear == eye[4] then 
+            setspeed()
+        elseif tear == eye[5] then 
+            switch({bootloader + liboffsets.rcoulds, 4, 0, false}, 1, "Remove Clouds: ")
+        elseif tear == eye[6] then
+            temp = {}
+            for i, v in ipairs(shout) do
+                table.insert(temp, i .. '. ' .. '[📣]' .. v[1] )
+            end table.insert(temp, back[1])
+            tear = gg.choice(temp, nil, 'This replaces the Default Call')
+            if tear ~= nil then
+                setstr(bootloader + liboffsets.honksound, 18, '.' .. shout[tear][2])
+                gg.toast(shout[tear][1] .. ' is the default call now')
+            elseif tear == #temp then 
+                modemenu()
+            end    
         end
     end
 end
@@ -7012,49 +7078,33 @@ function oobls(BUP)
     end
     local oBG = gg
     miniOOB = {}
-    do
         do
           do
-            do
             table.insert(miniOOB, 1, "[💾]Save Current Possition")
             table.insert(miniOOB, 2, "[🏃🏻‍♂️]Goto Saved Possition")
-            end
           end
         end
-      end
-      do
-        do
           do
             do
-            for i, v in ipairs(scrSoul) do
-                if scrSoul[i][1] == SkidLocation then
-                    for u, d in ipairs(scrSoul[i].OOB_Goto.OOB_Goto_Name) do
-                    miniOOB[u + 2] = u .. ") " .. scrSoul[i].OOB_Goto.OOB_Goto_Name[u]
-                    miOB = u + 3 end
-                    break
-                end
-               end
+             for i, v in ipairs(scrSoul) do
+                 if scrSoul[i][1] == SkidLocation then
+                     for u, d in ipairs(scrSoul[i].OOB_Goto.OOB_Goto_Name) do
+                     miniOOB[u + 2] = u .. ") " .. scrSoul[i].OOB_Goto.OOB_Goto_Name[u]
+                     miOB = u + 3 end
+                     break
+                 end
+             end
+             table.insert(miniOOB, back[1])
+             if SkidLock == nil then
+                 SkidLock = SkidLocation
+             end
+             if SkidLock ~= SkidLocation or svpo == nil then
+                 SkidLock = SkidLocation
+                 miniOOB[2] = nil
+                 svpo = eye[922]
              end
           end
        end
-    end
-      do
-        do
-          do
-            do
-            table.insert(miniOOB, back[1])
-                if SkidLock == nil then
-                    SkidLock = SkidLocation
-                end
-                if SkidLock ~= SkidLocation or svpo == nil then
-                    SkidLock = SkidLocation
-                    miniOOB[2] = nil
-                    svpo = eye[922]
-                end
-             end
-          end
-       end
-    end
     if miOB == nil then miOB = 3 end
     tear = oBG.choice(miniOOB, nil, header)
     if tear == 1 then svpo = {
@@ -7064,8 +7114,10 @@ function oobls(BUP)
     }
     zzz = "{" .. svpo[1] .. ', '.. svpo[2] .. ', ' .. svpo[3] .. "},"
     print(zzz)
-    elseif tear == 2 then teleport(svpo, true)
-    elseif tear == miOB then load(BUP_ .. '()')()
+    elseif tear == 2 then 
+        teleport(svpo, true)
+    elseif tear == miOB then 
+        load(BUP_ .. '()')()
     elseif tear ~= eye[336] then
         for i, v in ipairs(scrSoul) do
             if scrSoul[i][1] == SkidLocation then
@@ -7104,25 +7156,19 @@ function sres()
         end
     end
 end
-  do
-    do
-      function srun_add()
-        if star.trace ~= nil then 
-            if star.trace >= star.limit then star.trace = star.limit else star.trace = star.trace + eye[1] end
-            teleport(scrSoul[star.realm].S_Runner[star.trace], true) 
-        end
-      end
-        do
-          do
-            function srun_sub()
-                if star.trace ~= nil then
-                    if star.trace <= 1 then star.trace = 1 else star.trace = star.trace - eye[1] end
-                    teleport(scrSoul[star.realm].S_Runner[star.trace], true)
-                end 
-            end
-        end
-    end dontRemove = "BY: Kiojeen"
-        end
+function srun_add()
+    if star.trace ~= nil then 
+        if star.trace >= star.limit then star.trace = star.limit else star.trace = star.trace + eye[1] end
+        teleport(scrSoul[star.realm].S_Runner[star.trace], true) 
+        dontRemove = "BY: Kiojeen"
+    end
+end
+function srun_sub()
+    if star.trace ~= nil then
+        if star.trace <= 1 then star.trace = 1 else star.trace = star.trace - eye[1] end
+        teleport(scrSoul[star.realm].S_Runner[star.trace], true)
+        dontRemove = "BY: Kiojeen"
+    end 
 end
 function bwall(dis)
     local xcord = pvof(libpbase + ptoffsets.xpos, gg.TYPE_FLOAT)
