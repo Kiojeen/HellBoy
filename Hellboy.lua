@@ -1,7 +1,7 @@
 
 gg.setVisible(false)
 sockets = 6
-hellboy = 'undefined'
+hellboy = 7842
 configs = {
     name = 'User x-hidden',
     hellboy = 7842,
