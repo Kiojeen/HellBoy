@@ -1,10 +1,10 @@
 
 gg.setVisible(false)
 sockets = 6
-hellboy = 7794
+hellboy = 7822
 configs = {
     name = 'User x-hidden',
-    hellboy = 7794,
+    hellboy = 7822,
     cr_interval = 1500,
     sr_interval = 1500,
     portal_method = 'default',
@@ -6863,12 +6863,40 @@ shout = {
         'ShoutAi'
     },
     {
+        'Baby Manta',
+        'ShoutMantaBaby'
+    },
+    {
         'Small Manta',
         'ShoutMantaSmall',
     },
     {
+        'Big Manta',
+        'ShoutMantaBig'
+    },
+    {
+        'Double Manta',
+        'ShoutMantaDouble'
+    },
+    {
+        'Krill Shout',
+        'ShoutDuskCreature'
+    },
+    {
         'Anonymous Call',
         'ShoutShade'
+    },
+    {
+        'Anonymous Call 2',
+        'ShoutShadeRemote'
+    },
+    {
+        'Fragment Sound',
+        'ShoutFragment'
+    },
+    {
+        'Small Fish Call',
+        'ShoutSmallFish'
     },
 }
 function modemenu()
@@ -6896,11 +6924,11 @@ function modemenu()
                 table.insert(temp, i .. '. ' .. '[📣]' .. v[1] )
             end table.insert(temp, back[1])
             tear = gg.choice(temp, nil, 'This replaces the Default Call')
-            if tear ~= nil then
-                setstr(bootloader + liboffsets.honksound, 18, '.' .. shout[tear][2])
-                gg.toast(shout[tear][1] .. ' is the default call now')
-            elseif tear == #temp then 
+            if tear == #temp then
                 modemenu()
+            elseif tear ~= nil then 
+                setstr(bootloader + liboffsets.honksound, 19, '.' .. shout[tear][2])
+                gg.toast(shout[tear][1] .. ' is the default call now')
             end    
         end
     end
