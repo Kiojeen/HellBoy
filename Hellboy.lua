@@ -1,10 +1,10 @@
 
 gg.setVisible(false)
 sockets = 6
-hellboy = 7826
+hellboy = 7842
 configs = {
     name = 'User x-hidden',
-    hellboy = 7826,
+    hellboy = 7842,
     cr_interval = 1500,
     sr_interval = 1500,
     portal_method = 'default',
@@ -50,6 +50,7 @@ gptoffsets = {
     scrres = -11493676,
     portal = 13414668,
     meshared = 25071156,
+    winds = 3086400,
 }
   do
     do
@@ -5406,7 +5407,8 @@ yellow = {
             "[📸]ScreenShot Resolution",
             "[⏲]Game Speed",
             "[☁️]Remove Clouds",
-            "[💨]Remove Wind",
+            "[💨]Remove Wind[Method 1]",
+            "[💨]Remove Wind[Method 2 TEST]",
             "[📣]Calls 'Client side'",
         },  
     },
@@ -6923,6 +6925,8 @@ function modemenu()
         elseif tear == eye[6] then 
             switch({bootloader + liboffsets.winds, 4, 505873376, false}, 1847778369, "Removing Wind: " )
         elseif tear == eye[7] then
+            rwind()
+        elseif tear == eye[8] then
             temp = {}
             for i, v in ipairs(shout) do
                 table.insert(temp, i .. '. ' .. '[📣]' .. v[1] )
@@ -6959,6 +6963,18 @@ function meshare()
         }
         gg.setValues({uu})  
     end
+end
+function rwind()
+    windlist = {}
+    for i = 0, 100 do
+        table.insert(windlist, {
+            address = guipt + gptoffsets.winds + (i * 256) - 28,
+            flags = gg.TYPE_DWORD,
+            value = 0
+        })
+    end
+    gg.setValues(windlist)
+    gg.toast('Wind Removed')
 end
 function setIconSize(size)
     if size == nil then
@@ -7824,5 +7840,3 @@ function launch()
 end
 rang()
 launch()
-
-
