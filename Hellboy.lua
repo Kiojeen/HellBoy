@@ -1,10 +1,10 @@
 
 gg.setVisible(false)
 sockets = 6
-hellboy = 7822
+hellboy = 7826
 configs = {
     name = 'User x-hidden',
-    hellboy = 7822,
+    hellboy = 7826,
     cr_interval = 1500,
     sr_interval = 1500,
     portal_method = 'default',
@@ -27,6 +27,7 @@ liboffsets = {
     iconsize = 17611184,
     rcoulds = 22121792,
     honksound = 18301748,
+    winds = 7078420,
 }
 ptoffsets = {
     wings = 4407728,
@@ -5405,6 +5406,7 @@ yellow = {
             "[📸]ScreenShot Resolution",
             "[⏲]Game Speed",
             "[☁️]Remove Clouds",
+            "[💨]Remove Wind",
             "[📣]Calls 'Client side'",
         },  
     },
@@ -6918,7 +6920,9 @@ function modemenu()
             setspeed()
         elseif tear == eye[5] then 
             switch({bootloader + liboffsets.rcoulds, 4, 0, false}, 1, "Remove Clouds: ")
-        elseif tear == eye[6] then
+        elseif tear == eye[6] then 
+            switch({bootloader + liboffsets.winds, 4, 505873376, false}, 1847778369, "Removing Wind: " )
+        elseif tear == eye[7] then
             temp = {}
             for i, v in ipairs(shout) do
                 table.insert(temp, i .. '. ' .. '[📣]' .. v[1] )
