@@ -6640,17 +6640,28 @@ end
          if type_ == 'back' then yellowTears()
          elseif type_ == "c" and cflag ~= false then
              tear = rCG.choice(crunMenu, nil, header)
-             if     tear == eye[1] then run("c")
-             elseif tear == eye[2] then absorbWax()
-             elseif tear == eye[3] then burner()
-             elseif tear == eye[4] then bwall()
-             elseif tear == eye[5] then wcharge()
-             elseif tear == eye[6] then tportal() 
-             elseif tear == eye[7] then cordlist("c") 
-             elseif tear == eye[8] then type_ = eye[90] runChoice("s")
-             elseif tear == eye[9] then oobls('runChoice') 
-             elseif tear == eye[10] then type_ = nil yellowTears() 
-             elseif tear == eye[11] then runChoice("c")
+             if     tear == eye[1] then
+                 run("c")
+             elseif tear == eye[2] then
+                 absorbWax()
+             elseif tear == eye[3] then
+                 burner()
+             elseif tear == eye[4] then
+                 bwall()
+             elseif tear == eye[5] then
+                 wcharge()
+             elseif tear == eye[6] then
+                 tportal() 
+             elseif tear == eye[7] then
+                 cordlist("c") 
+             elseif tear == eye[8] then
+                 type_ = eye[90] runChoice("s")
+             elseif tear == eye[9] then
+                 oobls('runChoice') 
+             elseif tear == eye[10] then
+                 type_ = nil yellowTears() 
+             elseif tear == eye[11] then
+                 runChoice("c")
              elseif tear ~= nil then
                  for i, v in ipairs(scrSoul) do
                      if scrSoul[i][1] == SkidLocation then
@@ -6661,17 +6672,28 @@ end
              end
          elseif type_ == "s" and sflag ~= false then
              tear = rCG.choice(srunMenu, nil, header)
-             if     tear == eye[1] then srun_add()
-             elseif tear == eye[2] then srun_sub()
-             elseif tear == eye[3] then run("s")
-             elseif tear == eye[4] then bwall()
-             elseif tear == eye[5] then wcharge()
-             elseif tear == eye[6] then tportal()
-             elseif tear == eye[7] then cordlist("s")
-             elseif tear == eye[8] then type_ = eye[90] runChoice("c")
-             elseif tear == eye[9] then oobls('runChoice')
-             elseif tear == eye[10] then type_ = nil yellowTears() 
-             elseif tear == eye[11] then runChoice("s")
+             if     tear == eye[1] then
+                 srun_add()
+             elseif tear == eye[2] then
+                 srun_sub()
+             elseif tear == eye[3] then
+                 run("s")
+             elseif tear == eye[4] then
+                 bwall()
+             elseif tear == eye[5] then
+                 wcharge()
+             elseif tear == eye[6] then
+                 tportal()
+             elseif tear == eye[7] then
+                 cordlist("s")
+             elseif tear == eye[8] then
+                 type_ = eye[90] runChoice("c")
+             elseif tear == eye[9] then
+                 oobls('runChoice')
+             elseif tear == eye[10] then
+                 type_ = nil yellowTears() 
+             elseif tear == eye[11] then
+                 runChoice("s")
              elseif tear ~= nil then
                  for i, v in ipairs(scrSoul) do
                      if scrSoul[i][1] == SkidLocation then
@@ -7075,7 +7097,7 @@ function burner()
     if bSignS then bfreeze = true else bfreeze = false end
     settable(candles, false, bfreeze)
     settable(flowers, false, bfreeze)
-    bG.toast("Burning: " .. switch)
+    bG.toast("Burning: " .. sign_switch)
 end
 function wcharge()
     configSign(2)
@@ -7084,7 +7106,7 @@ function wcharge()
         do
           if isfrozen(libpbase + ptoffsets.wcharge) then bfreeze = false else bfreeze = true end
           settable({{libpbase + ptoffsets.wcharge, 16, 20, true}}, true, bfreeze)
-          wG.toast("Wing Charge: " .. switch)
+          wG.toast("Wing Charge: " .. sign_switch)
         end
     end
 end
@@ -7097,22 +7119,22 @@ function configSign(v)
         if signs.bSign == "" then
            signs.bSign = "  -〘 ✅ 〙"
            bSignS = true
-           switch = "[ON]"
+           sign_switch = "[ON]"
         else
             signs.bSign = ""
             bSignS = false
-            switch = "[OFF]"
+            sign_switch = "[OFF]"
         end
     end
     if v == 2 then
         if signs.wchsign == "" then
             signs.wchsign = "  -〘 ✅ 〙"
             wchsignS = true
-            switch = "[ON]"
+            sign_switch = "[ON]"
         else
             signs.wchsign = ""
             wchsignS = false
-            switch = "[OFF]"
+            sign_switch = "[OFF]"
         end
     end
 end
@@ -7726,20 +7748,27 @@ function noUiTrigger()
                     setmap(cmd[3])
                     end
                 end
-            elseif cmd[2] == 'help' then cmdguide()
-            elseif cmd[2] == 'c_run' then run('c')
-            elseif cmd[2] == 'burn' then burner()
-            elseif cmd[2] == 'closet' then
+            elseif cmd[2] == 'help'     then
+                 cmdguide()
+            elseif cmd[2] == 'c_run'    then
+                 run('c')
+            elseif cmd[2] == 'burn'     then
+                 burner()
+            elseif cmd[2] == 'closet'   then
                 for i, v in ipairs(cltypes) do
                     if cmd[3] == cltypes[i][1] then
                         opencloset(cltypes[i][2])
                     end
                 end
-            elseif cmd[2] == 'breach' then bwall()
-            elseif cmd[2] == 'c_absorb' then absorbWax()
-            elseif cmd[2] == 'w_charge' then wcharge()
-            elseif cmd[2] == 'stop' then cmdactv()
-            elseif cmd[2] == 'spell' then
+            elseif cmd[2] == 'breach'   then
+                 bwall()
+            elseif cmd[2] == 'c_absorb' then
+                 absorbWax()
+            elseif cmd[2] == 'w_charge' then
+                 wcharge()
+            elseif cmd[2] == 'stop'     then
+                 cmdactv()
+            elseif cmd[2] == 'spell'    then
                 if mgReq() then
                     if cmd[3] == 'remove' then
                         for i = 1, sockets, 1 do
