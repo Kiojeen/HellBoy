@@ -2,6 +2,16 @@
 gg.setVisible(false)
 sockets = 6
 hellboy = 7842
+sky = {
+    live = {
+        package = 'com.tgc.sky.android',
+        version = 192395
+    },
+    beta = {
+        package = 'com.tgc.sky.android.test.gold',
+        version = 194410
+    }
+}
 configs = {
     name = 'User x-hidden',
     hellboy = 7842,
@@ -11,7 +21,7 @@ configs = {
     version = nil,
     tp_theme = 'black',
 }
-distances = {
+ldistances = {
     candles = 448,
     flowers = 8,
     fldist = 56224,
@@ -21,15 +31,15 @@ qburners = {
     candles = 468,
     flowers = 12836692,
 }
-liboffsets = {
-    libpbase = 23197464,
+lliboffsets = {
+    anptr = 23197464,
     guipt = 25852864,
     iconsize = 17611184,
     rcoulds = 22121792,
     honksound = 18301748,
     winds = 7078420,
 }
-ptoffsets = {
+lanptroffsets = {
     wings = 4407728,
     xpos = 4519392,
     ypos = 4519396,
@@ -40,7 +50,7 @@ ptoffsets = {
     cmdchat = 2396800,
     wcharge =  4542820,
 }
-gptoffsets = {
+lgptoffsets = {
     map = 25082488,
     candles = 13437824,
     flowers = 26497620,
@@ -48,6 +58,44 @@ gptoffsets = {
     pflame = -6151064,
     gamespeed = -10098176,
     scrres = -11493676,
+    portal = 13414668,
+    meshared = 25071156,
+    winds = 3086400,
+}
+--
+bdistances = {
+    candles = 448,
+    flowers = 8,
+    fldist = 56224,
+    magx = 48,
+}
+bliboffsets = {
+    anptr = 21233544,
+    guipt = 23913632,
+    iconsize = 17611184,
+    rcoulds = 22121792,
+    honksound = 18301748,
+    winds = 7078420,
+}
+banptroffsets = {
+    wings = 4407728,
+    xpos = 4455024,
+    ypos = 4455028,
+    zpos = 4455032,
+    rad = 4455056,
+    magic = 4526736,
+    closet = 22710724,
+    cmdchat = 2396800,
+    wcharge = 4478516,
+}
+bgptoffsets = {
+    map = 23830648,
+    candles = 11983888,
+    flowers = 25043684,
+    pcandle = -6151076,
+    pflame = -6151064,
+    gamespeed = -10874448,
+    scrres = -12286908,
     portal = 13414668,
     meshared = 25071156,
     winds = 3086400,
@@ -6352,9 +6400,9 @@ function teleport(cord, noTime)
         end
         local cords = {}
         cords = {
-            {libpbase + ptoffsets.xpos, 16, cord[1], dfreeze},
-            {libpbase + ptoffsets.ypos, 16, cord[2], dfreeze},
-            {libpbase + ptoffsets.zpos, 16, cord[3], dfreeze},
+            {anptr + anptroffsets.xpos, 16, cord[1], dfreeze},
+            {anptr + anptroffsets.ypos, 16, cord[2], dfreeze},
+            {anptr + anptroffsets.zpos, 16, cord[3], dfreeze},
         }
         settable(cords, false, false)
         teleG.sleep(mnt)
@@ -6780,9 +6828,9 @@ function tpmenu()
 end
 function coordinater(rspType)
     ccor = {
-        pvof(libpbase + ptoffsets.xpos, 16),
-        pvof(libpbase + ptoffsets.ypos, 16),
-        pvof(libpbase + ptoffsets.zpos, 16),
+        pvof(anptr + anptroffsets.xpos, 16),
+        pvof(anptr + anptroffsets.ypos, 16),
+        pvof(anptr + anptroffsets.zpos, 16),
     }
     cord = {}
     xyz = "{" .. ccor[1] .. '; '.. ccor[2] .. '; ' .. ccor[3] .. "}"
@@ -6797,9 +6845,9 @@ function coordinater(rspType)
         end
     elseif rspType == 'freeze' then
         cortbl = {
-            {libpbase + ptoffsets.xpos, 16, ccor[1], true},
-            {libpbase + ptoffsets.ypos, 16, ccor[2], true},
-            {libpbase + ptoffsets.zpos, 16, ccor[3], true},
+            {anptr + anptroffsets.xpos, 16, ccor[1], true},
+            {anptr + anptroffsets.ypos, 16, ccor[2], true},
+            {anptr + anptroffsets.zpos, 16, ccor[3], true},
         }
         if posfreeze ~= true then
             settable(cortbl, false, true)
@@ -6845,19 +6893,19 @@ function opencloset(closet)
     if closet ~= nil then
         local temp = {
             {
-                address = libpbase + ptoffsets.closet - 60,
+                address = anptr + anptroffsets.closet - 60,
                 flags = gg.TYPE_DWORD,
                 value = 0,
             },
             {
-                address = libpbase + ptoffsets.closet - 4,
+                address = anptr + anptroffsets.closet - 4,
                 flags = gg.TYPE_DWORD,
                 value = 0,
             },
         }
         gg.setValues(temp)
         table.insert(temp, {
-                address = libpbase + ptoffsets.closet,
+                address = anptr + anptroffsets.closet,
                 flags = gg.TYPE_DWORD,
                 value = closet,
             })
@@ -6867,12 +6915,12 @@ function opencloset(closet)
         else
             local temp = {
                 {
-                    address = libpbase + ptoffsets.closet - 60,
+                    address = anptr + anptroffsets.closet - 60,
                     flags = gg.TYPE_DWORD,
                     value = 1,
                 },
                 {
-                    address = libpbase + ptoffsets.closet + 4,
+                    address = anptr + anptroffsets.closet + 4,
                     flags = gg.TYPE_DWORD,
                     value = 1,
                 },
@@ -6980,7 +7028,7 @@ end
 function meshare()
     mshtrigger = pvof(guipt + gptoffsets.meshared, gg.TYPE_DWORD)
     if mshtrigger == 0 then
-        local pointer = padof(libpbase + 22116672, gg.TYPE_QWORD)
+        local pointer = padof(anptr + 22116672, gg.TYPE_QWORD)
         if pvof(guipt + 860 + gptoffsets.meshared, gg.TYPE_QWORD) == 0 then
             local uu = {
                 address = guipt + 860 + gptoffsets.meshared,
@@ -7118,8 +7166,8 @@ function wcharge()
     local wG = gg
       do
         do
-          if isfrozen(libpbase + ptoffsets.wcharge) then bfreeze = false else bfreeze = true end
-          settable({{libpbase + ptoffsets.wcharge, 16, 20, true}}, true, bfreeze)
+          if isfrozen(anptr + anptroffsets.wcharge) then bfreeze = false else bfreeze = true end
+          settable({{anptr + anptroffsets.wcharge, 16, 20, true}}, true, bfreeze)
           wG.toast("Wing Charge: " .. sign_switch)
         end
     end
@@ -7192,9 +7240,9 @@ function oobls(BUP)
     if miOB == nil then miOB = 3 end
     tear = oBG.choice(miniOOB, nil, header)
     if tear == 1 then svpo = {
-        pvof(libpbase + ptoffsets.xpos, 16),
-        pvof(libpbase + ptoffsets.ypos, 16),
-        pvof(libpbase + ptoffsets.zpos, 16),
+        pvof(anptr + anptroffsets.xpos, 16),
+        pvof(anptr + anptroffsets.ypos, 16),
+        pvof(anptr + anptroffsets.zpos, 16),
     }
     zzz = "{" .. svpo[1] .. ', '.. svpo[2] .. ', ' .. svpo[3] .. "},"
     print(zzz)
@@ -7255,10 +7303,10 @@ function srun_sub()
     end 
 end
 function bwall(dis)
-    local xcord = pvof(libpbase + ptoffsets.xpos, gg.TYPE_FLOAT)
-    local ycord = pvof(libpbase + ptoffsets.ypos, gg.TYPE_FLOAT)
-    local zcord = pvof(libpbase + ptoffsets.zpos, gg.TYPE_FLOAT)
-    local radin = pvof(libpbase + ptoffsets.rad, gg.TYPE_FLOAT)
+    local xcord = pvof(anptr + anptroffsets.xpos, gg.TYPE_FLOAT)
+    local ycord = pvof(anptr + anptroffsets.ypos, gg.TYPE_FLOAT)
+    local zcord = pvof(anptr + anptroffsets.zpos, gg.TYPE_FLOAT)
+    local radin = pvof(anptr + anptroffsets.rad, gg.TYPE_FLOAT)
     teleport({xcord + 7 * math.sin(radin), ycord, zcord + 7 * math.cos(radin)}, true)
     gg.setVisible(false)
   end
@@ -7285,7 +7333,7 @@ function magic()
         end
         msocket = {}
         for i = 1, sockets do
-            cs = pvof(libpbase + ptoffsets.magic + i * distances.magx - distances.magx, 4)
+            cs = pvof(anptr + anptroffsets.magic + i * distances.magx - distances.magx, 4)
             for d, u in ipairs(magics) do
                 for a, b in ipairs(magics[d].content) do
                     if magics[d].content[a][2] == cs then
@@ -7354,7 +7402,7 @@ end
 function setspell(id, socket, spark)
     if spark == nil then spark = 360 end
     socket = socket * distances.magx - distances.magx
-    local spell1 = libpbase + ptoffsets.magic
+    local spell1 = anptr + anptroffsets.magic
     local mProcess = {}
     mProcess = {
         {
@@ -7395,7 +7443,7 @@ function trolls()
         end
     elseif tear == eye[2] then
         setspell(-1463943689, 1)
-        freeze_switch({libpbase + ptoffsets.magic + 40, 4, 0}, "Spamming Magic: ")
+        freeze_switch({anptr + anptroffsets.magic + 40, 4, 0}, "Spamming Magic: ")
     elseif tear == #yellow[4].content then 
         yellowTears()
     end
@@ -7584,7 +7632,7 @@ function absorbWax()
     wax = {}
     gg.setRanges(gg.REGION_OTHER| gg.REGION_C_ALLOC)
     if not bSignS then burner() gg.sleep(1000) end
-    gg.searchNumber('-1.0;3.5F::5', gg.TYPE_FLOAT, false, 536870912, guipt + 7093036, libpbase + 9123652, 0)
+    gg.searchNumber('-1.0;3.5F::5', gg.TYPE_FLOAT, false, 536870912, guipt + 7093036, anptr + 9123652, 0)
     gg.refineNumber('3.5', gg.TYPE_FLOAT)
     if gg.getResultCount() > 0 then
         wax = gg.getResults(400)
@@ -7742,7 +7790,7 @@ function noUiTrigger()
     if noui then
         local uu = {}
         for i = 1, 100, 1 do
-            uu[i] = pvof(libpbase + ptoffsets.cmdchat + i, gg.TYPE_BYTE)
+            uu[i] = pvof(anptr + anptroffsets.cmdchat + i, gg.TYPE_BYTE)
         end
         zz = {}
         for i, v in ipairs(uu) do
@@ -7754,7 +7802,7 @@ function noUiTrigger()
         cmd = wgrer(res)
         if cmd[1] == '-kj' then
             for i = 1, 10, 1 do
-                settable({{libpbase + ptoffsets.cmdchat + i, gg.TYPE_BYTE, 0, false}}, false, false)
+                settable({{anptr + anptroffsets.cmdchat + i, gg.TYPE_BYTE, 0, false}}, false, false)
             end
             if cmd[2] == 'sm' then
                 for i, v in ipairs(scrSoul) do
@@ -7827,13 +7875,13 @@ function rang()
 end
 function offseter()
     bootloader = gg.getRangesList("libBootloader.so")[1].start
-    libpbase = pvof(bootloader + liboffsets.libpbase, gg.TYPE_QWORD)
+    anptr = pvof(bootloader + liboffsets.anptr, gg.TYPE_QWORD)
     guipt = pvof(bootloader + liboffsets.guipt, gg.TYPE_QWORD)
     ls = {
         {
-            address = libpbase,
+            address = anptr,
             flags = gg.TYPE_QWORD,
-            name = 'libpbase',
+            name = 'anptr',
         },
         {
             address = guipt,
@@ -7855,7 +7903,42 @@ function isfrozen(add)
         end
     end
 end
+function version_check()
+    package = gg.getTargetPackage()
+    version = gg.getTargetInfo().versionCode
+    if package == sky.live.package then
+        if version == sky.live.version then
+            anptroffsets = lanptroffsets
+            gptoffsets = lgptoffsets
+            distances = ldistances
+            liboffsets = lliboffsets
+        elseif version > sky.live.version then
+            gg.alert("Sky version mismatch\nUpdate your game")
+            os.exit()
+        elseif version < sky.live.version then
+            gg.alert("Sky version mismatch\nWait for the script to be updated")
+            os.exit()
+        end
+    elseif package == sky.beta.package then
+        if version == sky.beta.version then
+            anptroffsets = banptroffsets
+            gptoffsets = bgptoffsets
+            distances = bdistances
+            liboffsets = bliboffsets
+        elseif version > sky.beta.version then
+            gg.alert("Sky version mismatch\nUpdate your game")
+            os.exit()
+        elseif version < sky.beta.version then
+            gg.alert("Sky version mismatch\nWait for the script to be updated")
+            os.exit()
+        end
+    else
+        gg.alert("Sky package mismatch\nSelect the right process")
+        os.exit()
+    end
+end
 function launch()
+    version_check()
     offseter()
     makeTable()
     setstr(bootloader + 18309856, 13, "By: Kiojeen")
@@ -7867,7 +7950,7 @@ function launch()
             break
         end
     end
-    if isfrozen(libpbase + ptoffsets.wcharge) then 
+    if isfrozen(anptr + anptroffsets.wcharge) then 
         configSign(2)
     end
     yellowTears()
