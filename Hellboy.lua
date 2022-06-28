@@ -36,7 +36,7 @@ lliboffsets = {
     libguiptr = 25852864,
     iconsize = 17611184,
     rcoulds = 22121792,
-    honksound = 18301748,
+    honksound = 720457,
     winds = 7078420,
     avatdelay = 5283440,
     absorb = 11647664,
@@ -8025,4 +8025,1415 @@ function launch()
     end
 end
 rang()
-launch()
+launch()375
+            }, 
+            {
+                415.28723144535, 
+                91.568244934083, 
+                778.63299560588
+            }, 
+            {
+                398.98120117185, 
+                91.097282409667, 
+                792.90447998048
+            }, 
+            {
+                412.68499755975, 
+                150.91204833985, 
+                1025.2669677775
+            }, 
+            {
+                395.25494384625, 
+                150.68644714347, 
+                1026.3712158125
+            }, 
+            {
+                392.61962890625, 
+                135.32165527375, 
+                1041.2110595125
+            }, 
+            {
+                343.39343261715, 
+                77.791633605903, 
+                183.47731018406
+            }, 
+            {
+                335.25216674809, 
+                77.791908266016, 
+                158.12371821875
+            }, 
+            {
+                352.12088012691, 
+                77.791503906295, 
+                164.90344238225
+            }, 
+            {
+                89.894142150878, 
+                76.407623291562, 
+                87.088615417487
+            }, 
+            {
+                100.93160247834, 
+                77.375305175125, 
+                75.615974426953
+            }, 
+            {
+                63.618473052916, 
+                72.560768127414, 
+                66.565811157256
+            }, 
+        },
+        S_Runner = {
+            {
+                -96.44934082031, 
+                64.377983093261, 
+                388.34783935546
+            },
+            {
+                339.97970581054, 
+                111.07629394531, 
+                170.51702880859
+            },
+            {
+                401.28558349609, 
+                75.494659423828, 
+                776.52569580078
+            },
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+                "Golden kids",
+            },
+            Map_Goto_Cord = {
+                {
+                    -797.5425415039, 
+                    156.25964355475, 
+                    916.47027587890
+                },
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "Night_JarCave",
+        C_Runner = {
+            {
+                -111.5105438239, 
+                21.142538070671, 
+                384.07177734375
+            }, 
+            {
+                -128.2429351806, 
+                21.106355667118, 
+                374.82376098681
+            }, 
+            {
+                -143.6011505123, 
+                25.003812789912, 
+                370.31155395501
+            }, 
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "NightDesert_Beach",
+        C_Runner = { 
+            {
+                600.07110595702, 
+                1.6242413520888, 
+                618.57495117175
+            },
+            {
+                609.41748046875, 
+                0.7359067428589, 
+                605.42315673822
+            },
+            {
+                621.23449707035, 
+                5.2496514320373, 
+                580.87713624688
+            },
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "NightDesert_Planets",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "Night_InfiniteDesert",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "Event_DaysOfMischief",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "NightEnd",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "StormStart",
+        C_Runner = {
+
+        },
+        S_Runner = {
+            {
+                -3.017127513885, 
+                196.82383728020, 
+                -21.47331619262
+            },
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "StormEnd",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "Storm",
+        C_Runner = {
+
+        },
+        S_Runner = {
+            {
+                7.1743726730346, 
+                265.93215942300, 
+                -244.1742285351
+            },
+            {
+                1.5070127248764, 
+                261.92361450193, 
+                -236.3896026113
+            },
+            {
+                11.426215171813, 
+                266.17758178710, 
+                -275.3578912109
+            },
+            {
+                20.687644958496, 
+                266.22225952148, 
+                -279.9749575195
+            },
+            {
+                29.395788192749, 
+                266.09494018556, 
+                -291.9837500000
+            },
+            {
+                35.689933776855, 
+                266.23931884766, 
+                -288.9327636718
+            },
+            {
+                52.191497802734, 
+                266.22885131839, 
+                -294.5979003906
+            },
+            {
+                60.197864532470, 
+                267.01519775396, 
+                -311.8089404296
+            },
+            {
+                60.197875976562, 
+                270.08026123048, 
+                -323.4586059570
+            },
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "OrbitMid",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "OrbitEnd",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "Credits",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "CandleSpaceEnd",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+}
+        end
+      end
+    end
+  end
+yellow = {
+    {
+        "[🌀]Teleport",
+        content = {
+            "[🌀]Portal Teleport",
+            "[🗃]Goto",
+            "[🧭]Out Of Borders",
+            "[⬆️]Breach Walls",
+            "[📝]Manual Coordinates",
+            "[🗄]Copy coordinate",
+            "[📌]Pin Position",
+            
+        }, 
+    },
+    {
+        "[🏃🏻‍♂️] Run",
+        content = {
+            "[🕯]Auto Candle Run",
+            "[⭐]Auto Star Run",
+            "[🕯]Semi Candle Run",
+            "[⭐]Semi Star Run",
+        },
+    },
+    {
+        "‍[️🧙]️Magic",
+        content = {
+            "[🔮]No Sparkles spells",
+            "[✨]Sparkle spells",
+            "[🔁]Random Capes",
+            "[❌]Remove All",
+        },
+    },
+    {
+        "[🔫]Trolls",
+        content = {
+            "[🧨]Force Light",
+            "[✨]Spam Magic",
+        },                                     
+    },
+    {
+        "[🎒]Props",
+        content = {
+            "[👖]Pants",
+            "[🎭]Masks",
+            "[👱]️Hairs",
+            "[🎀]Head accessories",
+            "[🦚]Capes",
+            "[🎒]Props",
+            "[🎗]Necklaces",
+        },                                        
+    },
+    {
+        "[🗃]Mode Menu",
+        content = {
+            "[🎥]Record Shared Memory",
+            "[🧸]Icons & Borders Size",
+            "[📸]ScreenShot Resolution",
+            "[⏲]Game Speed",
+            "[☁️]Remove Clouds",
+            "[💨]Remove Wind[Method 1]",
+            "[💨]Remove Wind[Method 2 TEST]",
+            "[📣]Calls 'Client side'",
+            "[🏃🏻‍♂️]Delay Effect"
+        },  
+    },
+    {
+        "[🧺]Show Closet",
+        content = {
+            "[👖]Pants",
+            "[🎭]Masks",
+            "[👱]️Hairs",
+            "[🦚]Capes",
+            "[🎒]Props",
+        },                                     
+    },
+  --  {
+  --      "[📥]Commands",
+  --  },
+    {
+        "[⚙]Settings",
+    },
+}
+magics = {
+    {
+        "[👖]","Pants Spells",
+        content = {
+            {
+                "LP Sword Pants", 
+                -495233219
+            },
+            {
+                "Halloween Pants", 
+                969946279
+            },
+        },
+    },
+    {
+        "[🎭]","Masks Spells",
+        content = {
+            {
+                "White Weasel Mask", 
+                784922793
+            },
+            {
+                "Red Rabbit Mask", 
+                964659005
+            },
+            {
+                "Rhythm Kiss Mask", 
+                -218615327
+            },
+            {
+                "Ox Head Mask", 
+                -849020465
+            },
+            {
+                "Valentien Mask", 
+                -938578505
+            },
+            {
+                "Red Cheeks Mask", 
+                -1636163586
+            },
+            {
+                "Phoenix Mask", 
+                771982951
+            },
+            {
+                "Peacock Mask", 
+                144876107
+            },
+            {
+                "Tiger Mask", 
+                475055967
+            },
+            {
+                "Oxygen Mask", 
+                2857434492
+            },
+            {
+                "Echantment Cape", 
+                3911125165
+            },
+        },
+    },
+    {
+        "[👱]️","Head Spells",
+        content = {
+            {
+                "Rainbow Flower", 
+                2141511649
+            },
+            {
+                "Rainbow Tassel", 
+                -290700605
+            },
+            {
+                "Pumpkin Hat", 
+                1046521292
+            },
+            {
+                "Witch Hat", 
+                1983755432
+            },
+            {
+                "Lion Hood", 
+                2093744529
+            },
+            {
+                "Two Puffs Hair", 
+                -2099997114
+            },
+            {
+                "Christmas Hood", 
+                -823266018
+            },
+            {
+                "Bloom Hair", 
+                373243257
+            },
+            {
+                "Dream Season Hair", 
+                1059767859
+            },
+            {
+                "Antlers", 
+                1909998088
+            },
+            {
+                "Christmas hat", 
+                -1409683913
+            },
+            {
+                "banquet bow tie", 
+                8361886
+            },
+            {
+                "Orange", 
+                -1616733323
+            },
+            {
+                "Hair Pin", 
+                4123817368
+            },
+            {
+                "Summer Hat", 
+                2052387583
+            },
+            {
+                "Small rabit", 
+                -848739711
+            },
+            {
+                "Halloween Hair 1", 
+                116679863
+            },
+            {
+                "Halloween Hair 2", 
+                2534225385
+            },
+            {
+                "Halloween Pumpkin", 
+                125584301
+            },
+            {
+                "Halloween Horn", 
+                1123843208
+            },
+            {
+                "Witch Hat 2", 
+                4219181095
+            },
+            {
+                "Winter Feast Hat", 
+                2202141658
+            },
+            {
+                "Fish Hat", 
+                2751409166
+            },
+            {
+                "Fish Accessories", 
+                551055685
+            },
+            {
+                "Flower Accessories", 
+                942365523
+            },
+            {
+                "Kizuna Ai Hair", 
+                2050094531
+            },      
+        },
+    },
+    {
+        "[🦚]","Capes Spells",
+        content = {
+            {
+                "Green Bud Cloak", 
+                2079599063
+            },
+            {
+                "TGC Cloak", 
+                540856305
+            },
+            {
+                "Ghost Bat Cloak", 
+                625581156
+            },
+            {
+                "Spider Silk Cloak", 
+                930203946
+            },
+            {
+                "Snowflake Cloak", 
+                -784831205
+            },
+            {
+                "Christmas Cloak", 
+                1306675982
+            },
+            {
+                "White bird cloak", 
+                -1623262339
+            },
+            {
+                "petal cloak", 
+                -6043825
+            },
+            {
+                "Lightseeker bulb", 
+                1375571404
+            },
+            {
+                "Cloak of Spring", 
+                -445538750
+            },
+            {
+                "Sakura Cloak", 
+                162066154
+            },
+            {
+                "Ocean Cloak", 
+                329684861
+            },
+            {
+                "Dream Season Red Velvet Cloak", 
+                -308941587
+            },
+            {
+                "Dream Season Graduation Cloak", 
+                -1822337532
+            },
+            {
+                "Rainbow Cloak", 
+                -195929339
+            },
+            {
+                "Scarf Cape", 
+                2207305370
+            },
+            {
+                "Asteroid Jacket", 
+                1402240423
+            },
+            {
+                "Golden Cape", 
+                330655056
+            },
+            {
+                "Canada Cape", 
+                769892976
+            },
+            {
+                "Winter Feast Cape", 
+                1762827508
+            },
+            {
+                "Scarf Fish Cape", 
+                573237039
+            },
+            {
+                "Bloom Cape 2", 
+                3050577227
+            },
+            {
+                "Turtle Cape", 
+                -700035318
+            },
+        },
+    },
+    {
+        "[🎒]","Props Spells",
+        content = {
+            {
+                "Lantern", 
+                1319710173
+            },
+            {
+                "Table", 
+                256924066
+            },
+            {
+                "Harp", 
+                -1001892262
+            },
+            {
+                "Swing", 
+                1064080243
+            },
+            {
+                "Seesaw", 
+                -2095749161
+            },
+            {
+                "Tea table", 
+                10058409
+            },
+            {
+                "Transparent Umbrella", 
+                1167393926
+            },
+            {
+                "Fox", 
+                2237536272
+            },
+            {
+                "Chair Wood", 
+                3136256372
+            },
+            {
+                "Chair Cloth", 
+                472595010
+            },
+            {
+                "Pipe", 
+                2428135093
+            },
+            {
+                "Brazier 2", 
+                160072902
+            },
+            {
+                "Summer Umbrella", 
+                2878211958
+            },
+            {
+                "Recliner", 
+                2875484078
+            },
+            {
+                "Winter piano", 
+                -1202427550
+            },
+            {
+                "Halloween Chair", 
+                3497279169
+            },
+            {
+                "Snow Globe", 
+                1440439821
+            },
+            {
+                "Umbrella 2", 
+                3302950267
+            },
+            {
+                "Boat", 
+                303877523
+            },
+            {
+                "Horn Instrument", 
+                3935620986
+            },
+            {
+                "Bloom Chair 2", 
+                1598845731
+            },
+            {
+                "TGC Guitar", 
+                332997197
+            },
+            {
+                "Grand Guitar", 
+                970364197
+            },
+            {
+                "Grand HandPan", 
+                454864430
+            },
+        },
+    },
+    {
+        "[🔰]","Other Spells",
+        content = {
+            {
+                "Small", 
+                1692428656
+            },
+            {
+                "Samller", 
+                2142718166
+            },
+            {
+                "Big", 
+                891098028
+            },
+            {
+                "Glow", 
+                1097748727
+            },
+            {
+                "Recharge", 
+                1750685908
+            },
+            {
+                "Floating", 
+                1860519737
+            },
+            {
+                "Anti Dragon", 
+                1067647386
+            },
+            {
+                "Anti Darkness", 
+                383062578
+            },
+            {
+                "Anti rain", 
+                -1463943689
+            },
+            {
+                "A lot of candlelight", 
+                -1727483534
+            },
+            {
+                "Flight Blessing", 
+                -1362469224
+            },
+            {
+                "Friendship Back to Back", 
+                1405645877
+            },
+            {
+                "Friendship Bear Hug", 
+                1677246236
+            },
+            {
+                "Friendship Warp", 
+                998754260
+            },
+            {
+                "Dark Crab Calling", 
+                1725047129
+            },
+            {
+                "Jellyfish Calling", 
+                -957441587
+            },
+            {
+                "Manta Calling", 
+                1814753890
+            },
+            {
+                "turquoise tail", 
+                1318288330
+            },
+            {
+                "black tail", 
+                -176902809
+            },
+            {
+                "blue tail", 
+                -1951801352
+            },
+            {
+                "Cyan tail", 
+                1918290563
+            },
+            {
+                "Green tail", 
+                637646527
+            },
+            {
+                "Purple pink tail", 
+                -1527316661
+            },
+            {
+                "orange tail", 
+                1237283438
+            },
+            {
+                "purple tail", 
+                470393304
+            },
+            {
+                "purple tail", 
+                -1071076330
+            },
+            {
+                "Red tail", 
+                -1304862813
+            },
+            {
+                "Yellow tail", 
+                -1354381164
+            },
+            {
+                "Rainbow trail", 
+                147016038
+            },
+            {
+                "Crab Troll", 
+                901504997
+            },
+            {
+                "Anti Krill", 
+                3362316915
+            },
+            {
+                "Kizuna AI Call", 
+                -1881863468
+            },
+            {
+                "Firework Stuff", 
+                227018419
+            },
+            {
+                "Ocean Necklace", 
+                -1938239955
+            },
+            {
+                "Winter Feast Scarf", 
+                70832281
+            },
+      },
+    },
+}
+world = {
+    {
+        "[🏝]","Isle of Dawn",
+        content = {
+            {
+                "Isle",
+                "Dawn"
+            },
+            {
+                "Trial of Water",
+                "Dawn_TrialsWater"
+            },
+            {
+                "Trial of Earth",
+                "Dawn_TrialsEarth"
+            },
+            {
+                "Trial of Air",
+                "Dawn_TrialsAir"
+            },
+            {
+                "Trial of Fire",
+                "Dawn_TrialsFire"
+            },
+        },
+    },
+    {
+        "[⛰]","Daylight Prairie",
+        content = {
+            {
+                "Butterfly Fields",
+                "Prairie_ButterflyFields" 
+            },
+            {
+                "Birds Nest",
+                "Prairie_NestAndKeeper"
+            },
+            {
+                "Sanctuary Island",
+                "Prairie_Island"
+            },
+            {
+                "Cave",
+                "Prairie_Cave"
+            },
+            {
+                "Village",
+                "Prairie_Village"
+            },
+            {
+                "8 Players Door",
+                "DayHubCave"
+            },
+            {
+                "Temple",
+                "DayEnd"
+            },
+
+        },
+    },
+    {
+        "[🏕]","Hidden Forest",
+        content = {
+            {
+                "Hidden Forest",
+                "Rain"
+            },
+            {
+                "Raining Forest",
+                "RainForest"
+            },
+            {
+                "Shelter",
+                "RainShelter"
+            },
+            {
+                "Cave",
+                "Rain_Cave"
+            },
+            {
+                "Middle Forest",
+                "RainMid"
+            },
+            {
+                "Assembly Base",
+                "Rain_BaseCamp"
+            },
+            {
+                "Wind Pathes",
+                "Skyway"
+            },
+            {
+                "Temple",
+                "RainEnd"
+            },
+        },
+    },
+    {
+        "[🗻]","Valley of Triumph",
+        content = {
+            {
+                "Valley",
+                "Sunset"
+            },
+            {
+                "Sliding Race",
+                "SunsetRace"
+            },
+            {
+                "Citadel",
+                "Sunset_Citadel"
+            },
+            {
+                "Flying Race",
+                "Sunset_FlyRace"
+            },
+            {
+                "Dream's Village",
+                "SunsetVillage"
+            },
+            {
+                "Yeti Cave",
+                "Sunset_YetiPark"
+            },
+            {
+                "Before Colosseum",
+                "SunsetEnd"
+            },
+            {
+                "Colosseum",
+                "SunsetColosseum"
+            },
+            {
+                "Temple",
+                "SunsetEnd2"
+            },
+        },
+    },
+    {
+        "[🏜]","Golden Wasteland",
+        content = {
+            {
+                "Social Space",
+                "DuskStart"
+            },
+            {
+                "Nintendo Park",
+                "Nintendo_CandleSpace"
+            },
+            {
+                "Abyss",
+                "Dusk_Triangle"
+            },
+            {
+                "Wasteland",
+                "Dusk"
+            },
+            {
+                "Forgotten Ark",
+                "DuskOasis"
+            },
+            {
+                "Graveyard",
+                "DuskGraveyard"
+            },
+            {
+                "Sinking Ship",
+                "Dusk_CrabField"
+            },
+            {
+                "Krills Field",
+                "DuskMid"
+            },
+            {
+                "Temple",
+                "DuskEnd"
+            },
+        },
+    },
+    {
+        "[🛕]","Vault of Knowledge",
+        content = {
+            {
+                "Vault",
+                "Night"
+            },
+            {
+                "Archives",
+                "NightArchive"
+            },
+            {
+                "Mantas Field",
+                "Night2"
+            },
+            {
+                "Starlight Desert",
+                "NightDesert"
+            },
+            {
+                "JellyFish Field",
+                "NightDesert_Beach"
+            },
+            {
+                "Jar Cave",
+                "Night_JarCave"
+            },
+            {
+                "Krill Desert",
+                "Night_InfiniteDesert"
+            },
+            {
+                "Planets",
+                "NightDesert_Planets"
+            },
+            {
+                "Halloween Cave",
+                "Event_DaysOfMischief"
+            },
+            {
+                "Office",
+                "TGCOffice"
+            },
+            {
+                "Thunder",
+                "NightEnd"
+            }
+        },
+    },
+    {
+        "[🌋]","Storm",
+        content = {
+            {
+                "Storm Gate",
+                "StormStart"
+            },
+            {
+                "Krills Field",
+                "Storm"
+            },
+            {
+                "Sacrifice",
+                "StormEnd"
+            },
+            {
+                "Rebirth",
+                "OrbitMid"
+            },
+            {
+                "Ancestors Galaxy",
+                "OrbitEnd"
+            },
+            {
+                "Heavin",
+                "CandleSpaceEnd"
+            },
+            {
+                "Season of Shattering",
+                "StormEvent_VoidSpace"
+            },
+            {
+                "Credits",
+                "Credits"
+            },
+        },
+    },
+}
+----
+function reqQ(fReq)
+    local reqG = gg
+    reqG.cl
