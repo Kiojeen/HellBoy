@@ -5487,9 +5487,9 @@ yellow = {
             "[🎒]Props",
         },                                     
     },
-    {
-        "[📥]Commands",
-    },
+  --  {
+  --      "[📥]Commands",
+  --  },
     {
         "[⚙]Settings",
     },
@@ -6775,7 +6775,7 @@ end
 end
 function yellowTears()
     STAY = 'yellowTears'
-    yellowCry[8] = nil
+    --yellowCry[8] = nil
     local ytG = gg
     tear = ytG.choice(yellowCry, nil, header)
     if tear == eye[1] then 
@@ -6792,10 +6792,8 @@ function yellowTears()
         modemenu()
     elseif tear == eye[7] then 
         ClosetMenu()
-    elseif tear == eye[8] then 
-        cmdactv()
-    elseif tear == eye[9] then 
-
+    --elseif tear == eye[8] then 
+      --  cmdactv()
     elseif tear == #yellowCry then os.exit()
     end
 end
@@ -7894,7 +7892,7 @@ function offseter()
             name = 'guiptr',
         }
     }
-   -- gg.addListItems(ls)
+    gg.addListItems(ls)
 end
 function isfrozen(add)
     local temp = gg.getListItems()
