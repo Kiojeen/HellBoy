@@ -1,7 +1,7 @@
 
 gg.setVisible(false)
 sockets = 6
-hellboy = 7968
+hellboy = 7842
 sky = {
     live = {
         package = 'com.tgc.sky.android',
@@ -38,6 +38,7 @@ lliboffsets = {
     rcoulds = 22121792,
     honksound = 18301748,
     winds = 7078420,
+    avatdelay = 5283440,
 }
 lanptroffsets = {
     wings = 4407728,
@@ -76,6 +77,7 @@ bliboffsets = {
     rcoulds = 22121792,
     honksound = 18301748,
     winds = 7078420,
+    avatdelay = 5073048,
 }
 banptroffsets = {
     wings = 4407728,
@@ -5472,6 +5474,7 @@ yellow = {
             "[💨]Remove Wind[Method 1]",
             "[💨]Remove Wind[Method 2 TEST]",
             "[📣]Calls 'Client side'",
+            "[🏃🏻‍♂️]Delay Effect"
         },  
     },
     {
@@ -7021,7 +7024,9 @@ function modemenu()
             elseif tear ~= nil then 
                 setstr(bootloader + liboffsets.honksound, 19, '.' .. shout[tear][2])
                 gg.toast(shout[tear][1] .. ' is the default call now')
-            end    
+            end
+        elseif tear == eye[9] then
+            switch({bootloader + liboffsets.avatdelay, 4, 1384120352, false}, 872415496, "Delay Effect: ")   
         end
     end
 end
