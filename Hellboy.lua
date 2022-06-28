@@ -7894,7 +7894,7 @@ function offseter()
             name = 'guiptr',
         }
     }
-    gg.addListItems(ls)
+   -- gg.addListItems(ls)
 end
 function isfrozen(add)
     local temp = gg.getListItems()
