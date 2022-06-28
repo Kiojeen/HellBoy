@@ -36,7 +36,6 @@ lliboffsets = {
     libguiptr = 25852864,
     iconsize = 17611184,
     rcoulds = 22121792,
-    honksound = 18635525,
     winds = 7078420,
     avatdelay = 5283440,
     absorb = 11647664,
@@ -44,6 +43,7 @@ lliboffsets = {
     libguiptr = 23913632,
     libanptr = 21233544,
     iconsize = 17915068,
+    honksound = 18635525,
 }
 lanptroffsets = {
     wings = 4407728,
@@ -82,6 +82,7 @@ lgptoffsets = {
     portal = 11960732,
     flowers = 25043684,
     map = 23830648,
+    winds = 3095136,
 }
 --
 bdistances = {
