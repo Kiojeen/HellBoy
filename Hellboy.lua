@@ -1,7 +1,7 @@
 
 gg.setVisible(false)
 sockets = 6
-hellboy = 7842
+hellboy = 8029
 sky = {
     live = {
         package = 'com.tgc.sky.android',
@@ -73,7 +73,7 @@ lgptoffsets = {
     gamespeed = -10098176,
     scrres = -11493676,
     portal = 13414668,
-    meshared = 25071156,
+    meshared = 23819316,
     winds = 3086400,
     ----new----
     gamespeed = -10874448,
@@ -7056,7 +7056,7 @@ end
 function meshare()
     mshtrigger = pvof(guiptr + gptoffsets.meshared, gg.TYPE_DWORD)
     if mshtrigger == 0 then
-        local pointer = padof(anptr + 22116672, gg.TYPE_QWORD)
+        local pointer = anptr + 22566976
         if pvof(guiptr + 860 + gptoffsets.meshared, gg.TYPE_QWORD) == 0 then
             local uu = {
                 address = guiptr + 860 + gptoffsets.meshared,
@@ -8002,7 +8002,7 @@ function launch()
     version_check()
     offseter()
     makeTable()
-    setstr(bootloader + 18309856, 13, "By: Kiojeen")
+    setstr(bootloader + 18643660, 13, "By: Kiojeen")
     while true do
         local almG = gg
         if almG.isVisible(true) then
