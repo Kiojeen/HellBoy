@@ -1,7 +1,7 @@
 
 gg.setVisible(false)
 sockets = 6
-hellboy = 7842
+hellboy = 7968
 sky = {
     live = {
         package = 'com.tgc.sky.android',
@@ -32,8 +32,8 @@ qburners = {
     flowers = 12836692,
 }
 lliboffsets = {
-    anptr = 23197464,
-    guipt = 25852864,
+    libanptr = 23197464,
+    libguiptr = 25852864,
     iconsize = 17611184,
     rcoulds = 22121792,
     honksound = 18301748,
@@ -70,9 +70,9 @@ bdistances = {
     magx = 48,
 }
 bliboffsets = {
-    anptr = 21233544,
-    guipt = 23913632,
-    iconsize = 17611184,
+    libanptr = 21233544,
+    libguiptr = 23913632,
+    iconsize = 17915068,
     rcoulds = 22121792,
     honksound = 18301748,
     winds = 7078420,
@@ -96,7 +96,7 @@ bgptoffsets = {
     pflame = -6151064,
     gamespeed = -10874448,
     scrres = -12286908,
-    portal = 13414668,
+    portal = 11960732,
     meshared = 25071156,
     winds = 3086400,
 }
@@ -6357,7 +6357,7 @@ function pmn()
     mapBTable = {}
     mapLTable = {}
     for i = 0, 30, 1 do
-        table.insert(mapBTable, pvof(guipt + gptoffsets.map + i, gg.TYPE_BYTE))
+        table.insert(mapBTable, pvof(guiptr + gptoffsets.map + i, gg.TYPE_BYTE))
         if  mapBTable[i - 1] == 0 then
             mapBTable[i - 1] = nil 
             break 
@@ -6990,7 +6990,7 @@ shout = {
 function modemenu()
     STAY = 'modemenu'
     pmn()
-    c_hw = '\t' .. toint(pvof(guipt + gptoffsets.scrres, gg.TYPE_FLOAT)) .. '::' .. toint(pvof(guipt + gptoffsets.scrres + 4, gg.TYPE_FLOAT))
+    c_hw = '\t' .. toint(pvof(guiptr + gptoffsets.scrres, gg.TYPE_FLOAT)) .. '::' .. toint(pvof(guiptr + gptoffsets.scrres + 4, gg.TYPE_FLOAT))
     yellow[6].content[3] = "[📸]ScreenShot Resolution" .. c_hw
     tear = gg.choice(yellow[6].content, nil, header)
     if tear ~= nil then
@@ -7026,22 +7026,22 @@ function modemenu()
     end
 end
 function meshare()
-    mshtrigger = pvof(guipt + gptoffsets.meshared, gg.TYPE_DWORD)
+    mshtrigger = pvof(guiptr + gptoffsets.meshared, gg.TYPE_DWORD)
     if mshtrigger == 0 then
         local pointer = padof(anptr + 22116672, gg.TYPE_QWORD)
-        if pvof(guipt + 860 + gptoffsets.meshared, gg.TYPE_QWORD) == 0 then
+        if pvof(guiptr + 860 + gptoffsets.meshared, gg.TYPE_QWORD) == 0 then
             local uu = {
-                address = guipt + 860 + gptoffsets.meshared,
+                address = guiptr + 860 + gptoffsets.meshared,
                 flags = gg.TYPE_QWORD,
                 value = pointer
             }
             gg.setValues({uu})
             gg.sleep(500)
         end
-        settable({{guipt + gptoffsets.meshared, 4, 1, false}}, false, false)
+        settable({{guiptr + gptoffsets.meshared, 4, 1, false}}, false, false)
     else
         local uu = {
-            address = guipt + gptoffsets.meshared,
+            address = guiptr + gptoffsets.meshared,
             flags = 4,
             value = 0
         }
@@ -7052,7 +7052,7 @@ function rwind()
     windlist = {}
     for i = 0, 100 do
         table.insert(windlist, {
-            address = guipt + gptoffsets.winds + (i * 256) - 28,
+            address = guiptr + gptoffsets.winds + (i * 256) - 28,
             flags = gg.TYPE_DWORD,
             value = 0
         })
@@ -7087,7 +7087,7 @@ function setspeed(speed)
     end
     if speed ~= nil then
         local uu = {
-            address = guipt + gptoffsets.gamespeed,
+            address = guiptr + gptoffsets.gamespeed,
             flags = gg.TYPE_FLOAT,
             value = speed,
         }
@@ -7261,20 +7261,20 @@ function oobls(BUP)
 end
 function sres()
     local srsG = gg
-    def_width = toint(pvof(guipt + gptoffsets.scrres + 1656, gg.TYPE_FLOAT))
-    def_height = toint(pvof(guipt + gptoffsets.scrres + 1660, gg.TYPE_FLOAT))
+    def_width = toint(pvof(guiptr + gptoffsets.scrres + 1656, gg.TYPE_FLOAT))
+    def_height = toint(pvof(guiptr + gptoffsets.scrres + 1660, gg.TYPE_FLOAT))
     tear = srsG.prompt({'[📸]Set screenshot resulotion\nWidth:', 'Height:'}, {def_width, def_height}, {'number', 'number'})
     if tear ~= nil then
         local uu = {
             {
-                address = guipt + gptoffsets.scrres,
+                address = guiptr + gptoffsets.scrres,
                 flags = gg.TYPE_FLOAT,
                 freeze = true,
                 value = tear[1],
                 name = 'screenshot width',
             },
             {
-                address = guipt + gptoffsets.scrres + 4,
+                address = guiptr + gptoffsets.scrres + 4,
                 flags = gg.TYPE_FLOAT,
                 freeze = true,
                 value = tear[2],
@@ -7501,7 +7501,7 @@ function setsmap(str)
  end
 function setmap(str)
     qb = qburner
-    xtr = guipt + gptoffsets.portal
+    xtr = guiptr + gptoffsets.portal
     setstr(xtr + 14800, 24, str)
     setstr(xtr + 14832, 28, "Black")
     xar = {
@@ -7632,7 +7632,7 @@ function absorbWax()
     wax = {}
     gg.setRanges(gg.REGION_OTHER| gg.REGION_C_ALLOC)
     if not bSignS then burner() gg.sleep(1000) end
-    gg.searchNumber('-1.0;3.5F::5', gg.TYPE_FLOAT, false, 536870912, guipt + 7093036, anptr + 9123652, 0)
+    gg.searchNumber('-1.0;3.5F::5', gg.TYPE_FLOAT, false, 536870912, guiptr + 7093036, anptr + 9123652, 0)
     gg.refineNumber('3.5', gg.TYPE_FLOAT)
     if gg.getResultCount() > 0 then
         wax = gg.getResults(400)
@@ -7656,22 +7656,22 @@ function makeTable()
     do
         do
            for i = 0, 499, 1 do
-                table.insert(candles, {guipt + gptoffsets.candles + i * distances.candles, gg.TYPE_FLOAT, 1, true})
+                table.insert(candles, {guiptr + gptoffsets.candles + i * distances.candles, gg.TYPE_FLOAT, 1, true})
            end
         end
       end
       do
         do 
            for i = 0, 499, 1 do
-               table.insert(flowers, {guipt + gptoffsets.flowers + i * distances.flowers, gg.TYPE_FLOAT, 0, true})
+               table.insert(flowers, {guiptr + gptoffsets.flowers + i * distances.flowers, gg.TYPE_FLOAT, 0, true})
            end
         end
       end
       do
         do 
            for i = 0, 10, 1 do
-               table.insert(showCandle, {guipt + gptoffsets.pcandle + i * distances.fldist, gg.TYPE_FLOAT, 9.24856986e-41, true})
-               table.insert(showFlame, {guipt + gptoffsets.pflame + i * distances.fldist, gg.TYPE_FLOAT, 1, true})
+               table.insert(showCandle, {guiptr + gptoffsets.pcandle + i * distances.fldist, gg.TYPE_FLOAT, 9.24856986e-41, true})
+               table.insert(showFlame, {guiptr + gptoffsets.pflame + i * distances.fldist, gg.TYPE_FLOAT, 1, true})
            end
         end
     end
@@ -7875,8 +7875,8 @@ function rang()
 end
 function offseter()
     bootloader = gg.getRangesList("libBootloader.so")[1].start
-    anptr = pvof(bootloader + liboffsets.anptr, gg.TYPE_QWORD)
-    guipt = pvof(bootloader + liboffsets.guipt, gg.TYPE_QWORD)
+    anptr = pvof(bootloader + liboffsets.libanptr, gg.TYPE_QWORD)
+    guiptr = pvof(bootloader + liboffsets.libguiptr, gg.TYPE_QWORD)
     ls = {
         {
             address = anptr,
@@ -7884,9 +7884,9 @@ function offseter()
             name = 'anptr',
         },
         {
-            address = guipt,
+            address = guiptr,
             flags = gg.TYPE_QWORD,
-            name = 'guipt',
+            name = 'guiptr',
         }
     }
     gg.addListItems(ls)
