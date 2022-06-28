@@ -5,7 +5,7 @@ hellboy = 7842
 sky = {
     live = {
         package = 'com.tgc.sky.android',
-        version = 192395
+        version = 194411
     },
     beta = {
         package = 'com.tgc.sky.android.test.gold',
@@ -39,6 +39,11 @@ lliboffsets = {
     honksound = 18301748,
     winds = 7078420,
     avatdelay = 5283440,
+    absorb = 11647664,
+    ----new----
+    libguiptr = 23913632,
+    libanptr = 21233544,
+    iconsize = 17915068,
 }
 lanptroffsets = {
     wings = 4407728,
@@ -50,6 +55,14 @@ lanptroffsets = {
     closet = 22260036,
     cmdchat = 2396800,
     wcharge =  4542820,
+    ----new----
+    xpos = 4455024,
+    ypos = 4455028,
+    zpos = 4455032,
+    rad = 4455056,
+    wcharge = 4478516,
+    magic = 4526736,
+    closet = 22710724,
 }
 lgptoffsets = {
     map = 25082488,
@@ -62,6 +75,13 @@ lgptoffsets = {
     portal = 13414668,
     meshared = 25071156,
     winds = 3086400,
+    ----new----
+    gamespeed = -10874448,
+    scrres = -12286908,
+    candles = 11983888,
+    portal = 11960732,
+    flowers = 25043684,
+    map = 23830648,
 }
 --
 bdistances = {
@@ -6266,6 +6286,10 @@ world = {
                 "CandleSpaceEnd"
             },
             {
+                "Season of Shattering",
+                "StormEvent_VoidSpace"
+            },
+            {
                 "Credits",
                 "Credits"
             },
@@ -6512,7 +6536,7 @@ function runType()
     STAY = 'runType'
     local rnmG = gg
     tear = rnmG.choice(yellow[2].content, nil, header)
-    if     tear == eye[1] then acrun() --absorbWax() --runall()
+    if     tear == eye[1] then test()
     elseif tear == eye[2] then
     elseif tear == eye[3] then runChoice("c")
     elseif tear == eye[4] then runChoice("s")
@@ -7632,7 +7656,7 @@ function setmap(str)
       gg.setValues(xar)
 end
 function absorbWax()
-    wax = {}
+    --[[wax = {}
     gg.setRanges(gg.REGION_OTHER| gg.REGION_C_ALLOC)
     if not bSignS then burner() gg.sleep(1000) end
     gg.searchNumber('-1.0;3.5F::5', gg.TYPE_FLOAT, false, 536870912, guiptr + 7093036, anptr + 9123652, 0)
@@ -7649,7 +7673,25 @@ function absorbWax()
             v.value = 3.5
         end
         gg.setValues(wax)
-    end
+    end]]
+    local uu = {
+        {
+            address = bootloader + liboffsets.absorb,
+            flags = 4,
+            value = 506892288,
+        }
+    }
+    gg.setValues(uu)
+    gg.sleep(1000)
+    local uu = {
+        {
+            address = bootloader + liboffsets.absorb,
+            flags = 4,
+            value = 1847647232,
+        }
+    }
+    gg.setValues(uu)
+    gg.toast('Done')
 end
 candles = {}
 flowers = {}
@@ -7752,6 +7794,21 @@ function wgrer(str)
     end
     return array
 end
+function test() --kio
+    while true do
+        if gg.isVisible(true) then
+            local x = pvof(anptr + anptroffsets.xpos, gg.TYPE_FLOAT)
+            local y = pvof(anptr + anptroffsets.ypos, gg.TYPE_FLOAT)
+            local z = pvof(anptr + anptroffsets.zpos, gg.TYPE_FLOAT)
+            local r = pvof(anptr + anptroffsets.rad, gg.TYPE_FLOAT)
+            x = x + math.cos(180) * r
+            z = z + math.sin(180) * r
+            teleport({{x, y, z}}, false, false)
+        else
+            break
+        end
+    end
+end  
 function cmdguide()
     if  gg.alert([[Page 1.
         Chat commands:
