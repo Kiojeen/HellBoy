@@ -1,7 +1,7 @@
 
 gg.setVisible(false)
 sockets = 6
-hellboy = 8083
+hellboy = 8065
 sky = {
     live = {
         package = 'com.tgc.sky.android',
@@ -5469,15 +5469,6 @@ yellow = {
         }, 
     },
     {
-        "[🔥]Burn",
-    },
-    {
-        "[🀄️]Absorb All",
-    },
-    {
-        "[🌕]Wing Charge",
-    },
-    {
         "[🏃🏻‍♂️] Run",
         content = {
             "[🕯]Auto Candle Run",
@@ -5485,6 +5476,15 @@ yellow = {
             "[🕯]Semi Candle Run",
             "[⭐]Semi Star Run",
         },
+    },
+    {
+        "[🔥]Burn",
+    },
+    {
+        "[🀄️]Absorb All",
+    },
+    {
+        "[🌕]Wing Charge",
     },
     {
         "‍[️🧙]️Magic",
@@ -6528,7 +6528,7 @@ end
  do
    do
      table.insert(yellow[1].content, back[1])
-      table.insert(yellow[5].content, back[1]) 
+      table.insert(yellow[2].content, back[1]) 
    end
  end
   do
@@ -6561,9 +6561,9 @@ function runType()
                 end
             end
             if cflag == nil then 
-                yellow[5].content[3] = nil
+                yellow[2].content[3] = nil
             else
-                yellow[5].content[3] = "[🕯]Semi Candle Run"
+                yellow[2].content[3] = "[🕯]Semi Candle Run"
             end
             for d, u in ipairs(scrSoul[i].S_Runner) do
                 if d == 1 then
@@ -6572,16 +6572,16 @@ function runType()
                 end
             end
             if sflag == nil then 
-                yellow[5].content[4] = nil
+                yellow[2].content[4] = nil
             else
-                yellow[5].content[4] = "[⭐]Semi Star Run"
+                yellow[2].content[4] = "[⭐]Semi Star Run"
                 end
             break
         end
     end
     STAY = 'runType'
     local rnmG = gg
-    tear = rnmG.choice(yellow[5].content, nil, header)
+    tear = rnmG.choice(yellow[2].content, nil, header)
     if     tear == eye[1] then test()
     elseif tear == eye[2] then
     elseif tear == eye[3] then runChoice("c")
@@ -6851,13 +6851,13 @@ function yellowTears()
     if tear == eye[1] then 
         tpmenu()
     elseif tear == eye[2] then 
-        burner() 
+        runType() 
     elseif tear == eye[3] then 
-        gg.toast('Soon...') --Absorb all 
+        burner() 
     elseif tear == eye[4] then 
-        wcharge()
+        gg.toast('Soon...') --Absorb all
     elseif tear == eye[5] then
-        runType()    
+        wcharge()
     elseif tear == eye[6] then 
         magic()   
     elseif tear == eye[7] then
@@ -7711,42 +7711,24 @@ function setmap(str)
       gg.setValues(xar)
 end
 function absorbWax()
-    wax = {}
     gg.setRanges(gg.REGION_OTHER| gg.REGION_C_ALLOC)
     if not bSignS then burner() gg.sleep(1000) end
-    gg.searchNumber('-1.0;3.5F::5', gg.TYPE_FLOAT, false, 536870912, guiptr + 7093036, anptr + 9123652, 0)
-    gg.refineNumber('3.5', gg.TYPE_FLOAT)
-    if gg.getResultCount() > 0 then
-        wax = gg.getResults(400)
-        gg.clearResults()
-        for i, v in ipairs(wax) do
-            v.value = 9999999
-        end
-        gg.setValues(wax)
-        gg.sleep(1000)
-        for i, v in ipairs(wax) do
-            v.value = 3.5
-        end
-        gg.setValues(wax)
+    gg.setRanges(gg.REGION_OTHER| gg.REGION_C_ALLOC)
+    local msg = reqQ({'-1.0;3.5F::5', gg.TYPE_FLOAT, false, 536870912, guiptr + 18204520, anptr + 9123652, 0, 1})
+    if #msg > 0 then
+        fwx = msg[1].address + 4
     end
-    --[[local uu = {
-        {
-            address = bootloader + liboffsets.absorb,
-            flags = 4,
-            value = 506892288,
-        }
-    }
-    gg.setValues(uu)
-    gg.sleep(1000)
-    local uu = {
-        {
-            address = bootloader + liboffsets.absorb,
-            flags = 4,
-            value = 1847647232,
-        }
-    }
-    gg.setValues(uu)
-    gg.toast('Done')]]
+    wx = {}
+    for i = 0, 1000 do
+        if pvof(fwx + (i * 0x1E0), gg.TYPE_FLOAT) == 3.5 then
+            table.insert(wx, {
+                address = fwx + i * 480,
+                flags = gg.TYPE_FLOAT,
+                value = 99999
+            })
+        end
+    end
+    gg.setValues(wx)
 end
 candles = {}
 flowers = {}
