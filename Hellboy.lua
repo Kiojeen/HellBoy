@@ -7714,7 +7714,7 @@ function absorbWax()
     gg.setRanges(gg.REGION_OTHER| gg.REGION_C_ALLOC)
     if not bSignS then burner() gg.sleep(1000) end
     gg.setRanges(gg.REGION_OTHER| gg.REGION_C_ALLOC)
-    local msg = reqQ({'-1.0;3.5F::5', gg.TYPE_FLOAT, false, 536870912, guiptr + 18204520, anptr + 9123652, 0, 1})
+    local msg = reqQ({'-1.0;3.5F::5', gg.TYPE_FLOAT, false, 536870912, guiptr + 11204520, anptr + 9123652, 0, 1})
     if #msg > 0 then
         fwx = msg[1].address + 4
     end
