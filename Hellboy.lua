@@ -1,7 +1,7 @@
 
 gg.setVisible(false)
 sockets = 6
-hellboy = 8029
+hellboy = 8050
 sky = {
     live = {
         package = 'com.tgc.sky.android',
@@ -32,9 +32,6 @@ qburners = {
     flowers = 12836692,
 }
 lliboffsets = {
-    libanptr = 23197464,
-    libguiptr = 25852864,
-    iconsize = 17611184,
     rcoulds = 22121792,
     winds = 7078420,
     avatdelay = 5283440,
@@ -47,14 +44,7 @@ lliboffsets = {
 }
 lanptroffsets = {
     wings = 4407728,
-    xpos = 4519392,
-    ypos = 4519396,
-    zpos = 4519400,
-    rad = 4519424,
-    magic = 4581040,
-    closet = 22260036,
     cmdchat = 2396800,
-    wcharge =  4542820,
     ----new----
     xpos = 4455024,
     ypos = 4455028,
@@ -65,16 +55,8 @@ lanptroffsets = {
     closet = 22710724,
 }
 lgptoffsets = {
-    map = 25082488,
-    candles = 13437824,
-    flowers = 26497620,
     pcandle = -6151076,
     pflame = -6151064,
-    gamespeed = -10098176,
-    scrres = -11493676,
-    portal = 13414668,
-    meshared = 23819316,
-    winds = 3086400,
     ----new----
     gamespeed = -10874448,
     scrres = -12286908,
@@ -83,6 +65,7 @@ lgptoffsets = {
     flowers = 25043684,
     map = 23830648,
     winds = 3095136,
+    meshared = 23819316,
 }
 --
 bdistances = {
@@ -4635,7 +4618,31 @@ scrSoul = {
     {
         "TGCOffice",
         C_Runner = {
-
+            {
+                0.1949972029938, 
+                64.382759094228, 
+                -10.98140335078
+            },
+            {
+                0.2008173693924, 
+                64.382781972188, 
+                -5.547325134244
+            },
+            {
+                -10.73098659809, 
+                63.291069030172, 
+                2.4283483028865
+            },
+            {
+                -11.10198116902, 
+                63.290981292761, 
+                6.5677919387838
+            },
+            {
+                7.6979284286402, 
+                63.205051422914, 
+                -16.81070516523
+            },
         },
         S_Runner = {
 
@@ -4645,18 +4652,32 @@ scrSoul = {
         },
         Map_Goto = {
             Map_Goto_Name = {
-
+                "Vault",
             },
             Map_Goto_Cord = {
-
+                {
+                    7.0312218666666, 
+                    61.986282348281, 
+                    -26.53548240621
+                },
             },
         },
         OOB_Goto = {
             OOB_Goto_Name = {
-
+                "TGC Satellite",
+                "Office",
             },
             OOB_Goto_Cord = {
-
+                {
+                    7009.4736328125,
+                    6921.1816450625,
+                    9078.2425461875
+                },
+                {
+                    7.6979284286402, 
+                    63.205051422914, 
+                    -16.81070516523
+                },
             },
         },
     },
@@ -6287,12 +6308,12 @@ world = {
                 "CandleSpaceEnd"
             },
             {
-                "Season of Shattering",
-                "StormEvent_VoidSpace"
-            },
-            {
                 "Credits",
                 "Credits"
+            },
+            {
+                "Season of Shattering",
+                "StormEvent_VoidSpace"
             },
         },
     },
