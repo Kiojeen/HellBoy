@@ -1,7 +1,7 @@
 
 gg.setVisible(false)
 sockets = 6
-hellboy = 8050
+hellboy = 8083
 sky = {
     live = {
         package = 'com.tgc.sky.android',
@@ -5469,6 +5469,15 @@ yellow = {
         }, 
     },
     {
+        "[🔥]Burn",
+    },
+    {
+        "[🀄️]Absorb All",
+    },
+    {
+        "[🌕]Wing Charge",
+    },
+    {
         "[🏃🏻‍♂️] Run",
         content = {
             "[🕯]Auto Candle Run",
@@ -5485,6 +5494,12 @@ yellow = {
             "[🔁]Random Capes",
             "[❌]Remove All",
         },
+    },
+    {
+        "[🦚]Wing",
+        content = {
+
+        }
     },
     {
         "[🔫]Trolls",
@@ -5514,7 +5529,7 @@ yellow = {
             "[⏲]Game Speed",
             "[☁️]Remove Clouds",
             "[💨]Remove Wind[Method 1]",
-            "[💨]Remove Wind[Method 2 TEST]",
+            "[💨]Remove Wind[Method 2]",
             "[📣]Calls 'Client side'",
             "[🏃🏻‍♂️]Delay Effect"
         },  
@@ -5534,6 +5549,9 @@ yellow = {
   --  },
     {
         "[⚙]Settings",
+        content = {
+
+        }
     },
 }
 magics = {
@@ -6510,21 +6528,27 @@ end
  do
    do
      table.insert(yellow[1].content, back[1])
-      table.insert(yellow[2].content, back[1]) 
+      table.insert(yellow[5].content, back[1]) 
    end
  end
   do
     do
-      table.insert(yellow[3].content, back[1]) 
-     table.insert(yellow[4].content, back[1])   
+      table.insert(yellow[6].content, back[1]) 
+       table.insert(yellow[7].content, back[1])   
     end
   end
    do
      do
-        table.insert(yellow[6].content, back[1])   
-    table.insert(yellow[7].content, back[1])   
+         table.insert(yellow[8].content, back[1])   
+       table.insert(yellow[9].content, back[1])   
     end
  end
+ do
+    do
+       table.insert(yellow[10].content, back[1])   
+   table.insert(yellow[11].content, back[1])   
+   end
+end
 function runType()
     pmn()
     sflag, cflag = nil
@@ -6537,9 +6561,9 @@ function runType()
                 end
             end
             if cflag == nil then 
-                yellow[2].content[3] = nil
+                yellow[5].content[3] = nil
             else
-                yellow[2].content[3] = "[🕯]Semi Candle Run"
+                yellow[5].content[3] = "[🕯]Semi Candle Run"
             end
             for d, u in ipairs(scrSoul[i].S_Runner) do
                 if d == 1 then
@@ -6548,16 +6572,16 @@ function runType()
                 end
             end
             if sflag == nil then 
-                yellow[2].content[4] = nil
+                yellow[5].content[4] = nil
             else
-                yellow[2].content[4] = "[⭐]Semi Star Run"
+                yellow[5].content[4] = "[⭐]Semi Star Run"
                 end
             break
         end
     end
     STAY = 'runType'
     local rnmG = gg
-    tear = rnmG.choice(yellow[2].content, nil, header)
+    tear = rnmG.choice(yellow[5].content, nil, header)
     if     tear == eye[1] then test()
     elseif tear == eye[2] then
     elseif tear == eye[3] then runChoice("c")
@@ -6827,20 +6851,29 @@ function yellowTears()
     if tear == eye[1] then 
         tpmenu()
     elseif tear == eye[2] then 
-        runType()
+        burner() 
     elseif tear == eye[3] then 
-        magic()
+        gg.toast('Soon...') --Absorb all 
     elseif tear == eye[4] then 
-        trolls()
+        wcharge()
     elseif tear == eye[5] then
-
+        runType()    
     elseif tear == eye[6] then 
+        magic()   
+    elseif tear == eye[7] then
+        gg.toast('Soon...') --Wing mode
+    elseif tear == eye[8] then 
+        trolls()
+    elseif tear == eye[9] then 
+        gg.toast('Soon...')      
+    elseif tear == eye[10] then 
         modemenu()
-    elseif tear == eye[7] then 
-        ClosetMenu()
-    --elseif tear == eye[8] then 
-      --  cmdactv()
-    elseif tear == #yellowCry then os.exit()
+    elseif tear == eye[11] then 
+        ClosetMenu()  --  cmdactv()
+    elseif tear == eye[11] then 
+        gg.toast('Soon...') --SETTINGS
+    elseif tear == #yellowCry then 
+        os.exit()
     end
 end
 function cmdactv()
@@ -6930,7 +6963,7 @@ function ClosetMenu()
     STAY = 'ClosetMenu'
     local type = nil
     local cMG = gg
-    tear = cMG.choice(yellow[7].content, nil, header)
+    tear = cMG.choice(yellow[11].content, nil, header)
     if tear == eye[6] then yellowTears()
     elseif tear ~= nil then
         opencloset(cltypes[tear][2])
@@ -7038,10 +7071,10 @@ function modemenu()
     STAY = 'modemenu'
     pmn()
     c_hw = '\t' .. toint(pvof(guiptr + gptoffsets.scrres, gg.TYPE_FLOAT)) .. '::' .. toint(pvof(guiptr + gptoffsets.scrres + 4, gg.TYPE_FLOAT))
-    yellow[6].content[3] = "[📸]ScreenShot Resolution" .. c_hw
-    tear = gg.choice(yellow[6].content, nil, header)
+    yellow[10].content[3] = "[📸]ScreenShot Resolution" .. c_hw
+    tear = gg.choice(yellow[10].content, nil, header)
     if tear ~= nil then
-        if tear == #yellow[6].content then 
+        if tear == #yellow[10].content then 
             yellowTears()
         elseif tear == eye[1] then 
             meshare()
@@ -7367,10 +7400,10 @@ function magic()
     sMagics.type = {} 
     local gXG = gg 
     STAY = 'magic'
-    tear = gg.choice(yellow[3].content, nil, "‍[️🧙]️Magic: Only three are visible at a time")
-    if tear == #yellow[3].content then yellowTears()
-    elseif tear == #yellow[3].content - 2 then randCape()
-    elseif tear == #yellow[3].content - 1 then
+    tear = gg.choice(yellow[6].content, nil, "‍[️🧙]️Magic: Only three are visible at a time")
+    if tear == #yellow[6].content then yellowTears()
+    elseif tear == #yellow[6].content - 2 then randCape()
+    elseif tear == #yellow[6].content - 1 then
         for d = 1, 3, 1 do
             for i = 1, sockets do
                 setspell(0, i)
@@ -7479,7 +7512,7 @@ function setspell(id, socket, spark)
 end
 function trolls()
     STAY = 'trolls'
-    tear = gg.choice(yellow[4].content, nil, "Be careful")
+    tear = gg.choice(yellow[8].content, nil, "Be careful")
     if tear == eye[1] then
         if troll1 ~= true then 
             settable(showFlame, false, true)
@@ -7493,7 +7526,7 @@ function trolls()
     elseif tear == eye[2] then
         setspell(-1463943689, 1)
         freeze_switch({anptr + anptroffsets.magic + 40, 4, 0}, "Spamming Magic: ")
-    elseif tear == #yellow[4].content then 
+    elseif tear == #yellow[8].content then 
         yellowTears()
     end
  end
@@ -7678,7 +7711,7 @@ function setmap(str)
       gg.setValues(xar)
 end
 function absorbWax()
-    --[[wax = {}
+    wax = {}
     gg.setRanges(gg.REGION_OTHER| gg.REGION_C_ALLOC)
     if not bSignS then burner() gg.sleep(1000) end
     gg.searchNumber('-1.0;3.5F::5', gg.TYPE_FLOAT, false, 536870912, guiptr + 7093036, anptr + 9123652, 0)
@@ -7695,8 +7728,8 @@ function absorbWax()
             v.value = 3.5
         end
         gg.setValues(wax)
-    end]]
-    local uu = {
+    end
+    --[[local uu = {
         {
             address = bootloader + liboffsets.absorb,
             flags = 4,
@@ -7713,7 +7746,7 @@ function absorbWax()
         }
     }
     gg.setValues(uu)
-    gg.toast('Done')
+    gg.toast('Done')]]
 end
 candles = {}
 flowers = {}
