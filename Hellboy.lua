@@ -5805,6 +5805,9 @@ magics = {
                 "Canada Cape", 
                 769892976
             },
+            {   "Nintendo Red Cape",
+                320385458
+            },
             {
                 "Winter Feast Cape", 
                 1762827508
