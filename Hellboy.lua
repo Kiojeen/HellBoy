@@ -7281,6 +7281,7 @@ function sunsetfilter()
             signs.veffect[i + 1] = ""
         end
     end
+    val = kj.getValue(offsets[3] + 16, 'D')
     vfilters = {
         'Dark Effect',
         'Red Effect',
@@ -7293,21 +7294,7 @@ function sunsetfilter()
     tear = gg.choice(temp, nil, header)
     for i, v in ipairs(vfilters) do
         if tear == i then
-            if kj.getValue(offsets[i + 1], 'D') == 0 then
-                val = 1
-                gg.toast(vfilters[i] .. ": OFF")
-            else
-                val = 0
-                gg.toast(vfilters[i] .. ": ON")
-            end
-            local uu = {
-                {
-                    address = offsets[i],
-                    flags = kj.dT('D'),
-                    value = val,   
-                }
-            }
-            gg.setValues(uu)
+            signs.veffect[i] = kj.switch(offsets[i], '0 D', tostring(val) .. 'D', vfilters[i])
         end
     end
 end
