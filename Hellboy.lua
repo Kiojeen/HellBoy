@@ -32,15 +32,15 @@ qburners = {
     flowers = 12836692,
 }
 lliboffsets = {
-    rcoulds = 22121792,
-    winds = 7078420,
-    avatdelay = 5283440,
+    rcoulds = 5940744,
+    winds = 6932232,
     absorb = 11647664,
     ----new----
     libguiptr = 23913632,
     libanptr = 21233544,
     iconsize = 17915068,
     honksound = 18635525,
+    wcharge = 5207944,
 }
 lanptroffsets = {
     wings = 4407728,
@@ -60,12 +60,13 @@ lgptoffsets = {
     ----new----
     gamespeed = -10874448,
     scrres = -12286908,
-    candles = 11983888,
-    portal = 11960732,
-    flowers = 25043684,
+    candles = 11986128,
+    portal = 25428388,
+    flowers = 25428388,
     map = 23830648,
     winds = 3095136,
     meshared = 23819316,
+    sunsetfilter = -2698924,
 }
 --
 bdistances = {
@@ -78,10 +79,10 @@ bliboffsets = {
     libanptr = 21233544,
     libguiptr = 23913632,
     iconsize = 17915068,
-    rcoulds = 22121792,
+    rcoulds = 5940744,
     honksound = 18301748,
-    winds = 7078420,
-    avatdelay = 5073048,
+    winds = 6932232,
+    wcharge = 5207944,
 }
 banptroffsets = {
     wings = 4407728,
@@ -96,8 +97,8 @@ banptroffsets = {
 }
 bgptoffsets = {
     map = 23830648,
-    candles = 11983888,
-    flowers = 25043684,
+    candles = 11986128,
+    flowers = 25428388,
     pcandle = -6151076,
     pflame = -6151064,
     gamespeed = -10874448,
@@ -105,6 +106,16 @@ bgptoffsets = {
     portal = 11960732,
     meshared = 25071156,
     winds = 3086400,
+    sunsetfilter = -2698924,
+}
+signs = {
+    burn = "",
+    wcharge = "",
+    veffect = {
+        [1] = '',
+        [2] = '',
+        [3] = '',
+    },
 }
   do
     do
@@ -2537,9 +2548,19 @@ scrSoul = {
         Map_Goto = {
             Map_Goto_Name = {
                 "Forest's Shelter",
+                "Wind Pathes",
             },
             Map_Goto_Cord = {
-
+                {
+                    -59.40465545297, 
+                    210.42742919875, 
+                    -283.0974731445
+                },
+                {
+                    146.93075561538, 
+                    25.575334548195, 
+                    -135.8213197812
+                },
             },
         },
         OOB_Goto = {
@@ -2616,7 +2637,16 @@ scrSoul = {
                 "Valley of Thriumph",
             },
             Map_Goto_Cord = {
-
+                {
+                    1.8626718325806, 
+                    106.88093894531, 
+                    93.326965332125
+                },
+                {
+                    -0.783522307722, 
+                    211.91905212344, 
+                    230.63220214875
+                },
             },
         },
         OOB_Goto = {
@@ -5459,7 +5489,7 @@ yellow = {
         "[🌀]Teleport",
         content = {
             "[🌀]Portal Teleport",
-            "[🗃]Goto",
+            "[⬆️]Goto",
             "[🧭]Out Of Borders",
             "[⬆️]Breach Walls",
             "[📝]Manual Coordinates",
@@ -5531,7 +5561,7 @@ yellow = {
             "[💨]Remove Wind[Method 1]",
             "[💨]Remove Wind[Method 2]",
             "[📣]Calls 'Client side'",
-            "[🏃🏻‍♂️]Delay Effect"
+            "[🌁]Valley Filter",
         },  
     },
     {
@@ -5804,9 +5834,6 @@ magics = {
             {
                 "Canada Cape", 
                 769892976
-            },
-            {   "Nintendo Red Cape",
-                320385458
             },
             {
                 "Winter Feast Cape", 
@@ -6340,94 +6367,232 @@ world = {
     },
 }
 ----
-function reqQ(fReq)
-    local reqG = gg
-    reqG.clearResults()
-    reqG.searchNumber(--🪐╭╮╭━╮
-    fReq[1],          --☄️┃┃┃╭╯╱╱╱╱╭╮
-    fReq[2],          --🪐┃╰╯╯╭┳━━╮╰╋━━┳━━┳━╮
-    fReq[3],          --☄️┃╭╮┃┣┫╭╮┃╭┫┃━┫┃━┫╭╮╮
-    fReq[4],          --🪐┃┃┃╰┫┃╰╯┃┃┃┃━┫┃━┫┃┃┃
-    fReq[5],          --☄️╰╯╰━┻┻━━╯┃┣━━┻━━┻╯╰╯
-    fReq[6],          --🪐╱╱╱╱╱╱╱╱╭╯┃
-    fReq[7])          --☄️╱╱╱╱╱╱╱╱╰━╯ 
-    reqR = reqG.getResults(fReq[8])
-    reqG.clearResults()
-    return reqR
-end
-function pvof(add, flag)
-    local data = {
-            address = add,
-            flags = flag
-        }
-    return gg.getValues({data})[1].value
-end
-function padof(offset, flag)
-    local data = {
-        address = offset,
-        flags = flag,
-    }
-    return gg.getValues({data})[1].address
-end
-function switch(values, oval, toast)
-    --{add, flag, nval, bfreeze}--
-    add = values[1]
-    flag = values[2]
-    nval = values[3]
-    bfreeze = values[4]
-    cval = pvof(add, flag)
-    if cval == oval then
-        pval = nval
-        gg.toast(toast .. "ON")
-    elseif cval == nval then
-        pval = oval
-        gg.toast(toast .. "OFF")
-    end
-    if pval ~= nil then
-        uu = {
-            address = add,
-            flags = flag,
-            value = pval,
-            freeze = bfreeze
-        }
-        if not pcall(gg.setValues, {uu}) then
-            gg.toast("Something went wrong")
-        end
-        if bfreeze then
-            if pval ~= cval then
-                gg.addListItems({uu})
-            else
-                gg.removeListItems({uu})
-            end
+kj = {
+    dataTypes = { A = 127, B = 1, DBL = 64, D = 4, F = 16, Q = 32, W = 2, X = 8},
+    removePoint = function(int)
+        str = tostring(int)
+        if string.find(str, '%.') then
+            return tonumber(string.sub(str, 1, string.find(str, '%.') - 1))
         else
-            gg.removeListItems({uu})
+            return tonumber(str)
         end
-    end
-end
-function freeze_switch(values, toast)
-    --{add, flag, val}--
-    add = values[1]
-    flag = values[2]
-    val = values[3]
-    uu = {
-        address = add,
-        flags = flag,
-        value = val,
-        freeze = true
-    }
-    if isfrozen(add) then
-        gg.removeListItems({uu})
-        gg.toast(toast .. "OFF")
-    elseif pcall(gg.setValues, {uu}) then
-        gg.addListItems({uu})
-        gg.toast(toast .. "ON")
-    end
-end
-function pmn()
+    end,
+    splitStrings = function(str)
+        local z = 0
+        local array = {}
+        for i in string.gmatch(str, "[^%s]+") do 
+            z = z + 1
+            array[z] = i
+        end
+        return array
+    end,
+    dT = function(str)
+        for i, v in pairs(kj.dataTypes) do
+            if str == i then
+                return v, true
+            end
+        end
+    end,
+    isFrozen = function(add)
+        if type(add) == 'number' then
+            local items = gg.getListItems()
+            for i, v in ipairs(items) do
+                if v.address == add then
+                    if v.freeze == true then
+                        return true
+                    elseif v.freeze == false then
+                        return false
+                    end
+                end
+            end
+        end
+    end,
+    setString = function(add, str, range)
+        vars = {}
+        bytes = gg.bytes(str)
+        if #bytes < range then
+            for i = 1, range - #bytes do
+                table.insert(bytes, 0)
+            end
+        end
+        for i = 1, range do
+            table.insert(vars, {
+                address = add + i - 1,
+                flags = kj.dT('B'),
+                value = bytes[i]
+            })
+        end
+        gg.setValues(vars)
+    end,
+    tableToString = function (array)
+        local str = " {\n"
+        for i, v in pairs(array) do
+            if type(i) == "string" then
+                str = str .. "\t\t" .. i .. " ="
+            end
+            if type(v) == "table" then
+                str = str .. kj.tableToString(v)
+            elseif type(v) == "boolean" then
+                str = str .. tostring(v)
+            else
+                str =  str .. " " .. v
+            end
+            str = str .. ",\n"
+        end
+        if str ~= '' then
+            str = string.sub(str, 1, string.len(str) - 1)
+        end 
+        str = str .. "\n}"
+        return str
+    end,
+    getValue = function(add, flag)
+        if type(add) == 'number' then
+            flag, bool = kj.dT(string.sub(flag, string.len(flag)))
+            if bool then
+                local var = {
+                    {
+                        address = add,
+                        flags = flag,
+                    }
+                }
+                return gg.getValues(var)[1].value
+            end
+        end
+    end,
+    findAddress = function(str, start_point, end_point, times, result)
+        if type(str) == 'string' then
+            gg.clearResults()
+            flag, bool = kj.dT(string.sub(str, string.len(str)))
+            if bool then
+                str = string.sub(str, 1, string.len(str) - 1)
+                if pcall(gg.searchNumber, str, flag, false, 536870912, start_point, end_point, times) then
+                    results = gg.getResults(gg.getResultCount())
+                    if #results > 0 then
+                        address = gg.getResults(gg.getResultCount())[result].address
+                        gg.clearResults()
+                        return address, true
+                    end
+                end
+            end
+        end
+    end,
+    switch = function(add, new_value, original_value, toast)
+        if type(new_value) == 'string' and type(original_value) == 'string' then
+            if type(add) == 'number' then
+                flag_1, bool_1 = kj.dT(string.sub(new_value, string.len(new_value)))
+                flag_2, bool_2 = kj.dT(string.sub(original_value, string.len(original_value)))
+                if bool_1 and bool_2 then
+                    current_value = kj.getValue(add, string.sub(new_value, string.len(new_value)))
+                    new_value = tonumber(string.sub(new_value, 1, string.len(new_value) - 1))
+                    original_value = tonumber(string.sub(original_value, 1, string.len(original_value) - 1))
+                    if new_value == current_value then
+                        var = {
+                            {
+                                address = add,
+                                flags = flag_1,
+                                value = original_value,
+                            }
+                        }
+                        if toast ~= nil then
+                            toast = toast .. ": " .. "OFF"
+                            gg.toast(toast)
+                        end gg.setValues(var)
+                        return ""
+                    elseif original_value == current_value then
+                        var = {
+                            {
+                                address = add,
+                                flags = flag_2,
+                                value = new_value,
+                            }
+                        }
+                        if toast ~= nil then
+                            toast = toast .. ": " .. "ON"
+                            gg.toast(toast)
+                        end gg.setValues(var)
+                        return "  -〘 ✅ 〙"
+                    else
+                        gg.toast("No Match")
+                        return ""
+                    end
+                end
+            end
+        end
+    end,
+    freezeSwitch = function(add, new_value, toast)
+        if type(new_value) == 'string' then
+            flag, bool = kj.dT(string.sub(new_value, string.len(new_value)))
+            if bool then
+                new_value = tonumber(string.sub(new_value, 1, string.len(new_value) - 1))
+                if type(add) == 'number' then
+                    local var = {
+                        {
+                            address = add,
+                            flags = flag,
+                            value = new_value,
+                            freeze = true
+                        }
+                    }
+                    if kj.isFrozen(add) then
+                        gg.removeListItems(var)
+                        if toast ~= nil then
+                            toast = toast .. ": " .. "OFF"
+                            gg.toast(toast)
+                        end
+                        return ""
+                    else
+                        gg.setValues(var)
+                        gg.addListItems(var)
+                        if toast ~= nil then
+                            toast = toast .. ": " .. "ON"
+                            gg.toast(toast)
+                        end
+                        return "  -〘 ✅ 〙"
+                    end
+                end
+            end
+        end
+    end,
+    groupFreezeSwitch = function(array, toast, interval)
+        if kj.isFrozen(array[1].address) then
+            gg.removeListItems(array)
+            if toast ~= nil then
+                toast = toast .. ": " .. "OFF"
+                gg.toast(toast)
+            end
+            return ""
+        else
+            for i, v in ipairs(array) do
+                v.freeze = true
+            end
+            if interval == nil then
+                gg.setValues(array)
+                gg.addListItems(array)
+                if toast ~= nil then
+                    toast = toast .. ": " .. "ON"
+                    gg.toast(toast)
+                end
+            else
+                for i, v in ipairs(array) do
+                    gg.setValues(v)
+                    gg.addListItems(v)
+                    gg.sleep(interval)
+                end
+                if toast ~= nil then
+                    toast = toast .. ": " .. "ON"
+                    gg.toast(toast)
+                end
+            end
+            return "  -〘 ✅ 〙"
+        end
+    end,
+}
+----
+function getSkidLocat()
     mapBTable = {}
     mapLTable = {}
     for i = 0, 30, 1 do
-        table.insert(mapBTable, pvof(guiptr + gptoffsets.map + i, gg.TYPE_BYTE))
+        table.insert(mapBTable, kj.getValue(guiptr + gptoffsets.map + i, 'B'))
         if  mapBTable[i - 1] == 0 then
             mapBTable[i - 1] = nil 
             break 
@@ -6437,7 +6602,7 @@ function pmn()
         mapLTable[i] = string.char(mapBTable[i])
     end
     SkidLocation = table.concat(mapLTable)
-    header = "Current map: " .. SkidLocation
+    header = "Current Map: " .. SkidLocation
 end
 do
  kio = {}
@@ -6449,33 +6614,55 @@ do
       end
    end
 end
-function teleport(cord, noTime)
-    --X,Y,Z--
-    timer = 1500
-    local dfreeze = false
-    local teleG = gg
-    if cord ~= nil or type(cord) == 'table' then
+function teleport(pos, bfreeze)
+    cords = {
+        {
+            address = anptr + anptroffsets.xpos,
+            flags = kj.dT('F'),
+            value = pos[1],
+            freeze = bfreeze,
+        },
+        {
+            address = anptr + anptroffsets.ypos,
+            flags = kj.dT('F'),
+            value = pos[2],
+            freeze = bfreeze,
+        },
+        {
+            address = anptr + anptroffsets.zpos,
+            flags = kj.dT('F'),
+            value = pos[3],
+            freeze = bfreeze,
+        },
+    }
+    gg.setValues(cords)
+    if bfreeze then
+        gg.addListItems(cords)
+    else
+        gg.removeListItems(cords)
+    end
+end
+function tporders(cord)
+    ctime = 1500
+    if cord ~= nil then
         if cord[4] == 1 then
             hold()
         end
         if cord[5] == 1 then
-            dfreeze = true
-        end
-        if cord[4] == 2 and cord[5] == 2 then
-            mnt = 7500
-        elseif noTime then
-            mnt = 0
+            bfreeze = true
         else
-            mnt = timer 
+            bfreeze = false
         end
-        local cords = {}
-        cords = {
-            {anptr + anptroffsets.xpos, 16, cord[1], dfreeze},
-            {anptr + anptroffsets.ypos, 16, cord[2], dfreeze},
-            {anptr + anptroffsets.zpos, 16, cord[3], dfreeze},
-        }
-        settable(cords, false, false)
-        teleG.sleep(mnt)
+        if cord[4] == 2 then
+            if cord[5] == 2 then
+                ctime = 8000
+            end
+        else
+            ctime = 1500
+        end
+        if pcall(teleport, cord, bfreeze) then
+            
+        end
     end
 end
 eye = {}
@@ -6485,45 +6672,50 @@ for i = 1, 50, 1 do
     cltypes = {}
 end
 function run(type)
-    do local CRunG = gg
-      pmn()
+    local CRunG = gg
+    getSkidLocat()
     if type == "c" then
         for i, v in ipairs(scrSoul) do
+            getSkidLocat()
             if scrSoul[i][1] == SkidLocation then
-                for u , d in pairs(scrSoul[i]['C_Runner']) do
-                    local o = 0
-                    for e , n in ipairs(scrSoul[i]['C_Runner']) do
-                    o = o + 1
+                for u , d in pairs(scrSoul[i].C_Runner) do
+                    CRunG.toast("Location: " .. u .. " :: " .. #scrSoul[i].C_Runner)
+                    if pcall(tporders, scrSoul[i].C_Runner[u]) then
+                        if u < #scrSoul[i].C_Runner then
+                            gg.sleep(ctime)
+                        end
+                        if gg.isVisible(true) then
+                            gg.setVisible(false)
+                            gg.toast('Running Cancelled')
+                            return
+                        end
                     end
-        CRunG.toast("Location: " .. u .. " :: " .. o)
-        teleport(scrSoul[i]['C_Runner'][u])
-        if gg.isVisible(true) then
-            gg.setVisible(false)
+                end
+            end
         end
+    elseif type == "s" then
+        for i, v in ipairs(scrSoul) do
+            getSkidLocat()
+            if scrSoul[i][1] == SkidLocation then
+                for u , d in pairs(scrSoul[i].S_Runner) do
+                    CRunG.toast("Location: " .. u .. " :: " .. #scrSoul[i].S_Runner)
+                    if pcall(teleport, scrSoul[i].S_Runner[u]) then
+                        if u < #scrSoul[i].S_Runner then
+                            gg.sleep(1500)
+                        end
+                        if gg.isVisible(true) then
+                            gg.setVisible(false)
+                            gg.toast('Running Cancelled')
+                            return
+                        end
+                    end
+                end 
+            end
         end
     end
 end
-    elseif type == "s" then
-        for i, v in ipairs(scrSoul) do
-            if scrSoul[i][1] == SkidLocation then
-                for u , d in pairs(scrSoul[i]['S_Runner']) do
-                    local o = 0
-                    for e , n in ipairs(scrSoul[i]['S_Runner']) do
-                    o = o + 1
-                    end
-        CRunG.toast("Location: " .. u .. " :: " .. o)
-        teleport(scrSoul[i]['S_Runner'][u])
-        if gg.isVisible(true) then
-        gg.setVisible(false)
-        end
-               end 
-            end
-         end
-      end
-   end
-end
-do
-  do
+ do
+   do
     back = {"[🔙]Back", "[👋]End" }
     table.insert(yellowCry, back[2])
   end
@@ -6549,11 +6741,11 @@ end
  do
     do
        table.insert(yellow[10].content, back[1])   
-   table.insert(yellow[11].content, back[1])   
+     table.insert(yellow[11].content, back[1])   
    end
 end
 function runType()
-    pmn()
+    getSkidLocat()
     sflag, cflag = nil
     for i, v in ipairs(scrSoul) do
         if scrSoul[i][1] == SkidLocation then
@@ -6585,51 +6777,18 @@ function runType()
     STAY = 'runType'
     local rnmG = gg
     tear = rnmG.choice(yellow[2].content, nil, header)
-    if     tear == eye[1] then test()
+    if     tear == eye[1] then
     elseif tear == eye[2] then
     elseif tear == eye[3] then runChoice("c")
     elseif tear == eye[4] then runChoice("s")
     elseif tear == eye[5] then yellowTears()
     end
 end
-function settable(array, order, adls)
-    local uu = {}
-        for i, v in ipairs(array) do
-            uu[i] = {
-            address = array[i][1],
-            flags = array[i][2],
-            value = array[i][3],
-            freeze = array[i][4],
-            }
-            if order then
-                gg.setValues(uu)
-            end
-        end
-        if order == false then
-            gg.setValues(uu)
-        end
-    if adls then
-        gg.addListItems(uu)
-    elseif adls == false then
-        gg.removeListItems(uu)
-    else
-        gg.addListItems(uu)
-    end  
-end
-function toint(num)
-    local s = tostring(num)
-    local i, j = s:find("%.")
-    if i then
-      return tonumber(s:sub(1, i - 1))
-    else
-      return num
-    end
-  end
 function frac()
     if gg.MAP_ ~= 0xF05BEC0 then
         mobCloset = change_1
     end
- end
+ end dontRemove = "BY: Kiojeen"
 function hold()
     local hG = gg
     hG.toast("Click on the GG icon to resume")
@@ -6663,7 +6822,7 @@ cltypes = {
     },
 }
 function starPLocker()
-    pmn()
+    getSkidLocat()
     if SkidLock ~= SkidLocation then
         SkidLock = SkidLocation star = {}
         for i, v in ipairs(scrSoul) do
@@ -6685,9 +6844,9 @@ function runChoice(rtype)
     crunMenu = {
         "[🕯]Run",
         "[🕯]Absorb wax",
-        "[🔥]Burn"  .. signs.bSign,
+        "[🔥]Burn"  .. signs.burn,
         "[⬆️]Breach Walls",
-        "[🌕]Wing Charge" .. signs.wchsign,
+        "[🌕]Wing Charge" .. signs.wcharge,
         "[🌀]Teleport",
         "[📃]Coordinates List",
         "[⭐]Semi Star Run",
@@ -6705,7 +6864,7 @@ do
         "[⬅️]Previous Location",
         "[⭐]Run",
         "[⬆️]Breach Walls",
-        "[🌕]Wing Charge" .. signs.wchsign,
+        "[🌕]Wing Charge" .. signs.wcharge,
         "[🌀]Teleport",
         "[📃]Coordinates List",
         "[🕯]Semi Candle Run",
@@ -6779,64 +6938,66 @@ end
          elseif type_ == "c" and cflag ~= false then
              tear = rCG.choice(crunMenu, nil, header)
              if     tear == eye[1] then
-                 run("c")
+                run("c")------Kiojeen-->
              elseif tear == eye[2] then
-                 absorbWax()
+                absorbWax()---Kiojeen-->
              elseif tear == eye[3] then
-                 burner()
+                burner()------Kiojeen-->
              elseif tear == eye[4] then
-                 bwall()
+                bwall()-------Kiojeen-->
              elseif tear == eye[5] then
-                 wcharge()
+                wcharge()-----Kiojeen-->
              elseif tear == eye[6] then
-                 tportal() 
+                tportal()-----Kiojeen-->
              elseif tear == eye[7] then
-                 cordlist("c") 
+                cordlist("c")---------->
              elseif tear == eye[8] then
-                 type_ = eye[90] runChoice("s")
+                type_ = eye[90] runChoice("s")
              elseif tear == eye[9] then
-                 oobls('runChoice') 
+                oobls('runChoice')----->
              elseif tear == eye[10] then
-                 type_ = nil yellowTears() 
+                type_ = nil yellowTears() 
              elseif tear == eye[11] then
-                 runChoice("c")
+                runChoice("c")
              elseif tear ~= nil then
                  for i, v in ipairs(scrSoul) do
-                     if scrSoul[i][1] == SkidLocation then
-                         teleport(scrSoul[i].Map_Goto.Map_Goto_Cord[tear - cgoto], true)
-                         break
-                     end
+                    getSkidLocat()
+                    if scrSoul[i][1] == SkidLocation then
+                        pcall(teleport, scrSoul[i].Map_Goto.Map_Goto_Cord[tear - cgoto])
+                        break
+                    end
                  end
              end
          elseif type_ == "s" and sflag ~= false then
              tear = rCG.choice(srunMenu, nil, header)
              if     tear == eye[1] then
-                 srun_add()
+                srun_add()----Kiojeen-->
              elseif tear == eye[2] then
-                 srun_sub()
+                srun_sub()----Kiojeen-->
              elseif tear == eye[3] then
-                 run("s")
+                run("s")------Kiojeen-->
              elseif tear == eye[4] then
-                 bwall()
+                bwall()-------Kiojeen-->
              elseif tear == eye[5] then
-                 wcharge()
+                wcharge()-----Kiojeen-->
              elseif tear == eye[6] then
-                 tportal()
+                tportal()-----Kiojeen-->
              elseif tear == eye[7] then
-                 cordlist("s")
+                cordlist("s")---------->
              elseif tear == eye[8] then
-                 type_ = eye[90] runChoice("c")
+                type_ = eye[90] runChoice("c")
              elseif tear == eye[9] then
-                 oobls('runChoice')
+                oobls('runChoice')----->
              elseif tear == eye[10] then
-                 type_ = nil yellowTears() 
+                type_ = nil yellowTears() 
              elseif tear == eye[11] then
-                 runChoice("s")
+                runChoice("s")
              elseif tear ~= nil then
                  for i, v in ipairs(scrSoul) do
-                     if scrSoul[i][1] == SkidLocation then
-                         teleport(scrSoul[i].Map_Goto.Map_Goto_Cord[tear - sgoto], true)
-                         break
+                    getSkidLocat()
+                    if scrSoul[i][1] == SkidLocation then
+                        pcall(teleport, scrSoul[i].Map_Goto.Map_Goto_Cord[tear - sgoto])
+                        break
                        end
                     end
                  end
@@ -6910,11 +7071,7 @@ function tpmenu()
     end
 end
 function coordinater(rspType)
-    ccor = {
-        pvof(anptr + anptroffsets.xpos, 16),
-        pvof(anptr + anptroffsets.ypos, 16),
-        pvof(anptr + anptroffsets.zpos, 16),
-    }
+    ccor = getPosition()
     cord = {}
     xyz = "{" .. ccor[1] .. '; '.. ccor[2] .. '; ' .. ccor[3] .. "}"
     if rspType == 'copy' then
@@ -6927,18 +7084,23 @@ function coordinater(rspType)
             end
         end
     elseif rspType == 'freeze' then
-        cortbl = {
-            {anptr + anptroffsets.xpos, 16, ccor[1], true},
-            {anptr + anptroffsets.ypos, 16, ccor[2], true},
-            {anptr + anptroffsets.zpos, 16, ccor[3], true},
-        }
-        if posfreeze ~= true then
-            settable(cortbl, false, true)
-            posfreeze = true
-        else
-            posfreeze = false
-            settable(cortbl, false, false)
-        end
+        kj.groupFreezeSwitch({
+            {
+                address = anptr + anptroffsets.xpos,
+                flags = kj.dT('F'),
+                value = getPosition()[1],
+            },
+            {
+                address = anptr + anptroffsets.ypos,
+                flags = kj.dT('F'),
+                value = getPosition()[2]
+            },
+            {
+                address = anptr + anptroffsets.zpos,
+                flags = kj.dT('F'),
+                value = getPosition()[3]
+            },
+        },'Pin Position')
     end
 end
 function gotoMap()
@@ -6959,7 +7121,7 @@ function gotoMap()
     table.insert(gtMenu.Name, back[1])
     tear = gtG.choice(gtMenu.Name, nil, header)
     if tear == #gtMenu.Name then tpmenu()
-    elseif tear ~= eye[69] then teleport(gtMenu.Cord[tear])
+    elseif tear ~= eye[69] then pcall(teleport, gtMenu.Cord[tear])
     end
 end
 function ClosetMenu()   
@@ -7072,8 +7234,8 @@ shout = {
 }
 function modemenu()
     STAY = 'modemenu'
-    pmn()
-    c_hw = '\t' .. toint(pvof(guiptr + gptoffsets.scrres, gg.TYPE_FLOAT)) .. '::' .. toint(pvof(guiptr + gptoffsets.scrres + 4, gg.TYPE_FLOAT))
+    getSkidLocat()
+    c_hw = '\t' .. kj.removePoint(kj.getValue(guiptr + gptoffsets.scrres, 'F')) .. '::' .. kj.removePoint(kj.getValue(guiptr + gptoffsets.scrres + 4, 'F'))
     yellow[10].content[3] = "[📸]ScreenShot Resolution" .. c_hw
     tear = gg.choice(yellow[10].content, nil, header)
     if tear ~= nil then
@@ -7088,9 +7250,9 @@ function modemenu()
         elseif tear == eye[4] then 
             setspeed()
         elseif tear == eye[5] then 
-            switch({bootloader + liboffsets.rcoulds, 4, 0, false}, 1, "Remove Clouds: ")
+            kj.switch(bootloader + liboffsets.rcoulds, '506630144 D', '-46054816 D', "Remove Clouds")
         elseif tear == eye[6] then 
-            switch({bootloader + liboffsets.winds, 4, 505873376, false}, 1847778369, "Removing Wind: " )
+            kj.switch(bootloader + liboffsets.winds, '505873376 D', '1847778369 D', "Removing Wind" )
         elseif tear == eye[7] then
             rwind()
         elseif tear == eye[8] then
@@ -7102,36 +7264,57 @@ function modemenu()
             if tear == #temp then
                 modemenu()
             elseif tear ~= nil then 
-                setstr(bootloader + liboffsets.honksound, 19, '.' .. shout[tear][2])
+                kj.setString(bootloader + liboffsets.honksound, '.' .. shout[tear][2], 19)
                 gg.toast(shout[tear][1] .. ' is the default call now')
             end
         elseif tear == eye[9] then
-            switch({bootloader + liboffsets.avatdelay, 4, 1384120352, false}, 872415496, "Delay Effect: ")   
+            if string.sub(SkidLocation, 1, 6) == 'Sunset' then
+                sunsetfilter()
+            else
+                gg.toast('Use in \'Valley of Triumph\'')
+            end
+        end
+    end
+end
+function sunsetfilter()
+    getSkidLocat()
+    local offsets = {}
+    for i = 0, 2 do
+        table.insert(offsets, guiptr + gptoffsets.sunsetfilter + 16 * i) 
+        if kj.getValue(offsets[i + 1], 'D') == 0 then
+            signs.veffect[i + 1] = "  -〘 ✅ 〙"
+        else
+            signs.veffect[i + 1] = ""
+        end
+    end
+    vfilters = {
+        'Dark Effect',
+        'Red Effect',
+        'White Effect',
+    }
+    local temp = {}
+    for i, v in ipairs(vfilters) do
+        table.insert(temp, '[🌁]' .. v .. signs.veffect[i])
+    end
+    tear = gg.choice(temp, nil, header)
+    for i, v in ipairs(vfilters) do
+        if tear == i then
+            signs.veffect[i] = kj.switch(offsets[i], '0 D', '1 D', vfilters[i])
         end
     end
 end
 function meshare()
-    mshtrigger = pvof(guiptr + gptoffsets.meshared, gg.TYPE_DWORD)
-    if mshtrigger == 0 then
-        local pointer = anptr + 22566976
-        if pvof(guiptr + 860 + gptoffsets.meshared, gg.TYPE_QWORD) == 0 then
-            local uu = {
-                address = guiptr + 860 + gptoffsets.meshared,
-                flags = gg.TYPE_QWORD,
-                value = pointer
-            }
-            gg.setValues({uu})
-            gg.sleep(500)
-        end
-        settable({{guiptr + gptoffsets.meshared, 4, 1, false}}, false, false)
-    else
+    local pointer = anptr + 22566976
+    if kj.getValue(guiptr + 860 + gptoffsets.meshared, 'Q') == 0 then
         local uu = {
-            address = guiptr + gptoffsets.meshared,
-            flags = 4,
-            value = 0
+            address = guiptr + 860 + gptoffsets.meshared,
+            flags = kj.dT('Q'),
+            value = pointer
         }
-        gg.setValues({uu})  
+        gg.setValues({uu})
+        gg.sleep(500)
     end
+    kj.switch(guiptr + gptoffsets.meshared, '1 D', '0 D')
 end
 function rwind()
     windlist = {}
@@ -7204,7 +7387,7 @@ function cordlist(type)
         tear = gg.choice(cordls, nil, header)
         if tear == eye[z + 1] then type_ = eye[900] runChoice('c')
         elseif tear ~= eye[900] and (tear ~= z + eye[1]) then
-            teleport(scrSoul[menu].C_Runner[tear], true)
+            pcall(teleport, scrSoul[menu].C_Runner[tear])
             sign[tear] = 1
             if gg.isVisible(true) then
             gg.setVisible(false)
@@ -7239,59 +7422,41 @@ function cordlist(type)
     end
 end
 function burner()
-    configSign(1)
-    local bG = gg
-    if bSignS then bfreeze = true else bfreeze = false end
-    settable(candles, false, bfreeze)
-    settable(flowers, false, bfreeze)
-    bG.toast("Burning: " .. sign_switch)
+    signs.burn = kj.groupFreezeSwitch(candles, 'Burning')
+    kj.groupFreezeSwitch(flowers)
 end
 function wcharge()
-    configSign(2)
-    local wG = gg
+ do
+   do
+    signs.wcharge = kj.freezeSwitch(anptr + anptroffsets.wcharge, '14 F', 'Wing Charge')
+    --kj.switch(bootloader + liboffsets.wcharge, '505571328 D', '505729024 D')
+   end
+ end
+end
+function configSign()
+    do
       do
-        do
-          if isfrozen(anptr + anptroffsets.wcharge) then bfreeze = false else bfreeze = true end
-          settable({{anptr + anptroffsets.wcharge, 16, 20, true}}, true, bfreeze)
-          wG.toast("Wing Charge: " .. sign_switch)
+        if kj.isFrozen(guiptr + gptoffsets.candles) then
+            signs.burn = "  -〘 ✅ 〙"
         end
+      end
     end
-end
-signs = {
-    bSign = "",
-    wchsign = "",
-}
-function configSign(v)
-    if v == 1 then
-        if signs.bSign == "" then
-           signs.bSign = "  -〘 ✅ 〙"
-           bSignS = true
-           sign_switch = "[ON]"
-        else
-            signs.bSign = ""
-            bSignS = false
-            sign_switch = "[OFF]"
+     do
+       do
+        if kj.isFrozen(anptr + anptroffsets.wcharge) then
+            signs.wcharge = "  -〘 ✅ 〙"
         end
+      end
     end
-    if v == 2 then
-        if signs.wchsign == "" then
-            signs.wchsign = "  -〘 ✅ 〙"
-            wchsignS = true
-            sign_switch = "[ON]"
-        else
-            signs.wchsign = ""
-            wchsignS = false
-            sign_switch = "[OFF]"
-        end
-    end
-end
-function oobls(BUP)
+ end
+function oobls(bto)
+    getSkidLocat()
     STAY = 'oobls'
-    if BUP_ == nil then
-        BUP_ = BUP
+    if _bto_ == nil then
+        _bto_ = bto
     end
-    if BUP ~= nil then
-        BUP_ = BUP
+    if bto ~= nil then
+        _bto_ = bto
     end
     local oBG = gg
     miniOOB = {}
@@ -7305,10 +7470,10 @@ function oobls(BUP)
             do
              for i, v in ipairs(scrSoul) do
                  if scrSoul[i][1] == SkidLocation then
-                     for u, d in ipairs(scrSoul[i].OOB_Goto.OOB_Goto_Name) do
-                     miniOOB[u + 2] = u .. ") " .. scrSoul[i].OOB_Goto.OOB_Goto_Name[u]
-                     miOB = u + 3 end
-                     break
+                    for u, d in ipairs(scrSoul[i].OOB_Goto.OOB_Goto_Name) do
+                        table.insert(miniOOB, u .. ") " .. scrSoul[i].OOB_Goto.OOB_Goto_Name[u])
+                    end
+                    break
                  end
              end
              table.insert(miniOOB, back[1])
@@ -7317,38 +7482,42 @@ function oobls(BUP)
              end
              if SkidLock ~= SkidLocation or svpo == nil then
                  SkidLock = SkidLocation
-                 miniOOB[2] = nil
+                 table.remove(miniOOB, 2)
                  svpo = eye[922]
              end
           end
        end
-    if miOB == nil then miOB = 3 end
     tear = oBG.choice(miniOOB, nil, header)
-    if tear == 1 then svpo = {
-        pvof(anptr + anptroffsets.xpos, 16),
-        pvof(anptr + anptroffsets.ypos, 16),
-        pvof(anptr + anptroffsets.zpos, 16),
-    }
+    if tear == #miniOOB then 
+    load(_bto_ .. '()')()
+    elseif tear == eye[1] then svpo = getPosition()
     zzz = "{" .. svpo[1] .. ', '.. svpo[2] .. ', ' .. svpo[3] .. "},"
     print(zzz)
-    elseif tear == 2 then 
-        teleport(svpo, true)
-    elseif tear == miOB then 
-        load(BUP_ .. '()')()
+    elseif tear == eye[2] then 
+        pcall(teleport, svpo)
     elseif tear ~= eye[336] then
         for i, v in ipairs(scrSoul) do
+            getSkidLocat()
             if scrSoul[i][1] == SkidLocation then
-                teleport(scrSoul[i].OOB_Goto.OOB_Goto_Cord[tear - eye[2]], true)
+                pcall(teleport, scrSoul[i].OOB_Goto.OOB_Goto_Cord[tear - eye[2]])
                 break
             end
         end
     end
 end
+function getPosition()
+    coords = {
+        kj.getValue(anptr + anptroffsets.xpos, 'F'),
+        kj.getValue(anptr + anptroffsets.ypos, 'F'),
+        kj.getValue(anptr + anptroffsets.zpos, 'F'),
+    }
+    return coords
+end
 function sres()
     local srsG = gg
-    def_width = toint(pvof(guiptr + gptoffsets.scrres + 1656, gg.TYPE_FLOAT))
-    def_height = toint(pvof(guiptr + gptoffsets.scrres + 1660, gg.TYPE_FLOAT))
-    tear = srsG.prompt({'[📸]Set screenshot resulotion\nWidth:', 'Height:'}, {def_width, def_height}, {'number', 'number'})
+    def_width = kj.removePoint(kj.getValue(guiptr + gptoffsets.scrres + 1656, 'F'))
+    def_height = kj.removePoint(kj.getValue(guiptr + gptoffsets.scrres + 1660, 'F'))
+    tear = srsG.prompt({'[📸]Set screenshot resulotion\nChanging the graphics resets it\nWidth:', 'Height:'}, {def_width, def_height}, {'number', 'number'})
     if tear ~= nil then
         local uu = {
             {
@@ -7368,32 +7537,31 @@ function sres()
         }
         if not pcall(srsG.setValues, uu) then
             gg.toast("Please type properly")
-        else
-            srsG.addListItems(uu)
         end
     end
 end
 function srun_add()
     if star.trace ~= nil then 
         if star.trace >= star.limit then star.trace = star.limit else star.trace = star.trace + eye[1] end
-        teleport(scrSoul[star.realm].S_Runner[star.trace], true) 
-        dontRemove = "BY: Kiojeen"
+        pcall(teleport, scrSoul[star.realm].S_Runner[star.trace])
+        dontRemove = "By: Kiojeen"
     end
 end
 function srun_sub()
     if star.trace ~= nil then
         if star.trace <= 1 then star.trace = 1 else star.trace = star.trace - eye[1] end
-        teleport(scrSoul[star.realm].S_Runner[star.trace], true)
-        dontRemove = "BY: Kiojeen"
+        pcall(teleport, scrSoul[star.realm].S_Runner[star.trace])
+        dontRemove = "By: Kiojeen"
     end 
 end
 function bwall(dis)
-    local xcord = pvof(anptr + anptroffsets.xpos, gg.TYPE_FLOAT)
-    local ycord = pvof(anptr + anptroffsets.ypos, gg.TYPE_FLOAT)
-    local zcord = pvof(anptr + anptroffsets.zpos, gg.TYPE_FLOAT)
-    local radin = pvof(anptr + anptroffsets.rad, gg.TYPE_FLOAT)
-    teleport({xcord + 7 * math.sin(radin), ycord, zcord + 7 * math.cos(radin)}, true)
-    gg.setVisible(false)
+    local xcord = kj.getValue(anptr + anptroffsets.xpos, 'F')
+    local ycord = kj.getValue(anptr + anptroffsets.ypos, 'F')
+    local zcord = kj.getValue(anptr + anptroffsets.zpos, 'F')
+    local radin = kj.getValue(anptr + anptroffsets.rad, 'F')
+    if pcall(teleport, {xcord + 7 * math.sin(radin), ycord, zcord + 7 * math.cos(radin)}) then
+        gg.setVisible(false)
+    end
   end
 function magic()
     sMagics = {}
@@ -7418,7 +7586,7 @@ function magic()
         end
         msocket = {}
         for i = 1, sockets do
-            cs = pvof(anptr + anptroffsets.magic + i * distances.magx - distances.magx, 4)
+            cs = kj.getValue(anptr + anptroffsets.magic + i * distances.magx - distances.magx, 'D')
             for d, u in ipairs(magics) do
                 for a, b in ipairs(magics[d].content) do
                     if magics[d].content[a][2] == cs then
@@ -7517,46 +7685,13 @@ function trolls()
     STAY = 'trolls'
     tear = gg.choice(yellow[8].content, nil, "Be careful")
     if tear == eye[1] then
-        if troll1 ~= true then 
-            settable(showFlame, false, true)
-            settable(showCandle, false, true)
-            troll1 = true
-        else 
-            troll1 = false
-            settable(showFlame, false, false)
-            settable(showCandle, false, false)
-        end
     elseif tear == eye[2] then
         setspell(-1463943689, 1)
-        freeze_switch({anptr + anptroffsets.magic + 40, 4, 0}, "Spamming Magic: ")
+        kj.freezeSwitch(anptr + anptroffsets.magic + 40, '0 D', "Spamming Magic")
     elseif tear == #yellow[8].content then 
         yellowTears()
     end
  end
-function setstr(add, range, str)
-    nn = gg.bytes(str)
-    hv = {}
-    if range > #nn then
-      mm = range - #nn
-      do
-        for i = 1, mm do
-          table.insert(nn, 0)
-        end
-      end
-    end
-    do
-      do
-        for i = 1, range do
-          table.insert(hv, {
-            address = add + (i - 1),
-            flags = gg.TYPE_BYTE,
-            value = nn[i]
-          })
-        end
-      end
-    end
-   gg.setValues(hv)
-  end
 function tpsReq()
     if tps == nil then
         gg.setRanges(gg.REGION_OTHER| gg.REGION_C_ALLOC)
@@ -7577,18 +7712,16 @@ function tpsReq()
  end 
 function setsmap(str)
     if tpsReq() then
-        setstr(tps, 1, '.')
-        setstr(tps + 1, 30, str)
+        kj.setString(tps + 1, '.' .. str, 30)
         setspell(224110574, 8, 0)
         gg.sleep(1000)
         setspell(0, 8)
     end
  end
 function setmap(str)
-    qb = qburner
     xtr = guiptr + gptoffsets.portal
-    setstr(xtr + 14800, 24, str)
-    setstr(xtr + 14832, 28, "Black")
+    kj.setString(xtr + 14800, str, 24)
+    kj.setString(xtr + 14832, "Black", 28)
     xar = {
         {
           address = xtr + -76,
@@ -7714,55 +7847,90 @@ function setmap(str)
       gg.setValues(xar)
 end
 function absorbWax()
+    if signs.burn == "" then burner() gg.sleep(500) end
     gg.setRanges(gg.REGION_OTHER| gg.REGION_C_ALLOC)
-    if not bSignS then burner() gg.sleep(1000) end
-    gg.setRanges(gg.REGION_OTHER| gg.REGION_C_ALLOC)
-    local msg = reqQ({'-1.0;3.5F::5', gg.TYPE_FLOAT, false, 536870912, guiptr + 11204520, anptr + 9123652, 0, 1})
-    if #msg > 0 then
-        fwx = msg[1].address + 4
-    end
-    wx = {}
-    for i = 0, 1000 do
-        if pvof(fwx + (i * 0x1E0), gg.TYPE_FLOAT) == 3.5 then
-            table.insert(wx, {
-                address = fwx + i * 480,
-                flags = gg.TYPE_FLOAT,
-                value = 99999
-            })
+    local fwx, bool = kj.findAddress('-1.0;3.5F::5 F', guiptr + 11204520, anptr + 9123652, 1, 2)
+    if bool then
+        wx = {}
+        for i = 0, 500 do
+            if kj.getValue(fwx + i * 480, 'F') == 3.5 then
+                table.insert(wx, {
+                    address = fwx + i * 480,
+                    flags = kj.dT('F'),
+                    value = 99999
+                })
+            end
         end
+        for i = 1, -100, -1 do
+            if kj.getValue(fwx + i * 480, 'F') == 3.5 then
+                table.insert(wx, {
+                    address = fwx + i * 480,
+                    flags = kj.dT('F'),
+                    value = 99999
+                })
+            end
+        end
+        gg.setValues(wx)
     end
-    gg.setValues(wx)
 end
-candles = {}
-flowers = {}
-showFlame  = {}
-showCandle = {}
-function makeTable()
-    do
-        do
-           for i = 0, 499, 1 do
-                table.insert(candles, {guiptr + gptoffsets.candles + i * distances.candles, gg.TYPE_FLOAT, 1, true})
-           end
-        end
+function teaMake()
+do
+  do candles = {}
+    for i = 0, 700 do
+      if guiptr + 12299728 >= guiptr + gptoffsets.candles + i * distances.candles then
+         table.insert(candles, {
+         address = guiptr + gptoffsets.candles + i * distances.candles, 
+         flags = kj.dT('F'),
+         value = 1,                
+         name = 'Candle' .. '[' .. i .. ']',
+         })
+      else
+        break
       end
-      do
-        do 
-           for i = 0, 499, 1 do
-               table.insert(flowers, {guiptr + gptoffsets.flowers + i * distances.flowers, gg.TYPE_FLOAT, 0, true})
-           end
-        end
-      end
-      do
-        do 
-           for i = 0, 10, 1 do
-               table.insert(showCandle, {guiptr + gptoffsets.pcandle + i * distances.fldist, gg.TYPE_FLOAT, 9.24856986e-41, true})
-               table.insert(showFlame, {guiptr + gptoffsets.pflame + i * distances.fldist, gg.TYPE_FLOAT, 1, true})
-           end
-        end
     end
+  end
+end
+ do
+   do flowers = {}
+    for i = 0, 700 do
+      if guiptr + 25432476 > guiptr + gptoffsets.flowers + i * distances.flowers then
+         table.insert(flowers, {
+         address = guiptr + gptoffsets.flowers + i * distances.flowers,
+         flags = kj.dT('F'),
+         value = 0,               
+         name = 'Flower' .. '[' .. i .. ']',
+         })
+      else
+         break
+      end
+    end
+  end
+end
+   do
+     do showCandle = {}
+        for i = 0, 7, 1 do
+            table.insert(showCandle, {
+            address = guiptr + gptoffsets.pcandle + i * distances.fldist, 
+            flags = kj.dT('F'), 
+            value = 9.24856986e-41, 
+            freeze = true
+        }) showFlame  = {}
+            table.insert(showFlame, {
+            address = guiptr + gptoffsets.pflame + i * distances.fldist, 
+            flags = kj.dT('F'), 
+            value = 1, 
+            freeze = true,
+        })
+        end
+     end
+   end
  end
 function tportal()
-    pmn()
+    if true then
+        gg.toast('Will add later')
+        return
+    end
+    getSkidLocat()
     if STAY  ~= 'runChoice' then
         STAY = 'tportal'
     end
@@ -7834,21 +8002,6 @@ function wgrer(str)
     end
     return array
 end
-function test() --kio
-    while true do
-        if gg.isVisible(true) then
-            local x = pvof(anptr + anptroffsets.xpos, gg.TYPE_FLOAT)
-            local y = pvof(anptr + anptroffsets.ypos, gg.TYPE_FLOAT)
-            local z = pvof(anptr + anptroffsets.zpos, gg.TYPE_FLOAT)
-            local r = pvof(anptr + anptroffsets.rad, gg.TYPE_FLOAT)
-            x = x + math.cos(180) * r
-            z = z + math.sin(180) * r
-            teleport({{x, y, z}}, false, false)
-        else
-            break
-        end
-    end
-end  
 function cmdguide()
     if  gg.alert([[Page 1.
         Chat commands:
@@ -7890,7 +8043,7 @@ function noUiTrigger()
     if noui then
         local uu = {}
         for i = 1, 100, 1 do
-            uu[i] = pvof(anptr + anptroffsets.cmdchat + i, gg.TYPE_BYTE)
+            uu[i] = kj.getValue(anptr + anptroffsets.cmdchat + i, 'F')
         end
         zz = {}
         for i, v in ipairs(uu) do
@@ -7902,7 +8055,7 @@ function noUiTrigger()
         cmd = wgrer(res)
         if cmd[1] == '-kj' then
             for i = 1, 10, 1 do
-                settable({{anptr + anptroffsets.cmdchat + i, gg.TYPE_BYTE, 0, false}}, false, false)
+                --settable({{anptr + anptroffsets.cmdchat + i, gg.TYPE_BYTE, 0, false}}, false, false)
             end
             if cmd[2] == 'sm' then
                 for i, v in ipairs(scrSoul) do
@@ -7960,23 +8113,10 @@ print[[
     🪐╱╱╱╱╱╱╱╱╭╯┃
     ☄️╱╱╱╱╱╱╱╱╰━╯
             ]]
-gg.toast('HellBoy\t' .. hellboy)
-function rang()
-    ranges = gg.getRangesList()
-    local uu = {}
-    for i, v in ipairs(ranges) do
-        uu[i] = {
-            address = ranges[i].start,
-            flags = gg.TYPE_DWORD,
-            name = ranges[i].name,
-        }
-    end
-    ranges = uu
-end
 function offseter()
     bootloader = gg.getRangesList("libBootloader.so")[1].start
-    anptr = pvof(bootloader + liboffsets.libanptr, gg.TYPE_QWORD)
-    guiptr = pvof(bootloader + liboffsets.libguiptr, gg.TYPE_QWORD)
+    anptr = kj.getValue(bootloader + liboffsets.libanptr, 'Q')
+    guiptr = kj.getValue(bootloader + liboffsets.libguiptr, 'Q')
     ls = {
         {
             address = anptr,
@@ -8007,6 +8147,8 @@ function version_check()
     package = gg.getTargetPackage()
     version = gg.getTargetInfo().versionCode
     if package == sky.live.package then
+        hellboy = "-[" .. debug.getinfo(launch).lastlinedefined + 1 .. "]-"
+        gg.toast('[Live]HellBoy\t' .. hellboy)
         if version == sky.live.version then
             anptroffsets = lanptroffsets
             gptoffsets = lgptoffsets
@@ -8020,6 +8162,8 @@ function version_check()
             os.exit()
         end
     elseif package == sky.beta.package then
+        hellboy = "-[" .. debug.getinfo(launch).lastlinedefined + 1 .. "]-"
+        gg.toast('[Beta]HellBoy\t' .. hellboy)
         if version == sky.beta.version then
             anptroffsets = banptroffsets
             gptoffsets = bgptoffsets
@@ -8040,29 +8184,26 @@ end
 function launch()
     version_check()
     offseter()
-    makeTable()
-    setstr(bootloader + 18643660, 13, "By: Kiojeen")
+    teaMake()
+    configSign()
+    kj.setString(bootloader + 18643660, dontRemove, 13)
     while true do
         local almG = gg
         if almG.isVisible(true) then
             almG.setVisible(false)
-            pmn()
+            getSkidLocat()
             break
         end
-    end
-    if isfrozen(anptr + anptroffsets.wcharge) then 
-        configSign(2)
     end
     yellowTears()
     while true do
         local almG = gg
         if almG.isVisible(true) then
             almG.setVisible(false)
-            pmn()
+            getSkidLocat()
             load(STAY .. '()')()
         end
         noUiTrigger()
     end
 end
-rang()
 launch()
