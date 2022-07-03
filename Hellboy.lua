@@ -34,13 +34,12 @@ qburners = {
 lliboffsets = {
     rcoulds = 5940744,
     winds = 6932232,
-    absorb = 11647664,
-    ----new----
     libguiptr = 23913632,
     libanptr = 21233544,
     iconsize = 17915068,
     honksound = 18635525,
     wcharge = 5207944,
+    absorb = 11605276,
 }
 lanptroffsets = {
     wings = 4407728,
@@ -83,6 +82,7 @@ bliboffsets = {
     honksound = 18301748,
     winds = 6932232,
     wcharge = 5207944,
+    absorb = 11605276,
 }
 banptroffsets = {
     wings = 4407728,
@@ -7850,9 +7850,10 @@ function absorbWax()
     if signs.burn == "" then burner() gg.sleep(500) end
     gg.setRanges(gg.REGION_OTHER| gg.REGION_C_ALLOC)
     local fwx, bool = kj.findAddress('-1.0;3.5F::5 F', guiptr + 11204520, anptr + 9123652, 1, 2)
+    kj.switch(bootloader + liboffsets.absorb, '506892288 D','1847647232 D' )
     if bool then
         wx = {}
-        for i = 0, 500 do
+        for i = 0, 400 do
             if kj.getValue(fwx + i * 480, 'F') == 3.5 then
                 table.insert(wx, {
                     address = fwx + i * 480,
@@ -7872,6 +7873,7 @@ function absorbWax()
         end
         gg.setValues(wx)
     end
+    kj.switch(bootloader + liboffsets.absorb, '506892288 D','1847647232 D' )
 end
 function teaMake()
 do
