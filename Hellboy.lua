@@ -7077,7 +7077,7 @@ function coordinater(rspType)
     elseif rspType == 'move' then
         tear = gg.prompt({'Specifiy coordinates in form: {X ; Y ; Z}'},{xyz},{'number'})
         if tear ~= nil then
-            if not pcall(teleport, assert(load("return " .. tear[1]))(), true) then
+            if not pcall(teleport, assert(load("return " .. tear[1]))()) then
                 gg.toast("Please type properly")
             end
         end
