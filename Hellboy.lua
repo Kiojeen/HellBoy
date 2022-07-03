@@ -6961,7 +6961,6 @@ end
                 runChoice("c")
              elseif tear ~= nil then
                  for i, v in ipairs(scrSoul) do
-                    getSkidLocat()
                     if scrSoul[i][1] == SkidLocation then
                         pcall(teleport, scrSoul[i].Map_Goto.Map_Goto_Cord[tear - cgoto])
                         break
@@ -6994,7 +6993,6 @@ end
                 runChoice("s")
              elseif tear ~= nil then
                  for i, v in ipairs(scrSoul) do
-                    getSkidLocat()
                     if scrSoul[i][1] == SkidLocation then
                         pcall(teleport, scrSoul[i].Map_Goto.Map_Goto_Cord[tear - sgoto])
                         break
@@ -7268,11 +7266,7 @@ function modemenu()
                 gg.toast(shout[tear][1] .. ' is the default call now')
             end
         elseif tear == eye[9] then
-            if string.sub(SkidLocation, 1, 6) == 'Sunset' then
-                sunsetfilter()
-            else
-                gg.toast('Use in \'Valley of Triumph\'')
-            end
+            sunsetfilter()
         end
     end
 end
@@ -7299,7 +7293,21 @@ function sunsetfilter()
     tear = gg.choice(temp, nil, header)
     for i, v in ipairs(vfilters) do
         if tear == i then
-            signs.veffect[i] = kj.switch(offsets[i], '0 D', '1 D', vfilters[i])
+            if kj.getValue(offsets[i + 1], 'D') == 0 then
+                val = 1
+                gg.toast(vfilters[i] .. ": OFF")
+            else
+                val = 0
+                gg.toast(vfilters[i] .. ": ON")
+            end
+            local uu = {
+                {
+                    address = offsets[i],
+                    flags = kj.dT('D'),
+                    value = val,   
+                }
+            }
+            gg.setValues(uu)
         end
     end
 end
