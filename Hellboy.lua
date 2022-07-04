@@ -20,6 +20,7 @@ configs = {
     portal_method = 'default',
     version = nil,
     tp_theme = 'black',
+    bdis = 7,
 }
 ldistances = {
     candles = 448,
@@ -703,9 +704,9 @@ scrSoul = {
         "Prairie_ButterflyFields",
         C_Runner = {
             {
-                115.94466400154, 
-                197.09620665473, 
-                -435.0668029948
+                112.56028748594, 
+                196.98828128985, 
+                -435.5927234375
             },
             {
                 119.13771854200, 
@@ -713,24 +714,49 @@ scrSoul = {
                 -430.6450314949
             },
             {
+                115.94466400154, 
+                197.09620665473, 
+                -435.0668029948
+            },
+            {
                 120.62158549660, 
                 196.93354543632, 
                 -426.3350667119
             },
             {
-                77.197385600659, 
-                150.64553548129, 
-                2.5079245479510
+                117.65332037125, 
+                197.58807373075, 
+                -416.6775871094
             },
             {
-                26.864156723022, 
+                123.81385803256, 
+                157.31137084938, 
+                -31.27239227922
+            },
+            {
+                38.672340396406, 
+                156.68092346406, 
+                -17.53947067422
+            },
+            {
+                26.864156723022,
                 158.78469848632, 
                 -20.59331703188
+            },
+            {
+                77.197385600659,
+                150.64553548129, 
+                2.5079245479510
             },
             {
                 58.641217562780, 
                 151.12345538098, 
                 7.3986284523489
+            },
+            {
+                81.502853355469, 
+                156.66355895094, 
+                44.774879466406
             },
             {
                 81.879865475537,
@@ -741,6 +767,21 @@ scrSoul = {
                 103.04887596789, 
                 155.52134544691, 
                 16.613235446917
+            },
+            {
+                110.04409799062, 
+                156.15850078125, 
+                23.556427003125
+            },
+            {
+                111.83203176825, 
+                155.90751647922, 
+                50.264965737305
+            },
+            {
+                148.24801635188, 
+                162.55459726562, 
+                1.1438622474641
             },
             {
                 144.83453892822, 
@@ -2651,10 +2692,26 @@ scrSoul = {
         },
         OOB_Goto = {
             OOB_Goto_Name = {
-
+                "Elder Room",
+                "Under The Shrine",
+                "Sauna Room",
             },
             OOB_Goto_Cord = {
-
+                {
+                    2.4484107435425,
+                    8.9488725662145,
+                    503.58135328125 
+                },
+                {
+                    -2.881236921387, 
+                    111.04280092031, 
+                    0.7469336390453
+                },
+                {
+                    -26.16459083129, 
+                    105.28491973873, 
+                    -26.35310742578
+                },
             },
         },
     },
@@ -5492,10 +5549,12 @@ yellow = {
             "[⬆️]Goto",
             "[🧭]Out Of Borders",
             "[⬆️]Breach Walls",
+            "[↗️]Breach Roofs",
+            "[⬇️]Breach Grounds",
             "[📝]Manual Coordinates",
             "[🗄]Copy coordinate",
             "[📌]Pin Position",
-            
+            "[📌]Pin Y Coordinate",
         }, 
     },
     {
@@ -6944,7 +7003,7 @@ end
              elseif tear == eye[3] then
                 burner()------Kiojeen-->
              elseif tear == eye[4] then
-                bwall()-------Kiojeen-->
+                bwall(configs.bdis)-------Kiojeen-->
              elseif tear == eye[5] then
                 wcharge()-----Kiojeen-->
              elseif tear == eye[6] then
@@ -6976,7 +7035,7 @@ end
              elseif tear == eye[3] then
                 run("s")------Kiojeen-->
              elseif tear == eye[4] then
-                bwall()-------Kiojeen-->
+                bwall(configs.bdis)-------Kiojeen-->
              elseif tear == eye[5] then
                 wcharge()-----Kiojeen-->
              elseif tear == eye[6] then
@@ -7032,10 +7091,30 @@ function yellowTears()
         modemenu()
     elseif tear == eye[11] then 
         ClosetMenu()  --  cmdactv()
-    elseif tear == eye[11] then 
-        gg.toast('Soon...') --SETTINGS
+    elseif tear == eye[12] then 
+        settings()
     elseif tear == #yellowCry then 
         os.exit()
+    end
+end
+function settings()
+    hbstngs = {
+        "[↕️]Breach distance: " .. configs.bdis,
+        back[1]
+    }
+    tear = gg.choice(hbstngs, nil, '[☣️]HellBoy' .. ' Settings ' .. hellboy)
+    if tear == eye[#hbstngs] then
+        yellowTears()
+    elseif tear == eye[1] then
+        tear = gg.prompt({"Choose the distance for Breach:"}, {7}, {'number'})
+        if tear ~= nil then
+            tear[1] = tonumber(tear[1])
+            if type(tear[1]) == 'number' then
+                configs.bdis = tear[1]
+            else
+                gg.toast('Please put numbers only')
+            end
+        end
     end
 end
 function cmdactv()
@@ -7059,13 +7138,19 @@ function tpmenu()
     elseif tear == eye[3] then 
         oobls('tpmenu')
     elseif tear == eye[4] then 
-        bwall()
+        bwall(configs.bdis)
     elseif tear == eye[5] then 
-        coordinater('move')
+        teleport({getPosition()[1], getPosition()[2] + configs.bdis, getPosition()[3]})
     elseif tear == eye[6] then 
-        coordinater('copy')
+        teleport({getPosition()[1], getPosition()[2] - configs.bdis, getPosition()[3]})
     elseif tear == eye[7] then 
+        coordinater('move')
+    elseif tear == eye[8] then 
+        coordinater('copy')
+    elseif tear == eye[9] then 
         coordinater('freeze')
+    elseif tear == eye[10] then 
+        kj.freezeSwitch(anptr + anptroffsets.ypos, tostring(getPosition()[2]) .. 'F', 'Freezing Y Coordinate')
     end
 end
 function coordinater(rspType)
@@ -7075,7 +7160,7 @@ function coordinater(rspType)
     if rspType == 'copy' then
         gg.copyText(xyz)
     elseif rspType == 'move' then
-        tear = gg.prompt({'Specifiy coordinates in form: {X ; Y ; Z}'},{xyz},{'number'})
+        tear = gg.prompt({'Specifiy coordinates in form: {X ; Y ; Z}'}, {xyz}, {'number'})
         if tear ~= nil then
             if not pcall(teleport, assert(load("return " .. tear[1]))()) then
                 gg.toast("Please type properly")
@@ -7456,9 +7541,18 @@ function oobls(bto)
     local oBG = gg
     miniOOB = {}
         do
-          do
+          do oobCord = {}
             table.insert(miniOOB, 1, "[💾]Save Current Possition")
             table.insert(miniOOB, 2, "[🏃🏻‍♂️]Goto Saved Possition")
+            if SkidLock == nil then
+                SkidLock = SkidLocation
+            end
+            if SkidLock ~= SkidLocation or svpo == nil then
+                SkidLock = SkidLocation
+                table.remove(miniOOB, 2)
+                svpo = eye[922]
+                otp = #miniOOB
+            end
           end
         end
           do
@@ -7466,20 +7560,13 @@ function oobls(bto)
              for i, v in ipairs(scrSoul) do
                  if scrSoul[i][1] == SkidLocation then
                     for u, d in ipairs(scrSoul[i].OOB_Goto.OOB_Goto_Name) do
-                        table.insert(miniOOB, u .. ") " .. scrSoul[i].OOB_Goto.OOB_Goto_Name[u])
+                        miniOOB[otp + u + 1] = u .. ". " .. scrSoul[i].OOB_Goto.OOB_Goto_Name[u]
+                        oobCord[otp + u + 1] = scrSoul[i].OOB_Goto.OOB_Goto_Cord[u]
                     end
                     break
                  end
              end
              table.insert(miniOOB, back[1])
-             if SkidLock == nil then
-                 SkidLock = SkidLocation
-             end
-             if SkidLock ~= SkidLocation or svpo == nil then
-                 SkidLock = SkidLocation
-                 table.remove(miniOOB, 2)
-                 svpo = eye[922]
-             end
           end
        end
     tear = oBG.choice(miniOOB, nil, header)
@@ -7491,13 +7578,7 @@ function oobls(bto)
     elseif tear == eye[2] then 
         pcall(teleport, svpo)
     elseif tear ~= eye[336] then
-        for i, v in ipairs(scrSoul) do
-            getSkidLocat()
-            if scrSoul[i][1] == SkidLocation then
-                pcall(teleport, scrSoul[i].OOB_Goto.OOB_Goto_Cord[tear - eye[2]])
-                break
-            end
-        end
+        pcall(teleport, oobCord[tear])
     end
 end
 function getPosition()
@@ -7549,12 +7630,12 @@ function srun_sub()
         dontRemove = "By: Kiojeen"
     end 
 end
-function bwall(dis)
+function bwall(bdis)
     local xcord = kj.getValue(anptr + anptroffsets.xpos, 'F')
     local ycord = kj.getValue(anptr + anptroffsets.ypos, 'F')
     local zcord = kj.getValue(anptr + anptroffsets.zpos, 'F')
     local radin = kj.getValue(anptr + anptroffsets.rad, 'F')
-    if pcall(teleport, {xcord + 7 * math.sin(radin), ycord, zcord + 7 * math.cos(radin)}) then
+    if pcall(teleport, {xcord + bdis * math.sin(radin), ycord, zcord + bdis * math.cos(radin)}) then
         gg.setVisible(false)
     end
   end
@@ -8073,7 +8154,7 @@ function noUiTrigger()
                     end
                 end
             elseif cmd[2] == 'breach'   then
-                 bwall()
+                 bwall(configs.bdis)
             elseif cmd[2] == 'c_absorb' then
                  absorbWax()
             elseif cmd[2] == 'w_charge' then
