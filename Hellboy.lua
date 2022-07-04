@@ -21,6 +21,7 @@ configs = {
     version = nil,
     tp_theme = 'black',
     bdis = 7,
+    awrob = false
 }
 ldistances = {
     candles = 448,
@@ -2684,9 +2685,9 @@ scrSoul = {
                     93.326965332125
                 },
                 {
-                    -0.783522307722, 
-                    211.91905212344, 
-                    230.63220214875
+                    -1.139660358428, 
+                    208.91905212344, 
+                    219.63220214875
                 },
             },
         },
@@ -3735,26 +3736,46 @@ scrSoul = {
                 "Wasteland Portal",
             },
             Map_Goto_Cord = {
-
+                {
+                    8.4611356748642,
+                    147.98652648578,
+                    -111.0883789062
+                },
+                {
+                    12.346468777433,
+                    141.34769865500,
+                    -199.4980579635
+                },
             },
         },
         OOB_Goto = {
             OOB_Goto_Name = {
-
+                "Temple",
+                "Enders Room",
+                "Tower",
             },
             OOB_Goto_Cord = {
-
+                {
+                    9.2510662078842, 
+                    137.98652648578, 
+                    -176.0883789062
+                },
+                {
+                    308.30637890625,
+                    148.89456177812,
+                    -775.3768920438
+                },
+                {
+                    -50.51851171875, 
+                    181.36268612656, 
+                    -790.6363525625
+                },
             },
         },
     },
     {
         "DuskStart",
         C_Runner = {
-            {
-                -144.8478088372,
-                66.706222534179,
-                -795.8886108438
-            },
             {
                 -70.78469848632, 
                 63.947822570878, 
@@ -3780,15 +3801,44 @@ scrSoul = {
                 "Nintendo Park",
             },
             Map_Goto_Cord = {
+                {
 
+                },
+                {
+                    -144.8478088372,
+                    66.706222534179,
+                    -795.8886108438
+                },
+                {
+
+                },
+                {
+
+                },
             },
         },
         OOB_Goto = {
             OOB_Goto_Name = {
-
+                "OOB Temple",
+                "Tower",
+                "Eden View",
             },
             OOB_Goto_Cord = {
-
+                {
+                    9.4382123947355, 
+                    137.98654174688, 
+                    -169.0309441875
+                },
+                {
+                    -51.30135349844, 
+                    181.36267089875, 
+                    -789.2449951875
+                },
+                {
+                    -50.03977908594,
+                    4735.7001953125,
+                    -807.43835441875
+                },
             },
         },
     },
@@ -4498,10 +4548,20 @@ scrSoul = {
         },
         OOB_Goto = {
             OOB_Goto_Name = {
-
+                "Demons Prison",
+                "Spawn",
             },
             OOB_Goto_Cord = {
-
+                {
+                    -416.2230224375,
+                    12.170680081543,
+                    410.91101074987
+                },
+                {
+                    1.7065873905713, 
+                    102.49025136719, 
+                    -52.23664017578
+                },
             },
         },
     },
@@ -4549,10 +4609,20 @@ scrSoul = {
         },
         OOB_Goto = {
             OOB_Goto_Name = {
-
+                "Elder Room",
+                "Shrine",
             },
             OOB_Goto_Cord = {
-
+                {
+                    -416.2230224375,
+                    12.170680081543,
+                    410.91101074987
+                },
+                {
+                    -0.002804073824, 
+                    208.72766113225, 
+                    -1.835969804683
+                },
             },
         },
     },
@@ -6452,6 +6522,13 @@ kj = {
             end
         end
     end,
+    statSwitch = function (bool)
+        if bool then
+            return "  -〘 ✅ 〙"
+        else
+            return "  -〘 ❌ 〙"
+        end
+    end,
     isFrozen = function(add)
         if type(add) == 'number' then
             local items = gg.getListItems()
@@ -6492,7 +6569,9 @@ kj = {
             if type(v) == "table" then
                 str = str .. kj.tableToString(v)
             elseif type(v) == "boolean" then
-                str = str .. tostring(v)
+                str = str .. " " .. tostring(v)
+            elseif type(v) == 'string' then
+                str = str .. " " .. "'" .. tostring(v) .. "'"
             else
                 str =  str .. " " .. v
             end
@@ -6555,7 +6634,8 @@ kj = {
                         if toast ~= nil then
                             toast = toast .. ": " .. "OFF"
                             gg.toast(toast)
-                        end gg.setValues(var)
+                        end 
+                        gg.setValues(var)
                         return ""
                     elseif original_value == current_value then
                         var = {
@@ -6568,7 +6648,8 @@ kj = {
                         if toast ~= nil then
                             toast = toast .. ": " .. "ON"
                             gg.toast(toast)
-                        end gg.setValues(var)
+                        end 
+                        gg.setValues(var)
                         return "  -〘 ✅ 〙"
                     else
                         gg.toast("No Match")
@@ -7098,7 +7179,9 @@ function yellowTears()
     end
 end
 function settings()
+    STAY = 'settings'
     hbstngs = {
+        "[💨]Auto Wind Remove in OOBs: " .. kj.statSwitch(configs.awrob),
         "[↕️]Breach distance: " .. configs.bdis,
         back[1]
     }
@@ -7106,15 +7189,26 @@ function settings()
     if tear == eye[#hbstngs] then
         yellowTears()
     elseif tear == eye[1] then
+        if configs.awrob then
+            configs.awrob = false
+        else
+            configs.awrob = true
+        end
+        saveconfigs()
+    elseif tear == eye[2] then
         tear = gg.prompt({"Choose the distance for Breach:"}, {7}, {'number'})
         if tear ~= nil then
             tear[1] = tonumber(tear[1])
             if type(tear[1]) == 'number' then
                 configs.bdis = tear[1]
+                saveconfigs()
             else
                 gg.toast('Please put numbers only')
             end
         end
+    end
+    if tear ~= nil then
+        settings()
     end
 end
 function cmdactv()
@@ -7337,7 +7431,7 @@ function modemenu()
         elseif tear == eye[6] then 
             kj.switch(bootloader + liboffsets.winds, '505873376 D', '1847778369 D', "Removing Wind" )
         elseif tear == eye[7] then
-            rwind()
+            rwind() gg.toast('Wind Removed')
         elseif tear == eye[8] then
             temp = {}
             for i, v in ipairs(shout) do
@@ -7406,7 +7500,6 @@ function rwind()
         })
     end
     gg.setValues(windlist)
-    gg.toast('Wind Removed')
 end
 function setIconSize(size)
     if size == nil then
@@ -7532,6 +7625,9 @@ function configSign()
 function oobls(bto)
     getSkidLocat()
     STAY = 'oobls'
+    if configs.awrob then
+        rwind()
+    end
     if _bto_ == nil then
         _bto_ = bto
     end
@@ -8221,6 +8317,31 @@ function isfrozen(add)
         end
     end
 end
+function saveconfigs()
+    local cfgs = io.open('/sdcard/Hellboy.kj', 'w')
+    cfgs:write('configs = '.. kj.tableToString(configs))
+    cfgs:close()
+end
+function loadconfigs()
+    local cfgs = io.open('/sdcard/Hellboy.kj', 'r')
+    if cfgs == nil then
+        saveconfigs()
+        return
+    end
+    cfgs = cfgs:read("*a")
+    if cfgs == nil then
+        saveconfigs()
+    elseif cfgs ~= nil then
+        local bool, msg = pcall(load, cfgs)
+        if bool then
+            load(msg)()
+        else
+            saveconfigs()
+        end
+    else
+        saveconfigs()
+    end
+end
 function version_check()
     package = gg.getTargetPackage()
     version = gg.getTargetInfo().versionCode
@@ -8260,6 +8381,7 @@ function version_check()
     end
 end
 function launch()
+    loadconfigs()
     version_check()
     offseter()
     teaMake()
