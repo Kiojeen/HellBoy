@@ -44,7 +44,6 @@ lliboffsets = {
     absorb = 11605276,
 }
 lanptroffsets = {
-    wings = 4407728,
     cmdchat = 2396800,
     ----new----
     xpos = 4455024,
@@ -53,7 +52,8 @@ lanptroffsets = {
     rad = 4455056,
     wcharge = 4478516,
     magic = 4526736,
-    closet = 22710724,
+    closet = 22710724,    
+    wings = 4343240,
 }
 lgptoffsets = {
     pcandle = -6151076,
@@ -87,7 +87,7 @@ bliboffsets = {
     absorb = 11605276,
 }
 banptroffsets = {
-    wings = 4407728,
+    wings = 4343240,
     xpos = 4455024,
     ypos = 4455028,
     zpos = 4455032,
@@ -5612,7 +5612,7 @@ scrSoul = {
     end
   end
 yellow = {
-    {
+    {--1
         "[🌀]Teleport",
         content = {
             "[🌀]Portal Teleport",
@@ -5627,7 +5627,7 @@ yellow = {
             "[📌]Pin Y Coordinate",
         }, 
     },
-    {
+    {--2
         "[🏃🏻‍♂️] Run",
         content = {
             "[🕯]Auto Candle Run",
@@ -5636,16 +5636,16 @@ yellow = {
             "[⭐]Semi Star Run",
         },
     },
-    {
+    {--3
         "[🔥]Burn",
     },
-    {
+    {--4
         "[🀄️]Absorb All",
     },
-    {
+    {--5
         "[🌕]Wing Charge",
     },
-    {
+    {--6
         "‍[️🧙]️Magic",
         content = {
             "[🔮]No Sparkles spells",
@@ -5654,10 +5654,10 @@ yellow = {
             "[❌]Remove All",
         },
     },
-    {
+    {--7
         "[🦚]Wing",
         content = {
-
+            "[🌟]Wing Count",
         }
     },
     {
@@ -7163,7 +7163,7 @@ function yellowTears()
     elseif tear == eye[6] then 
         magic()   
     elseif tear == eye[7] then
-        gg.toast('Soon...') --Wing mode
+        wingmode()
     elseif tear == eye[8] then 
         trolls()
     elseif tear == eye[9] then 
@@ -7177,6 +7177,34 @@ function yellowTears()
     elseif tear == #yellowCry then 
         os.exit()
     end
+end
+function wingmode()
+    STAY = 'wingmode'
+    getSkidLocat()
+    tear = gg.choice(yellow[7].content, nil, header)
+    if tear ~= nil then
+        if tear == #yellow[7].content then
+            yellowTears()
+        elseif tear == eye[1] then
+            wings = kj.getValue(anptr + anptroffsets.wings, 'Q')
+            tear = gg.prompt({'Set wings count: '}, {wings}, {'number'})
+            if tear ~= nil then
+                tear[1] = tonumber(tear[1])
+                if type(tear[1]) == 'number' then
+                    local uu = {
+                        {
+                            address = anptr + anptroffsets.wings,
+                            flags = kj.dT('Q'),
+                            value = tear[1],
+                        },
+                    }
+                    gg.setValues(uu)
+                else
+                    gg.toast('Please put numbers only')
+                end
+            end
+        end
+    end   
 end
 function settings()
     STAY = 'settings'
@@ -7637,32 +7665,30 @@ function oobls(bto)
     local oBG = gg
     miniOOB = {}
         do
-          do oobCord = {}
+          do
             table.insert(miniOOB, 1, "[💾]Save Current Possition")
             table.insert(miniOOB, 2, "[🏃🏻‍♂️]Goto Saved Possition")
             if SkidLock == nil then
                 SkidLock = SkidLocation
             end
-            if SkidLock ~= SkidLocation or svpo == nil then
-                SkidLock = SkidLocation
-                table.remove(miniOOB, 2)
-                svpo = eye[922]
-                otp = #miniOOB
-            end
           end
         end
           do
             do
-             for i, v in ipairs(scrSoul) do
-                 if scrSoul[i][1] == SkidLocation then
-                    for u, d in ipairs(scrSoul[i].OOB_Goto.OOB_Goto_Name) do
-                        miniOOB[otp + u + 1] = u .. ". " .. scrSoul[i].OOB_Goto.OOB_Goto_Name[u]
-                        oobCord[otp + u + 1] = scrSoul[i].OOB_Goto.OOB_Goto_Cord[u]
+             for i, v in pairs(scrSoul) do
+                 if v[1] == SkidLocation then
+                    for u, d in pairs(v.OOB_Goto.OOB_Goto_Name) do
+                        table.insert(miniOOB, u .. ". " .. d)
                     end
                     break
                  end
              end
              table.insert(miniOOB, back[1])
+             if SkidLock ~= SkidLocation or svpo == nil then
+                SkidLock = SkidLocation
+                miniOOB[2] = nil
+                svpo = eye[922]
+            end
           end
        end
     tear = oBG.choice(miniOOB, nil, header)
@@ -7674,7 +7700,13 @@ function oobls(bto)
     elseif tear == eye[2] then 
         pcall(teleport, svpo)
     elseif tear ~= eye[336] then
-        pcall(teleport, oobCord[tear])
+        getSkidLocat()
+        for i, v in pairs(scrSoul) do
+            if SkidLocation == v[1] then
+                pcall(teleport, v.OOB_Goto.OOB_Goto_Cord[tear - eye[2]])
+                break
+            end
+        end
     end
 end
 function getPosition()
@@ -7776,7 +7808,7 @@ function magic()
         table.insert(msocket, back[1])
         tear = gXG.choice(msocket, nil, "‍[️🧙]️Magic: Only three are visible at a time")
         if tear == eye[sockets + eye[1]] then
-            for d = 1, 3, 1 do
+            for d = 1, 3 do
                 for i, v in ipairs(msocket) do
                     setspell(0, i)
                 end
@@ -7799,7 +7831,7 @@ function magic()
                     sMagics.spell[i] = magics[tear][1] .. magics[tear].content[i][1]
                     sMagics.id[i] = magics[tear].content[i][2]
                 end
-                    do
+                    do local fhdr = tear
                     tear = gXG.choice(sMagics.spell, eye[65], sMagics.type[fhdr])
                     if tear ~= eye[65] then
                         setspell(sMagics.id[tear], socket, spark)
