@@ -7286,7 +7286,7 @@ function fasthome(bool)
     if val ~= nil then
             local uu = {
                 {
-                    address = liboffsets + liboffsets.fasthome,
+                    address = bootloader + liboffsets.fasthome,
                     flags = kj.dT('D'),
                     value = val,
                 },
