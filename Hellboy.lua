@@ -7920,8 +7920,9 @@ function magic()
         end
     end                                            
 end
+mtracer = 0
 function autoCape()
-    if mtracer > #magics[4].content or mtracer == nil then
+    if mtracer > #magics[4].content then
         mtracer = 0
     end
     mtracer = mtracer + 1
