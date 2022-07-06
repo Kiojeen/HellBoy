@@ -5660,7 +5660,7 @@ yellow = {
         content = {
             "[🔮]No Sparkles spells",
             "[✨]Sparkle spells",
-            "[🔁]Random Capes",
+            "[🔁]Auto Capes",
             "[❌]Remove All",
         },
     },
@@ -7920,14 +7920,14 @@ function magic()
         end
     end                                            
 end
-function randCape()
-    mrand = math.random(1, #magics[4].content)
-    if temp ~= mrand then
-        setspell(magics[4].content[mrand][2], 1)
-        if not capetrick then
-            gg.sleep(2000)
-        end
-        local temp = mrand
+function autoCape()
+    if mtracer > #magics[4].content or mtracer == nil then
+        mtracer = 0
+    end
+    mtracer = mtracer + 1
+    setspell(magics[4].content[mtracer][2], 1)
+    if not capetrick then
+        gg.sleep(2000)
     end
 end
 function cptrick()
@@ -8512,7 +8512,7 @@ function version_check()
 end
 function noUiTrigger()
     if caperand then
-        randCape()
+        autoCape()
     end
     if capetrick then
         cptrick()
