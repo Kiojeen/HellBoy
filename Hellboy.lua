@@ -6634,6 +6634,24 @@ kj = {
             end
         end
     end,
+    setValue = function (add, val)
+        if type(add) == 'number' then
+            if type(val) == 'string' then
+                flag, bool = kj.dT(string.sub(val, string.len(val)))
+                if bool then
+                    val = tonumber(string.sub(val, 1, string.len(val) - 1))
+                    local var = {
+                        {
+                            address = add,
+                            flags = flag,
+                            value = val,
+                        }
+                    }
+                    gg.setValues(var)
+                end
+            end
+        end
+    end,
     switch = function(add, new_value, original_value, toast)
         if type(new_value) == 'string' and type(original_value) == 'string' then
             if type(add) == 'number' then
@@ -7225,6 +7243,9 @@ function wingmode()
             end
         elseif tear == eye[2] then
             capetrick = kj.toggler(capetrick)
+            if not capetrick then
+                kj.setValue(anptr + anptroffsets.wvisible, '1 F')
+            end
         elseif tear == eye[3] then
             kj.switch(bootloader + liboffsets.fastflap, '506761216 D', '520725538 D', 'Fast Flap')
         end
@@ -7851,12 +7872,7 @@ function magic()
     tear = gg.choice(yellow[6].content, nil, "‍[️🧙]️Magic: Only three are visible at a time")
     if tear == #yellow[6].content then yellowTears()
     elseif tear == #yellow[6].content - 2 then 
-        if caperand then
-            caperand = false
-        else
-            caperand = true
-            gg.setVisible(false)
-        end
+        capeauto = kj.toggler(capeauto)
     elseif tear == #yellow[6].content - 1 then
         for d = 1, 3, 1 do
             for i = 1, sockets do
@@ -7933,25 +7949,11 @@ function autoCape()
 end
 function cptrick()
     for i = 0, 1, 0.1 do
-        local uu = {
-            {
-                address = anptr + anptroffsets.wvisible,
-                value = i,
-                flags = kj.dT('F')
-            }
-        }
-        gg.setValues(uu)
+        kj.setValue(anptr + anptroffsets.wvisible, tostring(i) .. 'F')
         gg.sleep(100)
     end
     for i = 1, 0, -0.1 do
-        local uu = {
-            {
-                address = anptr + anptroffsets.wvisible,
-                value = i,
-                flags = kj.dT('F')
-            }
-        }
-        gg.setValues(uu)
+        kj.setValue(anptr + anptroffsets.wvisible, tostring(i) .. 'F')
         gg.sleep(100)
     end
 end
@@ -8512,7 +8514,7 @@ function version_check()
     end
 end
 function noUiTrigger()
-    if caperand then
+    if capeauto then
         autoCape()
     end
     if capetrick then
