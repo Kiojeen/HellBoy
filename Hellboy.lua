@@ -7224,7 +7224,7 @@ function wingmode()
         elseif tear == eye[2] then
             capetrick = kj.toggler(capetrick)
         elseif tear == eye[3] then
-            kj.switch(bootloader + liboffsets.fastflap, '520792098 D', '-1746353943 D', 'Fast Flap')
+            kj.switch(bootloader + liboffsets.fastflap, '506761216 D', '520725538 D', 'Fast Flap')
         end
     end   
 end
