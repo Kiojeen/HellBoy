@@ -7279,9 +7279,9 @@ function cmdactv()
 end
 function fasthome(bool)
     if bool then
-        val = 1409289387
-    else
         val = -721215457
+    else
+        val = 1409289387
     end
     if val ~= nil then
             local uu = {
