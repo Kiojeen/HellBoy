@@ -1,5 +1,3 @@
-
-gg.setVisible(false)
 sockets = 6
 hellboy = 8065
 sky = {
@@ -21,7 +19,9 @@ configs = {
     version = nil,
     tp_theme = 'black',
     bdis = 7,
-    awrob = false
+    awrob = false,
+    devmode = false,
+    fasthome = false,
 }
 ldistances = {
     candles = 448,
@@ -42,6 +42,7 @@ lliboffsets = {
     honksound = 18635525,
     wcharge = 5207944,
     absorb = 11605276,
+    pspeed = 20401636,
 }
 lanptroffsets = {
     cmdchat = 2396800,
@@ -54,6 +55,7 @@ lanptroffsets = {
     magic = 4526736,
     closet = 22710724,    
     wings = 4343240,
+    wvisible = 4478596,
 }
 lgptoffsets = {
     pcandle = -6151076,
@@ -85,6 +87,7 @@ bliboffsets = {
     winds = 6932232,
     wcharge = 5207944,
     absorb = 11605276,
+    pspeed = 20401636,
 }
 banptroffsets = {
     wings = 4343240,
@@ -96,6 +99,7 @@ banptroffsets = {
     closet = 22710724,
     cmdchat = 2396800,
     wcharge = 4478516,
+    wvisible = 4478596,
 }
 bgptoffsets = {
     map = 23830648,
@@ -5658,6 +5662,7 @@ yellow = {
         "[🦚]Wing",
         content = {
             "[🌟]Wing Count",
+            "[🃏]Cape Trick",
         }
     },
     {
@@ -5691,6 +5696,7 @@ yellow = {
             "[💨]Remove Wind[Method 2]",
             "[📣]Calls 'Client side'",
             "[🌁]Valley Filter",
+            "[🏁]Running Enhancement",
         },  
     },
     {
@@ -6529,6 +6535,13 @@ kj = {
             return "  -〘 ❌ 〙"
         end
     end,
+    toggler = function (var)
+        if var then
+            return false
+        else
+            return true
+        end
+    end,
     isFrozen = function(add)
         if type(add) == 'number' then
             local items = gg.getListItems()
@@ -7203,7 +7216,11 @@ function wingmode()
                     gg.toast('Please put numbers only')
                 end
             end
+        elseif tear == eye[2] then
+            capetrick = kj.toggler(capetrick)
         end
+    elseif tear == eye[2] then
+        
     end   
 end
 function settings()
@@ -7211,18 +7228,15 @@ function settings()
     hbstngs = {
         "[💨]Auto Wind Remove in OOBs: " .. kj.statSwitch(configs.awrob),
         "[↕️]Breach distance: " .. configs.bdis,
+        "[📮]Dev Mode: " .. kj.statSwitch(configs.devmode),
+        "[🏠]Fast Return Home" .. kj.statSwitch(configs.fasthome),
         back[1]
     }
     tear = gg.choice(hbstngs, nil, '[☣️]HellBoy' .. ' Settings ' .. hellboy)
     if tear == eye[#hbstngs] then
         yellowTears()
     elseif tear == eye[1] then
-        if configs.awrob then
-            configs.awrob = false
-        else
-            configs.awrob = true
-        end
-        saveconfigs()
+        configs.awrob = kj.toggler(configs.awrob)
     elseif tear == eye[2] then
         tear = gg.prompt({"Choose the distance for Breach:"}, {7}, {'number'})
         if tear ~= nil then
@@ -7234,9 +7248,22 @@ function settings()
                 gg.toast('Please put numbers only')
             end
         end
-    end
-    if tear ~= nil then
-        settings()
+    elseif tear == eye[3] then
+        if configs.devmode then
+            configs.devmode = false
+            gg.hideUiButton()
+            saveconfigs()
+            nodemode()
+        else 
+            configs.devmode = true
+            gg.showUiButton()
+            saveconfigs()
+            demode()
+        end
+    elseif tear == eye[4] then
+        configs.fasthome = kj.toggler(configs.fasthome)
+        fasthome(configs.fasthome)
+        saveconfigs()
     end
 end
 function cmdactv()
@@ -7246,6 +7273,23 @@ function cmdactv()
         gg.toast('Type: \'-kj help\' in the chat for help')
     else 
         noui = false gg.toast('Commands: [OFF]') 
+    end
+end
+function fasthome(bool)
+    if bool then
+        val = nil
+    else
+        val = nil
+    end
+    if val ~= nil then
+            local uu = {
+                {
+                    address = liboffsets + liboffsets.fasthome,
+                    flags = kj.dT('D'),
+                    value = val,
+                },
+            }
+        gg.setValues(uu)
     end
 end
 function tpmenu()
@@ -7474,6 +7518,23 @@ function modemenu()
             end
         elseif tear == eye[9] then
             sunsetfilter()
+        elseif tear == eye[10] then
+            tear = gg.prompt({"Choose Running Speed:"}, {3.5}, {'number'})
+            if tear ~= nil then
+                tear[1] = tonumber(tear[1])
+                if type(tear[1]) == 'number' then
+                    local uu = {
+                        {
+                            address = bootloader + liboffsets.pspeed,
+                            flags = kj.dT('F'),
+                            value = tear[1],
+                        }
+                    }
+                    gg.setValues(uu)
+                else
+                    gg.toast('Please put numbers only')
+                end
+            end
         end
     end
 end
@@ -7692,7 +7753,12 @@ function oobls(bto)
           end
        end
     tear = oBG.choice(miniOOB, nil, header)
-    if tear == #miniOOB then 
+    if #miniOOB == 1 then
+        bp = 3
+    else
+        bp = #miniOOB
+    end
+    if tear == bp then 
     load(_bto_ .. '()')()
     elseif tear == eye[1] then svpo = getPosition()
     zzz = "{" .. svpo[1] .. ', '.. svpo[2] .. ', ' .. svpo[3] .. "},"
@@ -7777,7 +7843,13 @@ function magic()
     STAY = 'magic'
     tear = gg.choice(yellow[6].content, nil, "‍[️🧙]️Magic: Only three are visible at a time")
     if tear == #yellow[6].content then yellowTears()
-    elseif tear == #yellow[6].content - 2 then randCape()
+    elseif tear == #yellow[6].content - 2 then 
+        if caperand then
+            caperand = false
+        else
+            caperand = true
+            gg.setVisible(false)
+        end
     elseif tear == #yellow[6].content - 1 then
         for d = 1, 3, 1 do
             for i = 1, sockets do
@@ -7842,18 +7914,37 @@ function magic()
     end                                            
 end
 function randCape()
-    gg.toast('Click on GG icon to stop.')
-    while true do
-        if gg.isVisible(true) then 
-            break
-        else
-            mrand = math.random(1, #magics[4].content)
-            if temp ~= mrand then
-                setspell(magics[4].content[mrand][2], 1)
-                gg.sleep(2000)
-                local temp = mrand
-            end
+    mrand = math.random(1, #magics[4].content)
+    if temp ~= mrand then
+        setspell(magics[4].content[mrand][2], 1)
+        if not capetrick then
+            gg.sleep(2000)
         end
+        local temp = mrand
+    end
+end
+function cptrick()
+    for i = 0, 1, 0.1 do
+        local uu = {
+            {
+                address = anptr + anptroffsets.wvisible,
+                value = i,
+                flags = kj.dT('F')
+            }
+        }
+        gg.setValues(uu)
+        gg.sleep(100)
+    end
+    for i = 1, 0, -0.1 do
+        local uu = {
+            {
+                address = anptr + anptroffsets.wvisible,
+                value = i,
+                flags = kj.dT('F')
+            }
+        }
+        gg.setValues(uu)
+        gg.sleep(100)
     end
 end
 function setspell(id, socket, spark)
@@ -8245,7 +8336,7 @@ function cmdguide()
         ]], 'Done')
         end
 end
-function noUiTrigger()
+function kjCommands()
     if noui then
         local uu = {}
         for i = 1, 100, 1 do
@@ -8412,13 +8503,54 @@ function version_check()
         os.exit()
     end
 end
+function noUiTrigger()
+    if caperand then
+        randCape()
+    end
+    if capetrick then
+        cptrick()
+    end
+end
+function startUpTrigger()
+    --fasthome(configs.fasthome)
+end
 function launch()
+    gg.setVisible(false)
     loadconfigs()
     version_check()
     offseter()
     teaMake()
     configSign()
     kj.setString(bootloader + 18643660, dontRemove, 13)
+    startUpTrigger()
+    function demode()
+        while true do
+            if gg.isClickedUiButton() then
+                getSkidLocat()
+                load(STAY .. '()')()
+            end
+            noUiTrigger()
+        end
+    end
+    function nodemode()
+        while true do
+            if gg.isVisible(true) then
+                gg.setVisible(false)
+                getSkidLocat()
+                load(STAY .. '()')()
+            end
+            noUiTrigger()
+        end
+    end
+    function handlers()
+        if configs.devmode then
+            gg.showUiButton()
+            demode()
+        else
+            gg.hideUiButton()
+            nodemode()
+        end
+    end
     while true do
         local almG = gg
         if almG.isVisible(true) then
@@ -8428,14 +8560,6 @@ function launch()
         end
     end
     yellowTears()
-    while true do
-        local almG = gg
-        if almG.isVisible(true) then
-            almG.setVisible(false)
-            getSkidLocat()
-            load(STAY .. '()')()
-        end
-        noUiTrigger()
-    end
+    handlers()
 end
 launch()
