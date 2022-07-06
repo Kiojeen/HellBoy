@@ -45,6 +45,7 @@ lliboffsets = {
     pspeed = 20401636,
     fasthome = 8708264,
     fastflap =  9523004,
+    wcharge = 5207944,
 }
 lanptroffsets = {
     cmdchat = 2396800,
@@ -92,6 +93,7 @@ bliboffsets = {
     pspeed = 20401636,
     fasthome = 8708264,
     fastflap =  9523004,
+    wcharge = 5207944,
 }
 banptroffsets = {
     wings = 4343240,
@@ -7696,7 +7698,7 @@ function wcharge()
  do
    do
     signs.wcharge = kj.freezeSwitch(anptr + anptroffsets.wcharge, '14 F', 'Wing Charge')
-    --kj.switch(bootloader + liboffsets.wcharge, '505571328 D', '505729024 D')
+    kj.switch(bootloader + liboffsets.wcharge, '505729024 D', '505571328 D')
    end
  end
 end
