@@ -6153,12 +6153,12 @@ magics = {
                 -305102667
             },
             {
-                "Height Small 3x",
-                1692428656
-            },
-            {
                 "Height Large 3x", 
                 891098028
+            },
+            {
+                "Height Small 3x",
+                1692428656
             },
             {
                 "Size Large 3x",
