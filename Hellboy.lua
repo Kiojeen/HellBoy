@@ -8514,7 +8514,7 @@ function noUiTrigger()
     end
 end
 function startUpTrigger()
-    --fasthome(configs.fasthome)
+    fasthome(configs.fasthome)
 end
 function launch()
     gg.setVisible(false)
