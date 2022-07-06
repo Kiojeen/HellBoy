@@ -43,6 +43,7 @@ lliboffsets = {
     wcharge = 5207944,
     absorb = 11605276,
     pspeed = 20401636,
+    fasthome = 8708264,
 }
 lanptroffsets = {
     cmdchat = 2396800,
@@ -88,6 +89,7 @@ bliboffsets = {
     wcharge = 5207944,
     absorb = 11605276,
     pspeed = 20401636,
+    fasthome = 8708264,
 }
 banptroffsets = {
     wings = 4343240,
@@ -7277,9 +7279,9 @@ function cmdactv()
 end
 function fasthome(bool)
     if bool then
-        val = nil
+        val = 1409289387
     else
-        val = nil
+        val = -721215457
     end
     if val ~= nil then
             local uu = {
