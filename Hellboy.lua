@@ -44,6 +44,7 @@ lliboffsets = {
     absorb = 11605276,
     pspeed = 20401636,
     fasthome = 8708264,
+    fastflap =  9523004,
 }
 lanptroffsets = {
     cmdchat = 2396800,
@@ -90,6 +91,7 @@ bliboffsets = {
     absorb = 11605276,
     pspeed = 20401636,
     fasthome = 8708264,
+    fastflap =  9523004,
 }
 banptroffsets = {
     wings = 4343240,
@@ -5665,6 +5667,7 @@ yellow = {
         content = {
             "[🌟]Wing Count",
             "[🃏]Cape Trick",
+            "[🚀]Fast Flap",
         }
     },
     {
@@ -7222,7 +7225,7 @@ function wingmode()
             capetrick = kj.toggler(capetrick)
         end
     elseif tear == eye[2] then
-        
+        kj.switch(bootloader + liboffsets.fastflap, '506761216 D', '520792098 D', 'Fast Flap')
     end   
 end
 function settings()
