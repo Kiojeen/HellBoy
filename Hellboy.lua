@@ -5731,12 +5731,16 @@ magics = {
         "[👖]","Pants Spells",
         content = {
             {
-                "LP Sword Pants", 
+                "Sword", 
                 -495233219
             },
             {
-                "Halloween Pants", 
+                "Witch Body", 
                 969946279
+            },
+            {
+                "Rainbow",
+                1482655023
             },
         },
     },
@@ -5744,48 +5748,44 @@ magics = {
         "[🎭]","Masks Spells",
         content = {
             {
-                "White Weasel Mask", 
+                "Weasel", 
                 784922793
             },
             {
-                "Red Rabbit Mask", 
+                "Fox", 
                 964659005
             },
             {
-                "Rhythm Kiss Mask", 
+                "Rhythm Actor", 
                 -218615327
             },
             {
-                "Ox Head Mask", 
+                "Ox Head", 
                 -849020465
             },
             {
-                "Valentien Mask", 
+                "Rose", 
                 -938578505
             },
             {
-                "Red Cheeks Mask", 
+                "Red Face", 
                 -1636163586
             },
             {
-                "Phoenix Mask", 
+                "Spintrick", 
                 771982951
             },
             {
-                "Peacock Mask", 
+                "Phoenix", 
                 144876107
             },
             {
-                "Tiger Mask", 
+                "Tiger", 
                 475055967
             },
             {
-                "Oxygen Mask", 
+                "Oxygen", 
                 2857434492
-            },
-            {
-                "Echantment Cape", 
-                3911125165
             },
         },
     },
@@ -5797,8 +5797,16 @@ magics = {
                 2141511649
             },
             {
+                "Double Rainbow Flower",
+                -1014212311
+            },
+            {
                 "Rainbow Tassel", 
                 -290700605
+            },
+            {
+                "Coral Horns",
+                -347711956
             },
             {
                 "Pumpkin Hat", 
@@ -5813,19 +5821,19 @@ magics = {
                 2093744529
             },
             {
-                "Two Puffs Hair", 
+                "Doublebun", 
                 -2099997114
             },
             {
-                "Christmas Hood", 
+                "Wool Hat", 
                 -823266018
             },
             {
-                "Bloom Hair", 
+                "Blossom Hair", 
                 373243257
             },
             {
-                "Dream Season Hair", 
+                "Spintrick Hair", 
                 1059767859
             },
             {
@@ -5833,11 +5841,11 @@ magics = {
                 1909998088
             },
             {
-                "Christmas hat", 
+                "Christmas Hat", 
                 -1409683913
             },
             {
-                "banquet bow tie", 
+                "Leaf Tie", 
                 8361886
             },
             {
@@ -5853,16 +5861,16 @@ magics = {
                 2052387583
             },
             {
-                "Small rabit", 
+                "Bunny", 
                 -848739711
             },
             {
-                "Halloween Hair 1", 
+                "Halloween Curles", 
                 116679863
             },
             {
-                "Halloween Hair 2", 
-                2534225385
+                "Spider Hair", 
+                -1760741911
             },
             {
                 "Halloween Pumpkin", 
@@ -5877,15 +5885,15 @@ magics = {
                 4219181095
             },
             {
-                "Winter Feast Hat", 
-                2202141658
+                "Winter Hat", 
+                -2092825638
             },
             {
-                "Fish Hat", 
-                2751409166
+                "Carp Hat", 
+                -1543558130
             },
             {
-                "Fish Accessories", 
+                "Carp", 
                 551055685
             },
             {
@@ -5895,94 +5903,126 @@ magics = {
             {
                 "Kizuna Ai Hair", 
                 2050094531
-            },      
+            },
+            {
+                "Snowflake",
+                1372838509
+            },
+            {
+                "Summer Shell",
+                -171149928
+            },
+            {
+                "Rainbow Hat",
+                -521490982
+            },
+            {
+                "Diamond Earring",
+                -1590289609
+            },
+            {
+                "Rainbow Headphones",
+                -1769208928
+            },
+            {
+                "Sea Turtle",
+                1943995802
+            },
         },
     },
     {
         "[🦚]","Capes Spells",
         content = {
             {
-                "Green Bud Cloak", 
+                "Earth Day Cape", 
                 2079599063
             },
             {
-                "TGC Cloak", 
+                "TGC Cape", 
                 540856305
             },
             {
-                "Ghost Bat Cloak", 
+                "Bat Cape", 
                 625581156
             },
             {
-                "Spider Silk Cloak", 
+                "Web Cape", 
                 930203946
             },
             {
-                "Snowflake Cloak", 
+                "Snowflake Cape", 
                 -784831205
             },
             {
-                "Christmas Cloak", 
+                "Christmas Red Cape", 
                 1306675982
             },
             {
-                "White bird cloak", 
-                -1623262339
-            },
-            {
-                "petal cloak", 
-                -6043825
-            },
-            {
-                "Lightseeker bulb", 
-                1375571404
-            },
-            {
-                "Cloak of Spring", 
-                -445538750
-            },
-            {
-                "Sakura Cloak", 
-                162066154
-            },
-            {
-                "Ocean Cloak", 
-                329684861
-            },
-            {
-                "Dream Season Red Velvet Cloak", 
-                -308941587
-            },
-            {
-                "Dream Season Graduation Cloak", 
-                -1822337532
-            },
-            {
-                "Rainbow Cloak", 
-                -195929339
-            },
-            {
-                "Scarf Cape", 
-                2207305370
-            },
-            {
-                "Asteroid Jacket", 
-                1402240423
-            },
-            {
-                "Golden Cape", 
-                330655056
-            },
-            {
-                "Canada Cape", 
-                769892976
-            },
-            {
-                "Winter Feast Cape", 
+                "Christmas White Cape", 
                 1762827508
             },
             {
-                "Scarf Fish Cape", 
+                "Echantment Cape", 
+                -383842131
+            },
+            {
+                "Director Cape", 
+                -1623262339
+            },
+            {
+                "Petal Cape", 
+                -6043825
+            },
+            {
+                "Lightseekers Cape", 
+                1375571404
+            },
+            {
+                "Fortune Cape", 
+                -445538750
+            },
+            {
+                "Spintrick",
+                1031127004
+            },
+            {
+                "Blossom Cape", 
+                162066154
+            },
+            {
+                "Ocean Cape", 
+                329684861
+            },
+            {
+                "Postman Cape", 
+                -308941587
+            },
+            {
+                "Pheonix Cape", 
+                -1822337532
+            },
+            {
+                "Rainbow Cape", 
+                -195929339
+            },
+            {
+                "Yellow Scarf", 
+                -2087661926
+            },
+            {
+                "Asteroid Coat", 
+                1402240423
+            },
+            {
+                "White & Gold Cape", 
+                330655056
+            },
+            {
+                "Leaf Cape", 
+                769892976
+            },
+            {
+                "Carp Cape", 
                 573237039
             },
             {
@@ -5993,6 +6033,10 @@ magics = {
                 "Turtle Cape", 
                 -700035318
             },
+            {
+                "Wisteria Cape",
+                -1244390069
+            }
         },
     },
     {
@@ -6019,7 +6063,7 @@ magics = {
                 -2095749161
             },
             {
-                "Tea table", 
+                "Teaset", 
                 10058409
             },
             {
@@ -6027,59 +6071,64 @@ magics = {
                 1167393926
             },
             {
-                "Fox", 
-                2237536272
-            },
-            {
-                "Chair Wood", 
-                3136256372
-            },
-            {
-                "Chair Cloth", 
-                472595010
-            },
-            {
-                "Pipe", 
-                2428135093
-            },
-            {
-                "Brazier 2", 
-                160072902
+                "Umbrella", 
+                -992017029
             },
             {
                 "Summer Umbrella", 
-                2878211958
+                -1416755338
+            },
+            {
+                "Fox", 
+                -2057431024
+            },
+            {
+                "Wooden Chair", 
+                -1158710924
+            },
+            {
+                "Two Wooden Chairs", 
+                472595010
+            },
+            {
+                "Two Chairs",
+                -1866832203
+            },
+            {
+                "Broken Pipe",
+                -1419483218
+                
+            },
+            {
+                "Flame Column", 
+                160072902
             },
             {
                 "Recliner", 
-                2875484078
+                2428135093
             },
             {
-                "Winter piano", 
+                "Winter Piano", 
                 -1202427550
             },
             {
-                "Halloween Chair", 
-                3497279169
+                "Halloween Table", 
+                -797688127
             },
             {
                 "Snow Globe", 
                 1440439821
             },
             {
-                "Umbrella 2", 
-                3302950267
-            },
-            {
                 "Boat", 
                 303877523
             },
             {
-                "Horn Instrument", 
-                3935620986
+                "Horn", 
+                -359346310
             },
             {
-                "Bloom Chair 2", 
+                "Yea Table", 
                 1598845731
             },
             {
@@ -6087,11 +6136,11 @@ magics = {
                 332997197
             },
             {
-                "Grand Guitar", 
+                "Ultimate Guitar", 
                 970364197
             },
             {
-                "Grand HandPan", 
+                "Ultimate HandPan", 
                 454864430
             },
         },
@@ -6100,132 +6149,140 @@ magics = {
         "[🔰]","Other Spells",
         content = {
             {
-                "Small", 
+                "Chibi Height",
+                -305102667
+            },
+            {
+                "Height Small 3x",
                 1692428656
             },
             {
-                "Samller", 
-                2142718166
+                "Height Large 3x", 
+                891098028
             },
             {
-                "Big", 
-                891098028
+                "Size Large 3x",
+                -1879316162
+            },
+            {
+                "Size Small 3x",
+                2142718166
             },
             {
                 "Glow", 
                 1097748727
             },
             {
-                "Recharge", 
+                "Energy", 
                 1750685908
             },
             {
-                "Floating", 
+                "Anti Gravity", 
                 1860519737
             },
             {
-                "Anti Dragon", 
-                1067647386
-            },
-            {
-                "Anti Darkness", 
+                "Goo Drain", 
                 383062578
             },
             {
-                "Anti rain", 
+                "Drain", 
                 -1463943689
             },
             {
-                "A lot of candlelight", 
+                "Wax 2x", 
                 -1727483534
             },
             {
-                "Flight Blessing", 
+                "Wing Gain", 
                 -1362469224
             },
             {
-                "Friendship Back to Back", 
+                "Repellant Krill",
+                -932650381
+            },
+            {
+                "Carry", 
                 1405645877
             },
             {
-                "Friendship Bear Hug", 
+                "Bear Hug", 
                 1677246236
             },
             {
-                "Friendship Warp", 
+                "Warp", 
                 998754260
             },
             {
-                "Dark Crab Calling", 
+                "Hit",
+                2137753158
+            },
+            {
+                "Crab Shout", 
                 1725047129
             },
             {
-                "Jellyfish Calling", 
+                "Jellyfish Shout", 
                 -957441587
             },
             {
-                "Manta Calling", 
+                "Manta Shout", 
                 1814753890
             },
             {
-                "turquoise tail", 
+                "Kizuna AI Shout", 
+                -1881863468
+            },
+            {
+                "Aquamarine Tail", 
                 1318288330
             },
             {
-                "black tail", 
+                "Black Tail", 
                 -176902809
             },
             {
-                "blue tail", 
+                "Blue Tail", 
                 -1951801352
             },
             {
-                "Cyan tail", 
+                "Cyan Tail", 
                 1918290563
             },
             {
-                "Green tail", 
+                "Green Tail", 
                 637646527
             },
             {
-                "Purple pink tail", 
+                "Magenta Tail", 
                 -1527316661
             },
             {
-                "orange tail", 
+                "Orange Tail", 
                 1237283438
             },
             {
-                "purple tail", 
+                "Pink Tail", 
                 470393304
             },
             {
-                "purple tail", 
+                "Purple Tail", 
                 -1071076330
             },
             {
-                "Red tail", 
+                "Red Tail", 
                 -1304862813
             },
             {
-                "Yellow tail", 
+                "Yellow Tail", 
                 -1354381164
             },
             {
-                "Rainbow trail", 
+                "Rainbow Trail", 
                 147016038
             },
             {
-                "Crab Troll", 
+                "Crab Rock Trick", 
                 901504997
-            },
-            {
-                "Anti Krill", 
-                3362316915
-            },
-            {
-                "Kizuna AI Call", 
-                -1881863468
             },
             {
                 "Firework Stuff", 
@@ -6236,8 +6293,64 @@ magics = {
                 -1938239955
             },
             {
-                "Winter Feast Scarf", 
+                "Red Scarf", 
                 70832281
+            },
+            {
+                "Teleport Isle Elder [Sparks Needed]",
+                103122035
+            },
+            {
+                "Teleport Sanctuary [Sparks Needed]",
+                598305233
+            },
+            {
+                "Teleport Prairie Elder [Sparks Needed]",
+                -1633629698
+            },
+            {
+                "Teleport Forest Cave [Sparks Needed]",
+                224110574
+            },
+            {
+                "Teleport Forest Elder [Sparks Needed]",
+                -1256468339
+            },
+            {
+                "Teleport Forgotten Ark [Sparks Needed]",
+                -210323960
+            },
+            {
+                "Teleport Hermit Valley [Sparks Needed]",
+                1660914074
+            },
+            {
+                "Teleport Valley Elder [Sparks Needed]",
+                248080515
+            },
+            {
+                "Teleport Wasteland Elder [Sparks Needed]",
+                -1172691679
+            },
+            {
+                "Teleport You & I [?]",
+                1153544860
+            },
+            {
+                "Timeline Birthday Crab [Sparks Needed]",
+                875460884
+            },
+            {
+                "Timeline Day & Night [Sparks Needed]",
+                539651423
+            },
+            {
+                "Timeline Nature Turtle [Sparks Needed]",
+                1212897503
+            },
+            {
+                "Timeline Oreo [Sparks Needed]",
+                959071590
             },
       },
     },
