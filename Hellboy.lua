@@ -7922,7 +7922,7 @@ function magic()
 end
 mtracer = 0
 function autoCape()
-    if mtracer > #magics[4].content then
+    if mtracer == #magics[4].content then
         mtracer = 0
     end
     mtracer = mtracer + 1
