@@ -7756,7 +7756,12 @@ function cordlist(type)
 end
 function burner()
     signs.burn = kj.switch(bootloader + liboffsets.candles, '-721215457 D', '872415464 D', 'Burning')
-    kj.groupFreezeSwitch(flowers)
+    if kj.isFrozen(flowers[32].address) then
+        gg.removeListItems(flowers)
+    else
+        gg.setValues(flowers)
+        gg.addListItems(flowers)
+    end
 end
 function wcharge()
  do
@@ -7771,13 +7776,25 @@ function configSign()
       do
         if kj.getValue(bootloader + liboffsets.candles, 'D') == -721215457 then
             signs.burn = "  -〘 ✅ 〙"
+            gg.setValues(flowers)
+            gg.addListItems(flowers)
         end
       end
     end
      do
        do
-        if kj.isFrozen(anptr + anptroffsets.wcharge) then
+        if kj.getValue(bootloader + liboffsets.wcharge, 'D') == 505729024 then
             signs.wcharge = "  -〘 ✅ 〙"
+            uu = {
+                {
+                    address = anptr + anptroffsets.wcharge,
+                    flags = kj.dT('F'),
+                    value = 14,
+                    freeze = true,
+                }
+            }
+            gg.setValues(uu)
+            gg.addListItems(uu)
         end
       end
     end
@@ -8275,7 +8292,8 @@ end
          table.insert(flowers, {
          address = guiptr + gptoffsets.flowers + i * distances.flowers,
          flags = kj.dT('F'),
-         value = 0,               
+         value = 0,
+         freeze = true,         
          name = 'Flower' .. '[' .. i .. ']',
          })
       else
