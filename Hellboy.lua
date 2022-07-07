@@ -47,6 +47,7 @@ lliboffsets = {
     fasthome = 8708264,
     fastflap =  9523004,
     wcharge = 5207944,
+    candles = 6978208,
 }
 lanptroffsets = {
     cmdchat = 2396800,
@@ -98,6 +99,7 @@ bliboffsets = {
     fasthome = 8708264,
     fastflap =  9523004,
     wcharge = 5207944,
+    candles = 6978208,
 }
 banptroffsets = {
     wings = 4343240,
@@ -7753,7 +7755,7 @@ function cordlist(type)
     end
 end
 function burner()
-    signs.burn = kj.groupFreezeSwitch(candles, 'Burning')
+    signs.burn = kj.switch(bootloader + liboffsets.candles, '-721215457 D', '872415464 D', 'Burning')
     kj.groupFreezeSwitch(flowers)
 end
 function wcharge()
@@ -7767,7 +7769,7 @@ end
 function configSign()
     do
       do
-        if kj.isFrozen(guiptr + gptoffsets.candles) then
+        if kj.getValue(bootloader + liboffsets.candles, 'D') == -721215457 then
             signs.burn = "  -〘 ✅ 〙"
         end
       end
