@@ -60,6 +60,7 @@ lanptroffsets = {
     closet = 22710724,    
     wings = 4343240,
     wvisible = 4478596,
+    mportal = 4198256,
 }
 lgptoffsets = {
     pcandle = -6151076,
@@ -109,6 +110,7 @@ banptroffsets = {
     cmdchat = 2396800,
     wcharge = 4478516,
     wvisible = 4478596,
+    mportal = 4198256,
 }
 bgptoffsets = {
     map = 23830648,
@@ -5538,10 +5540,10 @@ scrSoul = {
     end
   end
 yellow = {
-    {--1
+    {
         "[🌀]Teleport",
         content = {
-            "[🌀]Portal Teleport",
+            "[🌀]Magic Teleport",
             "[⬆️]Goto",
             "[🧭]Out Of Borders",
             "[⬆️]Breach Walls",
@@ -5553,7 +5555,7 @@ yellow = {
             "[📌]Pin Y Coordinate",
         }, 
     },
-    {--2
+    {
         "[🏃🏻‍♂️] Run",
         content = {
             "[🕯]Auto Candle Run",
@@ -5562,16 +5564,16 @@ yellow = {
             "[⭐]Semi Star Run",
         },
     },
-    {--3
+    {
         "[🔥]Burn",
     },
-    {--4
+    {
         "[🀄️]Absorb All",
     },
-    {--5
+    {
         "[🌕]Wing Charge",
     },
-    {--6
+    {
         "‍[️🧙]️Magic",
         content = {
             "[🔮]No Sparkles spells",
@@ -5580,7 +5582,7 @@ yellow = {
             "[❌]Remove All",
         },
     },
-    {--7
+    {
         "[🦚]Wing",
         content = {
             "[🌟]Wing Count",
@@ -7165,7 +7167,7 @@ end
              elseif tear == eye[6] then
                 wcharge()-----Kiojeen-->
              elseif tear == eye[7] then
-                tportal()-----Kiojeen-->
+                tpmortal()-----Kiojeen-->
              elseif tear == eye[8] then
                 cordlist("c")---------->
              elseif tear == eye[9] then
@@ -7197,7 +7199,7 @@ end
              elseif tear == eye[5] then
                 wcharge()-----Kiojeen-->
              elseif tear == eye[6] then
-                tportal()-----Kiojeen-->
+                tpmortal()-----Kiojeen-->
              elseif tear == eye[7] then
                 cordlist("s")---------->
              elseif tear == eye[8] then
@@ -7365,7 +7367,7 @@ function tpmenu()
     tear = tpmG.choice(yellow[1].content, nil, header)
     if tear == #yellow[1].content then yellowTears()
     elseif tear == eye[1] then 
-        tportal()
+        tpmortal()
     elseif tear == eye[2] then 
         gotoMap()
     elseif tear == eye[3] then 
@@ -8054,13 +8056,15 @@ function tpsReq()
         return true
     end
  end 
-function setsmap(str)
-    if tpsReq() then
-        kj.setString(tps + 1, '.' .. str, 30)
-        setspell(224110574, 8, 0)
-        gg.sleep(1000)
-        setspell(0, 8)
-    end
+ function setsmap(str)
+    tps = anptr + anptroffsets.mportal
+    kj.setString(tps, '.' .. str, 30)
+    setspeed(10)
+    setspell(224110574, 8, 0)
+    gg.sleep(1000)
+    setspeed(1)
+    kj.setString(tps, '.Rain_Cave', 30)
+    setspell(0, 8)
  end
 function setmap(str)
     xtr = guiptr + gptoffsets.portal
@@ -8297,14 +8301,10 @@ end
      end
    end
  end
-function tportal()
-    if true then
-        gg.toast('Will add later')
-        return
-    end
+function tpmortal()
     getSkidLocat()
     if STAY  ~= 'runChoice' then
-        STAY = 'tportal'
+        STAY = 'tpmortal'
     end
         do
           do
@@ -8331,9 +8331,9 @@ function tportal()
     if tear ~= nil then
         fhdr = tear - 2
         if tear == eye[1] then
-            setmap(SkidLocation)
+            setsmap(SkidLocation)
         elseif tear == eye[2] then 
-            setmap("CandleSpace")
+            setsmap("CandleSpace")
         elseif tear == #realms and STAY  ~= 'runChoice' then
             yellowTears()
         else
@@ -8348,9 +8348,9 @@ function tportal()
             end
             tear = gg.choice(realms, nil, world[fhdr][1] .. world[fhdr][2])
             if tear == #realms and STAY  ~= 'runChoice' then
-                tportal()
+                tpmortal()
             elseif tear ~= nil then
-                setmap(name[tear])
+                setsmap(name[tear])
             end
         end
     end
@@ -8588,6 +8588,8 @@ function noUiTrigger()
 end
 function startUpTrigger()
     fasthome(configs.fasthome)
+    kj.setValue(bootloader + 5138732, '-721215457 D')
+    kj.setValue(bootloader + 5138696, '-721215457 D')
 end
 function launch()
     gg.setVisible(false)
