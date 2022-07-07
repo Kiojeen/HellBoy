@@ -28,6 +28,7 @@ ldistances = {
     flowers = 8,
     fldist = 56224,
     magx = 48,
+    frags = 592,
 }
 qburners = {
     candles = 468,
@@ -73,6 +74,7 @@ lgptoffsets = {
     winds = 3095136,
     meshared = 23819316,
     sunsetfilter = -2698924,
+    frags = 22611536,
 }
 --
 bdistances = {
@@ -80,6 +82,7 @@ bdistances = {
     flowers = 8,
     fldist = 56224,
     magx = 48,
+    frags = 592,
 }
 bliboffsets = {
     libanptr = 21233544,
@@ -111,14 +114,13 @@ bgptoffsets = {
     map = 23830648,
     candles = 11986128,
     flowers = 25428388,
-    pcandle = -6151076,
-    pflame = -6151064,
     gamespeed = -10874448,
     scrres = -12286908,
     portal = 11960732,
     meshared = 25071156,
     winds = 3086400,
     sunsetfilter = -2698924,
+    frags = 22611536,
 }
 signs = {
     burn = "",
@@ -3132,86 +3134,6 @@ scrSoul = {
                 587.62487792968, 
                 -563.5349121093
             },
-            {
-                11.649492263793, 
-                312.75564575195, 
-                387.076660155,1
-            },
-            {
-                10.909109115600, 
-                268.10208129882, 
-                264.33517456054
-            },
-            {
-                52.308292388916, 
-                174.48767089843, 
-                35.013637542724
-            },
-            {
-                48.651847839355, 
-                167.01831054687, 
-                4.1076931953430
-            },
-            {
-                57.702232360839, 
-                132.35842895507, 
-                -195.93379688,1
-            }, 
-            {
-                78.006599426269, 
-                131.98063659667, 
-                -210.2630615375
-            }, 
-            {
-                84.904426574707, 
-                133.43931579589, 
-                -221.9564284375
-            }, 
-            {
-                69.892509460449, 
-                131.10452270507, 
-                -232.4457367188
-            }, 
-            {
-                60.032138824469, 
-                133.09295654295, 
-                -244.8497629062
-            }, 
-            {
-                47.335174560546, 
-                130.91708373438, 
-                -232.4038828125
-            }, 
-            {
-                31.493436813354, 
-                133.57623215625, 
-                -227.8029392578
-            }, 
-            {
-                36.882205963134, 
-                131.90249633762, 
-                -224.6617558594
-            }, 
-            {
-                44.885677337646, 
-                132.54476928718, 
-                -211.9600660156
-            }, 
-            {
-                58.522827148437, 
-                132.44879150325, 
-                -195.6243585938
-            }, 
-            {
-                57.882617950439, 
-                132.19241333012, 
-                -209.3764932812
-            }, 
-            {
-                69.167488098153, 
-                132.18293762703, 
-                -220.1134882812
-            },
         },
         S_Runner = {
             {
@@ -3239,7 +3161,12 @@ scrSoul = {
                 "Skip Race",
                 "Valley of Thriumph",
             },
-            Map_Goto_Cord = {             
+            Map_Goto_Cord = {   
+                {
+                    253.66641235351, 
+                    587.62487792968, 
+                    -563.5349121093
+                },          
                 {
                     158.58305378958, 
                     935.19421386875, 
@@ -3462,96 +3389,6 @@ scrSoul = {
                 1040.0925960156, 
                 -71.53787245312
             },
-            {
-                -426.0387573242, 
-                473.55313110156, 
-                445.703460694,1
-            },
-            {
-                -401.1581420895, 
-                446.46392822625, 
-                418.60153124219
-            }, 
-            {
-                -238.4582519535, 
-                323.89028930406, 
-                247.21086120547
-            }, 
-            {
-                2.0941019058224, 
-                202.83415222797, 
-                132.22161834375
-            }, 
-            {
-                43.365581512417, 
-                168.81559741797, 
-                10.312022209748
-            }, 
-            {
-                48.651847839547, 
-                167.01831054875, 
-                4.1076931953018
-            },
-            {
-                57.702232360844, 
-                132.35842807812, 
-                -195.99179688,1
-            },
-            {
-                78.006599426953, 
-                131.98063656797, 
-                -210.2630634375
-            }, 
-            {
-                84.904426574703, 
-                133.43931589844, 
-                -221.9564984375
-            }, 
-            {
-                69.892509460422, 
-                131.10452277812, 
-                -232.4457707188
-            }, 
-            {
-                60.032138826289, 
-                133.09295654875, 
-                -244.8497619062
-            }, 
-            {
-                47.335174566875, 
-                130.91708374438, 
-                -232.4036228125
-            }, 
-            {
-                31.493436813392, 
-                133.57623215625, 
-                -227.8029327578
-            }, 
-            {
-                36.882205964766, 
-                131.90249689062, 
-                -224.6618558594
-            }, 
-            {
-                44.885677336484, 
-                132.54478710938, 
-                -211.9600980156
-            }, 
-            {
-                58.522827148475, 
-                132.44879150625, 
-                -195.6243585938
-            }, 
-            {
-                57.882617950945, 
-                132.19241337812, 
-                -209.3764132812
-            }, 
-            {
-                69.167488098453, 
-                132.18293720703, 
-                -220.1138082812
-            }, 
         },
         S_Runner = {
             {
@@ -3589,7 +3426,86 @@ scrSoul = {
     {
         "SunsetEnd",
         C_Runner = {
-
+            {
+                11.649492263793, 
+                312.75564575195, 
+                387.07666015578
+            },
+            {
+                10.909109115600, 
+                268.10208129882, 
+                264.33517456054
+            },
+            {
+                52.308292388916, 
+                174.48767089843, 
+                35.013637542724
+            },
+            {
+                48.651847839355, 
+                167.01831054687, 
+                4.1076931953430
+            },
+            {
+                57.702232360839, 
+                132.35842895507, 
+                -195.93379688,1
+            }, 
+            {
+                78.006599426269, 
+                131.98063659667, 
+                -210.2630615375
+            }, 
+            {
+                84.904426574707, 
+                133.43931579589, 
+                -221.9564284375
+            }, 
+            {
+                69.892509460449, 
+                131.10452270507, 
+                -232.4457367188
+            }, 
+            {
+                60.032138824469, 
+                133.09295654295, 
+                -244.8497629062
+            }, 
+            {
+                47.335174560546, 
+                130.91708373438, 
+                -232.4038828125
+            }, 
+            {
+                31.493436813354, 
+                133.57623215625, 
+                -227.8029392578
+            }, 
+            {
+                36.882205963134, 
+                131.90249633762, 
+                -224.6617558594
+            }, 
+            {
+                44.885677337646, 
+                132.54476928718, 
+                -211.9600660156
+            }, 
+            {
+                58.522827148437, 
+                132.44879150325, 
+                -195.6243585938
+            }, 
+            {
+                57.882617950439, 
+                132.19241333012, 
+                -209.3764932812
+            }, 
+            {
+                69.167488098153, 
+                132.18293762703, 
+                -220.1134882812
+            },
         },
         S_Runner = {
             {
@@ -7126,6 +7042,13 @@ function starPLocker()
         end
     end
 end
+function fragsLocker()
+    if string.find(SkidLocation, 'Race') == nil then
+        if SkidLocation ~= 'SunsetColosseum' and SkidLocation ~= 'SunsetEnd' then
+            crunMenu[3] = nil
+        end
+    end
+end
 function runChoice(rtype)
     starPLocker()
     STAY = 'runChoice'
@@ -7135,6 +7058,7 @@ function runChoice(rtype)
     crunMenu = {
         "[🕯]Run",
         "[🕯]Absorb wax",
+        "[💠]Absorb Fragments",
         "[🔥]Burn"  .. signs.burn,
         "[⬆️]Breach Walls",
         "[🌕]Wing Charge" .. signs.wcharge,
@@ -7191,7 +7115,7 @@ end
     if type_ == nil then
         type_ = rtype
     end 
-  end
+  end fragsLocker()
     end sflag, cflag = false
         for i, v in ipairs(scrSoul) do
             if scrSoul[i][1] == SkidLocation then
@@ -7211,7 +7135,7 @@ end
                 else
                     sflag = false
                     type_ = "c"
-                    crunMenu[8] = nil
+                    crunMenu[9] = nil
                 end
             end
         end dontRemove = 'By: Kiojeen'
@@ -7233,22 +7157,24 @@ end
              elseif tear == eye[2] then
                 absorbWax()---Kiojeen-->
              elseif tear == eye[3] then
-                burner()------Kiojeen-->
+                absorbFrags()---Kiojeen-->
              elseif tear == eye[4] then
-                bwall(configs.bdis)-------Kiojeen-->
+                burner()------Kiojeen-->
              elseif tear == eye[5] then
-                wcharge()-----Kiojeen-->
+                bwall(configs.bdis)-------Kiojeen-->
              elseif tear == eye[6] then
-                tportal()-----Kiojeen-->
+                wcharge()-----Kiojeen-->
              elseif tear == eye[7] then
-                cordlist("c")---------->
+                tportal()-----Kiojeen-->
              elseif tear == eye[8] then
-                type_ = eye[90] runChoice("s")
+                cordlist("c")---------->
              elseif tear == eye[9] then
-                oobls('runChoice')----->
+                type_ = eye[90] runChoice("s")
              elseif tear == eye[10] then
-                type_ = nil yellowTears() 
+                oobls('runChoice')----->
              elseif tear == eye[11] then
+                type_ = nil yellowTears() 
+             elseif tear == eye[12] then
                 runChoice("c")
              elseif tear ~= nil then
                  for i, v in ipairs(scrSoul) do
@@ -8263,6 +8189,32 @@ function setmap(str)
         }
       }
       gg.setValues(xar)
+end
+function absorbFrags()
+    local uu = {}
+    for i = 0, 140 do
+        frags = guiptr + gptoffsets.frags + i * distances.frags
+        local rstr1 = kj.getValue(frags, 'F')
+        local rstr2 = kj.getValue(frags + 12, 'F')
+        if rstr1 ~= 0 and rstr2 == 1 then
+            table.insert(uu, {
+                address = frags,
+                value = getPosition()[1],
+                flags = kj.dT('F'),
+            })
+            table.insert(uu, {
+                address = frags + 4,
+                value = getPosition()[2] + 0.5,
+                flags = kj.dT('F'),
+            })
+            table.insert(uu, {
+                address = frags + 8,
+                value = getPosition()[3],
+                flags = kj.dT('F'),
+            })
+        end
+    end
+    gg.setValues(uu)
 end
 function absorbWax()
     if signs.burn == "" then burner() gg.sleep(500) end
