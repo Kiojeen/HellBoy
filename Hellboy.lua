@@ -102,6 +102,9 @@ bliboffsets = {
     candles = 6978208,
 }
 banptroffsets = {
+    pcandle = -6151076,
+    pflame = -6151064,
+    ----new----
     wings = 4343240,
     xpos = 4455024,
     ypos = 4455028,
