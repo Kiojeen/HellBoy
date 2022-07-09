@@ -22,6 +22,7 @@ configs = {
     awrob = false,
     devmode = false,
     fasthome = false,
+    mumu = false
 }
 ldistances = {
     candles = 448,
@@ -176,7 +177,11 @@ scrSoul = {
 
         },
         AC_Runner = {
-
+            {
+                1.2082827091217, 
+                1.2012283802032, 
+                -0.512719154357
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -358,7 +363,21 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                176.06900014062, 
+                37.162414550725, 
+                173.88603210922
+            },
+            {
+                406.33255004281, 
+                115.30656433169, 
+                -11.80378055098
+            },
+            {
+                141.18650811094, 
+                89.765403747576, 
+                -183.0690004062
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -432,7 +451,11 @@ scrSoul = {
 
         },
         AC_Runner = {
-
+            {
+                -11.23269844039, 
+                236.14418021383, 
+                -294.6099548941
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -518,7 +541,11 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                0.1578071713448, 
+                78.656890814062, 
+                -412.2473728125
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -589,7 +616,11 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                -16.086963653563, 
+                133.843963668898, 
+                1.68830537796059
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -645,7 +676,11 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                -13.12792205819, 
+                104.64202117922, 
+                -133.9867248562
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -691,7 +726,11 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                -12.17530059831, 
+                50.194400787356, 
+                -257.1418151869
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -832,7 +871,21 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                116.47127538984, 
+                196.72525024062, 
+                -434.8934326875
+            },
+            {
+                106.03333282703, 
+                148.89004516562, 
+                -30.24172058496
+            },
+            {
+                89.278778076188, 
+                156.34834289078, 
+                43.936943059922
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -1010,7 +1063,21 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                26.929542543906, 
+                184.64785761562, 
+                278.60827671875
+            },
+            {
+                90.043136596669, 
+                198.46316528312, 
+                270.37042238125
+            },
+            {
+                121.44505310594, 
+                254.76109314844, 
+                464.65283203125
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -1128,7 +1195,11 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                -26.44708061217, 
+                58.153938293703, 
+                -44.49094390840
+            }, 
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -1228,8 +1299,23 @@ scrSoul = {
                 178.67575032428
             },
         },
-        AC_Runner = {
-
+        AC_Runner = {            
+            {
+                307.26107788094, 
+                187.17100524344, 
+                71.495117189875
+            },
+            {
+                361.99203491094, 
+                180.86645507825, 
+                230.81097412375
+            },
+            {
+                254.73260497980, 
+                194.57379488059, 
+                218.48579870849
+            },
+            
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -1258,7 +1344,18 @@ scrSoul = {
                     314.23403930666,
                     235.16716003417,
                     162.43087768588
-                }
+                },        
+                {
+                    377.53762817281, 
+                    181.22164916188, 
+                    215.07095914062
+                },
+                {
+                    271.98013305406, 
+                    192.32685852078, 
+                    203.89930725656
+                },
+
             },
         },
     },
@@ -1334,7 +1431,16 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                -102.9916915893, 
+                171.81489562988, 
+                57.865177154541
+            },
+            {
+                -186.2400970458, 
+                183.59744262695, 
+                119.24262237548
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -1521,7 +1627,31 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                248.68655390812, 
+                113.45592498797, 
+                219.59768995625
+            },
+            {
+                105.65388488951, 
+                0.9920581579274, 
+                293.38293457125
+            },
+            {
+                121.49706260547, 
+                2.3658447265025, 
+                333.89300537375
+            },
+            {
+                51.122116088819, 
+                54.125610351625, 
+                341.18740844756
+            },
+            {
+                135.90951535938, 
+                1.4011123180384, 
+                411.89227294975
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -1595,7 +1725,11 @@ scrSoul = {
 
         },
         AC_Runner = {
-
+            {
+                -93.05754089355, 
+                82.931159973144, 
+                42.054836273193
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -1731,7 +1865,21 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                136.07281490625, 
+                217.56480404844, 
+                -612.3626098812
+            },
+            {
+                17.669103622523, 
+                92.522308349838, 
+                -225.5381465625
+            },
+            {
+                27.112838747188, 
+                97.958663940429, 
+                -118.9297637931
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -1923,7 +2071,36 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                -96.01830419922, 
+                363.93789672856, 
+                120.91712951156
+            },
+            {
+                -154.2238769525, 
+                365.00250240625, 
+                241.55316162375
+            },
+            {
+                -160.4405839062, 
+                343.98150634625, 
+                360.54956059875
+            },
+            {
+                445.31802368106, 
+                344.77639770581, 
+                306.03875731875
+            },
+            {
+                580.11492919988, 
+                334.39108276319, 
+                278.04650878625
+            },
+            {
+                583.47320556662, 
+                303.66043082031, 
+                248.94950866692
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -2020,7 +2197,11 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                6.6645178796084, 
+                145.34706115756, 
+                21.203031539992
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -2195,7 +2376,26 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                31.915939054688, 
+                105.66970825192, 
+                -73.49396514578
+            },
+            {
+                77.633071899406, 
+                107.52163696062, 
+                -60.80525970844
+            },
+            {
+                76.944671630938, 
+                129.22474670156, 
+                -12.96403985127
+            },
+            {
+                66.508689880371, 
+                98.901390077836, 
+                41.440334320066
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -2303,7 +2503,21 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                6.0396866790088, 
+                86.345352172856, 
+                -51.38526153453
+            },
+            {
+                -11.84419059418, 
+                83.828506469756, 
+                -20.76513292734
+            },
+            {
+                3.3023226261916, 
+                89.865173339875, 
+                68.095855712862
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -2496,7 +2710,26 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                22.659095760156, 
+                139.67922973812, 
+                45.772895812928
+            },
+            {
+                89.706176757825, 
+                143.43301391602, 
+                192.36849975538
+            },
+            {
+                -0.054203182563, 
+                135.57144165062, 
+                229.44253540062
+            },
+            {
+                -67.22160335469, 
+                144.88349914558, 
+                230.23429870607
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -2886,12 +3119,35 @@ scrSoul = {
                 -517.0969238225
             },
         },
-        AC_Runner = {
-
+        AC_Runner = {  
+            {
+                -38.82683944704, 
+                306.06375122031, 
+                0.7520882487058
+            },
+            {
+                -153.4755401628, 
+                257.03387451875,
+                -190.4804997812
+            },
+            {
+                8.5401477813207,
+                88.009811401719, 
+                -458.1741638184
+            },
+            {
+                143.83364868162, 
+                44.872287750214,
+                -513.0243573438
+            },
+            {
+                236.07720947625, 
+                45.873260498075, 
+                -509.6696166995
+            },
         },
         Map_Goto = {
-            Map_Goto_Name = {
-                
+            Map_Goto_Name = {  
                 "The middle",
                 "Social Space",
                 "Sliding Race",
@@ -2967,7 +3223,11 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                79.433319779688, 
+                51.831768035867, 
+                74.653587341306
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -3074,7 +3334,11 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                -191.6364746093, 
+                260.32254032031, 
+                677.55865451562
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -3303,7 +3567,26 @@ scrSoul = {
 
         },
         AC_Runner = {
-
+            {
+                115.10074615476, 
+                476.34976196286, 
+                10.340165134629
+            },
+            {
+                21.752538680273, 
+                531.68847656725, 
+                -30.24364662141
+            },
+            {
+                100.52706146244, 
+                556.59613070938, 
+                -44.33283232578
+            },
+            {
+                122.49337005234, 
+                480.57855609375, 
+                -114.0879952344
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -3661,7 +3944,11 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                9.4763431549077, 
+                137.91827392575, 
+                -165.4556884725
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -3724,7 +4011,11 @@ scrSoul = {
 
         },
         AC_Runner = {
-
+            {
+                8.4926347732595, 
+                141.55299377446, 
+                -200.6611022188
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -3984,6 +4275,31 @@ scrSoul = {
         },
         AC_Runner = {
 
+            {
+                58.912986771094, 
+                4.6200566291808, 
+                298.15884399406
+            },
+            {
+                -22.19000816215, 
+                8.0557069778448, 
+                263.75042724675
+            },
+            {
+                -87.20805358719, 
+                3.5997834208744, 
+                327.96957397464
+            },
+            {
+                -69.77503245703, 
+                8.2265472412938, 
+                169.59123229947
+            },
+            {
+                46.125465396406, 
+                0.7260575890547, 
+                230.98258972197
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -4114,7 +4430,36 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                142.42260748875, 
+                122.18070983719, 
+                354.66345214375
+            },
+            {
+                66.076637268064, 
+                108.00908660672, 
+                497.16506958081
+            },
+            {
+                117.08913423086, 
+                121.81314853516, 
+                472.02062988125
+            },
+            {
+                276.91116333081, 
+                113.86463163203, 
+                519.37231445325
+            },
+            {
+                313.57543945325, 
+                120.79293822188, 
+                561.34271240438
+            },
+            {
+                298.20739749375, 
+                112.79660791914, 
+                354.37231445125
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -4261,7 +4606,46 @@ scrSoul = {
 
         },
         AC_Runner = {
-
+            {
+                60.794216796875, 
+                91.529129028331, 
+                244.22984314844
+            },
+            {
+                53.718326568516, 
+                99.200119018469, 
+                129.55772302344
+            },
+            {
+                63.346504211478, 
+                72.228889533203, 
+                -21.90197753625
+            },
+            {
+                42.146312713385, 
+                79.497436582375, 
+                -64.31107322266
+            },
+            {
+                82.471214299336, 
+                71.394134521488, 
+                -113.2323683828
+            },
+            {
+                52.998291015625, 
+                78.329238890156, 
+                -151.8545338672
+            },
+            {
+                15.515132902734, 
+                78.858230590031, 
+                -145.9744710938
+            },
+            {
+                38.368598937828, 
+                71.276130967953,
+                -221.6977346094
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -4368,7 +4752,36 @@ scrSoul = {
 
         },
         AC_Runner = {
-
+            {
+                -131.7653044297, 
+                5.7304058074957, 
+                411.03732299869
+            },
+            {
+                -164.1964874268, 
+                9.4794673919673, 
+                375.84466552775
+            },
+            {
+                -192.6351621562, 
+                7.2719597816285, 
+                478.21673583975
+            },
+            {
+                -199.8372495938, 
+                1.5046497583382, 
+                412.92526241719
+            },
+            {
+                -289.2402954625, 
+                29.466814041695, 
+                413.06524658125
+            },
+            {
+                -213.4125223047, 
+                15.907491683951, 
+                429.15438842344
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -4469,7 +4882,31 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                -51.04799279883, 
+                104.36713403828, 
+                -80.17066955566
+            },
+            {
+                -230.8029026797, 
+                128.76542657422, 
+                -155.1765131875
+            },
+            {
+                -256.8525390625, 
+                104.70501704375, 
+                -221.3316192953
+            },
+            {
+                -224.0580248047, 
+                95.286918640172, 
+                -298.7842150781
+            },
+            {
+                -268.6379055469, 
+                90.554054260939, 
+                -375.0806274625
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -4530,7 +4967,11 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                -0.031368126721, 
+                208.73547363125, 
+                -1.968906163115
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -4652,7 +5093,26 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                1.2594480514527, 
+                31.962703733984, 
+                -88.96246337625
+            },
+            {
+                0.5493590831592, 
+                42.077457427516, 
+                -0.480985004443
+            },
+            {
+                10.627416610773, 
+                80.298393249512, 
+                15.289906507002
+            },
+            {
+                -14.72156047045, 
+                148.76473999438, 
+                -33.96760559031
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -4738,7 +5198,16 @@ scrSoul = {
 
         },
         AC_Runner = {
-
+            {
+                -11.10198116902, 
+                63.290981292761, 
+                6.5677919387838
+            },
+            {
+                7.6979284286402, 
+                63.205051422914, 
+                -16.81070516523
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -4884,7 +5353,36 @@ scrSoul = {
 
         },
         AC_Runner = {
-
+            {
+                -38.70960235503, 
+                129.55160522938, 
+                9.2645425796879
+            },
+            {
+                55.999851220664, 
+                161.04713431406, 
+                51.821758270367
+            },
+            {
+                30.942007064336, 
+                184.50595092438, 
+                43.768520322461
+            },
+            {
+                -14.26334667105, 
+                164.20660400325, 
+                -47.54933923594
+            },
+            {
+                0.3577706217808, 
+                295.38552856431, 
+                10.313385963441
+            },
+            {
+                0.0362490788996, 
+                309.66580200131, 
+                60.671302790156
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -4970,7 +5468,36 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                67.093620329297, 
+                541.55218505938, 
+                27.798276924117
+            },
+            {
+                58.152614593586, 
+                562.42883300725, 
+                -12.11826328906
+            },
+            {
+                69.298622134766, 
+                562.42889409688, 
+                -36.51779556414
+            },
+            {
+                69.626579284697, 
+                551.66046142512, 
+                -36.29650116797
+            },
+            {
+                58.987457275625, 
+                551.63305690625, 
+                -13.47164440293
+            },
+            {
+                83.471221923812, 
+                548.91503909625,
+                -36.43446737383
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -5076,7 +5603,26 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                78.103515678625, 
+                73.838241514844, 
+                67.291152954156
+            },
+            {
+                171.05500795703, 
+                13.188585281207, 
+                569.81274414025
+            },
+            {
+                399.70675917969, 
+                92.620971679675, 
+                778.44396975625
+            },
+            {
+                402.68057257656, 
+                150.51773071262, 
+                1018.8953247312
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -5122,7 +5668,21 @@ scrSoul = {
 
         },
         AC_Runner = {
-
+            {
+                -111.5105438239, 
+                21.142538070671, 
+                384.07177734375
+            }, 
+            {
+                -128.2429351806, 
+                21.106355667118, 
+                374.82376098681
+            }, 
+            {
+                -143.6011505123, 
+                25.003812789912, 
+                370.31155395501
+            }, 
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -6287,6 +6847,10 @@ world = {
                 "Dawn"
             },
             {
+                "Prophecy Cave",
+                "DawnCave"
+            },
+            {
                 "Trial of Water",
                 "Dawn_TrialsWater"
             },
@@ -6890,7 +7454,6 @@ function run(type)
     getSkidLocat()
     if type == "c" then
         for i, v in ipairs(scrSoul) do
-            getSkidLocat()
             if scrSoul[i][1] == SkidLocation then
                 for u , d in pairs(scrSoul[i].C_Runner) do
                     CRunG.toast("Location: " .. u .. " :: " .. #scrSoul[i].C_Runner)
@@ -6909,7 +7472,6 @@ function run(type)
         end
     elseif type == "s" then
         for i, v in ipairs(scrSoul) do
-            getSkidLocat()
             if scrSoul[i][1] == SkidLocation then
                 for u , d in pairs(scrSoul[i].S_Runner) do
                     CRunG.toast("Location: " .. u .. " :: " .. #scrSoul[i].S_Runner)
@@ -6991,7 +7553,7 @@ function runType()
     STAY = 'runType'
     local rnmG = gg
     tear = rnmG.choice(yellow[2].content, nil, header)
-    if     tear == eye[1] then
+    if     tear == eye[1] then autoCr()
     elseif tear == eye[2] then
     elseif tear == eye[3] then runChoice("c")
     elseif tear == eye[4] then runChoice("s")
@@ -7160,25 +7722,25 @@ end
          elseif type_ == "c" and cflag ~= false then
              tear = rCG.choice(crunMenu, nil, header)
              if     tear == eye[1] then
-                run("c")------Kiojeen-->
+                run("c")
              elseif tear == eye[2] then
-                absorbWax()---Kiojeen-->
+                abswaxpro()
              elseif tear == eye[3] then
-                absorbFrags()---Kiojeen-->
+                absorbFrags()
              elseif tear == eye[4] then
-                burner()------Kiojeen-->
+                burner()
              elseif tear == eye[5] then
-                bwall(configs.bdis)-------Kiojeen-->
+                bwall(configs.bdis)
              elseif tear == eye[6] then
-                wcharge()-----Kiojeen-->
+                wcharge()
              elseif tear == eye[7] then
-                tpmortal()-----Kiojeen-->
+                tpmortal()
              elseif tear == eye[8] then
-                cordlist("c")---------->
+                cordlist("c")
              elseif tear == eye[9] then
                 type_ = eye[90] runChoice("s")
              elseif tear == eye[10] then
-                oobls('runChoice')----->
+                oobls('runChoice')
              elseif tear == eye[11] then
                 type_ = nil yellowTears() 
              elseif tear == eye[12] then
@@ -7194,23 +7756,23 @@ end
          elseif type_ == "s" and sflag ~= false then
              tear = rCG.choice(srunMenu, nil, header)
              if     tear == eye[1] then
-                srun_add()----Kiojeen-->
+                srun_add()
              elseif tear == eye[2] then
-                srun_sub()----Kiojeen-->
+                srun_sub()
              elseif tear == eye[3] then
-                run("s")------Kiojeen-->
+                run("s")
              elseif tear == eye[4] then
-                bwall(configs.bdis)-------Kiojeen-->
+                bwall(configs.bdis)
              elseif tear == eye[5] then
-                wcharge()-----Kiojeen-->
+                wcharge()
              elseif tear == eye[6] then
-                tpmortal()-----Kiojeen-->
+                tpmortal()
              elseif tear == eye[7] then
-                cordlist("s")---------->
+                cordlist("s")
              elseif tear == eye[8] then
                 type_ = eye[90] runChoice("c")
              elseif tear == eye[9] then
-                oobls('runChoice')----->
+                oobls('runChoice')
              elseif tear == eye[10] then
                 type_ = nil yellowTears() 
              elseif tear == eye[11] then
@@ -7231,7 +7793,6 @@ end
 end
 function yellowTears()
     STAY = 'yellowTears'
-    --yellowCry[8] = nil
     local ytG = gg
     tear = ytG.choice(yellowCry, nil, header)
     if tear == eye[1] then 
@@ -7255,7 +7816,7 @@ function yellowTears()
     elseif tear == eye[10] then 
         modemenu()
     elseif tear == eye[11] then 
-        ClosetMenu()  --  cmdactv()
+        ClosetMenu()
     elseif tear == eye[12] then 
         settings()
     elseif tear == #yellowCry then 
@@ -7304,6 +7865,7 @@ function settings()
         "[↕️]Breach distance: " .. configs.bdis,
         "[📮]Dev Mode: " .. kj.statSwitch(configs.devmode),
         "[🏠]Fast Return Home" .. kj.statSwitch(configs.fasthome),
+        "[🔁]Mumu User" .. kj.statSwitch(configs.mumu),
         back[1]
     }
     tear = gg.choice(hbstngs, nil, '[☣️]HellBoy' .. ' Settings ' .. hellboy)
@@ -7338,6 +7900,12 @@ function settings()
         configs.fasthome = kj.toggler(configs.fasthome)
         fasthome(configs.fasthome)
         saveconfigs()
+    elseif tear == eye[5] then
+        configs.mumu = kj.toggler(configs.mumu)
+        saveconfigs()
+        if configs.mumu then
+            gg.toast('Too bad')
+        end
     end
 end
 function cmdactv()
@@ -7356,14 +7924,7 @@ function fasthome(bool)
         val = 1409289387
     end
     if val ~= nil then
-            local uu = {
-                {
-                    address = bootloader + liboffsets.fasthome,
-                    flags = kj.dT('D'),
-                    value = val,
-                },
-            }
-        gg.setValues(uu)
+        kj.setValue(bootloader + liboffsets.fasthome, tostring(val) .. 'D')
     end
 end
 function tpmenu()
@@ -7760,8 +8321,15 @@ end
 function burner()
     signs.burn = kj.switch(bootloader + liboffsets.candles, '-721215457 D', '872415464 D', 'Burning')
     if kj.isFrozen(flowers[32].address) then
+        if configs.mumu then
+            gg.removeListItems(candles)
+        end
         gg.removeListItems(flowers)
     else
+        if configs.mumu then
+            gg.setValues(candles)
+            gg.addListItems(candles)
+        end
         gg.setValues(flowers)
         gg.addListItems(flowers)
     end
@@ -7781,6 +8349,10 @@ function configSign()
             signs.burn = "  -〘 ✅ 〙"
             gg.setValues(flowers)
             gg.addListItems(flowers)
+            if configs.mumu then
+                gg.setValues(candles)
+                gg.addListItems(candles)
+            end
         end
       end
     end
@@ -8242,11 +8814,18 @@ function absorbFrags()
     end
     gg.setValues(uu)
 end
+function abswaxpro()
+    kj.switch(bootloader + liboffsets.absorb, '506892288 D','1847647232 D' )
+    if configs.mumu then
+        absorbWax()
+    end
+    gg.sleep(1000)
+    kj.switch(bootloader + liboffsets.absorb, '506892288 D','1847647232 D' )
+end
 function absorbWax()
     if signs.burn == "" then burner() gg.sleep(500) end
     gg.setRanges(gg.REGION_OTHER| gg.REGION_C_ALLOC)
     local fwx, bool = kj.findAddress('-1.0;3.5F::5 F', guiptr + 11204520, anptr + 9123652, 1, 2)
-    kj.switch(bootloader + liboffsets.absorb, '506892288 D','1847647232 D' )
     if bool then
         wx = {}
         for i = 0, 400 do
@@ -8269,7 +8848,6 @@ function absorbWax()
         end
         gg.setValues(wx)
     end
-    kj.switch(bootloader + liboffsets.absorb, '506892288 D','1847647232 D' )
 end
 function teaMake()
 do
@@ -8279,7 +8857,8 @@ do
          table.insert(candles, {
          address = guiptr + gptoffsets.candles + i * distances.candles, 
          flags = kj.dT('F'),
-         value = 1,                
+         value = 1,
+         freeze = true,        
          name = 'Candle' .. '[' .. i .. ']',
          })
       else
@@ -8397,6 +8976,70 @@ function wgrer(str)
     end
     return array
 end
+function acrholder()
+    if gg.isVisible(true) then
+        gg.setVisible(false)
+        tear = gg.choice({'[▶️]Resume Runnung', '[⏸]Pause Running', '[⏹]Stop Running'})
+        if tear == eye[1] then
+            return
+        elseif tear == eye[2] then
+            setspeed(1)
+            hold()
+            setspeed(100)
+        elseif tear == eye[3] then
+            kj.setValue(bootloader + liboffsets.absorb, '1847647232 D')
+            return true
+        end
+    end
+end
+function autoCr()
+    gg.setVisible(false)
+    if signs.burn == "" then 
+        burner() 
+        gg.sleep(500) 
+    end
+    if signs.wcharge == "" then
+        wcharge()
+    end
+    gg.toast('Click on the GG icon to stop')
+    kj.setValue(bootloader + liboffsets.absorb, '506892288 D')
+    absorbWax()
+    for i, v in ipairs(scrSoul) do
+        if #v.AC_Runner > 0 then
+            if acrholder() then
+                setspeed(1)
+                return
+            else
+                setsmap(v[1])
+                gg.sleep(3500)
+                setspeed(100)
+                getSkidLocat()
+            end
+            if SkidLocation == v[1] then
+                for d, u in ipairs(v.AC_Runner) do
+                    teleport(u)
+                    if acrholder() then
+                        setspeed(1)
+                        return
+                    elseif d <= #v.AC_Runner then
+                        gg.sleep(1500)
+                    end
+                end
+            end
+            if configs.mumu then
+                absorbWax()
+            end
+            gg.sleep(1000)
+            if configs.mumu then
+                absorbWax()
+            end
+            setspeed(1)
+            gg.sleep(1000)
+        end
+    end
+    setsmap('CandleSpace')
+    kj.setValue(bootloader + liboffsets.absorb, '1847647232 D')
+end
 function cmdguide()
     if  gg.alert([[Page 1.
         Chat commands:
@@ -8473,7 +9116,7 @@ function kjCommands()
             elseif cmd[2] == 'breach'   then
                  bwall(configs.bdis)
             elseif cmd[2] == 'c_absorb' then
-                 absorbWax()
+                abswaxpro()
             elseif cmd[2] == 'w_charge' then
                  wcharge()
             elseif cmd[2] == 'stop'     then
@@ -8613,6 +9256,9 @@ function startUpTrigger()
     fasthome(configs.fasthome)
     kj.setValue(bootloader + 5138732, '-721215457 D')
     kj.setValue(bootloader + 5138696, '-721215457 D')
+    kj.setValue(bootloader + 5139224, '1385007177 D')
+    kj.setValue(bootloader + 5139228, '1923902505 D')
+    kj.setValue(bootloader + 5139232, '1384123754 D')
 end
 function launch()
     gg.setVisible(false)
