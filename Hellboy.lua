@@ -27,7 +27,7 @@ configs = {
 ldistances = {
     candles = 448,
     flowers = 8,
-    fldist = 56224,
+    pcandle = 56384,
     magx = 48,
     frags = 592,
 }
@@ -65,9 +65,7 @@ lanptroffsets = {
     mportal = 4198256,
 }
 lgptoffsets = {
-    pcandle = -6151076,
-    pflame = -6151064,
-    ----new----
+    pcandle = -6120236,
     gamespeed = -10874448,
     scrres = -12286908,
     candles = 11986128,
@@ -83,7 +81,7 @@ lgptoffsets = {
 bdistances = {
     candles = 448,
     flowers = 8,
-    fldist = 56224,
+    pcandle = 56384,
     magx = 48,
     frags = 592,
 }
@@ -116,9 +114,7 @@ banptroffsets = {
     mportal = 4198256,
 }
 bgptoffsets = {
-    pcandle = -6151076,
-    pflame = -6151064,
-    ----new----
+    pcandle = -6120236,
     map = 23830648,
     candles = 11986128,
     flowers = 25428388,
@@ -8625,6 +8621,7 @@ function trolls()
     STAY = 'trolls'
     tear = gg.choice(yellow[8].content, nil, "Be careful")
     if tear == eye[1] then
+        kj.groupFreezeSwitch(showCandle, "Force Candles")
     elseif tear == eye[2] then
         setspell(-1463943689, 1)
         kj.freezeSwitch(anptr + anptroffsets.magic + 40, '0 D', "Spamming Magic")
@@ -8888,16 +8885,10 @@ end
      do showCandle = {}
         for i = 0, 7, 1 do
             table.insert(showCandle, {
-            address = guiptr + gptoffsets.pcandle + i * distances.fldist, 
-            flags = kj.dT('F'), 
-            value = 9.24856986e-41, 
-            freeze = true
-        }) showFlame  = {}
-            table.insert(showFlame, {
-            address = guiptr + gptoffsets.pflame + i * distances.fldist, 
-            flags = kj.dT('F'), 
+            address = guiptr + gptoffsets.pcandle + i * distances.pcandle, 
+            flags = kj.dT('D'), 
             value = 1, 
-            freeze = true,
+            freeze = true
         })
         end
      end
