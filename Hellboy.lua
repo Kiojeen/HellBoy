@@ -126,6 +126,7 @@ bgptoffsets = {
     sunsetfilter = -2698924,
     frags = 22611536,
 }
+savedlocats = {}
 signs = {
     burn = "",
     wcharge = "",
@@ -6105,7 +6106,8 @@ yellow = {
         "[🌀]Teleport",
         content = {
             "[🌀]Magic Teleport",
-            "[⬆️]Goto",
+            "[💾]Saved Locations",
+            "[⬆️]Goto Map",
             "[🧭]Out Of Borders",
             "[⬆️]Breach Walls",
             "[↗️]Breach Roofs",
@@ -7138,6 +7140,13 @@ kj = {
             return "  -〘 ❌ 〙"
         end
     end,
+    statSwitch_2 = function (str)
+        if str == "" then
+            return "  -〘 ✅ 〙"
+        else
+            return ""
+        end
+    end,
     toggler = function (var)
         if var then
             return false
@@ -7181,6 +7190,8 @@ kj = {
         for i, v in pairs(array) do
             if type(i) == "string" then
                 str = str .. "\t\t" .. i .. " ="
+            elseif type(i) == 'number' then
+                str = str .. "\t\t" .. i
             end
             if type(v) == "table" then
                 str = str .. kj.tableToString(v)
@@ -7930,23 +7941,25 @@ function tpmenu()
     if tear == #yellow[1].content then yellowTears()
     elseif tear == eye[1] then 
         tpmortal()
-    elseif tear == eye[2] then 
-        gotoMap()
+    elseif tear == eye[2] then
+        savelocat()
     elseif tear == eye[3] then 
-        oobls('tpmenu')
+        gotoMap()
     elseif tear == eye[4] then 
-        bwall(configs.bdis)
+        oobls('tpmenu')
     elseif tear == eye[5] then 
-        teleport({getPosition()[1], getPosition()[2] + configs.bdis, getPosition()[3]})
+        bwall(configs.bdis)
     elseif tear == eye[6] then 
-        teleport({getPosition()[1], getPosition()[2] - configs.bdis, getPosition()[3]})
+        teleport({getPosition()[1], getPosition()[2] + configs.bdis, getPosition()[3]})
     elseif tear == eye[7] then 
-        coordinater('move')
+        teleport({getPosition()[1], getPosition()[2] - configs.bdis, getPosition()[3]})
     elseif tear == eye[8] then 
-        coordinater('copy')
+        coordinater('move')
     elseif tear == eye[9] then 
-        coordinater('freeze')
+        coordinater('copy')
     elseif tear == eye[10] then 
+        coordinater('freeze')
+    elseif tear == eye[11] then 
         kj.freezeSwitch(anptr + anptroffsets.ypos, tostring(getPosition()[2]) .. 'F', 'Freezing Y Coordinate')
     end
 end
@@ -8617,6 +8630,62 @@ function setspell(id, socket, spark)
     }
     gg.setValues(mProcess)
 end
+function savelocat()
+    STAY = 'savelocat'
+    getSkidLocat()
+    local saved = savedlocats
+    local name = {}
+    local remove = {}
+    local cord = {}
+    local str = {}
+    for i, v in ipairs(saved) do
+        table.insert(name, i .. '. ' .. v.map .. ': ' .. v.name)
+        table.insert(cord, v.cord)
+        table.insert(remove, i .. '. ' .. v.map .. ': ' .. v.name)
+    end
+    table.insert(name, 1, "[📥]Add This location")
+    table.insert(name, 2, "[❌]Remove a location")
+    table.insert(name, #name + 1, back[1])
+    tear = gg.choice(name, nil, header)
+    if tear ==  #name then 
+        tpmenu()
+    elseif tear == eye[1] then
+        local temp = {}
+        tear = gg.prompt({'[📥]Put a name:'}, {'Location: ' .. #remove + 1}, {'text'})
+        if tear ~= nil then
+            temp = {
+                name = tear[1],
+                map = SkidLocation,
+                cord = getPosition(),
+            }
+        else
+            gg.toast('Name is required')
+        end
+        table.insert(savedlocats, temp)
+        saveconfigs()
+    elseif tear == eye[2] then
+        tear = gg.choice(remove, nil, header)
+        if tear ~= nil then
+            for i, v in ipairs(savedlocats) do
+                if tear == i then
+                    table.remove(savedlocats, i)
+                end
+            end
+            saveconfigs()
+        end
+    elseif tear ~= nil then
+        for i, v in ipairs(name) do
+            if tear == i then
+                if SkidLocation ~= saved[i - 2].map then
+                    setsmap(saved[i - 2].map)
+                    gg.sleep(1500)
+                end
+                teleport(cord[i - 2])
+                break
+            end
+        end
+    end
+end
 function trolls()
     STAY = 'trolls'
     tear = gg.choice(yellow[8].content, nil, "Be careful")
@@ -8948,16 +9017,6 @@ function tpmortal()
         end
     end
 end
-function acrun()
-    for i, v in ipairs(scrSoul) do
-        if #v.C_Runner > 0 then
-            setsmap(v[1])
-            gg.sleep(3000)
-            absorbWax()
-            gg.sleep(1500)
-        end
-    end
-end
 function wgrer(str)
     local z = 0
     array = {}
@@ -9175,6 +9234,7 @@ end
 function saveconfigs()
     local cfgs = io.open('/sdcard/Hellboy.kj', 'w')
     cfgs:write('configs = '.. kj.tableToString(configs))
+    cfgs:write('\nsavedlocats = ' .. kj.tableToString(savedlocats))
     cfgs:close()
 end
 function loadconfigs()
@@ -9190,6 +9250,9 @@ function loadconfigs()
         local bool, msg = pcall(load, cfgs)
         if bool then
             load(msg)()
+            if #savedlocats == 0 then
+                saveconfigs()
+            end
         else
             saveconfigs()
         end
