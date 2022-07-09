@@ -7190,9 +7190,6 @@ kj = {
         for i, v in pairs(array) do
             if type(i) == "string" then
                 str = str .. "\t\t" .. i .. " ="
-            elseif type(i) == 'number' then
-                str = str .. "\t\t" .. i
-            end
             if type(v) == "table" then
                 str = str .. kj.tableToString(v)
             elseif type(v) == "boolean" then
@@ -8679,7 +8676,6 @@ function savelocat()
                 if SkidLocation ~= saved[i - 2].map then
                     setsmap(saved[i - 2].map)
                     gg.sleep(1500)
-                end
                 teleport(cord[i - 2])
                 break
             end
