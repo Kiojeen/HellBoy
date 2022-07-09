@@ -8641,7 +8641,7 @@ function savelocat()
         table.insert(cord, v.cord)
         table.insert(remove, i .. '. ' .. v.map .. ': ' .. v.name)
     end
-    table.insert(name, 1, "[📥]Add This location")
+    table.insert(name, 1, "[📥]Add this location")
     table.insert(name, 2, "[❌]Remove a location")
     table.insert(name, #name + 1, back[1])
     tear = gg.choice(name, nil, header)
