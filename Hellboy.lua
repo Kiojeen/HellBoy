@@ -49,6 +49,7 @@ lliboffsets = {
     fastflap =  9523004,
     wcharge = 5207944,
     candles = 6978208,
+    mabsorb = 18223892,
 }
 lanptroffsets = {
     cmdchat = 2396800,
@@ -99,6 +100,7 @@ bliboffsets = {
     fastflap =  9523004,
     wcharge = 5207944,
     candles = 6978208,
+    mabsorb = 18223892,
 }
 banptroffsets = {
     wings = 4343240,
@@ -8980,12 +8982,14 @@ function absorbFrags()
     gg.setValues(uu)
 end
 function abswaxpro()
-    kj.switch(bootloader + liboffsets.absorb, '506892288 D','1847647232 D' )
+    kj.switch(bootloader + liboffsets.absorb, '506892288 D','1847647232 D')
+    kj.switch(bootloader + liboffsets.mabsorb, '999999 F','3.5 D')
     if configs.mumu then
         absorbWax()
     end
     gg.sleep(1000)
-    kj.switch(bootloader + liboffsets.absorb, '506892288 D','1847647232 D' )
+    kj.switch(bootloader + liboffsets.absorb, '506892288 D','1847647232 D')
+    kj.switch(bootloader + liboffsets.mabsorb, '999999 F','3.5 D')
 end
 function absorbWax()
     if signs.burn == "" then burner() gg.sleep(500) end
@@ -9152,6 +9156,7 @@ function autoCr()
     end
     gg.toast('Click on the GG icon to stop')
     kj.setValue(bootloader + liboffsets.absorb, '506892288 D')
+    kj.setValue(bootloader + liboffsets.mabsorb, '999999 F')
     absorbWax()
     for i, v in ipairs(scrSoul) do
         if #v.AC_Runner > 0 then
@@ -9259,6 +9264,7 @@ function autoCr()
      setspeed(1)
     setsmap('CandleSpace')
     kj.setValue(bootloader + liboffsets.absorb, '1847647232 D')
+    kj.setValue(bootloader + liboffsets.mabsorb, '3.5 F')
 end
 function cmdguide()
     if  gg.alert([[Page 1.
@@ -9532,4 +9538,549 @@ function launch()
     yellowTears()
     handlers()
 end
-launch()
+launch()388.34783935546
+            },
+            {
+                339.97970581054, 
+                111.07629394531, 
+                170.51702880859
+            },
+            {
+                401.28558349609, 
+                75.494659423828, 
+                776.52569580078
+            },
+        },
+        AC_Runner = {
+            {
+                78.103515678625, 
+                73.838241514844, 
+                67.291152954156
+            },
+            {
+                171.05500795703, 
+                13.188585281207, 
+                569.81274414025
+            },
+            {
+                399.70675917969, 
+                92.620971679675, 
+                778.44396975625
+            },
+            {
+                402.68057257656, 
+                150.51773071262, 
+                1018.8953247312
+            },
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+                "Golden kids",
+            },
+            Map_Goto_Cord = {
+                {
+                    -797.5425415039, 
+                    156.25964355475, 
+                    916.47027587890
+                },
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "Night_JarCave",
+        C_Runner = {
+            {
+                -111.5105438239, 
+                21.142538070671, 
+                384.07177734375
+            }, 
+            {
+                -128.2429351806, 
+                21.106355667118, 
+                374.82376098681
+            }, 
+            {
+                -143.6011505123, 
+                25.003812789912, 
+                370.31155395501
+            }, 
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+            {
+                -111.5105438239, 
+                21.142538070671, 
+                384.07177734375
+            }, 
+            {
+                -128.2429351806, 
+                21.106355667118, 
+                374.82376098681
+            }, 
+            {
+                -143.6011505123, 
+                25.003812789912, 
+                370.31155395501
+            }, 
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "NightDesert_Beach",
+        C_Runner = { 
+            {
+                600.07110595702, 
+                1.6242413520888, 
+                618.57495117175
+            },
+            {
+                609.41748046875, 
+                0.7359067428589, 
+                605.42315673822
+            },
+            {
+                621.23449707035, 
+                5.2496514320373, 
+                580.87713624688
+            },
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+            {
+                600.07110595702, 
+                1.6242413520888, 
+                618.57495117175
+            },
+            {
+                609.41748046875, 
+                0.7359067428589, 
+                605.42315673822
+            },
+            {
+                621.23449707035, 
+                5.2496514320373, 
+                580.87713624688
+            },
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "NightDesert_Planets",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "Night_InfiniteDesert",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "Event_DaysOfMischief",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "NightEnd",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "StormStart",
+        C_Runner = {
+
+        },
+        S_Runner = {
+            {
+                -3.017127513885, 
+                196.82383728020, 
+                -21.47331619262
+            },
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "StormEnd",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "Storm",
+        C_Runner = {
+
+        },
+        S_Runner = {
+            {
+                7.1743726730346, 
+                265.93215942300, 
+                -244.1742285351
+            },
+            {
+                1.5070127248764, 
+                261.92361450193, 
+                -236.3896026113
+            },
+            {
+                11.426215171813, 
+                266.17758178710, 
+                -275.3578912109
+            },
+            {
+                20.687644958496, 
+                266.22225952148, 
+                -279.9749575195
+            },
+            {
+                29.395788192749, 
+                266.09494018556, 
+                -291.9837500000
+            },
+            {
+                35.689933776855, 
+                266.23931884766, 
+                -288.9327636718
+            },
+            {
+                52.191497802734, 
+                266.22885131839, 
+                -294.5979003906
+            },
+            {
+                60.197864532470, 
+                267.01519775396, 
+                -311.8089404296
+            },
+            {
+                60.197875976562, 
+                270.08026123048, 
+                -323.4586059570
+            },
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "OrbitMid",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "OrbitEnd",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "Credits",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
+        "CandleSpaceEnd",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+}
+        end
+      end
+    end
+  end
+yellow = {
+    {
+        "[🌀]Teleport",
+        content = {
+            "[🌀]Magic Teleport",
+            "[💾]Saved Locations",
+            "[⬆️]Goto Map",
+            "[🧭]Out Of Borders",
+            "[⬆️]Breach Walls",
+            "[↗️]Breach Roofs",
+            "[⬇️]Breach Grounds",
+            "[📝]Manual Coordinates",
+            "[🗄]Copy coordinate",
+            "[📌]Pin Position",
+            "[📌]Pin Y Coordinate",
+        }, 
+    
