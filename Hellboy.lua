@@ -1,3 +1,32 @@
+--[[
+    ----------------------------------------------------------------------------
+    Hellboy is a free open source script to use and read and to learn from.
+    You are allowed to get inspiration from the way it is written but not
+    to copy the code as it is written from zero by me 'Kiojeen'.
+    ----------------------------------------------------------------------------
+    The script is on it beta version as i don't have enough time to add to it.
+    ----------------------------------------------------------------------------
+    If you have any hacks that you want to send, ...............
+    ----------------------------------------------------------------------------
+    Special thanks to myself and to my anonymous friend for the massive help
+    and to Elkan the creator of 'FCHINA' as i used his code as a reference to
+    learn lua from. also to Sushi maker for helping me to understand
+    how arrays work lol.
+    ----------------------------------------------------------------------------
+    ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱     ╭╮                                ╭╮     ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱
+    ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱     ┃┃--╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱--┃┃     ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱
+    ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱     ┃┃--╱╱╱ ╭╮╭━╮ ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱--┃┃     ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱
+    ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱     ┃┃--╱╱  ┃┃┃╭╯╱╱╱╱╭╮ ╱╱╱╱╱╱╱╱╱╱╱╱--┃┃     ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱
+    ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱     ┃┃--╱╱╱ ┃╰╯╯╭┳━━╮╰╋━━┳━━┳━╮ ╱╱╱╱--┃┃     ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱
+    ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱     ┃┃--╱╱╱ ┃╭╮┃┣┫╭╮┃╭┫┃━┫┃━┫╭╮╮  ╱╱--┃┃     ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱
+    ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱     ┃┃--╱╱╱ ┃┃┃╰┫┃╰╯┃┃┃┃━┫┃━┫┃┃┃  ╱╱--┃┃     ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱
+    ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱     ┃┃--╱╱╱ ╰╯╰━┻┻━━╯┃┣━━┻━━┻╯╰╯  ╱╱--┃┃     ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱
+    ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱     ┃┃--╱╱╱╱╱╱╱╱╱╱╱╱╭╯┃╱╱╱╱╱╱╱╱╱╱╱╱╱--┃┃     ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱
+    ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱     ┃┃--╱╱╱╱╱╱╱╱╱╱╱╱╰━╯╱╱╱╱╱╱╱╱╱╱╱╱╱--┃┃     ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱
+    ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱     ┃┃--╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱--┃┃     ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱
+    ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱     ╰╯                                ╰╯     ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱
+    ----------------------------------------------------------------------------
+]]
 sockets = 6
 hellboy = 8065
 sky = {
@@ -113,7 +142,7 @@ banptroffsets = {
     cmdchat = 2396800,
     wcharge = 4478516,
     wvisible = 4478596,
-    mportal = 4198256,
+    mportal = 4197992,
 }
 bgptoffsets = {
     pcandle = -6120236,
@@ -7697,7 +7726,7 @@ function runType()
     local rnmG = gg
     tear = rnmG.choice(yellow[2].content, nil, header)
     if     tear == eye[1] then autoCr()
-    elseif tear == eye[2] then
+    elseif tear == eye[2] then gg.toast('Not added yet...') 
     elseif tear == eye[3] then runChoice("c")
     elseif tear == eye[4] then runChoice("s")
     elseif tear == eye[5] then yellowTears()
@@ -7945,7 +7974,7 @@ function yellowTears()
     elseif tear == eye[3] then 
         burner() 
     elseif tear == eye[4] then 
-        gg.toast('Soon...') --Absorb all
+        gg.toast('Not added yet...') --Absorb all
     elseif tear == eye[5] then
         wcharge()
     elseif tear == eye[6] then 
@@ -7955,7 +7984,7 @@ function yellowTears()
     elseif tear == eye[8] then 
         trolls()
     elseif tear == eye[9] then 
-        gg.toast('Soon...')      
+        gg.toast('Not added yet...')       
     elseif tear == eye[10] then 
         modemenu()
     elseif tear == eye[11] then 
@@ -8008,7 +8037,7 @@ function settings()
         "[↕️]Breach distance: " .. configs.bdis,
         "[📮]Dev Mode: " .. kj.statSwitch(configs.devmode),
         "[🏠]Fast Return Home" .. kj.statSwitch(configs.fasthome),
-        "[🔁]Mumu User" .. kj.statSwitch(configs.mumu),
+        "[🔁]Mumu User [Not fully supported]" .. kj.statSwitch(configs.mumu),
         back[1]
     }
     tear = gg.choice(hbstngs, nil, '[☣️]HellBoy' .. ' Settings ' .. hellboy)
@@ -9517,22 +9546,38 @@ function noUiTrigger()
     end
 end
 function startUpTrigger()
-    fasthome(configs.fasthome)
-    kj.setValue(bootloader + 5138732, '-721215457 D')
-    kj.setValue(bootloader + 5138696, '-721215457 D')
-    kj.setValue(bootloader + 5139224, '1385007177 D')
-    kj.setValue(bootloader + 5139228, '1923902505 D')
-    kj.setValue(bootloader + 5139232, '1384123754 D')
+    do
+      do
+        fasthome(configs.fasthome)
+         kj.setValue(bootloader + 5138732, '-721215457 D')   
+      end
+    end
+     do
+       do
+          kj.setValue(bootloader + 5138732, '-721215457 D') 
+         kj.setValue(bootloader + 5138732, '-721215457 D')  
+      end
+    end
+    do
+      do
+        kj.setValue(bootloader + 5138732, '-721215457 D')
+       kj.setValue(bootloader + 5139232, '1384123754 D')
+      end
+    end
 end
 function launch()
-    gg.setVisible(false)
-    loadconfigs()
-    version_check()
-    offseter()
-    teaMake()
-    configSign()
-    kj.setString(bootloader + 18643660, dontRemove, 13)
-    startUpTrigger()
+    do
+      do
+       gg.setVisible(false)
+       loadconfigs()
+       version_check()
+       offseter()          
+       teaMake()
+       configSign()        
+       kj.setString(bootloader + 18643660, dontRemove, 13)
+       startUpTrigger()       
+      end
+    end
     function demode()
         while true do
             if gg.isClickedUiButton() then
