@@ -6050,10 +6050,20 @@ scrSoul = {
         },
         OOB_Goto = {
             OOB_Goto_Name = {
-
+                "Moonlight Island",
+                "Eelders Room",
             },
             OOB_Goto_Cord = {
-
+                {
+                    69.366737365726,
+                    240.42951965203,
+                    -184.5645751955
+                },
+                {
+                    -0.042129882645,
+                    195.09114074703,
+                    8.1545667648543
+                },
             },
         },
     },
@@ -9235,7 +9245,7 @@ function tpmortal()
         elseif tear == eye[2] then 
             setsmap("CandleSpace")
         elseif tear == #realms and STAY  ~= 'runChoice' then
-            yellowTears()
+            tpmenu()
         else
             realms = {}
             name = {}
