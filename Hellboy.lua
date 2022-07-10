@@ -5149,10 +5149,14 @@ scrSoul = {
         },
         Map_Goto = {
             Map_Goto_Name = {
-
+                "Vault of Knowledge",
             },
             Map_Goto_Cord = {
-
+                {
+                    0.0444635225784, 
+                    207.88650512692, 
+                    -66.52736663836
+                },
             },
         },
         OOB_Goto = {
