@@ -5857,22 +5857,22 @@ scrSoul = {
         },
         Map_Goto = {
             Map_Goto_Name = {
-                "Golden kids",
+
             },
             Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+                "Golden kids",
+            },
+            OOB_Goto_Cord = {
                 {
                     -797.5425415039, 
                     156.25964355475, 
                     916.47027587890
                 },
-            },
-        },
-        OOB_Goto = {
-            OOB_Goto_Name = {
-
-            },
-            OOB_Goto_Cord = {
-
             },
         },
     },
