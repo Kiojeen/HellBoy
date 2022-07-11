@@ -9772,13 +9772,13 @@ function startUpTrigger()
      do
        do
           kj.setValue(bootloader + 5138732, '-721215457 D') 
-         kj.setValue(bootloader + 5138732, '-721215457 D')  
+         kj.setValue(bootloader + 5139224, '1385007177 D')  
       end
     end
     do
       do
-        kj.setValue(bootloader + 5138732, '-721215457 D')
-       kj.setValue(bootloader + 5139232, '1384123754 D')
+         kj.setValue(bootloader + 5139228, '1923902505 D')
+        kj.setValue(bootloader + 5139232, '1384123754 D')
       end
     end
 end
