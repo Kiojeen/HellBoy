@@ -6,7 +6,7 @@
     ----------------------------------------------------------------------------
     The script is on it beta version as i don't have enough time to add to it.
     ----------------------------------------------------------------------------
-    If you have any hacks that you want to send, ...............
+    If you have any hacks that you want to send, https://discord.gg/2AHfEQJggX
     ----------------------------------------------------------------------------
     Special thanks to myself and to my anonymous friend for the massive help
     and to Elkan the creator of 'FCHINA' as i used his code as a reference to
@@ -7874,8 +7874,13 @@ function runType()
     STAY = 'runType'
     local rnmG = gg
     tear = rnmG.choice(yellow[2].content, nil, header)
-    if     tear == eye[1] then 
-        autoCr()
+    if     tear == eye[1] then
+        docr = gg.alert('[☣️]Do you want to auto candle run?', 'Go for it', 'Never mind')
+        if docr == 1 then
+            autoCr()
+        else
+            runType()
+        end
     elseif tear == eye[2] then 
         gg.toast('Not added yet...') 
     elseif tear == eye[3] then 
@@ -8076,7 +8081,7 @@ end
              elseif tear == eye[10] then
                 oobls('runChoice')
              elseif tear == eye[11] then
-                type_ = nil yellowTears() 
+                type_ = nil runType()
              elseif tear == eye[12] then
                 runChoice("c")
              elseif tear ~= nil then
@@ -8108,7 +8113,7 @@ end
              elseif tear == eye[9] then
                 oobls('runChoice')
              elseif tear == eye[10] then
-                type_ = nil yellowTears() 
+                type_ = nil runType()
              elseif tear == eye[11] then
                 runChoice("s")
              elseif tear ~= nil then
