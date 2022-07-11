@@ -93,6 +93,7 @@ lanptroffsets = {
     wings = 4343240,
     wvisible = 4478596,
     mportal = 4198256,
+    gquest = 3178496,
 }
 lgptoffsets = {
     pcandle = -6120236,
@@ -143,6 +144,7 @@ banptroffsets = {
     wcharge = 4478516,
     wvisible = 4478596,
     mportal = 4197992,
+    gquest = 3178496,
 }
 bgptoffsets = {
     pcandle = -6120236,
@@ -157,6 +159,7 @@ bgptoffsets = {
     sunsetfilter = -2698924,
     frags = 22611536,
 }
+gquests = {}
 savedlocats = {}
 signs = {
     burn = "",
@@ -6437,6 +6440,7 @@ yellow = {
             "[⭐]Auto Star Run",
             "[🕯]Semi Candle Run",
             "[⭐]Semi Star Run",
+            "[🔖]Unlock Seasonal Quests",
         },
     },
     {
@@ -7870,11 +7874,24 @@ function runType()
     STAY = 'runType'
     local rnmG = gg
     tear = rnmG.choice(yellow[2].content, nil, header)
-    if     tear == eye[1] then autoCr()
-    elseif tear == eye[2] then gg.toast('Not added yet...') 
-    elseif tear == eye[3] then runChoice("c")
-    elseif tear == eye[4] then runChoice("s")
-    elseif tear == eye[5] then yellowTears()
+    if     tear == eye[1] then 
+        autoCr()
+    elseif tear == eye[2] then 
+        gg.toast('Not added yet...') 
+    elseif tear == eye[3] then 
+        runChoice("c")
+    elseif tear == eye[4] then 
+        runChoice("s")
+    elseif tear == eye[5] then --kio
+        if getQuests() then
+            if kj.getValue(gquests[7].address, 'D') == 0 then
+                modQuest(false)
+            else
+                modQuest(true)
+            end
+        end
+    elseif tear == eye[6] then 
+        yellowTears()
     end
 end
 function frac()
@@ -8994,6 +9011,56 @@ function savelocat()
             end
         end
     end
+end
+function getQuests()
+    if #gquests < 3 then
+        gquest = anptr + anptroffsets.gquest - 4
+        gg.searchNumber('812671252D;1819178294D::5', kj.dT('D'), false, gg.SIGN_EQUAL, gquest, gquest + 83528, 0)
+        gg.refineNumber('812671252', kj.dT('D'))
+        gquests = gg.getResults(gg.getResultsCount())
+        gg.clearResults()
+        for i, v in ipairs(gquests) do
+            v.address = v.address + 8
+            table.remove(v, value)
+        end
+        gquests = gg.getValues(gquests)
+        if #gquests > 3 then
+            return true
+        else
+            return false
+        end
+    else
+        return true
+    end
+end
+function modQuest(bool)
+    if getQuests() then
+    do
+      do
+        if #gquests > 3 then
+            if bool then
+                for i, v in ipairs(gquests) do
+                    v.value = 0
+                end
+                gg.setValues(gquests)
+                gg.toast('Unlock Quests: ON')
+            else
+                for i, v in ipairs(gquests) do
+                    v.value = 7037807
+                end
+                gg.setValues(gquests)
+                gg.toast('Unlock Quests: OFF')
+            end
+        elseif not getQuests() then
+            gg.toast('Failed')
+            return
+        end 
+      end
+    end     
+    elseif not getQuests() then
+    gg.toast('Failed')
+    return
+  end 
 end
 function trolls()
     STAY = 'trolls'
