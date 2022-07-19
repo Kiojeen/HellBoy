@@ -9824,6 +9824,7 @@ function autoCr()
     end
      do
       do
+        setoffline(false)
         setsmap('SunsetRace')
         gg.sleep(3500)
         setspeed(100)
