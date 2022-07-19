@@ -28,15 +28,16 @@
     ----------------------------------------------------------------------------
 ]]
 sockets = 6
+offline = false
 hellboy = 8065
 sky = {
     live = {
         package = 'com.tgc.sky.android',
-        version = 194411
+        version = 196112
     },
     beta = {
         package = 'com.tgc.sky.android.test.gold',
-        version = 194410
+        version = 196223
     }
 }
 configs = {
@@ -59,55 +60,75 @@ ldistances = {
     pcandle = 56384,
     magx = 48,
     frags = 592,
+    candlespos = 176,
 }
 qburners = {
     candles = 468,
     flowers = 12836692,
 }
 lliboffsets = {
-    rcoulds = 5940744,
-    winds = 6932232,
-    libguiptr = 23913632,
-    libanptr = 21233544,
-    iconsize = 17915068,
-    honksound = 18635525,
-    wcharge = 5207944,
-    absorb = 11605276,
-    pspeed = 20401636,
-    fasthome = 8708264,
-    fastflap =  9523004,
-    wcharge = 5207944,
-    candles = 6978208,
-    mabsorb = 18223892,
-    pdelay = 5073048,
+    fastflap =  9529808,
+    wcharge = 5214744,
+    candles = 6985008,
+    realisim = 4384096,
+    pjump = 9568008,
+    pdive =  9606380,
+    rwater = 8034936,
+    rportals = 5860012,
+    unfirework = 8723300,
+    plain = 7022260,
+    winds = 6939032,
+    rclouds = 20180632,
+    fasthome = 8715068,
+    libguiptr = 23921920,
+    uncloset = 3969208,
+    mabsorb = 18232996,
+    unnodes = 8477596,
+    iconsize = 17924204,
+    pdelay = 5079848,
+    absorb = 11613128,
+    honksound = 18645217,
+    unemote = 10623588,
+    libanptr = 21241832,
+    offline = 7911784,
+    kjrights = 18653352,
+    scooter = 5410144,
+    pspeed = 20409828,
+    uitran = 17911324,
+    mtpcol = 5146024,
+    mtprst = 5145496,
+    mtpmrt = 5145532,
 }
 lanptroffsets = {
-    cmdchat = 2396800,
-    ----new----
-    xpos = 4455024,
-    ypos = 4455028,
-    zpos = 4455032,
-    rad = 4455056,
-    wcharge = 4478516,
-    magic = 4526736,
-    closet = 22710724,    
-    wings = 4343240,
-    wvisible = 4478596,
-    mportal = 4198256,
-    gquest = 3178496,
+    ppose = 4469016,
+    rad = 4455696,
+    wvisible = 4479236,
+    tomshptr = 22567616,
+    xpos = 4455664,
+    ypos = 4455668,
+    zpos = 4455672,
+    gquest = 3180488,
+    wcharge = 4479156,
+    pcape = 4486664,
+    magic = 4527376,
+    closet = 22711364,
+    mportal = 4198896,
+    wings = 4343880,
 }
-lgptoffsets = {
-    pcandle = -6120236,
-    gamespeed = -10874448,
-    scrres = -12286908,
-    candles = 11986128,
-    portal = 25428388,
-    flowers = 25428388,
-    map = 23830648,
-    winds = 3095136,
-    meshared = 23819316,
-    sunsetfilter = -2698924,
-    frags = 22611536,
+lguiptroffsets = {
+    candlespos = 17648288,
+    pcandle = -6120188,
+    sunsetfilter = -2698876,
+    winds = 3094624,
+    scrres = -12286876,
+    candles = 11983888,
+    meshared = 23819364,
+    map = 23830696,
+    mesharedptr = 23820224,
+    gamespeed = -10874416,
+    frags = 22611584,
+    flowers = 25428436,
+    cmdchat = 22999823,
 }
 --
 bdistances = {
@@ -116,50 +137,71 @@ bdistances = {
     pcandle = 56384,
     magx = 48,
     frags = 592,
+    candlespos = 176,
 }
 bliboffsets = {
-    libanptr = 21233544,
-    libguiptr = 23913632,
-    iconsize = 17915068,
-    rcoulds = 5940744,
-    honksound = 18301748,
-    winds = 6932232,
-    wcharge = 5207944,
-    absorb = 11605276,
-    pspeed = 20401636,
-    fasthome = 8708264,
-    fastflap =  9523004,
-    wcharge = 5207944,
-    candles = 6978208,
-    mabsorb = 18223892,
-    pdelay = 5073048,
+    fastflap =  9631348,
+    wcharge = 5263040,
+    candles = 7049272,
+    realisim = 4429312,
+    pjump = 9669548,
+    pdive =  9707908,
+    rwater = 8114468,
+    rportals = 5920828,
+    unfirework = 8822380,
+    plain = 7086624,
+    winds = 7001684,
+    rclouds = 20418624,
+    fasthome = 8814156,
+    libguiptr = 24177840,
+    uncloset = 4007784,
+    mabsorb = 18442372,
+    unnodes = 8557272,
+    iconsize = 18132764,
+    pdelay = 5125944,
+    absorb = 11788992,
+    honksound = 18857140,
+    unemote = 10741472,
+    libanptr = 21489400,
+    offline = 7988264,
+    scooter = 5464844,
+    kjrights = 18865275,
+    pspeed = 20653740,
+    uitran = 18119836,
+    mtpcol =  5191464,
+    mtprst = 5190936,
+    mtpmrt = 5190972,
 }
 banptroffsets = {
-    wings = 4343240,
-    xpos = 4455024,
-    ypos = 4455028,
-    zpos = 4455032,
-    rad = 4455056,
-    magic = 4526736,
-    closet = 22710724,
-    cmdchat = 2396800,
-    wcharge = 4478516,
-    wvisible = 4478596,
-    mportal = 4197992,
-    gquest = 3178496,
+    ppose = 4540696,
+    rad = 4527376,
+    wvisible = 4550916,
+    tomshptr = 22658192,
+    xpos = 4527344,
+    ypos = 4527348,
+    zpos = 4527352,
+    gquest = 3182120,
+    wcharge = 4550836,
+    pcape = 4558440,
+    magic = 4599440,
+    closet = 22801860,
+    mportal = 4245848,
+    wings = 4390584,
 }
-bgptoffsets = {
-    pcandle = -6120236,
-    map = 23830648,
-    candles = 11986128,
-    flowers = 25428388,
-    gamespeed = -10874448,
-    scrres = -12286908,
-    portal = 11960732,
-    meshared = 25071156,
-    winds = 3086400,
-    sunsetfilter = -2698924,
-    frags = 22611536,
+bguiptroffsets = {
+    candlespos = 17649488,
+    pcandle = -6123820,
+    sunsetfilter = -2701228,
+    winds = 3094624,
+    scrres = -12314428,
+    candles = 11935712,
+    meshared = 23820548,
+    map = 23831864,
+    mesharedptr = 23821392,
+    gamespeed = -10902672,
+    frags = 22612800,
+    flowers = 25452196,
+    cmdchat = 23000991,
 }
 gquests = {}
 savedlocats = {}
@@ -595,11 +637,6 @@ scrSoul = {
                 -99.77043151855
             },
             {
-                -107.3505783081, 
-                62.601161956787, 
-                -210.5045471192
-            },
-            {
                 -1.057060003280, 
                 69.734062194824,
                 -429.3835449218
@@ -674,36 +711,7 @@ scrSoul = {
             },
         },
         AC_Runner = {
-            {
-                31.315399169921, 
-                124.05870819091, 
-                5.9689574241638
-            },
-            {
-                -21.69558525085, 
-                121.72374725341, 
-                -41.66272735595
-            },
-            {
-                -30.40783691406, 
-                124.10617065429, 
-                -25.67955970764
-            },
-            {
-                -49.18499374389, 
-                120.38970184326, 
-                62.91881940,2,1
-            },
-            {
-                6.3460049629211, 
-                122.24280548095, 
-                -3.774559974670
-            },
-            {
-                -12.54314613342, 
-                133.64665222167, 
-                1.5344601869530
-            },
+
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -2077,18 +2085,23 @@ scrSoul = {
             },
             {
                 -154.3724670410, 
-                293.00000000000, 
-                220.0000000,2,2
+                293.55890533344, 
+                220.5768999,2,2
             },                         
             {
                 -148.0121917724, 
-                280.00000000000, 
+                280.56867967457, 
                 262.7193605,2,2
             },             
             {
                 -131.3562164306, 
                 285.28723144531, 
                 285.0506856,2,2
+            },
+            {
+                -89.91304779052, 
+                296.00558471679, 
+                277.0840625,2,2
             },
             {
                 338.32376098632, 
@@ -2139,18 +2152,18 @@ scrSoul = {
                 418.40115356445, 
                 346.00598144531, 
                 75.352455139160
-            }, 
+            },
             {
-                -89.91304779052, 
-                296.00558471679, 
-                277.08404545625
+                -118.8588338828, 
+                317.34036254881, 
+                256.38330078125
             },
         },
         S_Runner = {
             {
-                -125.0000000000, 
-                313.00000000000, 
-                273.00000000000
+                -125.0964369967, 
+                313.97643235588, 
+                273.80786632390
             },
         },
         AC_Runner = {
@@ -2187,16 +2200,56 @@ scrSoul = {
         },
         Map_Goto = {
             Map_Goto_Name = {
+                "Flight Guide",
                 "Hidden Forest",
                 "Prophecy Cave",
-                "Sanctuary",
-                "Forest Cave",
+                "Sanctuary Island",
+                "Forest's Cave",
                 "Yeti Park",
                 "Forgotten Ark",
                 "Starlight Desert",
             },
             Map_Goto_Cord = {
-
+                {
+                    -124.9053649902, 
+                    318.52612304675, 
+                    258.09320069375
+                },
+                {
+                    142.18208312828, 
+                    386.17880249044, 
+                    280.07360839875
+                },
+                {
+                    320.43630984531, 
+                    310.01177978515, 
+                    496.61895751955
+                },
+                {
+                    539.99871829188, 
+                    289.54663085935, 
+                    502.74176025625
+                },
+                {
+                    200.15707397438, 
+                    279.91601569925, 
+                    24.577936172435
+                },
+                {
+                    431.91629028331, 
+                    321.59747314455, 
+                    24.172508239094
+                },
+                {
+                    720.36920166062, 
+                    301.28622436524, 
+                    89.960136413522
+                },
+                {
+                    779.68865966798, 
+                    304.07293701875, 
+                    346.42419433595
+                },
             },
         },
         OOB_Goto = {
@@ -2292,10 +2345,28 @@ scrSoul = {
                 "Hidden Forest",
                 "Raining Forest",
                 "Middle Forest",
-                "Middle Forest[2]",
             },
             Map_Goto_Cord = {
-
+                {
+                    5.4188013678223, 
+                    142.26933288577, 
+                    27.034524917254
+                },
+                {
+                    -13.78285574512, 
+                    143.91560363753, 
+                    79.840209960375
+                },
+                {
+                    -18.77116584732, 
+                    137.61318966562, 
+                    63.908504486084
+                },
+                {
+                    -37.90637207025, 
+                    148.19372558575, 
+                    58.171356201875
+                },
             },
         },
         OOB_Goto = {
@@ -2587,19 +2658,39 @@ scrSoul = {
         },
         AC_Runner = {
             {
-                6.0396866790088, 
-                86.345352172856, 
-                -51.38526153453
+                14.439384460449, 
+                83.776420593261, 
+                -56.70314025878
             },
             {
-                -11.84419059418, 
-                83.828506469756, 
-                -20.76513292734
+                -16.05135154724, 
+                85.373046876785, 
+                -32.32175827026
             },
             {
-                3.3023226261916, 
-                89.865173339875, 
-                68.095855712862
+                8.5600271224975, 
+                92.971130371093, 
+                7.2801713943481
+            },
+            {
+                -17.69957542419, 
+                96.237068176269, 
+                21.321331024169
+            },
+            {
+                -0.362245887517, 
+                90.060592651367, 
+                72.608703613281
+            },
+            {
+                16.098192214965, 
+                88.764274597167, 
+                98.631996154785
+            },
+            {
+                4.1082468032891, 
+                90.182662963819, 
+                71.094680783281
             },
         },
         Map_Goto = {
@@ -3030,7 +3121,26 @@ scrSoul = {
             },
         },
         AC_Runner = {
-
+            {
+                0.0224006045126, 
+                107.12294006356, 
+                -13.61776168477
+            },
+            {
+                0.2779104709644, 
+                115.54570770272, 
+                5.9887666702251
+            },
+            {
+                -0.268315583835, 
+                108.08847048438, 
+                64.457168579156
+            },
+            {
+                1.1147356033195, 
+                106.88995361325, 
+                94.148300170844
+            },
         },
         Map_Goto = {
             Map_Goto_Name = {
@@ -3044,9 +3154,9 @@ scrSoul = {
                     93.326965332125
                 },
                 {
-                    -1.139660358428, 
-                    208.91905212344, 
-                    219.63220214875
+                    1.3707888126329, 
+                    183.10369873875, 
+                    181.36717221094
                 },
             },
         },
@@ -3402,15 +3512,28 @@ scrSoul = {
                 "Village of Dreams",
             },
             Map_Goto_Cord = {
-
+                {
+                    11.065223697656, 
+                    58.087078094482, 
+                    50.145336152305
+                },
+                {
+                    24.103757858367, 
+                    55.776138306406, 
+                    29.212980270742
+                },
             },
         },
         OOB_Goto = {
             OOB_Goto_Name = {
-
+                "The Penguin",
             },
             OOB_Goto_Cord = {
-
+                {
+                    -18.39187434492, 
+                    105.23886108438, 
+                    -121.9267851562
+                },
             },
         },
     },
@@ -3701,7 +3824,16 @@ scrSoul = {
                 "Valley of Thriumph",
             },
             Map_Goto_Cord = {
-
+                {
+                    80.228858947539, 
+                    414.42599487309, 
+                    380.60977172856
+                },
+                {
+                    206.16645812928, 
+                    491.85729980465, 
+                    -202.4133605912
+                },
             },
         },
         OOB_Goto = {
@@ -3789,14 +3921,14 @@ scrSoul = {
         },
         S_Runner = {
             {
-                -397.0000000000, 
-                1163.5000000000, 
-                49.000000000000
+                -397.8774574597, 
+                1163.5575457686, 
+                49.876556899977
             },
             {
-                69.000000000000, 
-                1051.0000000000, 
-                -32.00000000000
+                69.908856765757, 
+                1051.7877656747, 
+                -32.56898768897
             },
         },
         AC_Runner = {
@@ -3808,7 +3940,16 @@ scrSoul = {
                 "Valley's Citadel",
             },
             Map_Goto_Cord = {
-
+                {
+                    147.23817443656, 
+                    1040.0925960156, 
+                    -71.53787245312
+                },
+                {
+                    196.41284179675, 
+                    1187.0728759625, 
+                    401.25250244125
+                },
             },
         },
         OOB_Goto = {
@@ -3919,7 +4060,11 @@ scrSoul = {
                 "Valley's Colosseum",
             },
             Map_Goto_Cord = {
-
+                {
+                    47.020088195878, 
+                    167.03833007812, 
+                    3.5743873119425
+                },
             },
         },
         OOB_Goto = {
@@ -3996,7 +4141,16 @@ scrSoul = {
                 "Village of Dreams",
             },
             Map_Goto_Cord = {
-
+                {
+                    60.938243869668, 
+                    138.26496887203, 
+                    -292.8519609375
+                },
+                {
+                    136.38674927812, 
+                    154.63574218875, 
+                    -168.8068237305
+                },
             },
         },
         OOB_Goto = {
@@ -4655,6 +4809,7 @@ scrSoul = {
             Map_Goto_Name = {
                 "Enchantment Guide",
                 "The Boat",
+                "Wind Pathes",
             },
             Map_Goto_Cord = {
                 {
@@ -4666,6 +4821,11 @@ scrSoul = {
                     -53.93397972656, 
                     142.09533691405, 
                     166.76020818828
+                },
+                {
+                    -89.03162384203, 
+                    142.94610595125, 
+                    429.15158081469
                 },
             },
         },
@@ -5632,10 +5792,20 @@ scrSoul = {
         },
         Map_Goto = {
             Map_Goto_Name = {
-
+                "Top",
+                "The Shrine",
             },
             Map_Goto_Cord = {
-
+                {
+                    0.2997440695764, 
+                    294.58334350594, 
+                    4.5544605255125
+                },
+                {
+                    -0.112633943926, 
+                    309.67788696286, 
+                    66.827789306662
+                },
             },
         },
         OOB_Goto = {
@@ -5747,10 +5917,14 @@ scrSoul = {
         },
         Map_Goto = {
             Map_Goto_Name = {
-
+                "Vault of Knowledge",
             },
             Map_Goto_Cord = {
-
+                {
+                    40.679660797114, 
+                    541.79589843675, 
+                    -23.61368560756
+                },
             },
         },
         OOB_Goto = {
@@ -5872,21 +6046,67 @@ scrSoul = {
         },
         Map_Goto = {
             Map_Goto_Name = {
-
+                "Rose Guide",
+                "The Theater",
+                "Jar Cave",
+                "JellyFish Beach",
+                "Wind Pathes",
+                "Infinite Desert",
+                "Vault of Knowledge",
             },
             Map_Goto_Cord = {
-
+                {
+                    133.08966064455, 
+                    12.022131919864, 
+                    346.96282958975
+                },
+                {
+                    79.106628417975, 
+                    73.838272094726, 
+                    65.021270751312
+                },
+                {
+                    -78.98799896234, 
+                    29.797973632825, 
+                    377.49728393469
+                },
+                {
+                    405.60186767125, 
+                    3.8053691387174, 
+                    537.76263427938
+                },
+                {
+                    237.10614011875, 
+                    16.799419403072, 
+                    941.83557128925
+                },
+                {
+                    4.3910126686619, 
+                    4.3902668952895, 
+                    566.13067626952
+                },
+                {
+                    25.711566925028, 
+                    17.596036911042, 
+                    169.06643676712
+                },
             },
         },
         OOB_Goto = {
             OOB_Goto_Name = {
                 "Golden kids",
+                "Mysterious Star",
             },
             OOB_Goto_Cord = {
                 {
                     -797.5425415039, 
                     156.25964355475, 
                     916.47027587890
+                },
+                {
+                    551.66864013688,
+                    407.59988403331,
+                    336.75701906875
                 },
             },
         },
@@ -5932,10 +6152,14 @@ scrSoul = {
         },
         Map_Goto = {
             Map_Goto_Name = {
-
+                "Starlight Desert",
             },
             Map_Goto_Cord = {
-
+                {
+                    -77.87921905578, 
+                    29.884782791195, 
+                    377.396240234375
+                },
             },
         },
         OOB_Goto = {
@@ -5988,10 +6212,14 @@ scrSoul = {
         },
         Map_Goto = {
             Map_Goto_Name = {
-
+                "Starlight Desert",
             },
             Map_Goto_Cord = {
-
+                {
+                    461.14593505975,
+                    8.0011701583623, 
+                    549.59698486312
+                },
             },
         },
         OOB_Goto = {
@@ -6044,10 +6272,20 @@ scrSoul = {
         },
         Map_Goto = {
             Map_Goto_Name = {
-
+                "CampFire",
+                "Starlight Desert",
             },
             Map_Goto_Cord = {
-
+                {
+                    444.45315551781,
+                    61.997947692874,
+                    145.27032470125
+                },
+                {
+                    595.27697753905, 
+                    54.661212921158, 
+                    -92.36595916747
+                },
             },
         },
         OOB_Goto = {
@@ -6152,10 +6390,14 @@ scrSoul = {
         },
         Map_Goto = {
             Map_Goto_Name = {
-
+                "Krills Field",
             },
             Map_Goto_Cord = {
-
+                {
+                    -5.897002805176, 
+                    198.38143920838, 
+                    -23.93846130378
+                },
             },
         },
         OOB_Goto = {
@@ -6286,10 +6528,26 @@ scrSoul = {
         },
         Map_Goto = {
             Map_Goto_Name = {
-
+                "Storm Gate",
+                "Above The Pipe",
+                "Before The Sacrifice",
             },
             Map_Goto_Cord = {
-
+                {
+                    -15.93551870508, 
+                    136.72619620625, 
+                    79.754867553710
+                },
+                {
+                    11.890067100502, 
+                    238.93031311036, 
+                    -127.2434310986
+                },
+                {
+                    7.6405596733026, 
+                    266.50881958007, 
+                    -250.7771606425
+                },
             },
         },
         OOB_Goto = {
@@ -6398,10 +6656,26 @@ scrSoul = {
         },
         Map_Goto = {
             Map_Goto_Name = {
-
+                "Elders Rock",
+                "Spirits Line",
+                "Home",
             },
             Map_Goto_Cord = {
-
+                {
+                    0.0813743775281, 
+                    0.9796712398053, 
+                    -2.644541740405
+                },
+                {
+                    0.3602703217114, 
+                    0.5224132537897, 
+                    62.018844604419
+                },
+                {
+                    -0.469871431266, 
+                    0.5016764998474, 
+                    239.07266235352
+                },
             },
         },
         OOB_Goto = {
@@ -6468,42 +6742,65 @@ yellow = {
         content = {
             "[🌟]Wing Count",
             "[🃏]Cape Trick",
+            "[🃏]Invisible Cape",
+            "[🃏]Remove Cape",
             "[🚀]Fast Flap",
-        }
+        },
     },
     {
         "[🔫]Trolls",
         content = {
             "[🧨]Force Light",
             "[✨]Spam Magic",
+            "[✨]Shouts Loop",
         },                                     
-    },
-    {
-        "[🎒]Props",
-        content = {
-            "[👖]Pants",
-            "[🎭]Masks",
-            "[👱]️Hairs",
-            "[🎀]Head accessories",
-            "[🦚]Capes",
-            "[🎒]Props",
-            "[🎗]Necklaces",
-        },                                        
     },
     {
         "[🗃]Mode Menu",
         content = {
-            "[🎥]Record Shared Memory",
-            "[🧸]Icons & Borders Size",
-            "[📸]ScreenShot Resolution",
-            "[⏲]Game Speed",
-            "[☁️]Remove Clouds",
-            "[💨]Remove Wind[Method 1]",
-            "[💨]Remove Wind[Method 2]",
-            "[📣]Calls 'Client side'",
-            "[🌁]Valley Filter",
-            "[🏁]Running Enhancement",
-            "[🏃🏻‍♂️]Delayed Effect",
+            {
+                "[👦🏼]Avatar Modes",
+                content = {
+                    "[🏇]Running Enhancement",
+                    "[🪂]Jumping Enhancement",
+                    "[🏊🏻‍♂️]Diving Enchancement",
+                    "[🏃🏻‍♂️]Delay Effect",
+                    "[🛫]Always Fly",
+                    "[🛴]Scooter",
+                    "[📣]Calls",
+                },
+            },
+            {
+                "[📸]Camera Modes",
+                content = {
+                    "[🎥]Record Shared Memory",
+                    "[📸]ScreenShot Resolution",
+                    "[🖥]Realistic Graphics",
+                    "[🌁]Valley Filter",
+                },
+            },
+            {
+                "[🗺]World Modes",
+                content = {
+                    "[💨]Remove Wind[Method 1]",
+                    "[💨]Remove Wind[Method 2]",
+                    "[☁️]Remove Clouds",
+                    "[🌊]Remove Home Water",
+                    "[🚪]Remove Portals",
+                    "[⏲]Game Speed",
+                },
+            },
+            {
+                "[🖥]UI Modes",
+                content = {
+                    "[🧸]Icons & Borders Size",
+                    "[🔘]Transparent Ui",
+                    "[👒]Unlock Clothes and Emotes",
+                    "[❤️]Unlock Friendly Nodes",
+                    "[🛸]Unlimited Fireworks",                 
+                    "[📡]Single Player Mode",
+                },
+            },          
         },  
     },
     {
@@ -6516,14 +6813,17 @@ yellow = {
             "[🎒]Props",
         },                                     
     },
-  --  {
-  --      "[📥]Commands",
-  --  },
+    {
+        "[🎴]Move Things",
+        content = {
+            "[🕯]Candles Snake",
+        },
+    },
     {
         "[⚙]Settings",
         content = {
 
-        }
+        },
     },
 }
 magics = {
@@ -7284,6 +7584,14 @@ world = {
                 "Sunset_YetiPark"
             },
             {
+                "Performance Theater",
+                "Sunset_Theater"
+            },
+            {
+                "Music Shop",
+                "SunsetVillage_MusicShop"
+            },
+            {
                 "Before Colosseum",
                 "SunsetEnd"
             },
@@ -7358,7 +7666,7 @@ world = {
                 "NightDesert"
             },
             {
-                "JellyFish Field",
+                "JellyFish Beach",
                 "NightDesert_Beach"
             },
             {
@@ -7366,7 +7674,7 @@ world = {
                 "Night_JarCave"
             },
             {
-                "Krill Desert",
+                "Infinite Desert",
                 "Night_InfiniteDesert"
             },
             {
@@ -7419,7 +7727,7 @@ world = {
                 "Credits"
             },
             {
-                "Season of Shattering",
+                "Void of Shattering",
                 "StormEvent_VoidSpace"
             },
         },
@@ -7576,6 +7884,47 @@ kj = {
             end
         end
     end,
+    setArmv8 = function (add, str)
+        str = '~A8' .. str 
+        gg.setValues({{
+            address = add,
+            value = str,
+            flags = kj.dT('D'),
+        }})
+    end,
+    armv8ToDword = function (str)
+        kj.setArmv8(bootloader + 2250628, str)
+        return kj.getValue(bootloader + 2250628, 'D')
+    end,
+    switch_armv8 = function (add, new_str, original_str, toast)
+        if type(add) == 'number' then
+            new_value = kj.armv8ToDword(new_str)
+            original_value = kj.armv8ToDword(original_str)
+            current_value = kj.getValue(add, 'D')
+            if new_value == current_value then
+                kj.setValue(add , tostring(original_value) .. 'D')
+                if toast ~= nil then
+                    toast = toast .. ": " .. "OFF"
+                    gg.toast(toast)
+                end 
+                return "", offline
+            elseif original_value == current_value then
+                kj.setValue(add, tostring(new_value) .. 'D')
+                if toast ~= nil then
+                    toast = toast .. ": " .. "ON"
+                    gg.toast(toast)
+                end 
+                return "  -〘 ✅ 〙", true
+            else
+                local temp = ''
+                if toast ~= nil then
+                    temp = ': ' .. toast
+                end
+                gg.toast("No Match" .. temp)
+                return "", false
+            end
+        end
+    end,
     switch = function(add, new_value, original_value, toast)
         if type(new_value) == 'string' and type(original_value) == 'string' then
             if type(add) == 'number' then
@@ -7598,7 +7947,7 @@ kj = {
                             gg.toast(toast)
                         end 
                         gg.setValues(var)
-                        return ""
+                        return "", false
                     elseif original_value == current_value then
                         var = {
                             {
@@ -7612,10 +7961,14 @@ kj = {
                             gg.toast(toast)
                         end 
                         gg.setValues(var)
-                        return "  -〘 ✅ 〙"
+                        return "  -〘 ✅ 〙", true
                     else
-                        gg.toast("No Match")
-                        return ""
+                        local temp = ''
+                        if toast ~= nil then
+                            temp = ': ' .. toast
+                        end
+                        gg.toast("No Match" .. temp)
+                        return "", false
                     end
                 end
             end
@@ -7690,11 +8043,11 @@ kj = {
     end,
 }
 ----
-function getSkidLocat()
+function getLevel()
     mapBTable = {}
     mapLTable = {}
     for i = 0, 30, 1 do
-        table.insert(mapBTable, kj.getValue(guiptr + gptoffsets.map + i, 'B'))
+        table.insert(mapBTable, kj.getValue(guiptroffsets.map + i, 'B'))
         if  mapBTable[i - 1] == 0 then
             mapBTable[i - 1] = nil 
             break 
@@ -7703,8 +8056,20 @@ function getSkidLocat()
     for i, v in ipairs(mapBTable) do
         mapLTable[i] = string.char(mapBTable[i])
     end
-    SkidLocation = table.concat(mapLTable)
-    header = "Current Map: " .. SkidLocation
+    skidLevel = table.concat(mapLTable)
+    if kj.getValue(liboffsets.offline, 'D') == 1384120320 then
+        header = "Current Map: " .. skidLevel .. '\n------------------------' .. '\n[🔴]Offline Mode: ON'
+    else
+        header = "Current Map: " .. skidLevel .. '\n------------------------'
+    end
+end
+function getLevel_Cords()
+    for i, v in ipairs(scrSoul) do
+        if skidLevel == v[1] then
+            level_Cords = i
+            return level_Cords
+        end
+    end
 end
 do
  kio = {}
@@ -7719,19 +8084,19 @@ end
 function teleport(pos, bfreeze)
     cords = {
         {
-            address = anptr + anptroffsets.xpos,
+            address = anptroffsets.xpos,
             flags = kj.dT('F'),
             value = pos[1],
             freeze = bfreeze,
         },
         {
-            address = anptr + anptroffsets.ypos,
+            address = anptroffsets.ypos,
             flags = kj.dT('F'),
             value = pos[2],
             freeze = bfreeze,
         },
         {
-            address = anptr + anptroffsets.zpos,
+            address = anptroffsets.zpos,
             flags = kj.dT('F'),
             value = pos[3],
             freeze = bfreeze,
@@ -7775,41 +8140,34 @@ for i = 1, 50, 1 do
 end
 function run(type)
     local CRunG = gg
-    getSkidLocat()
+    getLevel()
+    getLevel_Cords()
     if type == "c" then
-        for i, v in ipairs(scrSoul) do
-            if scrSoul[i][1] == SkidLocation then
-                for u , d in pairs(scrSoul[i].C_Runner) do
-                    CRunG.toast("Location: " .. u .. " :: " .. #scrSoul[i].C_Runner)
-                    if pcall(tporders, scrSoul[i].C_Runner[u]) then
-                        if u < #scrSoul[i].C_Runner then
-                            gg.sleep(ctime)
-                        end
-                        if gg.isVisible(true) then
-                            gg.setVisible(false)
-                            gg.toast('Running Cancelled')
-                            return
-                        end
-                    end
+        for i, v in ipairs(scrSoul[level_Cords].C_Runner) do
+            CRunG.toast("Location: " .. i .. " :: " .. #scrSoul[level_Cords].C_Runner)
+            if pcall(tporders, v) then
+                if i < #scrSoul[level_Cords].C_Runner then
+                    gg.sleep(ctime)
+                end
+                if gg.isVisible(true) then
+                    gg.setVisible(false)
+                    gg.toast('Running Cancelled')
+                    return
                 end
             end
         end
     elseif type == "s" then
-        for i, v in ipairs(scrSoul) do
-            if scrSoul[i][1] == SkidLocation then
-                for u , d in pairs(scrSoul[i].S_Runner) do
-                    CRunG.toast("Location: " .. u .. " :: " .. #scrSoul[i].S_Runner)
-                    if pcall(teleport, scrSoul[i].S_Runner[u]) then
-                        if u < #scrSoul[i].S_Runner then
-                            gg.sleep(1500)
-                        end
-                        if gg.isVisible(true) then
-                            gg.setVisible(false)
-                            gg.toast('Running Cancelled')
-                            return
-                        end
-                    end
-                end 
+        for i, v in ipairs(scrSoul[level_Cords].S_Runner) do
+            CRunG.toast("Location: " .. i .. " :: " .. #scrSoul[level_Cords].S_Runner)
+            if pcall(teleport, v) then
+                if i < #scrSoul[level_Cords].S_Runner then
+                    gg.sleep(ctime)
+                end
+                if gg.isVisible(true) then
+                    gg.setVisible(false)
+                    gg.toast('Running Cancelled')
+                    return
+                end
             end
         end
     end
@@ -7835,44 +8193,27 @@ end
    do
      do
          table.insert(yellow[8].content, back[1])   
-       table.insert(yellow[9].content, back[1])   
+       table.insert(yellow[9].content, {back[1]})   
     end
  end
  do
     do
-       table.insert(yellow[10].content, back[1])   
-     table.insert(yellow[11].content, back[1])   
+       table.insert(yellow[10].content, back[1])
+      table.insert(yellow[11].content, back[1])  
    end
 end
 function runType()
-    getSkidLocat()
-    sflag, cflag = nil
-    for i, v in ipairs(scrSoul) do
-        if scrSoul[i][1] == SkidLocation then
-            for d, u in ipairs(scrSoul[i].C_Runner) do
-                if d == 1 then
-                    cflag = true
-                    break
-                end
-            end
-            if cflag == nil then 
-                yellow[2].content[3] = nil
-            else
-                yellow[2].content[3] = "[🕯]Semi Candle Run"
-            end
-            for d, u in ipairs(scrSoul[i].S_Runner) do
-                if d == 1 then
-                    sflag = true
-                    break
-                end
-            end
-            if sflag == nil then 
-                yellow[2].content[4] = nil
-            else
-                yellow[2].content[4] = "[⭐]Semi Star Run"
-                end
-            break
-        end
+    getLevel()
+    getLevel_Cords()
+    if #scrSoul[level_Cords].C_Runner > 0 then
+        yellow[2].content[3] = "[🕯]Semi Candle Run"
+    else
+        yellow[2].content[3] = nil
+    end
+    if #scrSoul[level_Cords].S_Runner > 0 then
+        yellow[2].content[4] = "[⭐]Semi Star Run"
+    else
+        yellow[2].content[4] = nil
     end
     STAY = 'runType'
     local rnmG = gg
@@ -7890,7 +8231,7 @@ function runType()
         runChoice("c")
     elseif tear == eye[4] then 
         runChoice("s")
-    elseif tear == eye[5] then --kio
+    elseif tear == eye[5] then
         if getQuests() then
             if kj.getValue(gquests[7].address, 'D') == 0 then
                 modQuest(false)
@@ -7939,29 +8280,23 @@ cltypes = {
         eye[2] * eye[4],
     },
 }
-function starPLocker()
-    getSkidLocat()
-    if SkidLock ~= SkidLocation then
-        SkidLock = SkidLocation star = {}
-        for i, v in ipairs(scrSoul) do
-            if scrSoul[i][1] == SkidLocation then
-                star.limit = #scrSoul[i].S_Runner
-                star.trace = 0
-                star.realm = i
-                return
-            end
-        end
+function pStarLocker()
+    getLevel()
+    getLevel_Cords()
+    if SkidLock ~= skidLevel then
+    do
+      do
+        SkidLock = skidLevel star = {}
+         star.limit = #scrSoul[level_Cords].S_Runner
+          star.trace = 0
+         dontRemove = 'By: Kiojeen'
+        star.realm = level_Cords
+      end
     end
-end
-function fragsLocker()
-    if string.find(SkidLocation, 'Race') == nil then
-        if SkidLocation ~= 'SunsetColosseum' and SkidLocation ~= 'SunsetEnd' then
-            crunMenu[3] = nil
-        end
-    end
+  end
 end
 function runChoice(rtype)
-    starPLocker()
+    pStarLocker()
     STAY = 'runChoice'
     do
   do
@@ -8014,42 +8349,37 @@ end
     end
     do
       do
-        for i, v in ipairs(scrSoul) do
-            if scrSoul[i][1] == SkidLocation then
-                for u, d in ipairs(scrSoul[i].Map_Goto.Map_Goto_Name) do
-                table.insert(crunMenu, u .. ". " .. stl1 .. scrSoul[i].Map_Goto.Map_Goto_Name[u])
-                table.insert(srunMenu, u .. ". " .. stl1 .. scrSoul[i].Map_Goto.Map_Goto_Name[u])
-                SkLock = SkidLocation
-                end
-            end
+        for i, v in ipairs(scrSoul[level_Cords].Map_Goto.Map_Goto_Name) do
+            table.insert(crunMenu, i .. ". " .. 'To ' .. v)
+            table.insert(srunMenu, i .. ". " .. 'To ' .. v)
         end
+     do
+      do
+        if #scrSoul[level_Cords].Map_Goto.Map_Goto_Name == 0 then
+            crunMenu[cgoto] = nil
+            srunMenu[sgoto] = nil
+        end
+      end
+    end
     if type_ == nil then
         type_ = rtype
     end 
-  end fragsLocker()
-    end sflag, cflag = false
-        for i, v in ipairs(scrSoul) do
-            if scrSoul[i][1] == SkidLocation then
-                if #scrSoul[i].C_Runner > 0 then
-                    cflag = true
-                else
-                    cflag = false
-                    type_ = "s"
-                    srunMenu[8] = nil
-                end
-            end
-        end dontRemove = 'By: Kiojeen'
-        for i, v in ipairs(scrSoul) do
-            if scrSoul[i][1] == SkidLocation then
-                if #scrSoul[i].S_Runner > 0 then
-                    sflag = true
-                else
-                    sflag = false
-                    type_ = "c"
-                    crunMenu[9] = nil
-                end
-            end
-        end dontRemove = 'By: Kiojeen'
+  end 
+end SkidLock = skidLevel
+        if #scrSoul[level_Cords].C_Runner > 0 then
+            cflag = true
+        else
+            cflag = false
+            type_ = "s"
+            srunMenu[8] = nil
+        end
+        if #scrSoul[level_Cords].S_Runner > 0 then
+            sflag = true
+        else
+            sflag = false
+            type_ = "c"
+            crunMenu[9] = nil
+        end  dontRemove = 'By: Kiojeen'
           if sflag == false then
               if cflag == false then
                 type_ = 'back'
@@ -8060,6 +8390,11 @@ end
        do
          do
           local rCG = gg
+          if string.find(skidLevel, 'Race') == nil then
+            if skidLevel ~= 'SunsetColosseum' and skidLevel ~= 'SunsetEnd' then
+                crunMenu[3] = nil
+            end
+        end
          if type_ == 'back' then yellowTears()
          elseif type_ == "c" and cflag ~= false then
              tear = rCG.choice(crunMenu, nil, header)
@@ -8088,12 +8423,7 @@ end
              elseif tear == eye[12] then
                 runChoice("c")
              elseif tear ~= nil then
-                 for i, v in ipairs(scrSoul) do
-                    if scrSoul[i][1] == SkidLocation then
-                        pcall(teleport, scrSoul[i].Map_Goto.Map_Goto_Cord[tear - cgoto])
-                        break
-                    end
-                 end
+                pcall(teleport, scrSoul[level_Cords].Map_Goto.Map_Goto_Cord[tear - cgoto])
              end
          elseif type_ == "s" and sflag ~= false then
              tear = rCG.choice(srunMenu, nil, header)
@@ -8120,12 +8450,7 @@ end
              elseif tear == eye[11] then
                 runChoice("s")
              elseif tear ~= nil then
-                 for i, v in ipairs(scrSoul) do
-                    if scrSoul[i][1] == SkidLocation then
-                        pcall(teleport, scrSoul[i].Map_Goto.Map_Goto_Cord[tear - sgoto])
-                        break
-                       end
-                    end
+                    pcall(teleport, scrSoul[level_Cords].Map_Goto.Map_Goto_Cord[tear - sgoto])
                  end
               end
            end
@@ -8144,7 +8469,7 @@ function yellowTears()
     elseif tear == eye[3] then 
         burner() 
     elseif tear == eye[4] then 
-        gg.toast('Not added yet...') --Absorb all
+        gg.toast('Not added yet...')
     elseif tear == eye[5] then
         wcharge()
     elseif tear == eye[6] then 
@@ -8153,39 +8478,42 @@ function yellowTears()
         wingmode()
     elseif tear == eye[8] then 
         trolls()
-    elseif tear == eye[9] then 
-        gg.toast('Not added yet...')       
+    elseif tear == eye[9] then  
+        modemenu()   
     elseif tear == eye[10] then 
-        modemenu()
-    elseif tear == eye[11] then 
-        ClosetMenu()
+       ClosetMenu()
+    elseif tear == eye[11] then
+        cords_changer()
     elseif tear == eye[12] then 
         settings()
     elseif tear == #yellowCry then 
         os.exit()
     end
 end
+function cords_changer()
+    getLevel()
+    STAY = 'cords_changer'
+    tear = gg.choice(yellow[11].content, nil, header)
+    if tear == #yellow[11].content then
+        yellowTears()
+    elseif tear == eye[1] then
+        drawcandles = kj.toggler(drawcandles)
+    end
+end
 function wingmode()
     STAY = 'wingmode'
-    getSkidLocat()
+    getLevel()
     tear = gg.choice(yellow[7].content, nil, header)
     if tear ~= nil then
         if tear == #yellow[7].content then
             yellowTears()
         elseif tear == eye[1] then
-            wings = kj.getValue(anptr + anptroffsets.wings, 'Q')
+            wings = kj.getValue(anptroffsets.wings, 'Q')
             tear = gg.prompt({'Set wings count: '}, {wings}, {'number'})
             if tear ~= nil then
                 tear[1] = tonumber(tear[1])
                 if type(tear[1]) == 'number' then
-                    local uu = {
-                        {
-                            address = anptr + anptroffsets.wings,
-                            flags = kj.dT('Q'),
-                            value = tear[1],
-                        },
-                    }
-                    gg.setValues(uu)
+                    kj.setValue(anptroffsets.wings, tostring(tear[1]) .. 'Q')
                 else
                     gg.toast('Please put numbers only')
                 end
@@ -8193,10 +8521,20 @@ function wingmode()
         elseif tear == eye[2] then
             capetrick = kj.toggler(capetrick)
             if not capetrick then
-                kj.setValue(anptr + anptroffsets.wvisible, '1 F')
+                kj.setValue(anptroffsets.wvisible, '1 F')
             end
         elseif tear == eye[3] then
-            kj.switch(bootloader + liboffsets.fastflap, '506761216 D', '520725538 D', 'Fast Flap')
+            if kj.getValue(anptroffsets.wvisible, 'F') == 1 then
+                kj.setValue(anptroffsets.wvisible, '0 F')
+                gg.toast('Invisible Wing: ON')
+            else
+                kj.setValue(anptroffsets.wvisible, '1 F')
+                gg.toast('Invisible Wing: OFF')
+            end
+        elseif tear == eye[4] then
+            kj.freezeSwitch(anptroffsets.pcape, '0 D', 'Freezing NoCape')
+        elseif tear == eye[5] then
+            kj.switch(liboffsets.fastflap, '506761216 D', '520725538 D', 'Fast Flap')
         end
     end   
 end
@@ -8250,23 +8588,11 @@ function settings()
         end
     end
 end
-function cmdactv()
-    if noui ~= true then 
-        noui = true gg.toast('Commands: [ON]')
-        gg.sleep(1000) 
-        gg.toast('Type: \'-kj help\' in the chat for help')
-    else 
-        noui = false gg.toast('Commands: [OFF]') 
-    end
-end
 function fasthome(bool)
     if bool then
-        val = -721215457
+        kj.setArmv8(liboffsets.fasthome, 'NOP')
     else
-        val = 1409289387
-    end
-    if val ~= nil then
-        kj.setValue(bootloader + liboffsets.fasthome, tostring(val) .. 'D')
+        kj.setArmv8(liboffsets.fasthome, 'B.LT [PC,#0x194]')
     end
 end
 function tpmenu()
@@ -8295,7 +8621,7 @@ function tpmenu()
     elseif tear == eye[10] then 
         coordinater('freeze')
     elseif tear == eye[11] then 
-        kj.freezeSwitch(anptr + anptroffsets.ypos, tostring(getPosition()[2]) .. 'F', 'Freezing Y Coordinate')
+        kj.freezeSwitch(anptroffsets.ypos, tostring(getPosition()[2]) .. 'F', 'Freezing Y Coordinate')
     end
 end
 function coordinater(rspType)
@@ -8314,17 +8640,17 @@ function coordinater(rspType)
     elseif rspType == 'freeze' then
         kj.groupFreezeSwitch({
             {
-                address = anptr + anptroffsets.xpos,
+                address = anptroffsets.xpos,
                 flags = kj.dT('F'),
                 value = getPosition()[1],
             },
             {
-                address = anptr + anptroffsets.ypos,
+                address = anptroffsets.ypos,
                 flags = kj.dT('F'),
                 value = getPosition()[2]
             },
             {
-                address = anptr + anptroffsets.zpos,
+                address = anptroffsets.zpos,
                 flags = kj.dT('F'),
                 value = getPosition()[3]
             },
@@ -8334,17 +8660,15 @@ end
 function gotoMap()
     STAY = 'gotoMap'
     local gtG = gg
-    gtMenu = {}
-    gtMenu.Name = {}
-    gtMenu.Cord = {}
-    for i, v in ipairs(scrSoul) do
-        if SkidLocation == scrSoul[i][1] then
-            for d, u in ipairs(scrSoul[i].Map_Goto.Map_Goto_Name) do
-                gtMenu.Name[d] = d .. '. ' .. scrSoul[i].Map_Goto.Map_Goto_Name[d]
-                gtMenu.Cord[d] = scrSoul[i].Map_Goto.Map_Goto_Cord[d]
-            end
-            break
-        end
+    getLevel()
+    getLevel_Cords()
+    gtMenu = {
+        Name = {},
+        Cord = {},
+    }
+    for i, v in ipairs(scrSoul[level_Cords].Map_Goto.Map_Goto_Name) do
+        table.insert(gtMenu.Cord, scrSoul[level_Cords].Map_Goto.Map_Goto_Cord[i])
+        table.insert(gtMenu.Name, i .. '. ' .. v)
     end
     table.insert(gtMenu.Name, back[1])
     tear = gtG.choice(gtMenu.Name, nil, header)
@@ -8356,7 +8680,7 @@ function ClosetMenu()
     STAY = 'ClosetMenu'
     local type = nil
     local cMG = gg
-    tear = cMG.choice(yellow[11].content, nil, header)
+    tear = cMG.choice(yellow[10].content, nil, header)
     if tear == eye[6] then yellowTears()
     elseif tear ~= nil then
         opencloset(cltypes[tear][2])
@@ -8366,20 +8690,20 @@ function opencloset(closet)
     if closet ~= nil then
         local temp = {
             {
-                address = anptr + anptroffsets.closet - 60,
-                flags = gg.TYPE_DWORD,
+                address = anptroffsets.closet - 60,
+                flags = kj.dT('D'),
                 value = 0,
             },
             {
-                address = anptr + anptroffsets.closet - 4,
-                flags = gg.TYPE_DWORD,
+                address = anptroffsets.closet - 4,
+                flags = kj.dT('D'),
                 value = 0,
             },
         }
         gg.setValues(temp)
         table.insert(temp, {
-                address = anptr + anptroffsets.closet,
-                flags = gg.TYPE_DWORD,
+                address = anptroffsets.closet,
+                flags = kj.dT('D'),
                 value = closet,
             })
         gg.sleep(100)
@@ -8388,13 +8712,13 @@ function opencloset(closet)
         else
             local temp = {
                 {
-                    address = anptr + anptroffsets.closet - 60,
-                    flags = gg.TYPE_DWORD,
+                    address = anptroffsets.closet - 60,
+                    flags = kj.dT('D'),
                     value = 1,
                 },
                 {
-                    address = anptr + anptroffsets.closet + 4,
-                    flags = gg.TYPE_DWORD,
+                    address = anptroffsets.closet + 4,
+                    flags = kj.dT('D'),
                     value = 1,
                 },
             }
@@ -8462,68 +8786,124 @@ shout = {
 }
 function modemenu()
     STAY = 'modemenu'
-    getSkidLocat()
-    c_hw = '\t' .. kj.removePoint(kj.getValue(guiptr + gptoffsets.scrres, 'F')) .. '::' .. kj.removePoint(kj.getValue(guiptr + gptoffsets.scrres + 4, 'F'))
-    yellow[10].content[3] = "[📸]ScreenShot Resolution" .. c_hw
-    tear = gg.choice(yellow[10].content, nil, header)
-    if tear ~= nil then
-        if tear == #yellow[10].content then 
-            yellowTears()
+    getLevel()
+    local x = {}
+    for i, v in ipairs(yellow[9].content) do
+        do
+          do
+            table.insert(x, v[1])
+          end
+        end  
+    end
+    c_hw = '\t' .. kj.removePoint(kj.getValue(guiptroffsets.scrres, 'F')) .. '::' .. kj.removePoint(kj.getValue(guiptroffsets.scrres + 4, 'F'))
+    yellow[9].content[2].content[2] = "[📸]ScreenShot Resolution" .. c_hw
+    tear = gg.choice(x, nil, header)
+    if tear == #x then 
+        yellowTears()
+    elseif tear == eye[1] then
+        tear = gg.choice(yellow[9].content[1].content, nil, '[👨🏻‍🦱]Avatar Modes\n---------------')
+        if tear == #yellow[9].content[1].content then
+            modemenu()
         elseif tear == eye[1] then 
-            meshare()
-        elseif tear == eye[2] then 
-            setIconSize()
-        elseif tear == eye[3] then 
-            sres()
-        elseif tear == eye[4] then 
-            setspeed()
-        elseif tear == eye[5] then 
-            kj.switch(bootloader + liboffsets.rcoulds, '506630144 D', '-46054816 D', "Remove Clouds")
-        elseif tear == eye[6] then 
-            kj.switch(bootloader + liboffsets.winds, '505873376 D', '1847778369 D', "Removing Wind" )
+            pspeed()
+        elseif tear == eye[2] then
+            kj.switch_armv8(liboffsets.pjump, 'FMOV  S0, #0x40A00000', 'FMAXNM  S1, S1, S8', 'Jumping Enhancement')
+        elseif tear == eye[3] then
+            if kj.getValue(liboffsets.pdive, 'D') == -1119010560 or kj.getValue(liboffsets.pdive, 'D') == -1119586048 then
+                kj.setValue(liboffsets.pdive, '505712640 D')
+                gg.toast('Diving Enchancement: ON')
+            else
+                kj.setValue(liboffsets.pdive, '-1119586048 D')
+                gg.toast('Diving Enchancement: OFF')
+            end
+        elseif tear == eye[4] then
+            kj.switch_armv8(liboffsets.pdelay, 'MOV  W0, #0x1', 'CBZ  W9, [PC,#0x60]', 'Delay Effect')
+        elseif tear == eye[5] then
+            kj.switch_armv8(liboffsets.plain, 'MOV  W0, #0x1', 'CBZ  W10, [PC,#0x14]', 'Always Fly')
+        elseif tear == eye[6] then
+            kj.switch(liboffsets.scooter, '506892288 D', '1847647232 D', 'Scooter')
         elseif tear == eye[7] then
-            rwind() gg.toast('Wind Removed')
-        elseif tear == eye[8] then
-            temp = {}
-            for i, v in ipairs(shout) do
-                table.insert(temp, i .. '. ' .. '[📣]' .. v[1] )
-            end table.insert(temp, back[1])
-            tear = gg.choice(temp, nil, 'This replaces the Default Call')
-            if tear == #temp then
-                modemenu()
-            elseif tear ~= nil then 
-                kj.setString(bootloader + liboffsets.honksound, '.' .. shout[tear][2], 19)
-                gg.toast(shout[tear][1] .. ' is the default call now')
-            end
-        elseif tear == eye[9] then
+            shouts()
+        end
+    elseif tear == eye[2] then
+        tear = gg.choice(yellow[9].content[2].content, nil, '[📸]Camera Modes\n---------------')
+        if tear == #yellow[9].content[2].content then
+            modemenu()
+        elseif tear == eye[1] then
+            meshare()
+        elseif tear == eye[2] then
+            sres()
+        elseif tear == eye[3] then
+            kj.switch_armv8(liboffsets.realisim, 'MOV  W0, #0x1', 'CBZ  W8, [PC,#0x104]', 'Realistic Graphics')
+        elseif tear == eye[4] then
             sunsetfilter()
-        elseif tear == eye[10] then
-            tear = gg.prompt({"Choose Running Speed:"}, {3.5}, {'number'})
-            if tear ~= nil then
-                tear[1] = tonumber(tear[1])
-                if type(tear[1]) == 'number' then
-                    local uu = {
-                        {
-                            address = bootloader + liboffsets.pspeed,
-                            flags = kj.dT('F'),
-                            value = tear[1],
-                        }
-                    }
-                    gg.setValues(uu)
-                else
-                    gg.toast('Please put numbers only')
-                end
-            end
-        elseif tear == eye[11] then
-            kj.switch(bootloader + liboffsets.pdelay, '1384120352 D', '872416009 D', 'Delay Effect')
+        end
+    elseif tear == eye[3] then
+        tear = gg.choice(yellow[9].content[3].content, nil, '[🗺]World Modes\n---------------')
+        if tear == #yellow[9].content[3].content then
+            modemenu()
+        elseif tear == eye[1] then
+            kj.switch(liboffsets.winds, '505873376 D', '1847778369 D', 'Removing Wind')
+        elseif tear == eye[2] then
+            rwind() gg.toast('Wind Removed')
+        elseif tear == eye[3] then
+            kj.switch(liboffsets.rclouds, '0 D', '1 D', 'Removing Clouds')
+        elseif tear == eye[4] then
+            kj.switch_armv8(liboffsets.rwater, 'FMOV  S0, #0x40A00000', 'FMOV  S11, #0x3F000000', 'Removing Water')
+        elseif tear == eye[5] then
+            kj.switch_armv8(liboffsets.rportals, 'MOV  W0, #0x1', 'CBZ  W8, [PC,#0x1C]', 'Removing Portals')
+        elseif tear == eye[6] then
+            setspeed()
+        end
+    elseif tear == eye[4] then
+        tear = gg.choice(yellow[9].content[4].content, nil, '[🖥]UI Modes\n---------------')
+        if tear == #yellow[9].content[4].content then
+            modemenu()
+        elseif tear == eye[1] then
+            setIconSize()
+        elseif tear == eye[2] then
+            tranUi()
+        elseif tear == eye[3] then
+            kj.switch_armv8(liboffsets.unemote, 'MOV  W0, #0x1', 'LDR  W8, [X28,#0x28]')
+            kj.switch_armv8(liboffsets.uncloset, 'MOV  W0, #0x1', 'CSET  W0, WZR, NE', 'Unlocking Clothes & Emotes')
+        elseif tear == eye[4] then
+            kj.switch_armv8(liboffsets.unnodes, 'MOV  W0, #0x1', 'CBZ  W8, [PC,#0xC]', 'Unlocking Nodes')
+        elseif tear == eye[5] then
+            kj.switch_armv8(liboffsets.unfirework, 'SUBS  W11, W10, #0x0', 'SUBS  W10, W10, #0x1', 'Unlimited Fireworks')
+        elseif tear == eye[6] then
+            s, offline = kj.switch(liboffsets.offline, '1384120320 D', '889192744 D', 'Offline Mode')
         end
     end
 end
+function pspeed()
+    tear = gg.prompt({"Choose Running Speed:"}, {3.5}, {'number'})
+    if tear ~= nil then
+        tear[1] = tonumber(tear[1])
+        if type(tear[1]) == 'number' then
+            kj.setValue(liboffsets.pspeed, tostring(tear[1]) .. 'F')
+        else
+            gg.toast('Please put numbers only')
+        end
+    end 
+end
+function shouts()
+    temp = {}
+    for i, v in ipairs(shout) do
+        table.insert(temp, i .. '. ' .. '[📣]' .. v[1] )
+    end table.insert(temp, back[1])
+    tear = gg.choice(temp, nil, 'This replaces the Default Call')
+    if tear == #temp then
+        modemenu()
+    elseif tear ~= nil then 
+        kj.setString(liboffsets.honksound, '.' .. shout[tear][2], 19)
+        gg.toast(shout[tear][1] .. ' is the default call now')
+    end
+end
 function sunsetfilter()
-    getSkidLocat()
+    getLevel()
     local offsets = {}
     for i = 0, 2 do
-        table.insert(offsets, guiptr + gptoffsets.sunsetfilter + 16 * i) 
+        table.insert(offsets, guiptroffsets.sunsetfilter + 16 * i) 
         if kj.getValue(offsets[i + 1], 'D') == 0 then
             signs.veffect[i + 1] = "  -〘 ✅ 〙"
         else
@@ -8548,24 +8928,23 @@ function sunsetfilter()
     end
 end
 function meshare()
-    local pointer = anptr + 22566976
-    if kj.getValue(guiptr + 860 + gptoffsets.meshared, 'Q') == 0 then
+    if kj.getValue(guiptroffsets.mesharedptr, 'Q') == 0 then
         local uu = {
-            address = guiptr + 860 + gptoffsets.meshared,
+            address = guiptroffsets.mesharedptr,
             flags = kj.dT('Q'),
-            value = pointer
+            value = anptroffsets.tomshptr
         }
         gg.setValues({uu})
         gg.sleep(500)
     end
-    kj.switch(guiptr + gptoffsets.meshared, '1 D', '0 D')
+    kj.switch(guiptroffsets.meshared, '1 D', '0 D')
 end
 function rwind()
     windlist = {}
     for i = 0, 100 do
         table.insert(windlist, {
-            address = guiptr + gptoffsets.winds + (i * 256) - 28,
-            flags = gg.TYPE_DWORD,
+            address = guiptroffsets.winds + (i * 256) - 28,
+            flags = kj.dT('D'),
             value = 0
         })
     end
@@ -8580,8 +8959,8 @@ function setIconSize(size)
     end
     if size ~= nil then
         local uu = {
-            address = bootloader + liboffsets.iconsize,
-            flags = gg.TYPE_FLOAT,
+            address = liboffsets.iconsize,
+            flags = kj.dT('F'),
             value = size,
         }
         if not pcall(gg.setValues, {uu}) then
@@ -8598,8 +8977,8 @@ function setspeed(speed)
     end
     if speed ~= nil then
         local uu = {
-            address = guiptr + gptoffsets.gamespeed,
-            flags = gg.TYPE_FLOAT,
+            address = guiptroffsets.gamespeed,
+            flags = kj.dT('F'),
             value = speed,
         }
         if not pcall(gg.setValues, {uu}) then
@@ -8610,71 +8989,72 @@ end
 function cordlist(type)
     STAY = 'runChoice'
     local cordls = {}
-    if not (type_ ~= nil) then
+    if type_ == nil then
         type_ = type
     end
     if type_ == "c" then
-        for i, v in ipairs(scrSoul) do
-            if scrSoul[i][1] == SkidLocation then
-                menu = i 
-                for d, u in ipairs(scrSoul[menu].C_Runner) do
-                    if d < 10 then b = 0 else b = "" end
-                        if sign[d] == eye[900] then sign[d] = "" elseif sign[d] == 1 then sign[d] = "✳️" end
-                        cordls[d] = "- Candle Location: " .. "-[ " .. b .. d .. " ]- " .. sign[d]
-                        z = d
-                    end
-                break
-            end
+        for i, v in ipairs(scrSoul[level_Cords].C_Runner) do
+            local c = ''
+            if i < 10 then c = 0 end
+            if sign[i] == 1 then 
+                sign[i] = "✳️" 
+            elseif sign[i] == nil then 
+                sign[i] = '' end
+            table.insert(cordls, "- Candle Location: " .. "-[ " .. c .. i .. " ]- " .. sign[i])
         end
         table.insert(cordls, back[1])
         tear = gg.choice(cordls, nil, header)
-        if tear == eye[z + 1] then type_ = eye[900] runChoice('c')
-        elseif tear ~= eye[900] and (tear ~= z + eye[1]) then
-            pcall(teleport, scrSoul[menu].C_Runner[tear])
+        if tear == #cordls then 
+            type_ = nil
+            runChoice('c')
+        elseif tear ~= nil then
+            pcall(teleport, scrSoul[level_Cords].C_Runner[tear])
             sign[tear] = 1
             if gg.isVisible(true) then
-            gg.setVisible(false)
+                gg.setVisible(false)
             end
             cordlist('s')
         end
     elseif type_ == "s" then
-        for i, v in ipairs(scrSoul) do
-            if scrSoul[i][1] == SkidLocation then
-                menu = i  
-                for d, u in ipairs(scrSoul[menu].S_Runner) do
-                    if d < 10 then b = 0 else b = "" end
-                        if sign[d] == eye[900] then sign[d] = "" elseif sign[d] == 1 then sign[d] = "✳️" end
-                        cordls[d] = "- Star Location: " .. "-[ " .. b .. d .. " ]-" .. sign[d]
-                        z = d
-                    end
-                break
-            end
+        for i, v in ipairs(scrSoul[level_Cords].S_Runner) do
+            local c = ''
+            if i < 10 then c = 0 end
+            if sign[i] == 1 then 
+                sign[i] = "✳️" 
+            elseif sign[i] == nil then 
+                sign[i] = '' end
+            table.insert(cordls, "- Star Location: " .. "-[ " .. c .. i .. " ]- " .. sign[i])
         end
         table.insert(cordls, back[1])
         tear = gg.choice(cordls, nil, header)
-        if tear == eye[z + 1] then type_ = eye[900] runChoice('s')
-        elseif tear ~= eye[900] and (tear ~= z + eye[1]) then
-            teleport(scrSoul[menu].S_Runner[tear])
+        if tear == #cordls then 
+            type_ = nil 
+            runChoice('s')
+        elseif tear ~= nil then
+            teleport(scrSoul[level_Cords].S_Runner[tear])
             sign[tear] = 1
             if gg.isVisible(true) then
-            gg.setVisible(false)
+                gg.setVisible(false)
             end
-            gg.sleep(3500)
             cordlist('c')
         end
     end
 end
 function burner()
-    signs.burn = kj.switch(bootloader + liboffsets.candles, '-721215457 D', '872415464 D', 'Burning')
+    if not configs.mumu then
+        signs.burn = kj.switch(liboffsets.candles, '-721215457 D', '872415464 D', 'Burning')
+    end
     if kj.isFrozen(flowers[32].address) then
         if configs.mumu then
             gg.removeListItems(candles)
+            signs.burn = ""
         end
         gg.removeListItems(flowers)
     else
         if configs.mumu then
             gg.setValues(candles)
             gg.addListItems(candles)
+            signs.burn = "  -〘 ✅ 〙"
         end
         gg.setValues(flowers)
         gg.addListItems(flowers)
@@ -8683,15 +9063,15 @@ end
 function wcharge()
  do
    do
-    signs.wcharge = kj.freezeSwitch(anptr + anptroffsets.wcharge, '14 F', 'Wing Charge')
-    kj.switch(bootloader + liboffsets.wcharge, '505729024 D', '505571328 D')
+    signs.wcharge = kj.freezeSwitch(anptroffsets.wcharge, '14 F', 'Wing Charge')
+    kj.switch(liboffsets.wcharge, '505729024 D', '505571328 D')
    end
  end
 end
 function configSign()
     do
       do
-        if kj.getValue(bootloader + liboffsets.candles, 'D') == -721215457 then
+        if kj.getValue(liboffsets.candles, 'D') == -721215457 then
             signs.burn = "  -〘 ✅ 〙"
             gg.setValues(flowers)
             gg.addListItems(flowers)
@@ -8704,16 +9084,14 @@ function configSign()
     end
      do
        do
-        if kj.getValue(bootloader + liboffsets.wcharge, 'D') == 505729024 then
+        if kj.getValue(liboffsets.wcharge, 'D') == 505729024 then
             signs.wcharge = "  -〘 ✅ 〙"
-            uu = {
-                {
-                    address = anptr + anptroffsets.wcharge,
-                    flags = kj.dT('F'),
-                    value = 14,
-                    freeze = true,
-                }
-            }
+            uu = {{
+                address = anptroffsets.wcharge,
+                flags = kj.dT('F'),
+                value = 14,
+                freeze = true,
+            }}
             gg.setValues(uu)
             gg.addListItems(uu)
         end
@@ -8721,7 +9099,7 @@ function configSign()
     end
  end
 function oobls(bto)
-    getSkidLocat()
+    getLevel()
     STAY = 'oobls'
     if configs.awrob then
         rwind()
@@ -8739,14 +9117,14 @@ function oobls(bto)
             table.insert(miniOOB, 1, "[💾]Save Current Possition")
             table.insert(miniOOB, 2, "[🏃🏻‍♂️]Goto Saved Possition")
             if SkidLock == nil then
-                SkidLock = SkidLocation
+                SkidLock = skidLevel
             end
           end
         end
           do
             do
              for i, v in pairs(scrSoul) do
-                 if v[1] == SkidLocation then
+                 if v[1] == skidLevel then
                     for u, d in pairs(v.OOB_Goto.OOB_Goto_Name) do
                         table.insert(miniOOB, u .. ". " .. d)
                     end
@@ -8754,8 +9132,8 @@ function oobls(bto)
                  end
              end
              table.insert(miniOOB, back[1])
-             if SkidLock ~= SkidLocation or svpo == nil then
-                SkidLock = SkidLocation
+             if SkidLock ~= skidLevel or svpo == nil then
+                SkidLock = skidLevel
                 miniOOB[2] = nil
                 svpo = eye[922]
             end
@@ -8775,9 +9153,9 @@ function oobls(bto)
     elseif tear == eye[2] then 
         pcall(teleport, svpo)
     elseif tear ~= eye[336] then
-        getSkidLocat()
+        getLevel()
         for i, v in pairs(scrSoul) do
-            if SkidLocation == v[1] then
+            if skidLevel == v[1] then
                 pcall(teleport, v.OOB_Goto.OOB_Goto_Cord[tear - eye[2]])
                 break
             end
@@ -8786,29 +9164,29 @@ function oobls(bto)
 end
 function getPosition()
     coords = {
-        kj.getValue(anptr + anptroffsets.xpos, 'F'),
-        kj.getValue(anptr + anptroffsets.ypos, 'F'),
-        kj.getValue(anptr + anptroffsets.zpos, 'F'),
+        kj.getValue(anptroffsets.xpos, 'F'),
+        kj.getValue(anptroffsets.ypos, 'F'),
+        kj.getValue(anptroffsets.zpos, 'F'),
     }
     return coords
 end
 function sres()
     local srsG = gg
-    def_width = kj.removePoint(kj.getValue(guiptr + gptoffsets.scrres + 1656, 'F'))
-    def_height = kj.removePoint(kj.getValue(guiptr + gptoffsets.scrres + 1660, 'F'))
+    def_width = kj.removePoint(kj.getValue(guiptroffsets.scrres + 1656, 'F'))
+    def_height = kj.removePoint(kj.getValue(guiptroffsets.scrres + 1660, 'F'))
     tear = srsG.prompt({'[📸]Set screenshot resulotion\nChanging the graphics resets it\nWidth:', 'Height:'}, {def_width, def_height}, {'number', 'number'})
     if tear ~= nil then
         local uu = {
             {
-                address = guiptr + gptoffsets.scrres,
-                flags = gg.TYPE_FLOAT,
+                address = guiptroffsets.scrres,
+                flags = kj.dT('F'),
                 freeze = true,
                 value = tear[1],
                 name = 'screenshot width',
             },
             {
-                address = guiptr + gptoffsets.scrres + 4,
-                flags = gg.TYPE_FLOAT,
+                address = guiptroffsets.scrres + 4,
+                flags = kj.dT('F'),
                 freeze = true,
                 value = tear[2],
                 name = 'screenshot height',
@@ -8834,20 +9212,21 @@ function srun_sub()
     end 
 end
 function bwall(bdis)
-    local xcord = kj.getValue(anptr + anptroffsets.xpos, 'F')
-    local ycord = kj.getValue(anptr + anptroffsets.ypos, 'F')
-    local zcord = kj.getValue(anptr + anptroffsets.zpos, 'F')
-    local radin = kj.getValue(anptr + anptroffsets.rad, 'F')
+    local xcord = kj.getValue(anptroffsets.xpos, 'F')
+    local ycord = kj.getValue(anptroffsets.ypos, 'F')
+    local zcord = kj.getValue(anptroffsets.zpos, 'F')
+    local radin = kj.getValue(anptroffsets.rad, 'F')
     if pcall(teleport, {xcord + bdis * math.sin(radin), ycord, zcord + bdis * math.cos(radin)}) then
         gg.setVisible(false)
     end
   end
 function magic()
-    sMagics = {}
-    sMagics.sign = {}
-    sMagics.spell = {}
-    sMagics.id = {}
-    sMagics.type = {} 
+    sMagics = {
+        sign = {},
+        spell = {},
+        id = {},
+        type = {},
+    }
     local gXG = gg 
     STAY = 'magic'
     tear = gg.choice(yellow[6].content, nil, "‍[️🧙]️Magic: Only three are visible at a time")
@@ -8866,7 +9245,7 @@ function magic()
         end
         msocket = {}
         for i = 1, sockets do
-            cs = kj.getValue(anptr + anptroffsets.magic + i * distances.magx - distances.magx, 'D')
+            cs = kj.getValue(anptroffsets.magic + i * distances.magx - distances.magx, 'D')
             for d, u in ipairs(magics) do
                 for a, b in ipairs(magics[d].content) do
                     if magics[d].content[a][2] == cs then
@@ -8930,38 +9309,37 @@ function autoCape()
 end
 function cptrick()
     for i = 0, 1, 0.1 do
-        kj.setValue(anptr + anptroffsets.wvisible, tostring(i) .. 'F')
+        kj.setValue(anptroffsets.wvisible, tostring(i) .. 'F')
         gg.sleep(100)
     end
     for i = 1, 0, -0.1 do
-        kj.setValue(anptr + anptroffsets.wvisible, tostring(i) .. 'F')
+        kj.setValue(anptroffsets.wvisible, tostring(i) .. 'F')
         gg.sleep(100)
     end
 end
 function setspell(id, socket, spark)
     if spark == nil then spark = 360 end
     socket = socket * distances.magx - distances.magx
-    local spell1 = anptr + anptroffsets.magic
     local mProcess = {}
     mProcess = {
         {
-            address = spell1 + 3072,
-            flags = 4,
-            value = 10,
+            address = anptroffsets.magic + 3072,
+            flags = kj.dT('D'),
+            value = 20,
         },
         {
-            address = spell1 + socket,
-            flags = 4,
+            address = anptroffsets.magic + socket,
+            flags = kj.dT('D'),
             value = id,
         },
         {
-            address = spell1 + 12 + socket,
-            flags = 4,
+            address = anptroffsets.magic + 12 + socket,
+            flags = kj.dT('D'),
             value = -1,
         },
         {
-            address = spell1 + 40 + socket,
-            flags = 4,
+            address = anptroffsets.magic + 40 + socket,
+            flags = kj.dT('D'),
             value = spark,
         },
     }
@@ -8969,7 +9347,7 @@ function setspell(id, socket, spark)
 end
 function savelocat()
     STAY = 'savelocat'
-    getSkidLocat()
+    getLevel()
     local saved = savedlocats
     local name = {}
     local remove = {}
@@ -8994,7 +9372,7 @@ function savelocat()
         end
             temp = {
                 name = userinput,
-                map = SkidLocation,
+                map = skidLevel,
                 cord = getPosition(),
             }
         table.insert(savedlocats, temp)
@@ -9012,9 +9390,9 @@ function savelocat()
     elseif tear ~= nil then
         for i, v in ipairs(name) do
             if tear == i then
-                if SkidLocation ~= saved[i - 2].map then
+                if skidLevel ~= saved[i - 2].map then
                     setsmap(saved[i - 2].map)
-                    gg.sleep(1500)
+                    gg.sleep(3500)
                 end
                 teleport(cord[i - 2])
                 break
@@ -9024,7 +9402,7 @@ function savelocat()
 end
 function getQuests()
     if #gquests < 3 then
-        gquest = anptr + anptroffsets.gquest - 4
+        gquest = anptroffsets.gquest - 4
         gg.searchNumber('812671252D;1819178294D::5', kj.dT('D'), false, gg.SIGN_EQUAL, gquest, gquest + 83528, 0)
         gg.refineNumber('812671252', kj.dT('D'))
         gquests = gg.getResults(gg.getResultsCount())
@@ -9075,35 +9453,38 @@ end
 function trolls()
     STAY = 'trolls'
     tear = gg.choice(yellow[8].content, nil, "Be careful")
-    if tear == eye[1] then
+    if tear == #yellow[8].content then 
+        yellowTears()
+    elseif tear == eye[1] then
         kj.groupFreezeSwitch(showCandle, "Force Candles")
     elseif tear == eye[2] then
         setspell(-1463943689, 1)
-        kj.freezeSwitch(anptr + anptroffsets.magic + 40, '0 D', "Spamming Magic")
-    elseif tear == #yellow[8].content then 
-        yellowTears()
+        kj.freezeSwitch(anptroffsets.magic + 40, '0 D', "Spamming Magic")
+    elseif tear == eye[3] then
+        tear = gg.prompt({'[✨]Specify the number of shouts'}, {1}, {'number'})
+        if tear ~= nil then
+            tear[1] = tonumber(tear[1])
+            if type(tear[1]) == 'number' then
+                for i = 1, tear[1] do
+                    setspell(1725047129, 7, 0)
+                    gg.sleep(100)
+                end
+            else
+                gg.toast("Please type properly") 
+            end
+            setspell(0, 7)
+        end
     end
  end
-function tpsReq()
-    if tps == nil then
-        gg.setRanges(gg.REGION_OTHER| gg.REGION_C_ALLOC)
-        local msg = reqQ({'1,818,580,002D;1,919,905,893D::5', 4, false, 536870912, qburner + 187790196, -1, 1, 1})
-        if type(msg) == 'table' then
-            if #msg > 0 then
-                bool = true
-                tps = msg[1].address + 40
-            end
-        else
-            bool = false
-            gg.alert(log_notFound)
+ for i = 1, #yellow[9].content - 1 do
+    do
+        do
+          table.insert(yellow[9].content[i].content, back[1])
         end
-    return bool
-    else
-        return true
-    end
- end 
+      end  
+  end
  function setsmap(str)
-    tps = anptr + anptroffsets.mportal
+    tps = anptroffsets.mportal
     kj.setString(tps, '.' .. str, 30)
     setspeed(10)
     setspell(224110574, 8, 0)
@@ -9112,138 +9493,10 @@ function tpsReq()
     kj.setString(tps, '.Rain_Cave', 30)
     setspell(0, 8)
  end
-function setmap(str)
-    xtr = guiptr + gptoffsets.portal
-    kj.setString(xtr + 14800, str, 24)
-    kj.setString(xtr + 14832, "Black", 28)
-    xar = {
-        {
-          address = xtr + -76,
-          flags = gg.TYPE_QWORD,
-          value = 0
-        },
-        {
-          address = xtr - 52,
-          flags = gg.TYPE_QWORD,
-          value = 49
-        },
-        {
-          address = xtr - 48,
-          flags = gg.TYPE_DWORD,
-          value = 0
-        },
-        {
-          address = xtr - 116,
-          flags = gg.TYPE_FLOAT,
-          value = 80000
-        },
-        {
-          address = xtr - 116 + 4,
-          flags = gg.TYPE_FLOAT,
-          value = 80000
-        },
-        {
-          address = xtr - 116 + 8,
-          flags = gg.TYPE_FLOAT,
-          value = 80000
-        },
-        {
-          address = xtr - 132,
-          flags = gg.TYPE_FLOAT,
-          value = 80000
-        },
-        {
-          address = xtr - 132 + 4,
-          flags = gg.TYPE_FLOAT,
-          value = 80000
-        },
-        {
-          address = xtr - 132 + 8,
-          flags = gg.TYPE_FLOAT,
-          value = 80000
-        },
-        {
-          address = xtr - 148,
-          flags = gg.TYPE_FLOAT,
-          value = 80000
-        },
-        {
-          address = xtr - 148 + 4,
-          flags = gg.TYPE_FLOAT,
-          value = 80000
-        },
-        {
-          address = xtr - 148 + 8,
-          flags = gg.TYPE_FLOAT,
-          value = 80000
-        },
-        {
-          address = xtr - 164,
-          flags = gg.TYPE_FLOAT,
-          value = 80000
-        },
-        {
-          address = xtr - 164 + 4,
-          flags = gg.TYPE_FLOAT,
-          value = 80000
-        },
-        {
-          address = xtr - 164 + 8,
-          flags = gg.TYPE_FLOAT,
-          value = 80000
-        },
-        {
-          address = xtr - 44,
-          flags = gg.TYPE_DWORD,
-          value = 28
-        },
-        {
-          address = xtr - 36,
-          flags = gg.TYPE_QWORD,
-          value = xtr + 14800
-        },
-        {
-          address = xtr + 14764,
-          flags = gg.TYPE_DWORD,
-          value = string.len(str)
-        },
-        {
-          address = xtr - 28,
-          flags = gg.TYPE_DWORD,
-          value = 49
-        },
-        {
-          address = xtr - 24,
-          flags = gg.TYPE_DWORD,
-          value = 0
-        },
-        {
-          address = xtr - 20,
-          flags = gg.TYPE_DWORD,
-          value = 10
-        },
-        {
-          address = xtr - 16,
-          flags = gg.TYPE_DWORD,
-          value = 0
-        },
-        {
-          address = xtr - 12,
-          flags = gg.TYPE_QWORD,
-          value = xtr + 14832
-        },
-        {
-          address = xtr,
-          flags = gg.TYPE_DWORD,
-          value = 666
-        }
-      }
-      gg.setValues(xar)
-end
 function absorbFrags()
     local uu = {}
     for i = 0, 140 do
-        frags = guiptr + gptoffsets.frags + i * distances.frags
+        frags = guiptroffsets.frags + i * distances.frags
         local rstr1 = kj.getValue(frags, 'F')
         local rstr2 = kj.getValue(frags + 12, 'F')
         if rstr1 ~= 0 and rstr2 == 1 then
@@ -9262,19 +9515,59 @@ function absorbFrags()
                 value = getPosition()[3],
                 flags = kj.dT('F'),
             })
+            table.insert(uu, {
+                address = frags + 128,
+                value = getPosition()[1],
+                flags = kj.dT('F'),
+            })
+            table.insert(uu, {
+                address = frags + 4 + 128,
+                value = getPosition()[2] + 0.5,
+                flags = kj.dT('F'),
+            })
+            table.insert(uu, {
+                address = frags + 8 + 128,
+                value = getPosition()[3],
+                flags = kj.dT('F'),
+            })
         end
     end
     gg.setValues(uu)
 end
+function drawCandles()
+    for i = 0, 250 do
+    local candle = guiptroffsets.candlespos + i * distances.candlespos
+    local uu = {}
+        table.insert(uu, {
+            address = candle,
+            value = getPosition()[1],
+            flags = kj.dT('F'),
+        })
+        table.insert(uu, {
+            address = candle + 4,
+            value = getPosition()[2],
+            flags = kj.dT('F'),
+        })
+        table.insert(uu, {
+            address = candle + 8,
+            value = getPosition()[3],
+            flags = kj.dT('F'),
+        })
+        gg.setValues(uu)
+        if gg.isVisible(true) then
+            break
+        end
+    end
+end
 function abswaxpro()
-    kj.switch(bootloader + liboffsets.absorb, '506892288 D','1847647232 D')
-    kj.switch(bootloader + liboffsets.mabsorb, '999999 F','3.5 D')
+    kj.setValue(liboffsets.absorb, '506892288 D')
+    kj.setValue(liboffsets.mabsorb, '999999 F')
     if configs.mumu then
         absorbWax()
     end
     gg.sleep(1000)
-    kj.switch(bootloader + liboffsets.absorb, '506892288 D','1847647232 D')
-    kj.switch(bootloader + liboffsets.mabsorb, '999999 F','3.5 D')
+    kj.setValue(liboffsets.absorb, '1847647232 D')
+    kj.setValue(liboffsets.mabsorb, '3.5 F')
 end
 function absorbWax()
     if signs.burn == "" then burner() gg.sleep(500) end
@@ -9303,38 +9596,65 @@ function absorbWax()
         gg.setValues(wx)
     end
 end
+notranui = {
+    1082130432,
+    1084227584,
+    1065353216,
+    1065353216,
+    1084227584,
+    1086324736,
+    1073741824,
+    1073741824,
+    1086324736,
+    1088421888,
+    1077936128,
+    1082130432,
+    1090519040,
+    1091567616,
+    1084227584,
+    1086324736,
+    1092616192,
+    1093664768,
+    1088421888,
+    1090519040,
+    1094713344,
+    1095761920,
+    1091567616,
+    1091567616,
+    1095761920,
+    1096810496,
+    1092616192,
+    1092616192,
+    1096810496,
+    1097859072,
+    1093664768,
+    1084227584,
+    1091567616,
+    1092616192,
+    1086324736
+}
 function teaMake()
 do
   do candles = {}
-    for i = 0, 700 do
-      if guiptr + 12299728 >= guiptr + gptoffsets.candles + i * distances.candles then
-         table.insert(candles, {
-         address = guiptr + gptoffsets.candles + i * distances.candles, 
-         flags = kj.dT('F'),
-         value = 1,
-         freeze = true,        
-         name = 'Candle' .. '[' .. i .. ']',
-         })
-      else
-        break
-      end
+    for i = 0, 650 do
+        table.insert(candles, {
+        address = guiptroffsets.candles + i * distances.candles, 
+        flags = kj.dT('F'),
+        value = 1,
+        freeze = true,        
+        })
     end
   end
 end
  do
    do flowers = {}
-    for i = 0, 700 do
-      if guiptr + 25432476 > guiptr + gptoffsets.flowers + i * distances.flowers then
-         table.insert(flowers, {
-         address = guiptr + gptoffsets.flowers + i * distances.flowers,
-         flags = kj.dT('F'),
-         value = 0,
-         freeze = true,         
-         name = 'Flower' .. '[' .. i .. ']',
-         })
-      else
-         break
-      end
+    for i = 0, 350 do
+        table.insert(flowers, {
+        address = guiptroffsets.flowers + i * distances.flowers,
+        flags = kj.dT('F'),
+        value = 0,
+        freeze = true,         
+        })
     end
   end
 end
@@ -9342,17 +9662,29 @@ end
      do showCandle = {}
         for i = 0, 7, 1 do
             table.insert(showCandle, {
-            address = guiptr + gptoffsets.pcandle + i * distances.pcandle, 
-            flags = kj.dT('D'), 
-            value = 1, 
-            freeze = true
+                address = guiptroffsets.pcandle + i * distances.pcandle, 
+                flags = kj.dT('D'), 
+                value = 1, 
+                freeze = true
         })
         end
      end
    end
- end
+    do
+     do local temp = {}
+        for i, v in ipairs(notranui) do
+            table.insert(temp, {
+                address = liboffsets.uitran + i * 4,
+                flags = kj.dT('D'),
+                value = v
+            })
+        end
+        notranui = temp
+     end
+  end
+end
 function tpmortal()
-    getSkidLocat()
+    getLevel()
     if STAY  ~= 'runChoice' then
         STAY = 'tpmortal'
     end
@@ -9381,7 +9713,7 @@ function tpmortal()
     if tear ~= nil then
         fhdr = tear - 2
         if tear == eye[1] then
-            setsmap(SkidLocation)
+            setsmap(skidLevel)
         elseif tear == eye[2] then 
             setsmap("CandleSpace")
         elseif tear == #realms and STAY  ~= 'runChoice' then
@@ -9405,14 +9737,22 @@ function tpmortal()
         end
     end
 end
-function wgrer(str)
-    local z = 0
-    array = {}
-    for i in string.gmatch(str, "[^%s]+") do 
-        z = z + 1
-        array[z] = i
+function tranUi()
+    if kj.getValue(liboffsets.uitran + 4, 'F') ~= 4 then
+        gg.setValues(notranui)
+        gg.toast('Transparent Ui: OFF')
+    else
+        local uu = {}
+        for i, v in ipairs(notranui) do
+            table.insert(uu, {
+                address = liboffsets.uitran + i * 4,
+                value = 0,
+                flags = kj.dT('F'),
+            })
+        end
+        gg.setValues(uu)
+        gg.toast('Transparent Ui: ON')
     end
-    return array
 end
 function acrholder()
     if gg.isVisible(true) then
@@ -9425,13 +9765,21 @@ function acrholder()
             hold()
             setspeed(100)
         elseif tear == eye[3] then
-            kj.setValue(bootloader + liboffsets.absorb, '1847647232 D')
-            return true
+            do
+              do
+                kj.setValue(liboffsets.absorb, '1847647232 D')
+                  kj.setValue(liboffsets.mabsorb, '3.5 F')
+                 setoffline(offline)
+              end
+            end
+          return true
         end
     end
 end
 function autoCr()
     gg.setVisible(false)
+    setoffline(true)
+    gg.sleep(500) 
     if signs.burn == "" then 
         burner() 
         gg.sleep(500) 
@@ -9440,9 +9788,11 @@ function autoCr()
         wcharge()
     end
     gg.toast('Click on the GG icon to stop')
-    kj.setValue(bootloader + liboffsets.absorb, '506892288 D')
-    kj.setValue(bootloader + liboffsets.mabsorb, '999999 F')
-    absorbWax()
+    kj.setValue(liboffsets.absorb, '506892288 D')
+    kj.setValue(liboffsets.mabsorb, '999999 F')
+    if configs.mumu then
+        absorbWax()
+    end
     for i, v in ipairs(scrSoul) do
         if #v.AC_Runner > 0 then
             if acrholder() then
@@ -9452,9 +9802,9 @@ function autoCr()
                 setsmap(v[1])
                 gg.sleep(3500)
                 setspeed(100)
-                getSkidLocat()
+                getLevel()
             end
-            if SkidLocation == v[1] then
+            if skidLevel == v[1] then
                 for d, u in ipairs(v.AC_Runner) do
                     teleport(u)
                     if acrholder() then
@@ -9464,13 +9814,9 @@ function autoCr()
                         gg.sleep(1500)
                     end
                 end
-            end
-            if configs.mumu then
-                absorbWax()
-            end
-            gg.sleep(1000)
-            if configs.mumu then
-                absorbWax()
+                if configs.mumu then
+                    absorbWax()
+                end
             end
             setspeed(1)
             gg.sleep(1000)
@@ -9482,17 +9828,13 @@ function autoCr()
         gg.sleep(3500)
         setspeed(100)
         teleport({
-            155.240709838872,
-            934.801538085975,
-            662.245222167988
+            155.223770141656, 
+            935.011413574288, 
+            662.057006835935
         })
         gg.sleep(100)
-        kj.setValue(anptr + 4468376, '2D')
-        coordinater('freeze')
+        kj.setValue(anptroffsets.ppose, '2D')
         absorbFrags()
-        gg.sleep(2000)
-        kj.setValue(anptr + 4468376, '0D')
-        coordinater('freeze')
         gg.sleep(5000)
         gg.sleep(1)
         gg.sleep(1000)
@@ -9503,12 +9845,8 @@ function autoCr()
         setsmap('SunsetEnd')
         gg.sleep(3600)
         setspeed(100)
-        coordinater('freeze')
         absorbFrags()
-        gg.sleep(12000)
-        coordinater('freeze')
-        gg.sleep(1)
-        gg.sleep(1000)
+        gg.sleep(10000)
       end
      end
       do
@@ -9517,17 +9855,13 @@ function autoCr()
         gg.sleep(3500)
         setspeed(100)
         teleport({
-            166.048797605904, 
-            1186.87946777375, 
-            398.928853759656
+            165.977371218203, 
+            1186.88940429659, 
+            398.890686035125
         })
         gg.sleep(100)
-        kj.setValue(anptr + 4468376, '2D')
-        coordinater('freeze')
+        kj.setValue(anptroffsets.ppose, '2D')
         absorbFrags()
-        gg.sleep(2000)
-        kj.setValue(anptr + 4468376, '0D')
-        coordinater('freeze')
         gg.sleep(5000)
         gg.sleep(1)
         gg.sleep(1000)
@@ -9538,120 +9872,40 @@ function autoCr()
         setsmap('SunsetEnd')
         gg.sleep(3600)
         setspeed(100)
-        coordinater('freeze')
         absorbFrags()
         gg.sleep(12000)
-        coordinater('freeze')
-        gg.sleep(1)
-        gg.sleep(1000)
       end
      end
-     setspeed(1)
+      do
+       do
+        setsmap('Dawn_TrialsEarth')
+        gg.sleep(3600)
+        setspeed(100)
+        teleport({
+            1.57159554958335, 
+            128.153259277375, 
+            15.8346834182926
+        })
+        gg.sleep(100)
+        kj.setValue(anptroffsets.ppose, '2D')
+        gg.sleep(10000)
+       end
+      end
     setsmap('CandleSpace')
-    kj.setValue(bootloader + liboffsets.absorb, '1847647232 D')
-    kj.setValue(bootloader + liboffsets.mabsorb, '3.5 F')
+    kj.setValue(liboffsets.absorb, '1847647232 D')
+    kj.setValue(liboffsets.mabsorb, '3.5 F')
+    setoffline(offline)
 end
-function cmdguide()
-    if  gg.alert([[Page 1.
-        Chat commands:
-
-            -kj c_run: start candle run in the location.
-            _________
-            -kj burn: burn candles and plants.
-            _________
-            -kj closet 'required closet': open the closet anywhere.
-                Closets: (pants, masks, hairs, capes, props).
-                example. -kj closet pants
-            _________
-            -kj sm 'map name in the resources': change the map.
-                example. -kj sm CandleSpace
-            _________
-            -kj stop: stop commands
-            _________
-        ]], 'Next') == 1 then
-            gg.alert([[Page 2.
-        Chat commands:
-        
-            -kj spell 'slot' 'spell id': wear a spell.
-                examples. 
-                -kj spell 1 1167393926
-                -kj spell 2 1167393926
-            _________
-            -kj spell remove: remove all spells in all slots.
-            _________
-            -kj breach: go through walls.
-            _________
-            -kj w_charge: charge your wing.
-            _________
-            -kj c_absorb: absorb wax.
-            _________
-        ]], 'Done')
-        end
-end
-function kjCommands()
-    if noui then
-        local uu = {}
-        for i = 1, 100, 1 do
-            uu[i] = kj.getValue(anptr + anptroffsets.cmdchat + i, 'F')
-        end
-        zz = {}
-        for i, v in ipairs(uu) do
-            if uu[i] == 0 or uu[i] == 34 then break end
-            if uu[i] < 0 or uu[i] > 255 then break end
-            zz[i] = string.char(uu[i])
-        end
-        res = table.concat(zz)
-        cmd = wgrer(res)
-        if cmd[1] == '-kj' then
-            for i = 1, 10, 1 do
-                --settable({{anptr + anptroffsets.cmdchat + i, gg.TYPE_BYTE, 0, false}}, false, false)
-            end
-            if cmd[2] == 'sm' then
-                for i, v in ipairs(scrSoul) do
-                    if cmd[3] == scrSoul[i][1] then
-                    setmap(cmd[3])
-                    end
-                end
-            elseif cmd[2] == 'help'     then
-                 cmdguide()
-            elseif cmd[2] == 'c_run'    then
-                 run('c')
-            elseif cmd[2] == 'burn'     then
-                 burner()
-            elseif cmd[2] == 'closet'   then
-                for i, v in ipairs(cltypes) do
-                    if cmd[3] == cltypes[i][1] then
-                        opencloset(cltypes[i][2])
-                    end
-                end
-            elseif cmd[2] == 'breach'   then
-                 bwall(configs.bdis)
-            elseif cmd[2] == 'c_absorb' then
-                abswaxpro()
-            elseif cmd[2] == 'w_charge' then
-                 wcharge()
-            elseif cmd[2] == 'stop'     then
-                 cmdactv()
-            elseif cmd[2] == 'spell'    then
-                if mgReq() then
-                    if cmd[3] == 'remove' then
-                        for i = 1, sockets, 1 do
-                            setspell(0, i)
-                        end
-                    elseif cmd[4] ~= nil then
-                        setspell(cmd[4], cmd[3], 0)
-                    end
-                end
-            end
-        end
+function setoffline(bool)
+    if bool then
+        kj.setValue(liboffsets.offline, '1384120320 D')
+        gg.toast('Offline Mode: ON')
+    else
+        kj.setValue(liboffsets.offline, '889192744 D')
+        gg.toast('Offline Mode: OFF')
     end
 end
-stl1 = "To "
-SPLine = [[------------------------------[⬆️]GOTO[⬆️]------------------------------]]
-log_notFound = [[
-    Something went wrong! Please wait for
-    the game to load or restart the game.
-]]
+SPLine = [[----------------------------------------------------------------------]]
 print[[
     🪐╭╮╭━╮
     ☄️┃┃┃╭╯╱╱╱╱╭╮
@@ -9666,19 +9920,15 @@ function offseter()
     bootloader = gg.getRangesList("libBootloader.so")[1].start
     anptr = kj.getValue(bootloader + liboffsets.libanptr, 'Q')
     guiptr = kj.getValue(bootloader + liboffsets.libguiptr, 'Q')
-    ls = {
-        {
-            address = anptr,
-            flags = gg.TYPE_QWORD,
-            name = 'anptr',
-        },
-        {
-            address = guiptr,
-            flags = gg.TYPE_QWORD,
-            name = 'guiptr',
-        }
-    }
-    --gg.addListItems(ls)
+    for i, v in pairs(anptroffsets) do
+        anptroffsets[i] = anptr + v
+    end
+    for i, v in pairs(guiptroffsets) do 
+        guiptroffsets[i] = guiptr + v
+    end
+    for i, v in pairs(liboffsets) do
+        liboffsets[i] = bootloader + v
+    end
 end
 function isfrozen(add)
     local temp = gg.getListItems()
@@ -9729,14 +9979,14 @@ function version_check()
         gg.toast('[Live]HellBoy\t' .. hellboy)
         if version == sky.live.version then
             anptroffsets = lanptroffsets
-            gptoffsets = lgptoffsets
+            guiptroffsets = lguiptroffsets
             distances = ldistances
             liboffsets = lliboffsets
         elseif version > sky.live.version then
-            gg.alert("Sky version mismatch\nUpdate your game")
+            gg.alert("Sky version mismatch\nWait for the script to be updated")
             os.exit()
         elseif version < sky.live.version then
-            gg.alert("Sky version mismatch\nWait for the script to be updated")
+            gg.alert("Sky version mismatch\nUpdate your game")
             os.exit()
         end
     elseif package == sky.beta.package then
@@ -9744,14 +9994,14 @@ function version_check()
         gg.toast('[Beta]HellBoy\t' .. hellboy)
         if version == sky.beta.version then
             anptroffsets = banptroffsets
-            gptoffsets = bgptoffsets
+            guiptroffsets = bguiptroffsets
             distances = bdistances
             liboffsets = bliboffsets
         elseif version > sky.beta.version then
-            gg.alert("Sky version mismatch\nUpdate your game")
+            gg.alert("Sky version mismatch\nWait for the script to be updated")
             os.exit()
         elseif version < sky.beta.version then
-            gg.alert("Sky version mismatch\nWait for the script to be updated")
+            gg.alert("Sky version mismatch\nUpdate your game")
             os.exit()
         end
     else
@@ -9766,24 +10016,27 @@ function noUiTrigger()
     if capetrick then
         cptrick()
     end
+    if drawcandles then
+        drawCandles()
+    end
 end
 function startUpTrigger()
     do
       do
         fasthome(configs.fasthome)
-         kj.setValue(bootloader + 5138732, '-721215457 D')   
+         kj.setValue(liboffsets.mtprst, '-721215457 D')   
       end
     end
      do
        do
-          kj.setValue(bootloader + 5138732, '-721215457 D') 
-         kj.setValue(bootloader + 5139224, '1385007177 D')  
+          kj.setValue(liboffsets.mtpmrt, '-721215457 D') 
+         kj.setValue(liboffsets.mtpcol, '1385007177 D')  
       end
     end
     do
       do
-         kj.setValue(bootloader + 5139228, '1923902505 D')
-        kj.setValue(bootloader + 5139232, '1384123754 D')
+         kj.setValue(liboffsets.mtpcol + 4, '1923902505 D')
+        kj.setValue(liboffsets.mtpcol + 8, '1384123754 D')
       end
     end
 end
@@ -9793,17 +10046,16 @@ function launch()
        gg.setVisible(false)
        loadconfigs()
        version_check()
-       offseter()          
+       offseter()     
        teaMake()
        configSign()        
-       kj.setString(bootloader + 18643660, dontRemove, 13)
+       kj.setString(liboffsets.kjrights, dontRemove, 13)
        startUpTrigger()       
       end
     end
     function demode()
         while true do
             if gg.isClickedUiButton() then
-                getSkidLocat()
                 load(STAY .. '()')()
             end
             noUiTrigger()
@@ -9813,7 +10065,6 @@ function launch()
         while true do
             if gg.isVisible(true) then
                 gg.setVisible(false)
-                getSkidLocat()
                 load(STAY .. '()')()
             end
             noUiTrigger()
@@ -9832,7 +10083,7 @@ function launch()
         local almG = gg
         if almG.isVisible(true) then
             almG.setVisible(false)
-            getSkidLocat()
+            getLevel()
             break
         end
     end
