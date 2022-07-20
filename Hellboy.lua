@@ -7809,9 +7809,17 @@ kj = {
             return true
         end
     end,
-    margen = function (str)
+    margen = function (par)
         local temp = {}
-        for i = 1, string.len(str) do
+        local x
+        if type(par) == 'string' then
+            x = string.len(par)
+        elseif type(par) == 'number' then
+            x = par
+        else
+            return
+        end
+        for i = 1, x do
             table.insert(temp, '-')
         end
         return table.concat(temp)
@@ -9945,7 +9953,7 @@ function setoffline(bool)
         gg.toast('Offline Mode: OFF')
     end
 end
-SPLine = [[----------------------------------------------------------------------]]
+SPLine = kj.margen(70)
 print[[
     🪐╭╮╭━╮
     ☄️┃┃┃╭╯╱╱╱╱╭╮
