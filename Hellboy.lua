@@ -7809,6 +7809,13 @@ kj = {
             return true
         end
     end,
+    margen = function (str)
+        local temp = {}
+        for i = 1, string.len(str) do
+            table.insert(temp, '-')
+        end
+        return table.concat(temp)
+    end,
     isFrozen = function(add)
         if type(add) == 'number' then
             local items = gg.getListItems()
@@ -8086,9 +8093,11 @@ function getLevel()
     end
     skidLevel = table.concat(mapLTable)
     if kj.getValue(liboffsets.offline, 'D') == 1384120320 then
-        header = "Current Map: " .. skidLevel .. '\n------------------------' .. '\n[🔴]Offline Mode: ON'
+        header = "Current Map: " .. skidLevel
+        header = header .. '\n' .. kj.margen(header) .. '\n[🔴]Offline Mode: ON'
     else
-        header = "Current Map: " .. skidLevel .. '\n------------------------'
+        header = "Current Map: " .. skidLevel   
+        header = header  .. '\n' .. kj.margen(header)
     end
 end
 function getLevel_Cords()
@@ -8488,6 +8497,7 @@ end SkidLock = skidLevel
   end
 end
 function yellowTears()
+    getLevel()
     STAY = 'yellowTears'
     local ytG = gg
     tear = ytG.choice(yellowCry, nil, header)
