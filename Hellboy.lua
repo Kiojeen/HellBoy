@@ -6644,6 +6644,34 @@ scrSoul = {
         },
     },
     {
+        "StormEvent_VoidSpace",
+        C_Runner = {
+
+        },
+        S_Runner = {
+
+        },
+        AC_Runner = {
+
+        },
+        Map_Goto = {
+            Map_Goto_Name = {
+
+            },
+            Map_Goto_Cord = {
+
+            },
+        },
+        OOB_Goto = {
+            OOB_Goto_Name = {
+
+            },
+            OOB_Goto_Cord = {
+
+            },
+        },
+    },
+    {
         "CandleSpaceEnd",
         C_Runner = {
 
@@ -8070,6 +8098,7 @@ function getLevel_Cords()
             return level_Cords
         end
     end
+    return 1
 end
 do
  kio = {}
