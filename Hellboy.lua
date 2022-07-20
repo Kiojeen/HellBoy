@@ -8094,10 +8094,10 @@ function getLevel()
     skidLevel = table.concat(mapLTable)
     if kj.getValue(liboffsets.offline, 'D') == 1384120320 then
         header = "Current Map: " .. skidLevel
-        header = header .. '\n' .. kj.margen(header) .. '\n[🔴]Offline Mode: ON'
+        header = header .. '\n' .. kj.margen(header) .. kj.margen(skidLevel) .. kj.margen('Kiojeen') .. '\n[🔴]Offline Mode: ON'
     else
         header = "Current Map: " .. skidLevel   
-        header = header  .. '\n' .. kj.margen(header)
+        header = header  .. '\n' .. kj.margen(header) .. kj.margen(skidLevel) .. kj.margen('Kiojeen')
     end
 end
 function getLevel_Cords()
