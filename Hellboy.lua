@@ -37,7 +37,7 @@ sky = {
     },
     beta = {
         package = 'com.tgc.sky.android.test.gold',
-        version = 196223
+        version = 196448
     }
 }
 configs = {
@@ -140,68 +140,67 @@ bdistances = {
     candlespos = 176,
 }
 bliboffsets = {
-    fastflap =  9631348,
-    wcharge = 5263040,
-    candles = 7049272,
-    realisim = 4429312,
-    pjump = 9669548,
-    pdive =  9707908,
-    rwater = 8114468,
-    rportals = 5920828,
-    unfirework = 8822380,
-    plain = 7086624,
-    winds = 7001684,
-    rclouds = 20418624,
-    fasthome = 8814156,
-    libguiptr = 24177840,
-    uncloset = 4007784,
-    mabsorb = 18442372,
-    unnodes = 8557272,
-    iconsize = 18132764,
-    pdelay = 5125944,
-    absorb = 11788992,
-    honksound = 18857140,
-    unemote = 10741472,
-    libanptr = 21489400,
-    offline = 7988264,
-    scooter = 5464844,
-    kjrights = 18865275,
-    pspeed = 20653740,
-    uitran = 18119836,
-    mtpcol =  5191464,
-    mtprst = 5190936,
-    mtpmrt = 5190972,
+    pdive =  9730200,
+    pjump = 9691840,    
+    fastflap =  9653640,    
+    plain = 7105220,   
+    candles = 7067860,   
+    winds = 7020268, 
+    scooter = 5483696,
+    realisim = 4442324, 
+    rclouds = 20451384,
+    fasthome = 8835852,
+    libguiptr = 24211488,
+    uncloset = 4016272,
+    unnodes = 8579260,
+    iconsize = 18161692,
+    absorb = 11818280,
+    honksound = 18887052,
+    wcharge = 5280696,
+    mtprst = 5207180,
+    rportals = 3571948,
+    mabsorb = 18471444,
+    pdelay = 5141472,
+    unfirework = 8844076,
+    unemote = 10765296,
+    libanptr = 21522824,
+    offline = 8009500,
+    kjrights = 18895141,
+    pspeed = 20686500,
+    mtpmrt = 5207216,
+    uitran = 18148684,
+    mtpcol = 5207708
 }
 banptroffsets = {
-    ppose = 4540696,
-    rad = 4527376,
-    wvisible = 4550916,
-    tomshptr = 22658192,
-    xpos = 4527344,
-    ypos = 4527348,
-    zpos = 4527352,
-    gquest = 3182120,
-    wcharge = 4550836,
-    pcape = 4558440,
-    magic = 4599440,
-    closet = 22801860,
-    mportal = 4245848,
-    wings = 4390584,
+    ppose = 4541448,
+    rad = 4528128,
+    wvisible = 4551676,
+    tomshptr = 22673152,
+    xpos = 4528096,
+    ypos = 4528100,
+    zpos = 4528104,
+    gquest = 3182760,
+    wcharge = 4551596,
+    pcape = 4559208,
+    magic = 4600352,
+    closet = 22817412,
+    mportal = 4247016,
+    wings = 4391224,
 }
 bguiptroffsets = {
-    candlespos = 17649488,
-    pcandle = -6123820,
-    sunsetfilter = -2701228,
-    winds = 3094624,
-    scrres = -12314428,
+    pcandle = -6123804, --don't change lol
+    scrres = -12478572,
     candles = 11935712,
-    meshared = 23820548,
-    map = 23831864,
-    mesharedptr = 23821392,
-    gamespeed = -10902672,
-    frags = 22612800,
-    flowers = 25452196,
-    cmdchat = 23000991,
+    meshared = 23820948,
+    map = 23832264,
+    mesharedptr = 23821792,
+    gamespeed = -10890432,
+    frags = 22612736,
+    sunsetfilter = -2701180,
+    flowers = 25452596,
+    cmdchat = 23001391,
+    wind = -3094624,
+    candlespos = 17649424,
 }
 gquests = {}
 savedlocats = {}
@@ -6745,6 +6744,7 @@ yellow = {
             "[🕯]Semi Candle Run",
             "[⭐]Semi Star Run",
             "[🔖]Unlock Seasonal Quests",
+            "[ℹ️]Running Instructions",
         },
     },
     {
@@ -7824,6 +7824,32 @@ kj = {
         end
         return table.concat(temp)
     end,
+    post = function (array, int)
+        if int == nil then
+            int = 1
+        end
+        local n = 'Next'
+        local p = 'Previous'
+        local e = 'Exit'
+        if array[int - 1] == nil then
+            p = nil
+        end
+        if array[int + 1] == nil then 
+            n = nil
+        end
+        local tear = gg.alert(array[int], e, n, p)
+        if tear == eye[1] then
+            return
+        elseif tear == eye[2] then
+            if array[int + 1] ~= nil then
+                kj.post(array, int + 1)
+            end
+        elseif tear == eye[3] then
+            if array[int - 1] ~= nil then
+                kj.post(array, int - 1)
+            end
+        end
+    end,
     isFrozen = function(add)
         if type(add) == 'number' then
             local items = gg.getListItems()
@@ -8264,7 +8290,9 @@ function runType()
     STAY = 'runType'
     local rnmG = gg
     tear = rnmG.choice(yellow[2].content, nil, header)
-    if     tear == eye[1] then
+    if tear == eye[7] then 
+        yellowTears()
+    elseif tear == eye[1] then
         docr = gg.alert('[☣️]Do you want to auto candle run?', 'Go for it', 'Never mind')
         if docr == 1 then
             autoCr()
@@ -8286,7 +8314,7 @@ function runType()
             end
         end
     elseif tear == eye[6] then 
-        yellowTears()
+       kj.post(instructions.run) 
     end
 end
 function frac()
@@ -8593,6 +8621,7 @@ function settings()
         "[📮]Dev Mode: " .. kj.statSwitch(configs.devmode),
         "[🏠]Fast Return Home" .. kj.statSwitch(configs.fasthome),
         "[🔁]Mumu User [Not fully supported]" .. kj.statSwitch(configs.mumu),
+        "[ℹ️]Description",
         back[1]
     }
     tear = gg.choice(hbstngs, nil, '[☣️]HellBoy' .. ' Settings ' .. hellboy)
@@ -8633,6 +8662,8 @@ function settings()
         if configs.mumu then
             gg.toast('Too bad')
         end
+    elseif tear == eye[6] then
+        kj.post(instructions.description)
     end
 end
 function fasthome(bool)
@@ -9111,7 +9142,7 @@ function wcharge()
  do
    do
     signs.wcharge = kj.freezeSwitch(anptroffsets.wcharge, '14 F', 'Wing Charge')
-    kj.switch(liboffsets.wcharge, '505729024 D', '505571328 D')
+    kj.switch(liboffsets.wcharge, '505745408D', '505571328 D')
    end
  end
 end
@@ -9964,6 +9995,59 @@ print[[
     🪐╱╱╱╱╱╱╱╱╭╯┃
     ☄️╱╱╱╱╱╱╱╱╰━╯
             ]]
+instructions = {
+    run = {
+        [[
+            [ℹ️]Running Instructions
+            ---------------------------------------------
+            [🕯]Auto Candle Run:
+            Collect Wax from the maps via teleporting and absorbing
+            the wax from the maps
+        ]],
+        [[
+            [ℹ️]Running Instructions
+            ---------------------------------------------
+            [⭐]Auto Star Run:
+            Not added yet.
+        ]],
+        [[
+            [ℹ️]Running Instructions
+            ---------------------------------------------
+            [🕯]Semi Candle Run:
+            Collecting wax alone or with other players by changing
+            your coordinates to teleport to each candle/plant location.
+            You can cancel teleporting by clicking on gg icon.
+            This option won't show if the map you are in doesn't have candles.
+        ]],
+        [[
+            [ℹ️]Running Instructions
+            ---------------------------------------------
+            [⭐]Semi Star Run:
+            Collecting stars alone or with other players by changing
+            your coordinates to teleport to each star location.
+            This option won't show if the map you are in doesn't have stars.
+        ]],
+        [[
+            [ℹ️]Running Instructions
+            ---------------------------------------------             
+            [🔖]Unlock Seasonal Quests:
+            Unlock the seasonal quests on the guides trees.
+            After unlocking check the tree of the guide.
+        ]],
+    },
+    description = {
+        [[
+            [ℹ️]Hellboy Description
+            ---------------------------------------------
+            Hellboy is a free open source script.
+            The script is to modify 'Sky: Children of the light'
+            for it Live - Global version and sometimes the Beta version.
+            This script is not for sell and not to be stolen from.
+            You can get more informations by visiting the official discord sever
+            https://discord.gg/2AHfEQJggX
+        ]],
+    }
+}
 function offseter()
     bootloader = gg.getRangesList("libBootloader.so")[1].start
     anptr = kj.getValue(bootloader + liboffsets.libanptr, 'Q')
