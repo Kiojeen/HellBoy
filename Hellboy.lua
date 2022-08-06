@@ -23,7 +23,7 @@ sky = {
     },
     beta = {
         package = 'com.tgc.sky.android.test.gold',
-        version = 197428
+        version = 198000
     }
 }
 configs = {
@@ -126,75 +126,75 @@ bdistances = {
     frags = 592,
     candlespos = 176,
     wbuff = 288,
-    npc = 76176,
-    xtonpc = 611456,
+    npc = 76112,
+    xtonpc = 610944,
 }
 bliboffsets = {
-    rclouds = 20558024,
-    candles = 7105768,
-    rwater = 8165192,
-    fasthome = 8865940,
-    libguiptr = 24327296,
+    rclouds = 20566216,
+    candles = 7108608,
+    rwater = 8169188,
+    fasthome = 8870496,
+    libguiptr = 24335984,
     uncloset = 4053496,
-    fastflap = 9702060,
-    unnodes = 8609680,
-    pjump = 9740344,
-    iconsize = 18260060,
-    absorb = 11893772,
-    honksound = 18985890,
-    wcharge = 5309956,
-    mtprst = 5236296,
-    rportals = 5970132,
-    realisim = 4477272,
-    plain = 7143140,
-    mabsorb = 18570052,
-    sglow = 20662020,
-    pdelay = 5170596,
-    unfirework = 8874164,
-    winds = 7058184,
-    pdive = 9778704,
-    unemote = 10817436,
-    scooter = 5512468,
-    libanptr = 21632472,
-    offline = 8038916,
-    kjrights = 18993895,
-    pspeed = 20793452,
-    mtpmrt = 5236332,
-    uitran = 18247036,
-    mtpcol = 5236824,
+    fastflap = 9707272,
+    unnodes = 8614040,
+    pjump = 9745556,
+    iconsize = 18268364,
+    absorb = 11900132,
+    honksound = 18994739,
+    wcharge = 5310704,
+    mtprst = 5236996,
+    rportals = 5971200,
+    realisim = 4477576,
+    plain = 7145980,
+    mabsorb = 18578356,
+    sglow = 20670292,
+    pdelay = 5171296,
+    unfirework = 8878720,
+    winds = 7060876,
+    pdive = 9783916,
+    unemote = 10823832,
+    scooter = 5513488,
+    libanptr = 21640904,
+    offline = 8042748,
+    kjrights = 19002744,
+    pspeed = 20801804,
+    mtpmrt = 5237032,
+    uitran = 18255340,
+    mtpcol = 5237524,
 }
 banptroffsets = { 
-    ppose = 4549544,
-    rad = 4536224,
-    wvisible = 4559772,
-    tomshptr = 22681280,
-    xpos = 4536192,
-    ypos = 4536196,
-    zpos = 4536200,
-    gquest = 3190960,
-    wcharge = 4559692,
-    pcape = 4567304,
-    magic = 4608448,
-    closet = 22825924,
-    mportal = 4255376,
-    wings = 4399320,
-    pdamage = 4559880,
+    ppose = 4646312,
+    rad = 4633056,
+    wvisible = 4656540,
+    tomshptr = 22774976,
+    xpos = 4633024,
+    ypos = 4633028,
+    zpos = 4633032,
+    gquest = 3275504,
+    wcharge = 4656460,
+    pcape = 4664072,
+    magic = 4705216,
+    closet = 22919620,
+    mportal = 4339920,
+    wings = 4496152,
+    pdamage = 4656648,
 }
 bguiptroffsets = {
-    scrres = -12441180,
+    scrres = -12531036,
     candles = 11935712,
-    meshared = 23904164,
-    map = 23915496,
-    mesharedptr = 23905024,
+    meshared = 23967716,
+    map = 23979048,
+    mesharedptr = 23968576,
     unmovnt = -6201668,
-    gamespeed = -10853040,
-    frags = 22622352,
+    gamespeed = -10942896,
+    frags = 22685904,
     winds = 3094624,
     sunsetfilter = -2701180,
     pcandle = -6123804,
-    flowers = 25535828,
-    cmdchat = 23084623,
-    candlespos = 17649440,
+    flowers = 25599380,
+    cmdchat = 23148175,
+    candlespos = 17712992,
     wbuff = 17425912,
 }
 gquests = {}
@@ -8625,7 +8625,7 @@ world = {
                 "OrbitEnd"
             },
             {
-                "Heavin",
+                "Heaven",
                 "CandleSpaceEnd"
             },
             {
@@ -9714,11 +9714,11 @@ function settings()
             settings()
         end
     elseif tear == eye[9] then
-        local k = 'Hellboy-Locations:' .. os.date() .. '.txt'
-        local t = io.open('/storage/emulated/0/Download/' .. k, 'w')
-        t:write('savedLocations = ' .. kj.tableToString(treatSavedLocats()))
-        t:close()
-        gg.alert('[📤]Output Saved Locations:\nFile name: ' .. k .. '\nDirectory: ' .. '/storage/emulated/0/Download')
+        local dir = '/storage/emulated/0/Download/Hellboy-Locations.txt'
+        local file = io.open(dir, 'w')
+        file:write('savedLocations = ' .. kj.tableToString(treatSavedLocats()))
+        file:close()
+        gg.alert('[📤]Output Saved Locations:\nFile name: ' .. 'Hellboy-Locations.txt' .. '\nDirectory: ' .. '/storage/emulated/0/Download')
     elseif tear == eye[10] then
         DumpOOBs()
     elseif tear == eye[11] then  
@@ -9946,12 +9946,12 @@ function modemenu()
         elseif tear == eye[2] then
             kj.switchArm64(liboffsets.pjump, [[FMOV S0, #0x40A00000]], [[FMAXNM S1, S1, S8]], 'Jumping Enhancement')
         elseif tear == eye[3] then
-            if kj.getValue(liboffsets.pdive, 'D') == -1119010560 or kj.getValue(liboffsets.pdive, 'D') == -1119586048 then
-                kj.setValue(liboffsets.pdive, '505712640D')
-                gg.toast('Diving Enchancement: ON')
-            else
+            if kj.getValue(liboffsets.pdive, 'D') == 505712640 then
                 kj.setValue(liboffsets.pdive, '-1119586048D')
                 gg.toast('Diving Enchancement: OFF')
+            else
+                kj.setValue(liboffsets.pdive, '505712640D')
+                gg.toast('Diving Enchancement: ON')
             end
         elseif tear == eye[4] then
             kj.groupFreezeSwitch(dontgo, 'No Movement Restriction')
