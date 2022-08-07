@@ -33,7 +33,8 @@ configs = {
     fasthome = true,
     mumu = false,
     sockets = 6,
-    user = 'Hellboy User-X'
+    user = 'Hellboy User-X',
+    pbeta = true,
 }
 --Live Offsets--
 ldistances = {
@@ -196,9 +197,10 @@ bguiptroffsets = {
     cmdchat = 23148175,
     candlespos = 17712992,
     wbuff = 17425912,
+    pbeta = -2114871,
 }
 gquests = {}
-savedlocats = {}
+slocs = {}
 signs = {
     burn = "",
     wcharge = "",
@@ -2707,12 +2709,18 @@ scrSoul = {
         OOB_Goto = {
             OOB_Goto_Name = {
                 "After The Exit",
+                "Cave",
             },
             OOB_Goto_Cord = {
                 {
                     61.737148284911,
                     112.71725463888,
                     102.13352966394
+                },
+                {
+                    131.32725502344,
+                    96.046325683375,
+                    -0.232889952114
                 },
             },
         },
@@ -3207,10 +3215,20 @@ scrSoul = {
         },
         OOB_Goto = {
             OOB_Goto_Name = {
-
+                "Little Prince",
+                "Whale",
             },
             OOB_Goto_Cord = {
-
+                {
+                    -344.8593678775,
+                    -0.097037477112,
+                    -197.4244384725
+                },
+                {
+                    -45.74275589258,
+                    -0.097855099707,
+                    -336.6859436086
+                },
             },
         },
     },
@@ -4191,27 +4209,33 @@ scrSoul = {
                 "Temple One",
                 "Temple Two",
                 "Golden Horizon",
+                "Clouds",
             },
             OOB_Goto_Cord = {
                 {
                     109.92462921428,
                     901.23022460935,
-                    2269.6267089843,
+                    2269.6267089843
                 },
                 {
                     -472.1725769069,
                     1249.2215576175,
-                    -52.04005898633,
+                    -52.04005898633
                 },
                 {
                     -478.6821594281,
                     1564.5404052775,
-                    88.100814819394,
+                    88.100814819394
                 },
                 {
                     4143.9067382125,
                     5385.2104492188,
-                    -1443.912846875,
+                    -1443.912846875
+                },
+                {
+                    -824.8135986125,
+                    1549.0378416875,
+                    -430.1322937719
                 },
             },
         },
@@ -7345,22 +7369,28 @@ scrSoul = {
                 "Eden Prisent 2nd Floor",
                 "Eden Prisent 1st Floor",
                 "Bloody Hell",
+                "Eden Edge",
             },
             OOB_Goto_Cord = {
                 {
                     20.733329772922,
                     189.83123779975,
-                    -118.3147277812,
+                    -118.3147277812
                 },
                 {
                     21.479471206650,
                     205.39353942094,
-                    -117.9585262812,
+                    -117.9585262812
                 },
                 {
                     -1649.366088875,
                     4425.2690996875,
-                    -596.9836428125,
+                    -596.9836428125
+                },
+                {
+                    616.824462890625,
+                    7.84097576141374,
+                    498.711822509656
                 },
             },
         },
@@ -7582,7 +7612,7 @@ yellow = {
         content = {
             "[🌀]Magic Teleport",
             "[💾]Saved Locations",
-            "[⬆️]Goto Map",
+            "[⬆️]Goto List",
             "[🧭]Out Of Borders",
             "[⬆️]Breach Walls",
             "[↗️]Breach Roofs",
@@ -9646,8 +9676,10 @@ function settings()
         "[🧙🏻‍♂️]Spells Sockets: " .. configs.sockets,
         "[🚮]Reset Settings",
         "[🚮]Reset Saved Locations",
-        "[📤]Output Saved Locations",
+        "[📤]Export Saved Locations",
+        "[📥]Import Locations",
         "[📄]Make a miniOOB HellBoy",
+        "[🗡]Bypass Beta Restriction [Active on play screen]" .. kj.statSwitch(configs.pbeta),
         "[ℹ️]Description",
         back[1]
     }
@@ -9696,7 +9728,7 @@ function settings()
             saveconfigs()
         end
     elseif tear == eye[7] then
-        if gg.alert('[☣️]Do you want to reset the script settings?') == eye[1] then
+        if gg.alert('[☣️]Do you want to reset the script settings?', 'Reset', 'Never mind') == eye[1] then
             configs = {}
             saveconfigs()
             loadconfigs()
@@ -9705,8 +9737,8 @@ function settings()
             settings()
         end
     elseif tear == eye[8] then
-        if gg.alert('[☣️]Do you want to reset the saved locations?') == eye[1] then
-            savedlocats = {}
+        if gg.alert('[☣️]Do you want to reset the saved locations?', 'Reset', 'Never mind') == eye[1] then
+            slocs = {}
             saveconfigs()
             loadconfigs()
             gg.toast('Saved locations were removed')
@@ -9716,12 +9748,21 @@ function settings()
     elseif tear == eye[9] then
         local dir = '/storage/emulated/0/Download/Hellboy-Locations.txt'
         local file = io.open(dir, 'w')
-        file:write('savedLocations = ' .. kj.tableToString(treatSavedLocats()))
+        file:write([[--Locations file generated by: Hellboy]]
+         .. '\nela = true\n')
+        file:write('slocs_local = ' .. kj.tableToString(slocs))
         file:close()
         gg.alert('[📤]Output Saved Locations:\nFile name: ' .. 'Hellboy-Locations.txt' .. '\nDirectory: ' .. '/storage/emulated/0/Download')
     elseif tear == eye[10] then
+        if not pcall(importOOBs) then
+            gg.toast('Something went wrong.')
+        end
+    elseif tear == eye[11] then
         DumpOOBs()
-    elseif tear == eye[11] then  
+    elseif tear == eye[12] then
+        configs.pbeta = kj.toggler(configs.pbeta)
+        patchbeta(configs.pbeta)
+    elseif tear == eye[13] then
         kj.post(instructions.description)
     end
 end
@@ -9730,6 +9771,15 @@ function fastHome(bool)
         kj.setArm64(liboffsets.fasthome, [[NOP]])
     else
         kj.setArm64(liboffsets.fasthome, 'B.LT [PC,#0x194]')
+    end
+end
+function patchbeta(bool)
+    if gg.getTargetPackage() == sky.beta.package then
+        if bool then
+            kj.setValue(guiptroffsets.pbeta, '101B')
+        else
+            kj.setValue(guiptroffsets.pbeta, '100B')
+        end
     end
 end
 function tpmenu()
@@ -9751,8 +9801,10 @@ function tpmenu()
         setPosition({getPosition()[1], getPosition()[2] + configs.bdis, getPosition()[3]})
     elseif tear == eye[7] then 
         setPosition({getPosition()[1], getPosition()[2] - configs.bdis, getPosition()[3]})
-    elseif tear == eye[8] then 
-        coordinater('move')
+    elseif tear == eye[8] then
+        if not pcall(coordinater, 'move') then
+            gg.toast("Please type properly")
+        end
     elseif tear == eye[9] then 
         coordinater('copy')
     elseif tear == eye[10] then 
@@ -10256,8 +10308,10 @@ function wenergy()
     local fd, bool = kj.switch(liboffsets.wcharge, '505745408D', '505571328 D')
         if bool then
             kj.setValue(anptroffsets.pdamage, '0D', true)
+            kj.setValue(anptroffsets.wcharge + 36, '1F', true)
         else
             kj.setValue(anptroffsets.pdamage, '0D')
+            kj.setValue(anptroffsets.wcharge + 36, '1F')
         end
     end
   end
@@ -10310,8 +10364,8 @@ function oobls(bto)
     miniOOB = {}
         do
           do
-            table.insert(miniOOB, 1, "[💾]Save Current Possition")
-            table.insert(miniOOB, 2, "[🏃🏻‍♂️]Goto Saved Possition")
+            table.insert(miniOOB, 1, "[💾]Pin Current Possition")
+            table.insert(miniOOB, 2, "[🏃🏻‍♂️]Goto Pinned Possition")
             if SkidLock == nil then
                 SkidLock = skidLevel
             end
@@ -10369,8 +10423,8 @@ function getAllOOBs()
             gg.sleep(100)
         end
     end
-    if #savedlocats > 0 then
-        local temp2 = treatSavedLocats()
+    if #slocs > 0 then
+        local temp2 = slocs
         for i, v in ipairs(temp2) do
             table.insert(temp, v)
             gg.toast('Getting ' .. v.Level_name .. ' Coordinats\n' .. v.Location_name)
@@ -10565,8 +10619,8 @@ function oobls()
     miniCord = {}
         do
             do
-            table.insert(miniOOB, 1, "[💾]Save Current Possition")
-            table.insert(miniOOB, 2, "[🏃🏻‍♂️]Goto Saved Possition")
+            table.insert(miniOOB, 1, "[💾]Pin Current Possition")
+            table.insert(miniOOB, 2, "[🏃🏻‍♂️]Goto Pinned Possition")
             if SkidLock == nil then
                 SkidLock = skidLevel
             end
@@ -10896,14 +10950,13 @@ end
 function savelocat()
     STAY = 'savelocat'
     getLevel()
-    local saved = savedlocats
     local name = {}
     local remove = {}
     local cord = {}
-    for i, v in ipairs(saved) do
-        table.insert(name, i .. '. ' .. v.map .. ': ' .. v.name)
-        table.insert(cord, v.cord)
-        table.insert(remove, i .. '. ' .. v.map .. ': ' .. v.name)
+    for i, v in ipairs(slocs) do
+        table.insert(name, i .. '. ' .. v.Level_name .. ': ' .. v.Location_name)
+        table.insert(remove, i .. '. ' .. v.Level_name .. ': ' .. v.Location_name)
+        table.insert(cord, {v.x, v.y, v.z})
     end
     table.insert(name, 1, "[📥]Add this location")
     table.insert(name, 2, "[📝]Rename a location")
@@ -10919,20 +10972,23 @@ function savelocat()
         if tear ~= nil then
             userinput = tear[1]
         end
-            temp = {
-                name = userinput,
-                map = skidLevel,
-                cord = getPosition(),
-            }
-        table.insert(savedlocats, temp)
+        temp = {
+            Level_name = skidLevel,
+            Location_name = userinput,
+            x = getPosition()[1],
+            y = getPosition()[2],
+            z = getPosition()[3]
+        }
+        table.insert(slocs, temp)
         saveconfigs()
+        gg.toast('Success')
     elseif tear == eye[2] then
         local tear = gg.choice(remove, nil, header)
         if tear ~= nil then
-            local userinput = savedlocats[tear].name
+            local userinput = slocs[tear].Location_name
             local x = gg.prompt({'[📥]Put a name:'}, {userinput}, {'text'})
             if x then
-                savedlocats[tear].name = x[1]
+                slocs[tear].location_name = x[1]
                 saveconfigs()
                 gg.toast('Success')
             end
@@ -10940,24 +10996,19 @@ function savelocat()
     elseif tear == eye[3] then
         local tear = gg.choice(remove, nil, header)
         if tear ~= nil then
-            for i, v in ipairs(savedlocats) do
+            for i, v in ipairs(slocs) do
                 if tear == i then
-                    table.remove(savedlocats, i)
+                    table.remove(slocs, i)
                 end
             end
             saveconfigs()
         end
     elseif tear ~= nil then
-        for i, v in ipairs(name) do
-            if tear == i then
-                if skidLevel ~= saved[i - 3].map then
-                    setsmap(saved[i - 3].map)
-                    gg.sleep(3500)
-                end
-                setPosition(cord[i - 3])
-                break
-            end
+        if skidLevel ~= slocs[tear - 3].Level_name then
+            setsmap(slocs[tear - 3].Level_name)
+            gg.sleep(3500)
         end
+        setPosition(cord[tear - 3])
     end
 end
 function getQuests()
@@ -11201,6 +11252,31 @@ function abswaxpro()
     gg.sleep(1000)
     kj.setValue(liboffsets.absorb, '1847647232 D')
     kj.setValue(liboffsets.mabsorb, '3.5 F')
+end
+function importOOBs()
+    local dir = '/storage/emulated/0/Download/'
+    local tear = gg.prompt({'Choose the path for the coordinates file:'}, {dir}, {'file'})
+    if tear then
+        local _, file = pcall(io.open, tear[1])
+        if _ then
+            file = file:read("*a")
+            if string.len(file) < 4 then
+                return gg.toast('This is not a valid file.')
+            else
+                pcall(load(file))
+                if ela then
+                    ela = nil
+                    for i, v in pairs(slocs_local) do
+                        table.insert(slocs, v)
+                    end
+                    saveconfigs()
+                else
+                    return gg.toast('This is not a valid file.')
+                end
+            end
+        end
+        gg.toast('Success')
+    end
 end
 function absorbWax()
     if signs.burn == "" then burner() gg.sleep(500) end
@@ -11555,7 +11631,7 @@ function autoCr()
     setsmap('CandleSpace')
     kj.setValue(liboffsets.absorb, '1847647232 D')
     kj.setValue(liboffsets.mabsorb, '3.5 F')
-    setoffline(offline)
+    setoffline(false)
 end
 local orbitStars = {
     {
@@ -11745,10 +11821,18 @@ function isfrozen(add)
         end
     end
 end
+function debugoldconfigs()
+    if savedlocats then
+        if #savedlocats > 0 then
+            slocs = treatSavedLocats()
+            saveconfigs()
+        end
+    end
+end
 function saveconfigs()
     local cfgs = io.open('/sdcard/Hellboy.kj', 'w')
     cfgs:write('configs = '.. kj.tableToString(configs))
-    cfgs:write('\nsavedlocats = ' .. kj.tableToString(savedlocats))
+    cfgs:write('\nslocs = ' .. kj.tableToString(slocs))
     cfgs:close()
 end
 function loadconfigs()
@@ -11770,15 +11854,13 @@ function loadconfigs()
                     saveconfigs()
                 end
             end
-            if #savedlocats == 0 then
-                saveconfigs()
-            end
         else
             saveconfigs()
         end
     else
         saveconfigs()
     end
+    debugoldconfigs()
 end
 function version_check()
     package = gg.getTargetPackage()
@@ -11860,12 +11942,11 @@ function startUpTrigger()
     ]]})
       local hotLoad = io.open('/sdcard/Hellboy.kj', 'r')
       hotLoad = hotLoad:read("*a")
-      local date = os.date()
-      local hotSave = io.open('/storage/emulated/0/Download/Hellboy-Corrupted Settings ' .. date .. '.txt', 'w')
+      local hotSave = io.open('/storage/emulated/0/Download/Hellboy-Corrupted Settings.txt', 'w')
       hotSave:write(hotLoad)
       hotSave:close()
       configs = configz
-      savedlocats = {}
+      slocs = {}
       saveconfigs()
   end
   version_check()
@@ -11873,6 +11954,7 @@ function startUpTrigger()
       do
         offseter()
         teaMake()
+        patchbeta(configs.pbeta)
       end
     end
     do
