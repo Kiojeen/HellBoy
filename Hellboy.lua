@@ -8557,6 +8557,10 @@ world = {
                 "Dusk_Triangle"
             },
             {
+                "Abyss Deep Water",
+                "Dusk_TriangleEnd"
+            },
+            {
                 "Wasteland",
                 "Dusk"
             },
