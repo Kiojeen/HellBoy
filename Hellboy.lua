@@ -1,13 +1,19 @@
 ---@diagnostic disable: lowercase-global, undefined-global
 --[[
+    These offsets are not to be taken and added to other scripts (; so find your own stuff
+    we spent ages finding and learning to make something that you can have fun with
+    so don't abuse the makers :D
+    enjoy..
+]]
+--[[
     ----------------------------------------------------------------------------
     Hellboy is a free open source script to use and read and to learn from.
     You are allowed to get inspiration from the way it is written but not
     to copy the code as it is written from zero by me 'Kiojeen'.
+    Also selling it will get you in troubles so be careful.
     ----------------------------------------------------------------------------
     If you have any hacks that you want to send, https://discord.gg/2AHfEQJggX
     ----------------------------------------------------------------------------
-
 ]]
 stime = 3500
 offline = false
@@ -15,7 +21,7 @@ hellboy = 8065
 sky = {
     live = {
         package = 'com.tgc.sky.android',
-        version = 196112
+        version = 199070
     },
     canvas = {
         package = 'git.artdeell.skymodloader',
@@ -45,78 +51,76 @@ ldistances = {
     frags = 592,
     candlespos = 176,
     wbuff = 288,
-    npc = 75520,
-    xtonpc = 606208,
+    npc = 76112,
+    xtonpc = 610944,
 }
 lliboffsets = {
-    rclouds = 20180632,
-    candles = 6985008,
-    rwater = 8034936,
-    fasthome = 8715068,
-    libguiptr = 23921920,
-    uncloset = 3969208,
-    fastflap = 9529808,
-    unnodes = 8477596,
-    pjump = 9568008,
-    iconsize = 17924204,
-    absorb = 11613128,
-    honksound = 18645217,
-    wcharge = 5214744,
-    mtprst = 5145496,
-    rportals = 5860012,
-    realisim = 4384096,
-    plain = 7022260,
-    mabsorb = 18232996,
-    sglow = 20282548,
-    pdelay = 5079848,
-    unfirework = 8723300,
-    winds = 6939032,
-    pdive = 9606380,
-    unemote = 10623588,
-    scooter = 5410144,
-    libanptr = 21241832,
-    offline = 7911784,
-    kjrights = 18653352,
-    pspeed = 20409828,
-    mtpmrt = 5145532,
-    uitran = 17911324,
-    mtpcol = 5146024,
+    rclouds = 20566216,
+    candles = 7108596,
+    rwater = 8168884,
+    fasthome = 8870192,
+    libguiptr = 24335984,
+    uncloset = 4053496,
+    fastflap = 9706968,
+    unnodes = 8613736,
+    pjump = 9745252,
+    iconsize = 18268108,
+    absorb = 11899828,
+    honksound = 18994483,
+    wcharge = 5310704,
+    mtprst = 5236996,
+    rportals = 5971188,
+    realisim = 4477576,
+    plain = 7145968,
+    mabsorb = 18578100,
+    sglow = 20670292,
+    pdelay = 5171296,
+    unfirework = 8878416,
+    winds = 7060864,
+    pdive = 9783612,
+    unemote = 10823528,
+    scooter = 5513488,
+    libanptr = 21640904,
+    offline = 8042444,
+    kjrights = 19002488,
+    pspeed = 20801804,
+    mtpmrt = 5237032,
+    uitran = 18255084,
+    mtpcol = 5237524,
 }
 lanptroffsets = {
-    wvisible = 4479236,
-    pashout = 4492244,
-    wcharge = 4479156,
-    pcape = 4486664,
-    magic = 4527376,
-    pshout = 4492240,
-    wings = 4343880,
-    ppose = 4469016,
-    rad = 4455696,
-    tomshptr = 22567616,
-    xpos = 4455664,
-    ypos = 4455668,
-    zpos = 4455672,
-    gquest = 3180488,
-    closet = 22711364,
-    mportal = 4198896,
-    pdamage = 4479352,
+    ppose = 4646312,
+    rad = 4633056,
+    wvisible = 4656540,
+    tomshptr = 22774976,
+    xpos = 4633024,
+    ypos = 4633028,
+    zpos = 4633032,
+    gquest = 3275400,
+    wcharge = 4656460,
+    pcape = 4664072,
+    magic = 4705216,
+    closet = 22919620,
+    mportal = 4340184,
+    wings = 4496152,
+    pdamage = 4656648,
 }
 lguiptroffsets = {
-    scrres = -12286876,
-    candles = 11983888,
-    meshared = 23819364,
-    map = 23830696,
-    mesharedptr = 23820224,
-    unmovnt = -6198052,
-    gamespeed = -10874416,
-    frags = 22611584,
+    scrres = -12531036,
+    candles = 11935712,
+    meshared = 23958116,
+    map = 23969448,
+    mesharedptr = 23958976,
+    unmovnt = -6201668,
+    gamespeed = -10942896,
+    frags = 22676304,
     winds = 3094624,
-    sunsetfilter = -2698876,
-    pcandle = -6120188,
-    flowers = 25428436,
-    cmdchat = 22999823,
-    candlespos = 17648288,
-    wbuff = 17424936,
+    sunsetfilter = -2701180,
+    pcandle = -6123804,
+    flowers = 25589780,
+    cmdchat = 23138575,
+    candlespos = 17712992,
+    wbuff = 17425912,
 }
 --Beta Offsets--
 bdistances = {
@@ -176,7 +180,7 @@ banptroffsets = {
     wcharge = 4656460,
     pcape = 4664072,
     magic = 4705216,
-    closet = 22919620,
+    closet = 22919636,
     mportal = 4339920,
     wings = 4496152,
     pdamage = 4656648,
