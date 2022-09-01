@@ -21,7 +21,7 @@ hellboy = 8065
 sky = {
     live = {
         package = 'com.tgc.sky.android',
-        version = 199070
+        version = 199846
     },
     huawei = {
         package = 'com.tgc.sky.android.huawei',
