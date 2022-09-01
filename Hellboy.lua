@@ -21,11 +21,11 @@ hellboy = 8065
 sky = {
     live = {
         package = 'com.tgc.sky.android',
-        version = 199846
+        version = 199070
     },
-    canvas = {
-        package = 'git.artdeell.skymodloader',
-        version = 3
+    huawei = {
+        package = 'com.tgc.sky.android.huawei',
+        version = 198186
     },
     beta = {
         package = 'com.tgc.sky.android.test.gold',
@@ -88,7 +88,7 @@ lliboffsets = {
     uitran = 18255084,
     mtpcol = 5237524,
 }
-lanptroffsets = {
+lemitoffsets = {
     ppose = 4646312,
     rad = 4633056,
     wvisible = 4656540,
@@ -103,9 +103,9 @@ lanptroffsets = {
     closet = 22919620,
     mportal = 4340184,
     wings = 4496152,
-    pdamage = 4656648,
+    pdamage = 4733016,
 }
-lguiptroffsets = {
+lguioffsets = {
     scrres = -12531036,
     candles = 11935712,
     meshared = 23958116,
@@ -116,7 +116,7 @@ lguiptroffsets = {
     frags = 22676304,
     winds = 3094624,
     sunsetfilter = -2701180,
-    pcandle = -6123804,
+    pcandle = -6180184,
     flowers = 25589780,
     cmdchat = 23138575,
     candlespos = 17712992,
@@ -139,7 +139,7 @@ bliboffsets = {
     candles = 7108608,
     rwater = 8169188,
     fasthome = 8870496,
-    libguiptr = 24335984,
+    guiptr = 24335984,
     uncloset = 4053496,
     fastflap = 9707272,
     unnodes = 8614040,
@@ -160,7 +160,7 @@ bliboffsets = {
     pdive = 9783916,
     unemote = 10823832,
     scooter = 5513488,
-    libanptr = 21640904,
+    emitptr = 21640904,
     offline = 8042748,
     kjrights = 19002744,
     pspeed = 20801804,
@@ -168,7 +168,7 @@ bliboffsets = {
     uitran = 18255340,
     mtpcol = 5237524,
 }
-banptroffsets = { 
+bemitoffsets = { 
     ppose = 4646312,
     rad = 4633056,
     wvisible = 4656540,
@@ -185,7 +185,7 @@ banptroffsets = {
     wings = 4496152,
     pdamage = 4656648,
 }
-bguiptroffsets = {
+bguioffsets = {
     scrres = -12531036,
     candles = 11935712,
     meshared = 23967716,
@@ -202,6 +202,94 @@ bguiptroffsets = {
     candlespos = 17712992,
     wbuff = 17425912,
     pbeta = -2114871,
+}
+--Huawei Offsets--
+hdistances = {
+    candles = 448,
+    flowers = 8,
+    pcandle = 56384,
+    magx = 48,
+    frags = 592,
+    candlespos = 176,
+    wbuff = 288,
+    npc = 76112,
+    xtonpc = 610944,
+}
+hemitoffsets = {
+    ppose = 4646312,
+    rad = 4633056,
+    wvisible = 4656540,
+    tomshptr = 22774976,
+    xpos = 4633024,
+    ypos = 4633028,
+    zpos = 4633032,
+    gquest = 3275400,
+    wcharge = 4656460,
+    pcape = 4664072,
+    magic = 4705216,
+    closet = 22919620,
+    mportal = 4340184,
+    wings = 4496152,
+    pdamage = 4656648,
+}
+hguioffsets = {
+    candles = 11935712,
+    map = 23969448,
+    mesharedptr = 23958976,
+    sunsetfilter = -2701180,
+    flowers = 25589780,
+    candlespos = 17712992,
+    wbuff = 17425912,
+    scrres = -12531036,
+    meshared = 23958116,
+    unmovnt = -6201668,
+    dof4 = 1000008,
+    gamespeed = -10942896,
+    frags = 22676304,
+    dof2 = -28864648,
+    dof3 = 900004,
+    winds = 3094624,
+    pcandle = -6123804,
+    cmdchat = 23138575,
+    dof1 = -28964652,
+}
+hliboffsets = {
+    candles = 7108608,
+    rclouds = 20566216,
+    fastflap = 9706980,
+    uncloset = 4053496,
+    pjump = 9745264,
+    emitptr = 21640904,
+    iconsize = 18268108,
+    guiptr = 24335984,
+    wcharge = 5310704,
+    plain = 7145980,
+    mabsorb = 18578100,
+    sglow = 20670292,
+    pdelay = 5171296,
+    dof2 = 3976804,
+    dof3 = 19513348,
+    pdive = 9783624,
+    winds = 7060876,
+    unfirework = 8878428,
+    pspeed = 20801804,
+    kjrights = 19002488,
+    mtpcol = 5237524,
+    uitran = 18255084,
+    dof1 = 2487652,
+    rwater = 8168896,
+    fasthome = 8870204,
+    unnodes = 8613748,
+    absorb = 11899840,
+    honksound = 18994483,
+    mtprst = 5236996,
+    rportals = 5971200,
+    realisim = 4477576,
+    dof4 = 19735096,
+    scooter = 5513488,
+    unemote = 10823540,
+    offline = 8042456,
+    mtpmrt = 5237032,
 }
 gquests = {}
 slocs = {}
@@ -9000,7 +9088,7 @@ function getLevel()
     mapBTable = {}
     mapLTable = {}
     for i = 0, 30, 1 do
-        table.insert(mapBTable, kj.getValue(guiptroffsets.map + i, 'B'))
+        table.insert(mapBTable, kj.getValue(guioffsets.map + i, 'B'))
         if  mapBTable[i - 1] == 0 then
             mapBTable[i - 1] = nil 
             break 
@@ -9041,19 +9129,19 @@ end
 function setPosition(pos, bfreeze)
     cords = {
         {
-            address = anptroffsets.xpos,
+            address = emitoffsets.xpos,
             flags = kj.dT('F'),
             value = pos[1],
             freeze = bfreeze,
         },
         {
-            address = anptroffsets.ypos,
+            address = emitoffsets.ypos,
             flags = kj.dT('F'),
             value = pos[2],
             freeze = bfreeze,
         },
         {
-            address = anptroffsets.zpos,
+            address = emitoffsets.zpos,
             flags = kj.dT('F'),
             value = pos[3],
             freeze = bfreeze,
@@ -9246,24 +9334,24 @@ end
 do
   do
   llib = kj.tableClone(lliboffsets)
-  lanon = kj.tableClone(lanptroffsets)    
+  lanon = kj.tableClone(lemitoffsets)    
   end
 end
 do
   do
-  lgui = kj.tableClone(lguiptroffsets)
+  lgui = kj.tableClone(lguioffsets)
   bd = kj.tableClone(bdistances)    
   end
 end
 do
   do
   blib = kj.tableClone(bliboffsets)
-  banon = kj.tableClone(banptroffsets)    
+  banon = kj.tableClone(bemitoffsets)    
   end
 end
 do
   do
-  bgui = kj.tableClone(bguiptroffsets)
+  bgui = kj.tableClone(bguioffsets)
   cltypes = {
     {
             "pants", 
@@ -9608,12 +9696,12 @@ function wingmode()
         if tear == #yellow[7].content then
             yellowTears()
         elseif tear == eye[1] then
-            wings = kj.getValue(anptroffsets.wings, 'Q')
+            wings = kj.getValue(emitoffsets.wings, 'Q')
             tear = gg.prompt({'Set wings count: '}, {wings}, {'number'})
             if tear ~= nil then
                 tear[1] = tonumber(tear[1])
                 if type(tear[1]) == 'number' then
-                    kj.setValue(anptroffsets.wings, tostring(tear[1]) .. 'Q')
+                    kj.setValue(emitoffsets.wings, tostring(tear[1]) .. 'Q')
                 else
                     gg.toast('Please put numbers only')
                 end
@@ -9623,18 +9711,18 @@ function wingmode()
         elseif tear == eye[3] then
             capetrick = kj.toggler(capetrick)
             if not capetrick then
-                kj.setValue(anptroffsets.wvisible, '1 F')
+                kj.setValue(emitoffsets.wvisible, '1 F')
             end
         elseif tear == eye[4] then
-            if kj.getValue(anptroffsets.wvisible, 'F') == 1 then
-                kj.setValue(anptroffsets.wvisible, '0 F')
+            if kj.getValue(emitoffsets.wvisible, 'F') == 1 then
+                kj.setValue(emitoffsets.wvisible, '0 F')
                 gg.toast('Invisible Wing: ON')
             else
-                kj.setValue(anptroffsets.wvisible, '1 F')
+                kj.setValue(emitoffsets.wvisible, '1 F')
                 gg.toast('Invisible Wing: OFF')
             end
         elseif tear == eye[5] then
-            kj.freezeSwitch(anptroffsets.pcape, '0 D', 'Freezing NoCape')
+            kj.freezeSwitch(emitoffsets.pcape, '0 D', 'Freezing NoCape')
         elseif tear == eye[6] then
             kj.switch(liboffsets.fastflap, '506761216 D', '520725538 D', 'Fast Flap')
         end
@@ -9645,9 +9733,9 @@ function doWdrop()
     if tear ~= nil then
         tear[1] = tonumber(tear[1])
         if type(tear[1]) == 'number' then
-            kj.setValue(anptroffsets.pdamage, tostring(tear[1]) .. 'D')
+            kj.setValue(emitoffsets.pdamage, tostring(tear[1]) .. 'D')
             if signs.wcharge ~= '' then
-                kj.setValue(anptroffsets.pdamage, '0D', true)  
+                kj.setValue(emitoffsets.pdamage, '0D', true)  
             end
         else
             gg.toast("Please type properly")
@@ -9784,9 +9872,9 @@ end
 function patchbeta(bool)
     if gg.getTargetPackage() == sky.beta.package then
         if bool then
-            kj.setValue(guiptroffsets.pbeta, '101B')
+            kj.setValue(guioffsets.pbeta, '101B')
         else
-            kj.setValue(guiptroffsets.pbeta, '100B')
+            kj.setValue(guioffsets.pbeta, '100B')
         end
     end
 end
@@ -9818,7 +9906,7 @@ function tpmenu()
     elseif tear == eye[10] then 
         coordinater('freeze')
     elseif tear == eye[11] then 
-        kj.freezeSwitch(anptroffsets.ypos, tostring(getPosition()[2]) .. 'F', 'Freezing Y Coordinate')
+        kj.freezeSwitch(emitoffsets.ypos, tostring(getPosition()[2]) .. 'F', 'Freezing Y Coordinate')
     end
 end
 function coordinater(rspType)
@@ -9837,17 +9925,17 @@ function coordinater(rspType)
     elseif rspType == 'freeze' then
         kj.groupFreezeSwitch({
             {
-                address = anptroffsets.xpos,
+                address = emitoffsets.xpos,
                 flags = kj.dT('F'),
                 value = getPosition()[1],
             },
             {
-                address = anptroffsets.ypos,
+                address = emitoffsets.ypos,
                 flags = kj.dT('F'),
                 value = getPosition()[2]
             },
             {
-                address = anptroffsets.zpos,
+                address = emitoffsets.zpos,
                 flags = kj.dT('F'),
                 value = getPosition()[3]
             },
@@ -9887,19 +9975,19 @@ function opencloset(closet)
     if closet ~= nil then
         local temp = {
             {
-                address = anptroffsets.closet - 60,
+                address = emitoffsets.closet - 60,
                 flags = kj.dT('D'),
                 value = 0,
             },
             {
-                address = anptroffsets.closet - 4,
+                address = emitoffsets.closet - 4,
                 flags = kj.dT('D'),
                 value = 0,
             },
         }
         gg.setValues(temp)
         table.insert(temp, {
-                address = anptroffsets.closet,
+                address = emitoffsets.closet,
                 flags = kj.dT('D'),
                 value = closet,
             })
@@ -9909,12 +9997,12 @@ function opencloset(closet)
         else
             local temp = {
                 {
-                    address = anptroffsets.closet - 60,
+                    address = emitoffsets.closet - 60,
                     flags = kj.dT('D'),
                     value = 1,
                 },
                 {
-                    address = anptroffsets.closet + 4,
+                    address = emitoffsets.closet + 4,
                     flags = kj.dT('D'),
                     value = 1,
                 },
@@ -9992,7 +10080,7 @@ function modemenu()
           end
         end  
     end
-    c_hw = '\t' .. kj.removePoint(kj.getValue(guiptroffsets.scrres, 'F')) .. '::' .. kj.removePoint(kj.getValue(guiptroffsets.scrres + 4, 'F'))
+    c_hw = '\t' .. kj.removePoint(kj.getValue(guioffsets.scrres, 'F')) .. '::' .. kj.removePoint(kj.getValue(guioffsets.scrres + 4, 'F'))
     yellow[9].content[2].content[2] = "[📸]ScreenShot Resolution" .. c_hw
     tear = gg.choice(x, nil, header)
     if tear == #x then 
@@ -10029,7 +10117,7 @@ function modemenu()
         if tear == #yellow[9].content[2].content then
             modemenu()
         elseif tear == eye[1] then
-            meShare()
+            kj.switch(guioffsets.meshared, '1D', '0D')
         elseif tear == eye[2] then
             sres()
         elseif tear == eye[3] then
@@ -10120,7 +10208,7 @@ function sunsetFilter()
     getLevel()
     local offsets = {}
     for i = 0, 2 do
-        table.insert(offsets, guiptroffsets.sunsetfilter + 16 * i) 
+        table.insert(offsets, guioffsets.sunsetfilter + 16 * i) 
         if kj.getValue(offsets[i + 1], 'D') == 0 then
             signs.veffect[i + 1] = "  -〘 ✅ 〙"
         else
@@ -10144,18 +10232,6 @@ function sunsetFilter()
         end
     end
 end
-function meShare()
-    if kj.getValue(guiptroffsets.mesharedptr, 'Q') == 0 then
-        local uu = {
-            address = guiptroffsets.mesharedptr,
-            flags = kj.dT('Q'),
-            value = anptroffsets.tomshptr
-        }
-        gg.setValues({uu})
-        gg.sleep(500)
-    end
-    kj.switch(guiptroffsets.meshared, '1D', '0D')
-end
 function rwind()
     windlist = {}
     for i = 0, 100 do
@@ -10163,7 +10239,7 @@ function rwind()
         do --\\Ca-O Main.lua
           for d = 1, 50 do
             table.insert(windlist, {
-                address = guiptroffsets.winds - d + i * 256 ,
+                address = guioffsets.winds - d + i * 256 ,
                 flags = kj.dT('D'),
                 value = 0
             })
@@ -10200,7 +10276,7 @@ function setspeed(speed)
     end
     if speed ~= nil then
         local uu = {
-            address = guiptroffsets.gamespeed,
+            address = guioffsets.gamespeed,
             flags = kj.dT('F'),
             value = speed,
         }
@@ -10312,14 +10388,14 @@ end
 function wenergy()
  do
    do
-    signs.wcharge = kj.freezeSwitch(anptroffsets.wcharge, '14 F', 'Wing Energy')
+    signs.wcharge = kj.freezeSwitch(emitoffsets.wcharge, '14 F', 'Wing Energy')
     local fd, bool = kj.switch(liboffsets.wcharge, '505745408D', '505571328 D')
         if bool then
-            kj.setValue(anptroffsets.pdamage, '0D', true)
-            kj.setValue(anptroffsets.wcharge + 36, '1F', true)
+            kj.setValue(emitoffsets.pdamage, '0D', true)
+            kj.setValue(emitoffsets.wcharge + 36, '1F', true)
         else
-            kj.setValue(anptroffsets.pdamage, '0D')
-            kj.setValue(anptroffsets.wcharge + 36, '1F')
+            kj.setValue(emitoffsets.pdamage, '0D')
+            kj.setValue(emitoffsets.wcharge + 36, '1F')
         end
     end
   end
@@ -10343,14 +10419,14 @@ function configSign()
         if not configs.mumu then
             if kj.getValue(liboffsets.wcharge, 'D') == 505729024 then
                 signs.wcharge = "  -〘 ✅ 〙"
-                kj.setValue(anptroffsets.wcharge, '14 F', true)
-                kj.setValue(anptroffsets.pdamage, '0 D', true)
+                kj.setValue(emitoffsets.wcharge, '14 F', true)
+                kj.setValue(emitoffsets.pdamage, '0 D', true)
             end
         else
-            if kj.isFrozen(anptroffsets.wcharge) then
+            if kj.isFrozen(emitoffsets.wcharge) then
                 signs.wcharge = "  -〘 ✅ 〙"
-                kj.setValue(anptroffsets.wcharge, '14 F', true)
-                kj.setValue(anptroffsets.pdamage, '0 D', true)
+                kj.setValue(emitoffsets.wcharge, '14 F', true)
+                kj.setValue(emitoffsets.pdamage, '0 D', true)
             end 
         end
       end
@@ -10451,26 +10527,26 @@ function DumpOOBs()
     local Offsets = [[
     --Live Offsets--
 lliboffsets = {]] .. '\n'
-    .. '\tlibguiptr = ' .. llib.libguiptr .. ',\n'
-    .. '\tlibanptr = ' .. llib.libanptr .. ',\n}\n'
- .. '\tlanptroffsets = {\n'
+    .. '\tlibgui = ' .. llib.guiptr .. ',\n'
+    .. '\tlibemit = ' .. llib.emitptr .. ',\n}\n'
+ .. '\tlemitoffsets = {\n'
  .. '\txpos = ' .. lanon.xpos .. ',\n'
  .. '\typos = ' .. lanon.ypos .. ',\n'
  .. '\tzpos = ' .. lanon.zpos .. ',\n'
  .. '\trad = ' .. lanon.rad .. ',\n}\n'
- .. 'lguiptroffsets = {\n'
+ .. 'lguioffsets = {\n'
  ..  '\tmap = ' .. lgui.map .. ',\n}\n'
  .. [[
      --Beta Offsets--
 bliboffsets = {]] .. '\n'
- .. '\tlibguiptr = ' .. blib.libguiptr .. ',\n'
- .. '\tlibanptr = ' .. blib.libanptr .. ',\n}\n'
- .. 'banptroffsets = {\n'
+ .. '\tlibgui = ' .. blib.guiptr .. ',\n'
+ .. '\tlibemit = ' .. blib.emitptr .. ',\n}\n'
+ .. 'bemitoffsets = {\n'
  .. '\txpos = ' .. banon.xpos .. ',\n'
  .. '\typos = ' .. banon.ypos .. ',\n'
  .. '\tzpos = ' .. banon.zpos .. ',\n'
  .. '\trad = ' .. banon.rad .. ',\n}\n'
- .. 'bguiptroffsets = {\n'
+ .. 'bguioffsets = {\n'
  ..  '\tmap = ' .. bgui.map .. ',\n}\n'
  local vcheck = [[
 function version_check()
@@ -10479,8 +10555,8 @@ function version_check()
     if string.find(package, 'com.tgc.sky.android.test') then
         gg.toast('[Beta]HellBoy-OOBs')
         if version == sky.beta.version then
-            anptroffsets = banptroffsets
-            guiptroffsets = bguiptroffsets
+            emitoffsets = bemitoffsets
+            guioffsets = bguioffsets
             liboffsets = bliboffsets
         elseif version > sky.beta.version then
             gg.alert("Sky version mismatch\nWait for the script to be updated")
@@ -10495,8 +10571,8 @@ function version_check()
     elseif string.find(package, 'com.tgc.sky.android') then
         gg.toast('[Live]HellBoy-OOBs')
         if version == sky.live.version then
-            anptroffsets = lanptroffsets
-            guiptroffsets = lguiptroffsets
+            emitoffsets = lemitoffsets
+            guioffsets = lguioffsets
             liboffsets = lliboffsets
         elseif version > sky.live.version then
             gg.alert("Sky version mismatch\nWait for the script to be updated")
@@ -10508,8 +10584,8 @@ function version_check()
     elseif string.find(package, 'git.artdeell') then
         gg.toast('[Canvas]HellBoy-OOBs')
         if version == sky.canvas.version then
-            anptroffsets = lanptroffsets
-            guiptroffsets = lguiptroffsets
+            emitoffsets = lemitoffsets
+            guioffsets = lguioffsets
             liboffsets = lliboffsets
         elseif version > sky.live.version then
             gg.alert("Canvas version mismatch\nWait for the script to be updated")
@@ -10549,7 +10625,7 @@ function getLevel()
     mapBTable = {}
     mapLTable = {}
     for i = 0, 30, 1 do
-        table.insert(mapBTable, kj.getValue(guiptroffsets.map + i, 1))
+        table.insert(mapBTable, kj.getValue(guioffsets.map + i, 1))
         if  mapBTable[i - 1] == 0 then
             mapBTable[i - 1] = nil 
             break 
@@ -10568,15 +10644,15 @@ function getLevel()
 function getPosition()
     local temp = {
         {
-            address = anptroffsets.xpos,
+            address = emitoffsets.xpos,
             flags = gg.TYPE_FLOAT,
         },
         {
-            address = anptroffsets.ypos,
+            address = emitoffsets.ypos,
             flags = gg.TYPE_FLOAT,
         },
         {
-            address = anptroffsets.zpos,
+            address = emitoffsets.zpos,
             flags = gg.TYPE_FLOAT,
         },
     }
@@ -10588,13 +10664,13 @@ function getPosition()
 end
 function offseter()
     bootloader = gg.getRangesList("libBootloader.so")[1].start
-    anptr = kj.getValue(bootloader + liboffsets.libanptr, 32)
-    guiptr = kj.getValue(bootloader + liboffsets.libguiptr, 32)
-    for i, v in pairs(anptroffsets) do
-        anptroffsets[i] = anptr + v
+    emit = kj.getValue(bootloader + liboffsets.emitptr, 32)
+    gui = kj.getValue(bootloader + liboffsets.guiptr, 32)
+    for i, v in pairs(emitoffsets) do
+        emitoffsets[i] = emit + v
     end
-    for i, v in pairs(guiptroffsets) do 
-        guiptroffsets[i] = guiptr + v
+    for i, v in pairs(guioffsets) do 
+        guioffsets[i] = gui + v
     end
     for i, v in pairs(liboffsets) do
         liboffsets[i] = bootloader + v
@@ -10603,17 +10679,17 @@ end
 function setPosition(pos)
     cords = {
         {
-            address = anptroffsets.xpos,
+            address = emitoffsets.xpos,
             flags = gg.TYPE_FLOAT,
             value = pos[1],
         },
         {
-            address = anptroffsets.ypos,
+            address = emitoffsets.ypos,
             flags = gg.TYPE_FLOAT,
             value = pos[2],
         },
         {
-            address = anptroffsets.zpos,
+            address = emitoffsets.zpos,
             flags = gg.TYPE_FLOAT,
             value = pos[3],
         },
@@ -10718,26 +10794,26 @@ launch()
 end
 function getPosition()
     coords = {
-        kj.getValue(anptroffsets.xpos, 'F'),
-        kj.getValue(anptroffsets.ypos, 'F'),
-        kj.getValue(anptroffsets.zpos, 'F'),
+        kj.getValue(emitoffsets.xpos, 'F'),
+        kj.getValue(emitoffsets.ypos, 'F'),
+        kj.getValue(emitoffsets.zpos, 'F'),
     }
     return coords
 end
 function sres()
     local srsG = gg
-    def_width = kj.removePoint(kj.getValue(guiptroffsets.scrres + 1656, 'F'))
-    def_height = kj.removePoint(kj.getValue(guiptroffsets.scrres + 1660, 'F'))
+    def_width = kj.removePoint(kj.getValue(guioffsets.scrres + 1656, 'F'))
+    def_height = kj.removePoint(kj.getValue(guioffsets.scrres + 1660, 'F'))
     tear = srsG.prompt({'[📸]Set screenshot resulotion\nChanging the graphics resets it\nWidth:', 'Height:'}, {def_width, def_height}, {'number', 'number'})
     if tear ~= nil then
         local uu = {
             {
-                address = guiptroffsets.scrres,
+                address = guioffsets.scrres,
                 flags = kj.dT('F'),
                 value = tear[1],
             },
             {
-                address = guiptroffsets.scrres + 4,
+                address = guioffsets.scrres + 4,
                 flags = kj.dT('F'),
                 value = tear[2],
             },
@@ -10794,19 +10870,19 @@ end
 function bwall(bdis)
     local temp = {
         {
-            address = anptroffsets.xpos,
+            address = emitoffsets.xpos,
             flags = kj.dT('F'),
         },
         {
-            address = anptroffsets.ypos,
+            address = emitoffsets.ypos,
             flags = kj.dT('F'),
         },
         {
-            address = anptroffsets.zpos,
+            address = emitoffsets.zpos,
             flags = kj.dT('F'),
         },
         {
-            address = anptroffsets.rad,
+            address = emitoffsets.rad,
             flags = kj.dT('F'),
         },
     }
@@ -10819,7 +10895,7 @@ function bwall(bdis)
         gg.setVisible(false)
     end
   end
-function magicList()
+  function magicList()
     sMagics = {
         sign = {},
         spell = {},
@@ -10834,10 +10910,8 @@ function magicList()
     elseif tear == eye[3] then 
         capeauto = kj.toggler(capeauto)
     elseif tear == eye[4] then
-        for d = 1, 3, 1 do
-            for i = 1, configs.sockets do
-                setspell(0, i)
-            end
+        for i = 1, configs.sockets do
+            setspell(0, i)
         end dontRemove = "BY: Kiojeen" 
     elseif tear == eye[1] or tear == eye[2] then
         if tear == 1 then 
@@ -10847,7 +10921,7 @@ function magicList()
         end
         msocket = {}
         for i = 1, configs.sockets do
-            cs = kj.getValue(anptroffsets.magic + i * distances.magx - distances.magx, 'D')
+            cs = kj.getValue(emitoffsets.magic + i * distances.magx - distances.magx, 'D')
             for d, u in ipairs(magics) do
                 for a, b in ipairs(magics[d].content) do
                     if magics[d].content[a][2] == cs then
@@ -10858,20 +10932,22 @@ function magicList()
             if sMagics.sign[i] == nil then
                 sMagics.sign[i] = "   None"
             end
-            if i < 10 then o = 0 else o = '' end
+            if i < 10 then 
+                o = 0 
+            else 
+                o = '' 
+            end
             msocket[i] = "[🔮]Spell [" .. o .. i .. "]: " .. sMagics.sign[i]
         end
         table.insert(msocket, "[❌]Remove All")
         table.insert(msocket, back[1])
         tear = gXG.choice(msocket, nil, "‍[️🧙]️Magic: Only three are visible at a time")
         if tear == configs.sockets + eye[1] then
-            for d = 1, 3 do
-                for i, v in ipairs(msocket) do
-                    setspell(0, i)
-                end
+            for i, v in ipairs(msocket) do
+                setspell(0, i)
             end dontRemove = "BY: Kiojeen" 
         elseif tear == configs.sockets + eye[2] then magicList()
-        elseif tear ~= eye[65] then
+        elseif tear ~= nil then
             socket = tear 
             local fhdr = tear
             for i, v in ipairs(magics) do
@@ -10879,18 +10955,16 @@ function magicList()
             end
             table.insert(sMagics.type, "[❌]Remove")
             tear = gXG.choice(sMagics.type, nil, "[🔮]Spell [" .. fhdr .. "]:" .. sMagics.sign[fhdr])
-            if tear == configs.sockets + eye[1] then 
-                for i = 1, 3, 1 do
-                    setspell(0, socket)
-                end
-            elseif tear ~= eye[65] then
+            if tear == #sMagics.type then 
+                setspell(0, socket)
+            elseif tear ~= nil then
                 for i, v in ipairs(magics[tear].content) do
                     sMagics.spell[i] = magics[tear][1] .. magics[tear].content[i][1]
                     sMagics.id[i] = magics[tear].content[i][2]
                 end
                     do local fhdr = tear
                     tear = gXG.choice(sMagics.spell, eye[65], sMagics.type[fhdr])
-                    if tear ~= eye[65] then
+                    if tear ~= nil then
                         setspell(sMagics.id[tear], socket, spark)
                     end
                 end
@@ -10911,7 +10985,7 @@ function autoCape()
 end
 function lighter()
     --Missing pshout
-    if kj.getValue(anptroffsets.pashout, 'D') == 1 then
+    if kj.getValue(emitoffsets.pashout, 'D') == 1 then
         setspell(-1463943689, 4)
         gg.sleep(100)
         setspell(0, 4, 0)
@@ -10919,11 +10993,11 @@ function lighter()
 end
 function cptrick()
     for i = 0, 1, 0.1 do
-        kj.setValue(anptroffsets.wvisible, tostring(i) .. 'F')
+        kj.setValue(emitoffsets.wvisible, tostring(i) .. 'F')
         gg.sleep(100)
     end
     for i = 1, 0, -0.1 do
-        kj.setValue(anptroffsets.wvisible, tostring(i) .. 'F')
+        kj.setValue(emitoffsets.wvisible, tostring(i) .. 'F')
         gg.sleep(100)
     end
 end
@@ -10933,22 +11007,22 @@ function setspell(id, socket, spark)
     local mProcess = {}
     mProcess = {
         {
-            address = anptroffsets.magic + 3072,
+            address = emitoffsets.magic + 3072,
             flags = kj.dT('D'),
             value = 20,
         },
         {
-            address = anptroffsets.magic + socket,
+            address = emitoffsets.magic + socket,
             flags = kj.dT('D'),
             value = id,
         },
         {
-            address = anptroffsets.magic + 12 + socket,
+            address = emitoffsets.magic + 12 + socket,
             flags = kj.dT('D'),
             value = -1,
         },
         {
-            address = anptroffsets.magic + 40 + socket,
+            address = emitoffsets.magic + 40 + socket,
             flags = kj.dT('D'),
             value = spark,
         },
@@ -11022,7 +11096,7 @@ end
 function getQuests()
     if #gquests < 3 then
         gg.setRanges(gg.REGION_OTHER| gg.REGION_C_ALLOC)
-        gquest = anptroffsets.gquest - 4
+        gquest = emitoffsets.gquest - 4
         gg.searchNumber('812671252D;1819178294D::5', kj.dT('D'), false, gg.SIGN_EQUAL, gquest, gquest + 83528, 0)
         gg.refineNumber('812671252', kj.dT('D'))
         gquests = gg.getResults(gg.getResultsCount())
@@ -11079,7 +11153,7 @@ function doTroll()
         kj.groupFreezeSwitch(showCandle, "Force Candles")
     elseif tear == eye[2] then
         setspell(-1463943689, 1)
-        kj.freezeSwitch(anptroffsets.magic + 40, '0 D', "Spamming Magic")
+        kj.freezeSwitch(emitoffsets.magic + 40, '0 D', "Spamming Magic")
     elseif tear == eye[3] then
         tear = gg.prompt({'[✨]Specify the number of shouts'}, {1}, {'number'})
         if tear ~= nil then
@@ -11104,7 +11178,7 @@ function doTroll()
       end  
   end
  function setsmap(str)
-    tps = anptroffsets.mportal
+    tps = emitoffsets.mportal
     kj.setString(tps, '.' .. str, 30)
     setspeed(100)
     setspell(224110574, 8, 0)
@@ -11116,7 +11190,7 @@ function doTroll()
 function absorbFrags()
     local uu = {}
     for i = 0, 100 do
-        frags = guiptroffsets.frags + i * distances.frags
+        frags = guioffsets.frags + i * distances.frags
         table.insert(uu, {
             address = frags,
             value = getPosition()[1],
@@ -11153,9 +11227,9 @@ end
 function absorbStars()
     local temp = {}
     for i = 0, 24 do
-        if kj.getValue(guiptroffsets.wbuff + distances.wbuff * i, 'D') == 1 then
+        if kj.getValue(guioffsets.wbuff + distances.wbuff * i, 'D') == 1 then
             table.insert(temp, {
-                address = guiptroffsets.wbuff + distances.wbuff * i,
+                address = guioffsets.wbuff + distances.wbuff * i,
                 flags = kj.dT('D'),
                 value = 4,
             })    
@@ -11173,7 +11247,7 @@ function absorbStars()
   end
 function drawCandles()
     for i = 0, 250 do
-    local candle = guiptroffsets.candlespos + i * distances.candlespos
+    local candle = guioffsets.candlespos + i * distances.candlespos
     local uu = {}
         table.insert(uu, {
             address = candle,
@@ -11200,7 +11274,7 @@ function getNPC()
     local nc = {}
     local nm = {}
     local c = 0
-    local npc = anptroffsets.xpos + distances.xtonpc
+    local npc = emitoffsets.xpos + distances.xtonpc
     for i = 0, 34 do
         local na = npc + distances.npc * i
         if kj.getValue(na, 'F') ~= 0 and kj.getValue(na + 12, 'F') == 0 then
@@ -11289,7 +11363,7 @@ end
 function absorbWax()
     if signs.burn == "" then burner() gg.sleep(500) end
     gg.setRanges(gg.REGION_OTHER| gg.REGION_C_ALLOC)
-    local fwx, bool = kj.findAddress('-1.0;3.5F::5 F', guiptr + 11204520, anptr + 9123652, 1, 2)
+    local fwx, bool = kj.findAddress('-1.0;3.5F::5 F', gui + 11204520, emit + 9123652, 1, 2)
     if bool then
         wx = {}
         for i = 0, 400 do
@@ -11355,7 +11429,7 @@ do
   do candles = {}
     for i = 0, 650 do
         table.insert(candles, {
-            address = guiptroffsets.candles + i * distances.candles, 
+            address = guioffsets.candles + i * distances.candles, 
             flags = kj.dT('F'),
             value = 1,
             freeze = true,        
@@ -11367,7 +11441,7 @@ end
    do flowers = {}
     for i = 0, 350 do
         table.insert(flowers, {
-            address = guiptroffsets.flowers + i * distances.flowers,
+            address = guioffsets.flowers + i * distances.flowers,
             flags = kj.dT('F'),
             value = 0,
             freeze = true,         
@@ -11379,7 +11453,7 @@ end
      do showCandle = {}
         for i = 0, 7, 1 do
             table.insert(showCandle, {
-                address = guiptroffsets.pcandle + i * distances.pcandle, 
+                address = guioffsets.pcandle + i * distances.pcandle, 
                 flags = kj.dT('D'), 
                 value = 1, 
                 freeze = true
@@ -11403,7 +11477,7 @@ end
       do dontgo = {}
         for i = 0, 1 do
             table.insert(dontgo, {
-                address = guiptroffsets.unmovnt + i * 4,
+                address = guioffsets.unmovnt + i * 4,
                 flags = kj.dT('F'),
                 value = 1,
             })
@@ -11578,7 +11652,7 @@ function autoCr()
             662.05700683535
         })
         gg.sleep(100)
-        kj.setValue(anptroffsets.ppose, '2D')
+        kj.setValue(emitoffsets.ppose, '2D')
         absorbFrags()
         gg.sleep(5000)
         gg.sleep(1)
@@ -11605,7 +11679,7 @@ function autoCr()
             398.89068603525
         })
         gg.sleep(100)
-        kj.setValue(anptroffsets.ppose, '2D')
+        kj.setValue(emitoffsets.ppose, '2D')
         absorbFrags()
         gg.sleep(5000)
         gg.sleep(1)
@@ -11632,7 +11706,7 @@ function autoCr()
             15.834683418226
         })
         gg.sleep(100)
-        kj.setValue(anptroffsets.ppose, '2D')
+        kj.setValue(emitoffsets.ppose, '2D')
         gg.sleep(10000)
        end
       end
@@ -11694,7 +11768,7 @@ function autoSr()
         -257.2058715825
     })
     burner()
-    kj.setValue(anptroffsets.ppose, '2D')
+    kj.setValue(emitoffsets.ppose, '2D')
     burner()
     gg.sleep(5000)
     absorbStars()
@@ -11793,25 +11867,25 @@ instructions = {
 }
 function offseter()
     bootloader = gg.getRangesList("libBootloader.so")[1].start
-    anptr = kj.getValue(bootloader + liboffsets.libanptr, 'Q')
-    guiptr = kj.getValue(bootloader + liboffsets.libguiptr, 'Q')
+    emit = kj.getValue(bootloader + liboffsets.emitptr, 'Q')
+    gui = kj.getValue(bootloader + liboffsets.guiptr, 'Q')
     offseters = {
         {
-            address = anptr,
+            address = emit,
             flags = kj.dT('Q'),
-            name = 'anptr',
+            name = 'emit',
         },
         {
-            address = guiptr,
+            address = gui,
             flags = kj.dT('Q'),
-            name = 'guiptr',
+            name = 'gui',
         },
     }
-    for i, v in pairs(anptroffsets) do
-        anptroffsets[i] = anptr + v
+    for i, v in pairs(emitoffsets) do
+        emitoffsets[i] = emit + v
     end
-    for i, v in pairs(guiptroffsets) do 
-        guiptroffsets[i] = guiptr + v
+    for i, v in pairs(guioffsets) do 
+        guioffsets[i] = gui + v
     end
     for i, v in pairs(liboffsets) do
         liboffsets[i] = bootloader + v
@@ -11877,8 +11951,8 @@ function version_check()
         hellboy = "-[" .. debug.getinfo(launch).lastlinedefined + 1 .. "]-"
         gg.toast('[Beta]HellBoy' .. hellboy)
         if version == sky.beta.version then
-            anptroffsets = banptroffsets
-            guiptroffsets = bguiptroffsets
+            emitoffsets = bemitoffsets
+            guioffsets = bguioffsets
             distances = bdistances
             liboffsets = bliboffsets
         elseif version > sky.beta.version then
@@ -11891,12 +11965,27 @@ function version_check()
             gg.alert("Sky package mismatch\nSelect the right process")
             os.exit()
         end
+    elseif string.find(package, 'com.tgc.sky.android.h') then
+        hellboy = "-[" .. debug.getinfo(launch).lastlinedefined + 1 .. "]-"
+        gg.toast('[Huawei]HellBoy' .. hellboy)
+        if version == sky.huawei.version then
+            emitoffsets = hemitoffsets
+            guioffsets = hguioffsets
+            distances = hdistances
+            liboffsets = hliboffsets
+        elseif version > sky.huawei.version then
+            gg.alert("Canvas version mismatch\nWait for the script to be updated")
+            os.exit()
+        elseif version < sky.huawei.version then
+            gg.alert("Canvas version mismatch\nUpdate your game")
+            os.exit()
+        end
     elseif string.find(package, 'com.tgc.sky.android') then
         hellboy = "-[" .. debug.getinfo(launch).lastlinedefined + 1 .. "]-"
         gg.toast('[Live]HellBoy' .. hellboy)
         if version == sky.live.version then
-            anptroffsets = lanptroffsets
-            guiptroffsets = lguiptroffsets
+            emitoffsets = lemitoffsets
+            guioffsets = lguioffsets
             distances = ldistances
             liboffsets = lliboffsets
         elseif version > sky.live.version then
@@ -11904,21 +11993,6 @@ function version_check()
             os.exit()
         elseif version < sky.live.version then
             gg.alert("Sky version mismatch\nUpdate your game")
-            os.exit()
-        end
-    elseif string.find(package, 'git.artdeell') then
-        hellboy = "-[" .. debug.getinfo(launch).lastlinedefined + 1 .. "]-"
-        gg.toast('[Canvas]HellBoy' .. hellboy)
-        if version == sky.canvas.version then
-            anptroffsets = lanptroffsets
-            guiptroffsets = lguiptroffsets
-            distances = ldistances
-            liboffsets = lliboffsets
-        elseif version > sky.live.version then
-            gg.alert("Canvas version mismatch\nWait for the script to be updated")
-            os.exit()
-        elseif version < sky.live.version then
-            gg.alert("Canvas version mismatch\nUpdate your game")
             os.exit()
         end
     end
@@ -11968,7 +12042,8 @@ function startUpTrigger()
     do
       do
         fastHome(configs.fasthome)
-         kj.setValue(liboffsets.mtprst, '-721215457D')   
+          kj.setValue(liboffsets.mtprst, '-721215457D')  
+         kj.setValue(guioffsets.mesharedptr, tostring(emitoffsets.tomshptr) .. "Q") 
       end
     end
      do
