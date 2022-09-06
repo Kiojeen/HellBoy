@@ -16,20 +16,19 @@
     ----------------------------------------------------------------------------
 ]]
 stime = 3500
-offline = false
 hellboy = 8065
 sky = {
     live = {
         package = 'com.tgc.sky.android',
-        version = 199846
+        version = 199846,
     },
     huawei = {
         package = 'com.tgc.sky.android.huawei',
-        version = 198186
+        version = 199070,
     },
     beta = {
         package = 'com.tgc.sky.android.test.gold',
-        version = 198000
+        version = 200144,
     }
 }
 configs = {
@@ -41,7 +40,8 @@ configs = {
     sockets = 6,
     user = 'Hellboy User-X',
     pbeta = true,
-}
+    sspark = false,
+};
 --Live Offsets--
 ldistances = {
     candles = 448,
@@ -50,43 +50,45 @@ ldistances = {
     magx = 48,
     frags = 592,
     candlespos = 176,
+    mcount = 3072, --Delete later
     wbuff = 288,
     npc = 76112,
     xtonpc = 610944,
 }
 lliboffsets = {
-    rclouds = 20566216,
     candles = 7108596,
-    rwater = 8168884,
-    fasthome = 8870192,
-    uncloset = 4053496,
+    rclouds = 20566216,
     fastflap = 9706968,
-    emitptr = 21640904,
-    unnodes = 8613736,
+    uncloset = 4053496,
     pjump = 9745252,
+    emitptr = 21640904,
     iconsize = 18268108,
+    map = 21691181,
     guiptr = 24335984,
-    absorb = 11899828,
-    honksound = 18994483,
     wcharge = 5310704,
-    mtprst = 5236996,
-    rportals = 5971188,
-    realisim = 4477576,
     plain = 7145968,
     mabsorb = 18578100,
     sglow = 20670292,
     pdelay = 5171296,
-    unfirework = 8878416,
-    winds = 7060864,
     pdive = 9783612,
-    unemote = 10823528,
-    scooter = 5513488,
-    offline = 8042444,
-    kjrights = 19002488,
+    winds = 7060864,
+    unfirework = 8878416,
     pspeed = 20801804,
-    mtpmrt = 5237032,
-    uitran = 18255084,
+    kjrights = 19002488,
     mtpcol = 5237524,
+    uitran = 18255084,
+    rwater = 8168884,
+    fasthome = 8870192,
+    unnodes = 8613736,
+    absorb = 11899828,
+    honksound = 18994483,
+    mtprst = 5236996,
+    rportals = 5971188,
+    realisim = 4477576,
+    scooter = 5513488,
+    unemote = 10823528,
+    offline = 8042444,
+    mtpmrt = 5237032,
 }
 lemitoffsets = {
     ppose = 4646312,
@@ -103,22 +105,20 @@ lemitoffsets = {
     closet = 22919620,
     mportal = 4340184,
     wings = 4496152,
-    pdamage = 4733016,
+    pdamage = 4809384,
 }
 lguioffsets = {
     scrres = -12531036,
     candles = 11935712,
     meshared = 23958116,
-    map = 23969448,
     mesharedptr = 23958976,
     unmovnt = -6201668,
     gamespeed = -10942896,
     frags = 22676304,
     winds = 3094624,
     sunsetfilter = -2701180,
-    pcandle = -6180184,
+    pcandle = - 6180188,
     flowers = 25589780,
-    cmdchat = 23138575,
     candlespos = 17712992,
     wbuff = 17425912,
 }
@@ -131,77 +131,77 @@ bdistances = {
     frags = 592,
     candlespos = 176,
     wbuff = 288,
+    mcount  = 3260, --Temporary 
     npc = 76112,
     xtonpc = 610944,
 }
 bliboffsets = {
-    rclouds = 20566216,
-    candles = 7108608,
-    rwater = 8169188,
-    fasthome = 8870496,
-    guiptr = 24335984,
-    uncloset = 4053496,
-    fastflap = 9707272,
-    unnodes = 8614040,
-    pjump = 9745556,
-    iconsize = 18268364,
-    absorb = 11900132,
-    honksound = 18994739,
-    wcharge = 5310704,
-    mtprst = 5236996,
-    rportals = 5971200,
-    realisim = 4477576,
-    plain = 7145980,
-    mabsorb = 18578356,
-    sglow = 20670292,
-    pdelay = 5171296,
-    unfirework = 8878720,
-    winds = 7060876,
-    pdive = 9783916,
-    unemote = 10823832,
-    scooter = 5513488,
-    emitptr = 21640904,
-    offline = 8042748,
-    kjrights = 19002744,
-    pspeed = 20801804,
-    mtpmrt = 5237032,
-    uitran = 18255340,
-    mtpcol = 5237524,
+    candles = 6932552,
+    rclouds = 20363848,
+    fastflap = 9496452,
+    uncloset = 3925176,
+    pjump = 9535308,
+    emitptr = 21408808,
+    iconsize = 18110412,
+    map = 21457165,
+    guiptr = 24105584,
+    wcharge = 5168980,
+    plain = 6970288,
+    mabsorb = 18423156,
+    sglow = 20454764,
+    pdelay = 5027740,
+    pdive = 9573664,
+    winds = 6894308,
+    unfirework = 8657336,
+    pspeed = 20576868,
+    kjrights = 18847671,
+    mtpcol = 5095984,
+    uitran = 18097164,
+    rwater = 7958688,
+    fasthome = 8649136,
+    unnodes = 8390516,
+    absorb = 11705416,
+    honksound = 18839914,
+    mtprst = 5095456,
+    rportals = 5848696,
+    realisim = 4331924,
+    scooter = 5377660,
+    unemote = 10609328,
+    offline = 7828652,
+    mtpmrt = 5095492,
 }
 bemitoffsets = { 
-    ppose = 4646312,
-    rad = 4633056,
-    wvisible = 4656540,
-    tomshptr = 22774976,
-    xpos = 4633024,
-    ypos = 4633028,
-    zpos = 4633032,
-    gquest = 3275504,
-    wcharge = 4656460,
-    pcape = 4664072,
-    magic = 4705216,
-    closet = 22919636,
-    mportal = 4339920,
-    wings = 4496152,
-    pdamage = 4656648,
+    ppose = 4547144,
+    rad = 4533872,
+    wvisible = 4554908,
+    tomshptr = 22574416,
+    xpos = 4533840,
+    ypos = 4533844,
+    zpos = 4533848,
+    gquest = 3274304,
+    wcharge = 4554828,
+    pcape = 4562648,
+    magic = 4603792,
+    closet = 22730212,
+    mportal = 4236856,
+    wings = 4392728,
+    pdamage = 4555016,
 }
 bguioffsets = {
-    scrres = -12531036,
-    candles = 11935712,
-    meshared = 23967716,
-    map = 23979048,
-    mesharedptr = 23968576,
-    unmovnt = -6201668,
-    gamespeed = -10942896,
-    frags = 22685904,
+    scrres = -12471612,
+    candles = 11945152,
+    pbeta = -2114823,
+    meshared = 23353092,
+    mesharedptr = 23353952,
+    unmovnt = -6126196,
+    gamespeed = -10808128,
+    frags = 197276272,
     winds = 3094624,
-    sunsetfilter = -2701180,
-    pcandle = -6123804,
-    flowers = 25599380,
-    cmdchat = 23148175,
-    candlespos = 17712992,
-    wbuff = 17425912,
-    pbeta = -2114871,
+    sunsetfilter = -2701244,
+    pcandle = -6105036,
+    flowers = 24987284,
+    candlespos = 17167504,
+    wbuff = 16880424,
 }
 --Huawei Offsets--
 hdistances = {
@@ -211,6 +211,7 @@ hdistances = {
     magx = 48,
     frags = 592,
     candlespos = 176,
+    mcount = 3072, --Delete later
     wbuff = 288,
     npc = 76112,
     xtonpc = 610944,
@@ -233,62 +234,53 @@ hemitoffsets = {
     pdamage = 4656648,
 }
 hguioffsets = {
+    scrres = -12531036,
     candles = 11935712,
-    map = 23969448,
+    meshared = 23958116,
     mesharedptr = 23958976,
+    unmovnt = -6201668,
+    gamespeed = -10942896,
+    frags = 22676304,
+    winds = 3094624,
     sunsetfilter = -2701180,
+    pcandle = - 6180188,
     flowers = 25589780,
     candlespos = 17712992,
     wbuff = 17425912,
-    scrres = -12531036,
-    meshared = 23958116,
-    unmovnt = -6201668,
-    dof4 = 1000008,
-    gamespeed = -10942896,
-    frags = 22676304,
-    dof2 = -28864648,
-    dof3 = 900004,
-    winds = 3094624,
-    pcandle = -6123804,
-    cmdchat = 23138575,
-    dof1 = -28964652,
 }
 hliboffsets = {
-    candles = 7108608,
+    candles = 7108596,
     rclouds = 20566216,
-    fastflap = 9706980,
+    fastflap = 9706968,
     uncloset = 4053496,
-    pjump = 9745264,
+    pjump = 9745252,
     emitptr = 21640904,
     iconsize = 18268108,
+    map = 21691181,
     guiptr = 24335984,
     wcharge = 5310704,
-    plain = 7145980,
+    plain = 7145968,
     mabsorb = 18578100,
     sglow = 20670292,
     pdelay = 5171296,
-    dof2 = 3976804,
-    dof3 = 19513348,
-    pdive = 9783624,
-    winds = 7060876,
-    unfirework = 8878428,
+    pdive = 9783612,
+    winds = 7060864,
+    unfirework = 8878416,
     pspeed = 20801804,
     kjrights = 19002488,
     mtpcol = 5237524,
     uitran = 18255084,
-    dof1 = 2487652,
-    rwater = 8168896,
-    fasthome = 8870204,
-    unnodes = 8613748,
-    absorb = 11899840,
+    rwater = 8168884,
+    fasthome = 8870192,
+    unnodes = 8613736,
+    absorb = 11899828,
     honksound = 18994483,
     mtprst = 5236996,
-    rportals = 5971200,
+    rportals = 5971188,
     realisim = 4477576,
-    dof4 = 19735096,
     scooter = 5513488,
-    unemote = 10823540,
-    offline = 8042456,
+    unemote = 10823528,
+    offline = 8042444,
     mtpmrt = 5237032,
 }
 gquests = {}
@@ -7703,12 +7695,12 @@ yellow = {
         "[🌀]Teleport",
         content = {
             "[🌀]Magic Teleport",
-            "[💾]Saved Locations",
-            "[⬆️]Goto List",
-            "[🧭]Out Of Borders",
             "[⬆️]Breach Walls",
             "[↗️]Breach Roofs",
             "[⬇️]Breach Grounds",
+            "[💾]Saved Locations",
+            "[⬆️]Goto List",
+            "[🧭]Out Of Borders",
             "[📝]Manual Coordinates",
             "[🗄]Copy coordinate",
             "[📌]Pin Position",
@@ -7716,33 +7708,39 @@ yellow = {
         }, 
     },
     {
-        "[🏃🏻‍♂️] Run",
+        "[🌀]Magic Teleport",
         content = {
-            "[🕯]Auto Candle Run",
-            "[⭐]Auto Star Run",
-            "[🕯]Semi Candle Run",
-            "[⭐]Semi Star Run",
-            "[🌋]Eden Assistance",
-            "[🔖]Unlock Seasonal Quests",
-            "[ℹ️]Running Instructions",
+
         },
     },
     {
         "[🔥]Burn",
+        content = {
+
+        },
     },
     {
-        "[🀄️]Absorb All",
+        "[🏃🏻‍♂️]Run",
+        content = {
+
+        },
     },
     {
         "[🌕]Wing Energy",
+        content = {
+
+        },
+    },
+    {
+        "[🀄️]Absorb All",
+        content = {
+
+        },
     },
     {
         "‍[️🧙]️Magic",
         content = {
-            "[🔮]No Sparkles spells",
-            "[✨]Sparkle spells",
-            "[🔁]Auto Capes",
-            "[❌]Remove All",
+
         },
     },
     {
@@ -7757,65 +7755,7 @@ yellow = {
         },
     },
     {
-        "[🔫]Trolls",
-        content = {
-            "[🧨]Force Light",
-            "[✨]Spam Magic",
-            "[✨]Shouts Loop",
-        },                                     
-    },
-    {
-        "[🗃]Mode Menu",
-        content = {
-            {
-                "[👦🏼]Avatar Modes",
-                content = {
-                    "[🏇]Running Enhancement",
-                    "[🪂]Jumping Enhancement",
-                    "[🏊🏻‍♂️]Diving Enchancement",
-                    "[⚠️]Remove Movement Restriction",
-                    "[🏃🏻‍♂️]Delay Effect",
-                    "[🛫]Always Fly",
-                    "[🛴]Scooter",
-                    "[📣]Calls",
-                },
-            },
-            {
-                "[📸]Camera Modes",
-                content = {
-                    "[🎥]Record Shared Memory",
-                    "[📸]ScreenShot Resolution",
-                    "[🖥]Realistic Graphics",
-                    "[🌁]Valley Filter",
-                    "[🔆]Brightness",
-                },
-            },
-            {
-                "[🗺]World Modes",
-                content = {
-                    "[💨]Remove Wind[Method 1]",
-                    "[💨]Remove Wind[Method 2]",
-                    "[☁️]Remove Clouds",
-                    "[🌊]Remove Home Water",
-                    "[🚪]Remove Portals",
-                    "[⏲]Game Speed",
-                },
-            },
-            {
-                "[🖥]UI Modes",
-                content = {
-                    "[🧸]Icons & Borders Size",
-                    "[🔘]Transparent Ui",
-                    "[👒]Unlock Clothes and Emotes",
-                    "[❤️]Unlock Friendly Nodes",
-                    "[🛸]Unlimited Fireworks",                 
-                    "[📡]Single Player Mode",
-                },
-            },          
-        },  
-    },
-    {
-        "[🧺]Show Closet",
+        "[🧺]Closets",
         content = {
             "[👖]Pants",
             "[🎭]Masks",
@@ -7825,7 +7765,58 @@ yellow = {
         },                                     
     },
     {
-        "[🎴]Move Things",
+        "[👦🏼]Avatar Modes",
+        content = {
+            "[🏇]Running Enhancement",
+            "[🪂]Jumping Enhancement",
+            "[🏊🏻‍♂️]Diving Enchancement",
+            "[⚠️]Remove Movement Restriction",
+            "[🏃🏻‍♂️]Delay Effect",
+            "[🛫]Always Fly",
+            "[🛴]Scooter",
+            "[📣]Calls",
+        },
+    },
+    {
+        "[📸]Camera Modes",
+        content = {
+            "[🎥]Record Shared Memory",
+            "[📸]ScreenShot Resolution",
+            "[🖥]Realistic Graphics",
+            "[🌁]Valley Filter",
+            "[🔆]Brightness",
+        },
+    },
+    {
+        "[🗺]World Modes",
+        content = {
+            "[💨]Remove Wind[Method 1]",
+            "[💨]Remove Wind[Method 2]",
+            "[☁️]Remove Clouds",
+            "[🌊]Remove Home Water",
+            "[🚪]Remove Portals",
+            "[⏲]Game Speed",
+        },
+    },
+    {
+        "[🖥]UI Modes",
+        content = {
+            "[🧸]Icons & Borders Size",
+            "[🔘]Transparent Ui",
+            "[👒]Unlock Clothes and Emotes",
+            "[❤️]Unlock Friendly Nodes",
+            "[🛸]Unlimited Fireworks",                 
+            "[📡]Single Player Mode",
+        },
+    },           
+    {
+        "[🧝🏻]Players Menu",
+        content = {
+            "[🧨]Force Light",
+        },                                     
+    },
+    {
+        "[🎴]Move Objects",
         content = {
             "[🕯]Candles Snake",
             "[🪆]Collect NPCs",
@@ -8792,11 +8783,27 @@ kj = {
             end
         end
     end,
+    userInput = function(str)
+        local bool, x = pcall(gg.prompt, {"..."}, {}, {str});
+        if bool then 
+            return x[1];
+        else
+            gg.toast("Please type properly");
+        end
+        return 0;
+    end,
     statSwitch = function (bool)
         if bool then
             return "  -〘 ✅ 〙"
         else
             return "  -〘 ❌ 〙"
+        end
+    end,
+    statRev = function (str)
+        if str == "  -〘 ✅ 〙" then
+            return true
+        else
+            return false
         end
     end,
     toggler = function (var)
@@ -8847,6 +8854,22 @@ kj = {
             end
         end
     end,
+    prepareMenu = function (array, bool)
+        local menu = {};
+        local x;
+        for i, v in pairs(array) do
+            if i < 10 then
+                x = 0;
+            else
+                x = "";
+            end
+            table.insert(menu, x .. i .. " | " .. v);
+        end
+        if bool then
+            table.insert(menu, 1, "[🔙]Back")
+        end
+        return menu;
+    end,
     isFrozen = function(add)
         if type(add) == 'number' then
             local items = gg.getListItems()
@@ -8877,6 +8900,32 @@ kj = {
             })
         end
         gg.setValues(vars)
+    end,
+    randomInjector = function(array)
+        local strs = {}
+        for i, v in ipairs(array) do
+            strs[i] = kj.drawString()
+        end
+        for i, v in ipairs(array) do
+            kj.setString(v, strs[i], string.len(strs[i]))
+        end
+    end,
+    drawString = function ()
+        local str = ''
+        for i = 0, 255 do
+            str = str .. string.char(math.random(1, 255));
+        end
+        return str
+    end,
+    tabs = function (times)
+        local str = ""
+        if not times then
+            return ""
+        end
+        for i = 1, times do
+            str = str .. "\t"
+        end
+        return str
     end,
     tableToString = function (array)
         local str = " {\n"
@@ -9085,25 +9134,21 @@ kj = {
 }
 ----
 function getLevel()
-    mapBTable = {}
-    mapLTable = {}
+    skidLevel = "";
+    local v = "";
     for i = 0, 30, 1 do
-        table.insert(mapBTable, kj.getValue(guioffsets.map + i, 'B'))
-        if  mapBTable[i - 1] == 0 then
-            mapBTable[i - 1] = nil 
-            break 
+        v = string.char(kj.getValue(liboffsets.map + i, 'B'));
+        if v ~= "\"" then
+            skidLevel = skidLevel .. v;
+        else
+            break;
         end
     end
-    for i, v in ipairs(mapBTable) do
-        mapLTable[i] = string.char(mapBTable[i])
-    end
-    skidLevel = table.concat(mapLTable)
     if kj.getValue(liboffsets.offline, 'D') == 1384120320 then
         header = "Current level: " .. skidLevel
-        header = header .. '\n' .. kj.margin(header) .. kj.margin(skidLevel) .. '\n[🔴]Offline Mode: ON'
+        header = header .. "\n| [🔴]Offline";
     else
-        header = "Current level: " .. skidLevel   
-        header = header  .. '\n' .. kj.margin(header) .. kj.margin(skidLevel)
+        header = "Current level: " .. skidLevel;
     end
 end
 function getLevel_Cords()
@@ -9177,21 +9222,20 @@ function posOrders(cord)
 end
 eye = {}
 for i = 1, 50 do
-    do
+   do
       do
-      eye[i] = i
-      yellowCry = kio        
+        eye[i] = i;
+        yellowStar = kio;
       end
-    end
-end
+   end
+end kio = nil;
 function farm(type)
-    local CRunG = gg
     getLevel()
     getLevel_Cords()
     gg.setVisible(false)
     if type == "c" then
         for i, v in ipairs(scrSoul[level_Cords].C_Runner) do
-            CRunG.toast("Location: " .. i .. " :: " .. #scrSoul[level_Cords].C_Runner)
+            gg.toast("Location: " .. i .. " :: " .. #scrSoul[level_Cords].C_Runner)
             if pcall(posOrders, v) then
                 if i < #scrSoul[level_Cords].C_Runner then
                     gg.sleep(ctime)
@@ -9205,7 +9249,7 @@ function farm(type)
         end
     elseif type == "s" then
         for i, v in ipairs(scrSoul[level_Cords].S_Runner) do
-            CRunG.toast("Location: " .. i .. " :: " .. #scrSoul[level_Cords].S_Runner)
+            gg.toast("Location: " .. i .. " :: " .. #scrSoul[level_Cords].S_Runner)
             if pcall(setPosition, v) then
                 if i < #scrSoul[level_Cords].S_Runner then
                     gg.sleep(stime)
@@ -9221,137 +9265,99 @@ function farm(type)
 end
  do
    do
-    back = {"[🔙]Back", "[👋]End" }
-    table.insert(yellowCry, back[2])
-  end
-end
- do
-   do
-     table.insert(yellow[1].content, back[1])
-      table.insert(yellow[2].content, back[1]) 
-   end
- end
-  do
-    do
-      table.insert(yellow[6].content, back[1]) 
-       table.insert(yellow[7].content, back[1])   
+    back = {
+        "[🔙]Back",
+        "[👋]End" 
+    }
+    yellowStar = kj.prepareMenu(yellowStar);
+    table.insert(yellowStar, back[2])
+    for i, v in pairs(yellow) do
+        yellow[i].content = kj.prepareMenu(v.content, true);
     end
   end
-   do
-     do
-         table.insert(yellow[8].content, back[1])   
-       table.insert(yellow[9].content, {back[1]})   
-    end
- end
- do
-    do
-       table.insert(yellow[10].content, back[1])
-      table.insert(yellow[11].content, back[1])  
-   end
 end
-function runType()
-    getLevel()
+function farmMenu()
+    getLevel();
+    STAY = farmMenu;
     getLevel_Cords()
+    local content = {
+        " | [🕯]Auto Candle Run",
+          " | [⭐]Auto Star Run",
+            " | [🕯]Semi Candle Run",
+              " | [⭐]Semi Star Run",
+                " | [🌋]Eden Assistance",
+                  " | [🔖]Unlock Seasonal Quests",
+                    " | [ℹ️]Running Instructions",        
+    };
+    table.insert(content, 1, back[1]);       
     if #scrSoul[level_Cords].C_Runner > 0 then
-        yellow[2].content[3] = "[🕯]Semi Candle Run"
+        content[4] = " | [🕯]Semi Candle Run";
     else
-        yellow[2].content[3] = nil
+        content[4] = nil;
     end
     if #scrSoul[level_Cords].S_Runner > 0 then
-        yellow[2].content[4] = "[⭐]Semi Star Run"
+        content[5] = " | [⭐]Semi Star Run";
     else
-        yellow[2].content[4] = nil
+        content[5] = nil;
     end
     if scrSoul[level_Cords].AK_Runner then
-        yellow[2].content[5] = "[🌋]Eden Assistance"
+        content[6] = " | [🌋]Eden Assistance";
     else
-        yellow[2].content[5] = nil
+        content[6] = nil;
     end
-    STAY = 'runType'
-    local rnmG = gg
-    tear = rnmG.choice(yellow[2].content, nil, header)
-    if tear == eye[8] then 
-        yellowTears()
-    elseif tear == eye[1] then
+    local tear = gg.choice(content, nil, header);
+    if tear == eye[1] then 
+        return yellowTears();
+    elseif tear == eye[2] then
         if gg.alert([[
             [☣️]Do you want to auto Candle Run?
             It is more recommended to use canvas for runnung
             to avoid using too much magic while teleporting]],
             'Go for it', 'Never mind') == eye[1] then
-            autoCr()
+            autoCr();
         else
-            runType()
+            return farmMenu();
         end
-    elseif tear == eye[2] then
+    elseif tear == eye[3] then
         if gg.alert([[
             [☣️]Do you want to auto Star Run?
             It is more recommended to use AutoWax for runnung
             to avoid using too much magic while teleporting]],
             'Go for it', 'Never mind') == eye[1] then
-            autoSr()
+            autoSr();
         else
-            runType()
+            return farmMenu();
         end
-    elseif tear == eye[3] then 
-        runChoice("c")
     elseif tear == eye[4] then 
-        runChoice("s")
-    elseif tear == eye[5] then
-        edenAssist()
+        runChoice("c");
+    elseif tear == eye[5] then 
+        runChoice("s");
     elseif tear == eye[6] then
+        edenAssist();
+    elseif tear == eye[7] then
         if getQuests() then
             if kj.getValue(gquests[7].address, 'D') ~= 7037807 then
-                modQuest(false)
+                modQuest(false);
             else
-                modQuest(true)
+                modQuest(true);
             end
         end
-    elseif tear == eye[7] then 
-       kj.post(instructions.run) 
+    elseif tear == eye[8] then 
+       kj.post(instructions.run);
     end
-end
-function frac()
-    if gg.MAP_ ~= 0xF05BEC0 then
-        mobCloset = change_1
-    end
- end dontRemove = "BY: Kiojeen"
+end dontRemove = "BY: Kiojeen";
 function hold()
-    local hG = gg
-    hG.toast("Click on the GG icon to resume")
+    gg.toast("Click on the GG icon to resume")
     while true do 
-        if hG.isVisible(true) then
-            hG.setVisible(false)
+        if gg.isVisible(true) then
+            gg.setVisible(false)
            break
         end
     end
 end
 do
   do
-  configz = kj.tableClone(configs)
-  ld = kj.tableClone(ldistances)    
-  end
-end
-do
-  do
-  llib = kj.tableClone(lliboffsets)
-  lanon = kj.tableClone(lemitoffsets)    
-  end
-end
-do
-  do
-  lgui = kj.tableClone(lguioffsets)
-  bd = kj.tableClone(bdistances)    
-  end
-end
-do
-  do
-  blib = kj.tableClone(bliboffsets)
-  banon = kj.tableClone(bemitoffsets)    
-  end
-end
-do
-  do
-  bgui = kj.tableClone(bguioffsets)
+configz = kj.tableClone(configs)
   cltypes = {
     {
             "pants", 
@@ -9392,41 +9398,37 @@ end
 function edenAssist()
     getLevel()
     if not scrSoul[getLevel_Cords()].AK_Runner then
-        return runType()
+        return farmMenu()
     end
     pStatueLocker()
-    STAY = 'edenAssist'
+    STAY = edenAssist;
     do
       do
         emenu = {
-            "[➡️]Next Statue",
-              "[⬅️]Previous Statue",
-                "[🔥]Burn"  .. signs.burn,
-                  "[🌕]Wing Energy" .. signs.wcharge,
-                    "[🀄️]Absorb All",
-                      "[⬆️]Breach Walls",
-                        "[🌀]Teleport",
-                          "[📃]Coordinates List",
-                            "[🧭]Out Of Borders",
+            " | [➡️]Next Statue",
+              " | [⬅️]Previous Statue",
+                " | [🔥]Burn"  .. signs.burn,
+                  " | [🌕]Wing Energy" .. signs.wcharge,
+                    " | [🀄️]Absorb All",
+                      " | [⬆️]Breach Walls",
+                        " | [🌀]Teleport",
+                          " | [📃]Coordinates List",
+                            " | [🧭]Out Of Borders",
         }
         egoto = #emenu + 2
         sign = {}
       end
     end
       do
-        do  
-         table.insert(emenu, back[1])
-          table.insert(emenu, SPLine)
-        end 
-      end
-      do
         do
+        table.insert(emenu, back[1])
+        table.insert(emenu, SPLine)
         for i, v in ipairs(scrSoul[level_Cords].Map_Goto.Map_Goto_Name) do
             table.insert(emenu, i .. ". " .. 'To ' .. v)
         end
       end
     if skidLevel ~= 'StormEnd' then
-        emenu[1], emenu[2] = nil
+        emenu[1], emenu[2] = nil, nil;
     end
     do
       do
@@ -9444,13 +9446,13 @@ function edenAssist()
         elseif tear == eye[6] then
             bwall(configs.bdis)
         elseif tear == eye[7] then
-            tpmortal('edenAssist()')
+            selectLevel('edenAssist()')
         elseif tear == eye[8] then
             cordlist('e')
         elseif tear == eye[9] then
             oobls('edenAssist')
         elseif tear == eye[10] then
-            runType()
+            farmMenu()
         elseif tear == eye[11] then
             edenAssist()
         elseif tear ~= nil then
@@ -9477,21 +9479,21 @@ function pStarLocker()
 end
 function runChoice(rtype)
     pStarLocker()
-    STAY = 'runChoice'
+    STAY = runChoice;
     do
   do
     do crunMenu = {}
     crunMenu = {
-        "[🕯]Run",
-          "[🕯]Absorb wax",
-            "[💠]Absorb Fragments",
-              "[🔥]Burn"  .. signs.burn,
-                "[⬆️]Breach Walls",
-                  "[🌕]Wing Energy" .. signs.wcharge,
-                    "[🌀]Teleport",
-                      "[📃]Coordinates List",
-                        "[⭐]Semi Star Run",
-                          "[🧭]Out Of Borders",
+        " | [🕯]Run",
+          " | [🕯]Absorb wax",
+            " | [💠]Absorb Fragments",
+              " | [🔥]Burn"  .. signs.burn,
+                " | [⬆️]Breach Walls",
+                  " | [🌕]Wing Energy" .. signs.wcharge,
+                    " | [🌀]Teleport",
+                      " | [📃]Coordinates List",
+                        " | [⭐]Semi Star Run",
+                          " | [🧭]Out Of Borders",
     }
     cgoto = #crunMenu + 2
     sign = {}
@@ -9502,232 +9504,217 @@ do
   do
     do srunMenu = {}
     srunMenu = {
-        "[➡️]Next Location",
-          "[⬅️]Previous Location",
-            "[⭐]Run",
-              "[⭐]Absorb Stars",
-                "[⬆️]Breach Walls",
-                  "[🌕]Wing Energy" .. signs.wcharge,
-                    "[🌀]Teleport",
-                      "[📃]Coordinates List",
-                        "[🕯]Semi Candle Run",
-                          "[🧭]Out Of Borders",
+        " | [➡️]Next Location",
+          " | [⬅️]Previous Location",
+            " | [⭐]Run",
+              " | [⭐]Absorb Stars",
+                " | [⬆️]Breach Walls",
+                  " | [🌕]Wing Energy" .. signs.wcharge,
+                    " | [🌀]Teleport",
+                      " | [📃]Coordinates List",
+                        " | [🕯]Semi Candle Run",
+                          " | [🧭]Out Of Borders",
     }
     sgoto = #srunMenu + 2
     sign = {}
     end
-  end
-end
-  do
-    do
-     table.insert(crunMenu, back[1])
-      table.insert(crunMenu, SPLine)
-    end
-  end
-    do
-      do
-        table.insert(srunMenu, back[1])
-       table.insert(srunMenu, SPLine)
       end
+        end
+    table.insert(crunMenu, back[1])
+    table.insert(crunMenu, SPLine)
+    table.insert(srunMenu, back[1])
+    table.insert(srunMenu, SPLine)
+    for i, v in ipairs(scrSoul[level_Cords].Map_Goto.Map_Goto_Name) do
+        if i < 10 then x = 0 else x = "" end
+        table.insert(crunMenu, x .. i .. " | " .. 'To ' .. v)
+        table.insert(srunMenu, x .. i .. " | " .. 'To ' .. v)
     end
-    do
-      do
-        for i, v in ipairs(scrSoul[level_Cords].Map_Goto.Map_Goto_Name) do
-            table.insert(crunMenu, i .. ". " .. 'To ' .. v)
-            table.insert(srunMenu, i .. ". " .. 'To ' .. v)
-        end
-     do
-      do
-        if #scrSoul[level_Cords].Map_Goto.Map_Goto_Name == 0 then
-            crunMenu[cgoto] = nil
-            srunMenu[sgoto] = nil
-        end
-      end
+    if #scrSoul[level_Cords].Map_Goto.Map_Goto_Name == 0 then
+        crunMenu[cgoto] = nil
+        srunMenu[sgoto] = nil
     end
     if type_ == nil then
         type_ = rtype
-    end 
-  end 
     end SkidLock = skidLevel
-        if #scrSoul[level_Cords].C_Runner > 0 then
-            cflag = true
-        else
-            cflag = false
-            type_ = "s"
-            srunMenu[9] = nil
-        end
-        if #scrSoul[level_Cords].S_Runner > 0 then
-            sflag = true
-        else
-            sflag = false
-            type_ = "c"
-            crunMenu[9] = nil
-        end  dontRemove = 'By: Kiojeen'
-          if sflag == false then
-              if cflag == false then
-                type_ = 'back'
-              end
-          end
-       do
-     do
-       do
-         do
-          local rCG = gg
-          if string.find(skidLevel, 'Race') == nil then
-            if skidLevel ~= 'SunsetColosseum' and skidLevel ~= 'SunsetEnd' then
-                crunMenu[3] = nil
-            end
-        end
-         if type_ == 'back' then yellowTears()
-         elseif type_ == "c" and cflag ~= false then
-             tear = rCG.choice(crunMenu, nil, header)
-             if     tear == eye[1] then
-                farm("c")
-             elseif tear == eye[2] then
-                abswaxpro()
-             elseif tear == eye[3] then
-                absorbFrags()
-             elseif tear == eye[4] then
-                burner()
-             elseif tear == eye[5] then
-                bwall(configs.bdis)
-             elseif tear == eye[6] then
-                wenergy()
-             elseif tear == eye[7] then
-                tpmortal('runChoice(\'c\')')
-             elseif tear == eye[8] then
-                cordlist("c")
-             elseif tear == eye[9] then
-                type_ = eye[90] runChoice("s")
-             elseif tear == eye[10] then
-                oobls('runChoice')
-             elseif tear == eye[11] then
-                type_ = nil runType()
-             elseif tear == eye[12] then
-                runChoice("c")
-             elseif tear ~= nil then
-                pcall(setPosition, scrSoul[getLevel_Cords()].Map_Goto.Map_Goto_Cord[tear - cgoto])
-            end
-         elseif type_ == "s" and sflag ~= false then
-             tear = rCG.choice(srunMenu, nil, header)
-             if     tear == eye[1] then
-                srun_add()
-             elseif tear == eye[2] then
-                srun_sub()
-             elseif tear == eye[3] then
-                farm("s")
-             elseif tear == eye[4] then
-                absorbStars()
-             elseif tear == eye[5] then
-                bwall(configs.bdis)
-             elseif tear == eye[6] then
-                wenergy()
-             elseif tear == eye[7] then
-                tpmortal('runChoice(\'s\')')
-             elseif tear == eye[8] then
-                cordlist("s")
-             elseif tear == eye[9] then
-                type_ = eye[90] runChoice("c")
-             elseif tear == eye[10] then
-                oobls('runChoice')
-             elseif tear == eye[11] then
-                type_ = nil runType()
-             elseif tear == eye[12] then
-                runChoice("s")
-             elseif tear ~= nil then
-                pcall(setPosition, scrSoul[getLevel_Cords()].Map_Goto.Map_Goto_Cord[tear - sgoto])
-            end
-          end
-        end
-      end
+    if #scrSoul[level_Cords].C_Runner > 0 then
+        cflag = true
+    else
+        cflag = false
+        type_ = "s"
+        srunMenu[9] = nil
     end
-  end
+    if #scrSoul[level_Cords].S_Runner > 0 then
+        sflag = true
+    else
+        sflag = false
+        type_ = "c"
+        crunMenu[9] = nil
+    end  dontRemove = 'By: Kiojeen'
+    if sflag == false then
+        if cflag == false then
+        type_ = 'back'
+        end
+    end
+    local rCG = gg
+    if string.find(skidLevel, 'Race') == nil then
+        if skidLevel ~= 'SunsetColosseum' and skidLevel ~= 'SunsetEnd' then
+            crunMenu[3] = nil
+        end
+    end
+    if type_ == 'back' then 
+        yellowTears();
+    elseif type_ == "c" and cflag ~= false then
+        tear = rCG.choice(crunMenu, nil, header)
+        if tear == eye[1] then
+            farm("c")
+        elseif tear == eye[2] then
+            abswaxpro()
+        elseif tear == eye[3] then
+            absorbFrags()
+        elseif tear == eye[4] then
+            burner()
+        elseif tear == eye[5] then
+            bwall(configs.bdis)
+        elseif tear == eye[6] then
+            wenergy()
+        elseif tear == eye[7] then
+            selectLevel('runChoice(\'c\')')
+        elseif tear == eye[8] then
+            cordlist("c")
+        elseif tear == eye[9] then
+            type_ = eye[90] runChoice("s")
+        elseif tear == eye[10] then
+            oobls('runChoice')
+        elseif tear == eye[11] then
+            type_ = nil farmMenu()
+        elseif tear == eye[12] then
+            runChoice("c")
+        elseif tear ~= nil then
+            pcall(setPosition, scrSoul[getLevel_Cords()].Map_Goto.Map_Goto_Cord[tear - cgoto])
+        end
+        elseif type_ == "s" and sflag ~= false then
+        tear = rCG.choice(srunMenu, nil, header)
+        if  tear == eye[1] then
+            srun_add()
+        elseif tear == eye[2] then
+            srun_sub()
+        elseif tear == eye[3] then
+            farm("s")
+        elseif tear == eye[4] then
+            absorbStars()
+        elseif tear == eye[5] then
+            bwall(configs.bdis)
+        elseif tear == eye[6] then
+            wenergy()
+        elseif tear == eye[7] then
+            selectLevel('runChoice(\'s\')')
+        elseif tear == eye[8] then
+            cordlist("s")
+        elseif tear == eye[9] then
+            type_ = eye[90] runChoice("c")
+        elseif tear == eye[10] then
+            oobls('runChoice')
+        elseif tear == eye[11] then
+            type_ = nil farmMenu()
+        elseif tear == eye[12] then
+            runChoice("s")
+        elseif tear ~= nil then
+            pcall(setPosition, scrSoul[getLevel_Cords()].Map_Goto.Map_Goto_Cord[tear - sgoto])
+        end
+    end
 end
 function yellowTears()
-    getLevel()
-    STAY = 'yellowTears'
-    local ytG = gg
-    tear = ytG.choice(yellowCry, nil, header)
+    getLevel();
+    STAY = yellowTears;
+    local tear = gg.choice(yellowStar, nil, header);
+    current_menu = tear;
     if tear == eye[1] then 
-        tpmenu()
+        teleports();        
     elseif tear == eye[2] then 
-        runType() 
-    elseif tear == eye[3] then 
-        burner() 
+        selectLevel("yellowTears()");
+    elseif tear == eye[3] then
+        burner();
     elseif tear == eye[4] then 
-        absorbStars() abswaxpro()
+        farmMenu();
     elseif tear == eye[5] then
-        wenergy()
-    elseif tear == eye[6] then 
-        magicList()   
-    elseif tear == eye[7] then
-        wingmode()
-    elseif tear == eye[8] then 
-        doTroll()
+        wenergy();
+    elseif tear == eye[6] then  
+        absorbStars();
+        abswaxpro();    
+    elseif tear == eye[7] then   
+        magicF();
+    elseif tear == eye[8] then
+        wingmode();
     elseif tear == eye[9] then  
-        modemenu()   
+        closets();
     elseif tear == eye[10] then 
-       ClosetMenu()
+        avatarModes();
     elseif tear == eye[11] then
-        cords_changer()
-    elseif tear == eye[12] then 
-        settings()
-    elseif tear == eye[13] then 
-        os.exit()
+        cameraModes();   
+    elseif tear == eye[12] then
+        worldModes(); 
+    elseif tear == eye[13] then
+        UIModes();   
+    elseif tear == eye[14] then
+        Players();
+    elseif tear == eye[15] then
+        moveObjects();
+    elseif tear == eye[16] then
+        settings();
+    elseif tear == eye[17] then
+        os.exit();        
     end
 end
-function cords_changer()
-    getLevel()
-    STAY = 'cords_changer'
-    tear = gg.choice(yellow[11].content, nil, header)
-    if tear == #yellow[11].content then
-        yellowTears()
-    elseif tear == eye[1] then
-        drawcandles = kj.toggler(drawcandles)
+function moveObjects()
+    getLevel();
+    STAY = moveObjects;
+    tear = gg.choice(yellow[current_menu].content, nil, header);
+    if tear == eye[1] then
+        yellowTears();
     elseif tear == eye[2] then
+        drawcandles = kj.toggler(drawcandles)
+    elseif tear == eye[3] then
         drawNPC()
     end
 end
 function wingmode()
-    STAY = 'wingmode'
-    getLevel()
-    tear = gg.choice(yellow[7].content, nil, header)
-    if tear ~= nil then
-        if tear == #yellow[7].content then
-            yellowTears()
-        elseif tear == eye[1] then
-            wings = kj.getValue(emitoffsets.wings, 'Q')
-            tear = gg.prompt({'Set wings count: '}, {wings}, {'number'})
-            if tear ~= nil then
-                tear[1] = tonumber(tear[1])
-                if type(tear[1]) == 'number' then
-                    kj.setValue(emitoffsets.wings, tostring(tear[1]) .. 'Q')
-                else
-                    gg.toast('Please put numbers only')
-                end
-            end
-        elseif tear == eye[2] then
-            doWdrop()
-        elseif tear == eye[3] then
-            capetrick = kj.toggler(capetrick)
-            if not capetrick then
-                kj.setValue(emitoffsets.wvisible, '1 F')
-            end
-        elseif tear == eye[4] then
-            if kj.getValue(emitoffsets.wvisible, 'F') == 1 then
-                kj.setValue(emitoffsets.wvisible, '0 F')
-                gg.toast('Invisible Wing: ON')
+    STAY = wingmode;
+    getLevel();
+    local tear = gg.choice(yellow[current_menu].content, nil, header);
+    if tear == eye[1] then
+        yellowTears();
+    elseif tear == eye[2] then
+        wings = kj.getValue(emitoffsets.wings, 'Q');
+        tear = gg.prompt({'Set wings count: '}, {wings}, {'number'});
+        if tear ~= nil then
+            tear[1] = tonumber(tear[1]);
+            if type(tear[1]) == 'number' then
+                kj.setValue(emitoffsets.wings, tostring(tear[1]) .. 'Q');
             else
-                kj.setValue(emitoffsets.wvisible, '1 F')
-                gg.toast('Invisible Wing: OFF')
+                gg.toast('Please put numbers only');
             end
-        elseif tear == eye[5] then
-            kj.freezeSwitch(emitoffsets.pcape, '0 D', 'Freezing NoCape')
-        elseif tear == eye[6] then
-            kj.switch(liboffsets.fastflap, '506761216 D', '520725538 D', 'Fast Flap')
         end
-    end   
-end
+    elseif tear == eye[3] then
+        doWdrop();
+    elseif tear == eye[4] then
+        capetrick = kj.toggler(capetrick);
+        if not capetrick then
+            kj.setValue(emitoffsets.wvisible, '1F');
+        end
+    elseif tear == eye[5] then
+        if kj.getValue(emitoffsets.wvisible, 'F') == 1 then
+            kj.setValue(emitoffsets.wvisible, '0F');
+            gg.toast('Invisible Wing: ON');
+        else
+            kj.setValue(emitoffsets.wvisible, '1F');
+            gg.toast('Invisible Wing: OFF');
+        end
+    elseif tear == eye[6] then
+        kj.freezeSwitch(emitoffsets.pcape, '0 D', 'Freezing NoCape');
+    elseif tear == eye[7] then
+        kj.switch(liboffsets.fastflap, '506761216 D', '520725538 D', 'Fast Flap');
+    end
+end   
 function doWdrop()
     tear = gg.prompt({"[🌟]Drop Wing Buffs:"}, {0}, {'number'})
     if tear ~= nil then
@@ -9762,104 +9749,100 @@ function treatSavedLocats()
     end
 end
 function settings()
-    STAY = 'settings'
-    hbstngs = {
-        "[💨]Auto Wind Remove in OOBs: " .. kj.statSwitch(configs.awrob),
+    STAY = settings;
+    local content = {
+        "[💨]Auto Wind Remove in OOBs menu: " .. kj.statSwitch(configs.awrob),
         "[↕️]Breach distance: " .. configs.bdis,
-        "[📮]Dev Mode: " .. kj.statSwitch(configs.devmode),
+        "[📮]Debug Mode: " .. kj.statSwitch(configs.devmode),
         "[🏠]Fast Return Home" .. kj.statSwitch(configs.fasthome),
-        "[🔁]Old OS [Not fully supported]" .. kj.statSwitch(configs.mumu),
+        "[🔁]Burn & Absorb[Method 2]" .. kj.statSwitch(configs.mumu),
+        "[🪲]Bypass Beta Restriction" .. kj.statSwitch(configs.pbeta),
         "[🧙🏻‍♂️]Spells Sockets: " .. configs.sockets,
-        "[🚮]Reset Settings",
-        "[🚮]Reset Saved Locations",
         "[📤]Export Saved Locations",
         "[📥]Import Locations",
-        "[📄]Make a miniOOB HellBoy",
-        "[🗡]Bypass Beta Restriction [Active on play screen]" .. kj.statSwitch(configs.pbeta),
+        "[🚮]Reset Settings",
+        "[🚮]Reset Saved Locations",
         "[ℹ️]Description",
-        back[1]
-    }
-    tear = gg.choice(hbstngs, nil, '[☣️]HellBoy' .. ' Settings ' .. hellboy)
-    if tear == eye[#hbstngs] then
-        yellowTears()
-    elseif tear == eye[1] then
-        configs.awrob = kj.toggler(configs.awrob)
+    };
+    content = kj.prepareMenu(content, true);
+    local tear = gg.choice(content, nil, '[☣️]HellBoy' .. ' Settings ' .. hellboy);
+    if tear == eye[1] then
+        yellowTears();
     elseif tear == eye[2] then
-        tear = gg.prompt({"Choose the distance for Breach:"}, {7}, {'number'})
+        configs.awrob = kj.toggler(configs.awrob);
+    elseif tear == eye[3] then
+        tear = gg.prompt({"Choose the distance for Breach:"}, {7}, {'number'});
         if tear ~= nil then
-            tear[1] = tonumber(tear[1])
+            tear[1] = tonumber(tear[1]);
             if type(tear[1]) == 'number' then
-                configs.bdis = tear[1]
-                saveconfigs()
+                configs.bdis = tear[1];
+                saveconfigs();
             else
-                gg.toast('Please put numbers only')
+                gg.toast('Please put numbers only');
             end
         end
-    elseif tear == eye[3] then
+    elseif tear == eye[4] then
         if configs.devmode then
-            configs.devmode = false
-            gg.hideUiButton()
-            saveconfigs()
-            nodemode()
+            configs.devmode = false;
+            gg.hideUiButton();
+            saveconfigs();
+            return nodemode();
         else 
             configs.devmode = true
-            gg.showUiButton()
-            saveconfigs()
-            demode()
+            gg.showUiButton();
+            saveconfigs();
+            return demode();
         end
-    elseif tear == eye[4] then
-        configs.fasthome = kj.toggler(configs.fasthome)
-        fastHome(configs.fasthome)
-        saveconfigs()
     elseif tear == eye[5] then
-        configs.mumu = kj.toggler(configs.mumu)
-        saveconfigs()
-        if configs.mumu then
-            gg.toast('Too bad')
-        end
+        configs.fasthome = kj.toggler(configs.fasthome);
+        fastHome(configs.fasthome);
+        saveconfigs();
     elseif tear == eye[6] then
-        local tear = gg.prompt({"Spells Sockets: [6; 20]"}, {6},{'number'})
-        if tear then
-            configs.sockets = tear[1]
-            saveconfigs()
+        configs.mumu = kj.toggler(configs.mumu);
+        saveconfigs();
+        if configs.mumu then
+            gg.toast("This option is not recomended");
         end
     elseif tear == eye[7] then
-        if gg.alert('[☣️]Do you want to reset the script settings?', 'Reset', 'Never mind') == eye[1] then
-            configs = {}
-            saveconfigs()
-            loadconfigs()
-            gg.toast('Settings are back to default')
-        else
-            settings()
-        end
+        configs.pbeta = kj.toggler(configs.pbeta);
+        patchbeta(configs.pbeta);
     elseif tear == eye[8] then
-        if gg.alert('[☣️]Do you want to reset the saved locations?', 'Reset', 'Never mind') == eye[1] then
-            slocs = {}
-            saveconfigs()
-            loadconfigs()
-            gg.toast('Saved locations were removed')
-        else
-            settings()
+        tear = gg.prompt({"Spells Sockets: [6; 20]"}, {6},{'number'});
+        if tear then
+            configs.sockets = tear[1];
+            saveconfigs();
         end
     elseif tear == eye[9] then
-        local dir = '/storage/emulated/0/Download/Hellboy-Locations.txt'
-        local file = io.open(dir, 'w')
-        file:write([[--Locations file generated by: Hellboy]]
-         .. '\nela = true\n')
-        file:write('slocs_local = ' .. kj.tableToString(slocs))
-        file:close()
-        gg.alert('[📤]Output Saved Locations:\nFile name: ' .. 'Hellboy-Locations.txt' .. '\nDirectory: ' .. '/storage/emulated/0/Download')
+        local dir = '/storage/emulated/0/Download/Hellboy-Locations.txt';
+        local file = io.open(dir, 'w');
+        file:write([[--Locations file generated by: Hellboy]] .. '\nlocal ela = true\n');
+        file:write('slocs_local = ' .. kj.tableToString(slocs));
+        file:close();
+        gg.alert('[📤]Output Saved Locations:\nFile name: ' .. 'Hellboy-Locations.txt' .. '\nDirectory: ' .. '/storage/emulated/0/Download');
     elseif tear == eye[10] then
         if not pcall(importOOBs) then
-            gg.toast('Something went wrong.')
+            gg.toast('Something went wrong.');
         end
     elseif tear == eye[11] then
-        DumpOOBs()
+        if gg.alert('[☣️]Do you want to reset the script settings?', 'Reset', 'Never mind') == eye[1] then
+            configs = {};
+            saveconfigs();
+            loadconfigs();
+            gg.toast('Settings are back to default');
+        else
+            settings();
+        end
     elseif tear == eye[12] then
-        configs.pbeta = kj.toggler(configs.pbeta)
-        patchbeta(configs.pbeta)
+        if gg.alert('[☣️]Do you want to reset the saved locations?', 'Reset', 'Never mind') == eye[1] then
+            slocs = {};
+            saveconfigs();
+            loadconfigs();
+            gg.toast('Saved locations were removed')
+        else
+            settings();
+        end
     elseif tear == eye[13] then
-        kj.post(instructions.description)
+        kj.post(instructions.description);
     end
 end
 function fastHome(bool)
@@ -9878,35 +9861,35 @@ function patchbeta(bool)
         end
     end
 end
-function tpmenu()
-    STAY = 'tpmenu'
-    local tpmG = gg
-    tear = tpmG.choice(yellow[1].content, nil, header)
-    if tear == #yellow[1].content then yellowTears()
-    elseif tear == eye[1] then 
-        tpmortal('tpmenu()')
-    elseif tear == eye[2] then
-        savelocat()
-    elseif tear == eye[3] then 
-        gotoMap()
-    elseif tear == eye[4] then 
-        oobls('tpmenu')
-    elseif tear == eye[5] then 
-        bwall(configs.bdis)
+function teleports()
+    STAY = teleports;
+    local tear = gg.choice(yellow[current_menu].content, nil, header);
+    if tear == eye[1] then 
+        yellowTears();
+    elseif tear == eye[2] then 
+        selectLevel('teleports()');
+    elseif tear == eye[3] then
+        bwall(configs.bdis); 
+    elseif tear == eye[4] then
+        setPosition({getPosition()[1], getPosition()[2] + configs.bdis, getPosition()[3]});
+    elseif tear == eye[5] then
+        setPosition({getPosition()[1], getPosition()[2] - configs.bdis, getPosition()[3]});
     elseif tear == eye[6] then 
-        setPosition({getPosition()[1], getPosition()[2] + configs.bdis, getPosition()[3]})
+        savelocat();
     elseif tear == eye[7] then 
-        setPosition({getPosition()[1], getPosition()[2] - configs.bdis, getPosition()[3]})
-    elseif tear == eye[8] then
+        gotoMap();
+    elseif tear == eye[8] then 
+        oobls('teleports');
+    elseif tear == eye[9] then
         if not pcall(coordinater, 'move') then
-            gg.toast("Please type properly")
+            gg.toast("Please type properly");
         end
-    elseif tear == eye[9] then 
-        coordinater('copy')
     elseif tear == eye[10] then 
-        coordinater('freeze')
+        coordinater('copy');
     elseif tear == eye[11] then 
-        kj.freezeSwitch(emitoffsets.ypos, tostring(getPosition()[2]) .. 'F', 'Freezing Y Coordinate')
+        coordinater('freeze');
+    elseif tear == eye[12] then 
+        kj.freezeSwitch(emitoffsets.ypos, tostring(getPosition()[2]) .. 'F', 'Freezing Y Coordinate');
     end
 end
 function coordinater(rspType)
@@ -9943,7 +9926,7 @@ function coordinater(rspType)
     end
 end
 function gotoMap()
-    STAY = 'gotoMap'
+    STAY = gotoMap;
     local gtG = gg
     getLevel()
     getLevel_Cords()
@@ -9957,18 +9940,18 @@ function gotoMap()
     end
     table.insert(gtMenu.Name, back[1])
     tear = gtG.choice(gtMenu.Name, nil, header)
-    if tear == #gtMenu.Name then tpmenu()
+    if tear == #gtMenu.Name then teleports()
     elseif tear ~= eye[69] then pcall(setPosition, gtMenu.Cord[tear])
     end
 end
-function ClosetMenu()   
-    STAY = 'ClosetMenu'
-    local type = nil
-    local cMG = gg
-    tear = cMG.choice(yellow[10].content, nil, header)
-    if tear == eye[6] then yellowTears()
+function closets()   
+    STAY = closets;
+    local type = nil;
+    local tear = gg.choice(yellow[current_menu].content, nil, header);
+    if tear == eye[1] then 
+        yellowTears();
     elseif tear ~= nil then
-        opencloset(cltypes[tear][2])
+        opencloset(cltypes[tear - 1][2]);
     end
 end
 function opencloset(closet)
@@ -10069,101 +10052,93 @@ shout = {
         'ShoutSmallFish'
     },
 }
-function modemenu()
-    STAY = 'modemenu'
-    getLevel()
-    local x = {}
-    for i, v in ipairs(yellow[9].content) do
-        do
-          do
-            table.insert(x, v[1])
-          end
-        end  
-    end
-    c_hw = '\t' .. kj.removePoint(kj.getValue(guioffsets.scrres, 'F')) .. '::' .. kj.removePoint(kj.getValue(guioffsets.scrres + 4, 'F'))
-    yellow[9].content[2].content[2] = "[📸]ScreenShot Resolution" .. c_hw
-    tear = gg.choice(x, nil, header)
-    if tear == #x then 
-        yellowTears()
-    elseif tear == eye[1] then
-        tear = gg.choice(yellow[9].content[1].content, nil, '[👦🏼]Avatar Modes\n' .. kj.margin(15))
-        if tear == #yellow[9].content[1].content then
-            modemenu()
-        elseif tear == eye[1] then 
-            pspeed()
-        elseif tear == eye[2] then
-            kj.switchArm64(liboffsets.pjump, [[FMOV S0, #0x40A00000]], [[FMAXNM S1, S1, S8]], 'Jumping Enhancement')
-        elseif tear == eye[3] then
-            if kj.getValue(liboffsets.pdive, 'D') == 505712640 then
-                kj.setValue(liboffsets.pdive, '-1119586048D')
-                gg.toast('Diving Enchancement: OFF')
-            else
-                kj.setValue(liboffsets.pdive, '505712640D')
-                gg.toast('Diving Enchancement: ON')
-            end
-        elseif tear == eye[4] then
-            kj.groupFreezeSwitch(dontgo, 'No Movement Restriction')
-        elseif tear == eye[5] then
-            kj.switchArm64(liboffsets.pdelay, [[MOV W0, #0x1]], 'CBZ W9, [PC,#0x60]', 'Delay Effect')
-        elseif tear == eye[6] then
-            kj.switchArm64(liboffsets.plain, [[MOV W0, #0x1]], 'CBZ W10, [PC,#0x14]', 'Always Fly')
-        elseif tear == eye[7] then
-            kj.switch(liboffsets.scooter, '506892288D', '1847647232D', 'Scooter')
-        elseif tear == eye[8] then
-            skidShouts()
-        end
-    elseif tear == eye[2] then
-        tear = gg.choice(yellow[9].content[2].content, nil, '[📸]Camera Modes\n' .. kj.margin(15))
-        if tear == #yellow[9].content[2].content then
-            modemenu()
-        elseif tear == eye[1] then
-            kj.switch(guioffsets.meshared, '1D', '0D')
-        elseif tear == eye[2] then
-            sres()
-        elseif tear == eye[3] then
-            kj.switchArm64(liboffsets.realisim, [[MOV W0, #0x1]], 'CBZ  W8, [PC,#0x104]', 'Realistic Graphics')
-        elseif tear == eye[4] then
-            sunsetFilter()
-        elseif tear == eye[5] then
-            sGlow()
-        end
+function avatarModes()
+    STAY = avatarModes;
+    local tear = gg.choice(yellow[current_menu].content, nil, '[👦🏼]Avatar Modes\n' .. kj.margin(15))
+    if tear == eye[1] then
+        return yellowTears();
+    elseif tear == eye[2] then 
+        pspeed()
     elseif tear == eye[3] then
-        tear = gg.choice(yellow[9].content[3].content, nil, '[🗺]World Modes\n' .. kj.margin(15))
-        if tear == #yellow[9].content[3].content then
-            modemenu()
-        elseif tear == eye[1] then
-            kj.switch(liboffsets.winds, '505873376D', '1847778369D', 'Removing Wind')
-        elseif tear == eye[2] then
-            rwind() gg.toast('Wind Removed')
-        elseif tear == eye[3] then
-            kj.switch(liboffsets.rclouds, '0D', '1D', 'Removing Clouds')
-        elseif tear == eye[4] then
-            kj.switchArm64(liboffsets.rwater, [[FMOV S0, #0x40A00000]], [[FMOV S11, #0x3F000000]], 'Removing Water')
-        elseif tear == eye[5] then
-            kj.switchArm64(liboffsets.rportals, [[MOV W0, #0x1]], 'CBZ W8, [PC,#0x1C]', 'Removing Portals')
-        elseif tear == eye[6] then
-            setspeed()
-        end
+        kj.switchArm64(liboffsets.pjump, [[FMOV S0, #0x40A00000]], [[FMAXNM S1, S1, S8]], 'Jumping Enhancement')
     elseif tear == eye[4] then
-        tear = gg.choice(yellow[9].content[4].content, nil, '[🖥]UI Modes\n' .. kj.margin(15))
-        if tear == #yellow[9].content[4].content then
-            modemenu()
-        elseif tear == eye[1] then
-            setIconSize()
-        elseif tear == eye[2] then
-            tranUi()
-        elseif tear == eye[3] then
-            kj.switchArm64(liboffsets.unemote, [[MOV W0, #0x1]], 'LDR W8, [X28,#0x28]')
-            kj.switchArm64(liboffsets.uncloset, [[MOV W0, #0x1]], [[CSET W0, WZR, NE]], 'Unlocking Clothes & Emotes')
-        elseif tear == eye[4] then
-            kj.switchArm64(liboffsets.unnodes, [[MOV W0, #0x1]], 'CBZ W8, [PC,#0xC]', 'Unlocking Nodes')
-        elseif tear == eye[5] then
-            kj.switchArm64(liboffsets.unfirework, [[SUBS W11, W10, #0x0]], [[SUBS W10, W10, #0x1]], 'Unlimited Fireworks')
-        elseif tear == eye[6] then
-            s, offline = kj.switch(liboffsets.offline, '1384120320D', '889192744D', 'Offline Mode')
+        if kj.getValue(liboffsets.pdive, 'D') == 505712640 then
+            kj.setValue(liboffsets.pdive, '-1119586048D')
+            gg.toast('Diving Enchancement: OFF')
+        else
+            kj.setValue(liboffsets.pdive, '505712640D')
+            gg.toast('Diving Enchancement: ON')
         end
-    end
+    elseif tear == eye[5] then
+        kj.groupFreezeSwitch(dontgo, 'No Movement Restriction')
+    elseif tear == eye[6] then
+        kj.switchArm64(liboffsets.pdelay, [[MOV W0, #0x1]], 'CBZ W9, [PC,#0x60]', 'Delay Effect')
+    elseif tear == eye[7] then
+        kj.switchArm64(liboffsets.plain, [[MOV W0, #0x1]], 'CBZ W10, [PC,#0x14]', 'Always Fly')
+    elseif tear == eye[8] then
+        kj.switch(liboffsets.scooter, '506892288D', '1847647232D', 'Scooter')
+    elseif tear == eye[9] then
+        skidShouts()
+    end        
 end
+function cameraModes()
+    STAY = cameraModes;
+    local c_hw = '\t' .. kj.removePoint(kj.getValue(guioffsets.scrres, 'F')) .. '::' .. kj.removePoint(kj.getValue(guioffsets.scrres + 4, 'F'))
+    yellow[current_menu].content[3] = "02. [📸]ScreenShot Resolution" .. c_hw
+    local tear = gg.choice(yellow[current_menu].content, nil, '[📸]Camera Modes\n' .. kj.margin(15))
+    if tear == eye[1] then
+        yellowTears();
+    elseif tear == eye[2] then
+        kj.switch(guioffsets.meshared, '1D', '0D')
+    elseif tear == eye[3] then
+        sres()
+    elseif tear == eye[4] then
+        kj.switchArm64(liboffsets.realisim, [[MOV W0, #0x1]], 'CBZ  W8, [PC,#0x104]', 'Realistic Graphics')
+    elseif tear == eye[5] then
+        sunsetFilter()
+    elseif tear == eye[6] then
+        sGlow()
+    end        
+end
+function worldModes()
+    STAY = worldModes;
+    local tear = gg.choice(yellow[current_menu].content, nil, '[🗺]World Modes\n' .. kj.margin(15));
+    if tear == eye[1] then
+        yellowTears();
+    elseif tear == eye[2] then
+        kj.switch(liboffsets.winds, '505873376D', '1847778369D', 'Removing Wind')
+    elseif tear == eye[3] then
+        rwind() gg.toast('Wind Removed')
+    elseif tear == eye[4] then
+        kj.switch(liboffsets.rclouds, '0D', '1D', 'Removing Clouds')
+    elseif tear == eye[5] then
+        kj.switchArm64(liboffsets.rwater, [[FMOV S0, #0x40A00000]], [[FMOV S11, #0x3F000000]], 'Removing Water')
+    elseif tear == eye[6] then
+        kj.switchArm64(liboffsets.rportals, [[MOV W0, #0x1]], 'CBZ W8, [PC,#0x1C]', 'Removing Portals')
+    elseif tear == eye[7] then
+        setspeed()
+    end      
+end
+function UIModes()
+    STAY = UIModes;
+    local tear = gg.choice(yellow[current_menu].content, nil, '[🖥]UI Modes\n' .. kj.margin(15))
+    if tear == eye[1] then
+        yellowTears();
+    elseif tear == eye[2] then
+        setIconSize()
+    elseif tear == eye[3] then
+        tranUi()
+    elseif tear == eye[4] then
+        kj.switchArm64(liboffsets.unemote, [[MOV W0, #0x1]], 'LDR W8, [X28,#0x28]')
+        kj.switchArm64(liboffsets.uncloset, [[MOV W0, #0x1]], [[CSET W0, WZR, NE]], 'Unlocking Clothes & Emotes')
+    elseif tear == eye[5] then
+        kj.switchArm64(liboffsets.unnodes, [[MOV W0, #0x1]], 'CBZ W8, [PC,#0xC]', 'Unlocking Nodes')
+    elseif tear == eye[6] then
+        kj.switchArm64(liboffsets.unfirework, [[SUBS W11, W10, #0x0]], [[SUBS W10, W10, #0x1]], 'Unlimited Fireworks')
+    elseif tear == eye[7] then
+        kj.switch(liboffsets.offline, '1384120320D', '889192744D', 'Offline Mode')
+    end
+end           
 function sGlow(int)
     if not int then
         tear = gg.prompt({'[🔆]Brightness:'}, {1}, {'number'})
@@ -10390,7 +10365,7 @@ function wenergy()
    do
     signs.wcharge = kj.freezeSwitch(emitoffsets.wcharge, '14 F', 'Wing Energy')
     local fd, bool = kj.switch(liboffsets.wcharge, '505745408D', '505571328 D')
-        if bool then
+        if bool or kj.statRev(signs.wcharge) then
             kj.setValue(emitoffsets.pdamage, '0D', true)
             kj.setValue(emitoffsets.wcharge + 36, '1F', true)
         else
@@ -10434,7 +10409,7 @@ function configSign()
  end
 function oobls(bto)
     getLevel()
-    STAY = 'oobls'
+    STAY = oobls;
     if configs.awrob then
         rwind()
     end
@@ -10492,306 +10467,6 @@ function oobls(bto)
         end
     end
 end
-function getAllOOBs()
-    local temp = {}
-    for i, v in ipairs(scrSoul) do
-        for d, u in ipairs(v.OOB_Goto.OOB_Goto_Name) do
-            table.insert(temp, {
-                Level_name = v[1],
-                Location_name = u,
-                x = v.OOB_Goto.OOB_Goto_Cord[d][1],
-                y = v.OOB_Goto.OOB_Goto_Cord[d][2],
-                z = v.OOB_Goto.OOB_Goto_Cord[d][3],
-            })
-            gg.toast('Getting ' .. v[1] .. ' Coordinats\n' .. u)
-            gg.sleep(100)
-        end
-    end
-    if #slocs > 0 then
-        local temp2 = slocs
-        for i, v in ipairs(temp2) do
-            table.insert(temp, v)
-            gg.toast('Getting ' .. v.Level_name .. ' Coordinats\n' .. v.Location_name)
-            gg.sleep(100)
-        end
-    end
-    gg.toast('Your MiniOOBs script is saved to your Downloads')
-    return temp
-end
-function DumpOOBs()
-    local tear = gg.prompt({'[☣️]Insert your name:'}, {configs.user}, {'text'})
-    if tear then
-        configs.user = tear[1]
-        saveconfigs()
-    end
-    local Offsets = [[
-    --Live Offsets--
-lliboffsets = {]] .. '\n'
-    .. '\tlibgui = ' .. llib.guiptr .. ',\n'
-    .. '\tlibemit = ' .. llib.emitptr .. ',\n}\n'
- .. '\tlemitoffsets = {\n'
- .. '\txpos = ' .. lanon.xpos .. ',\n'
- .. '\typos = ' .. lanon.ypos .. ',\n'
- .. '\tzpos = ' .. lanon.zpos .. ',\n'
- .. '\trad = ' .. lanon.rad .. ',\n}\n'
- .. 'lguioffsets = {\n'
- ..  '\tmap = ' .. lgui.map .. ',\n}\n'
- .. [[
-     --Beta Offsets--
-bliboffsets = {]] .. '\n'
- .. '\tlibgui = ' .. blib.guiptr .. ',\n'
- .. '\tlibemit = ' .. blib.emitptr .. ',\n}\n'
- .. 'bemitoffsets = {\n'
- .. '\txpos = ' .. banon.xpos .. ',\n'
- .. '\typos = ' .. banon.ypos .. ',\n'
- .. '\tzpos = ' .. banon.zpos .. ',\n'
- .. '\trad = ' .. banon.rad .. ',\n}\n'
- .. 'bguioffsets = {\n'
- ..  '\tmap = ' .. bgui.map .. ',\n}\n'
- local vcheck = [[
-function version_check()
-    package = gg.getTargetPackage()
-    version = gg.getTargetInfo().versionCode
-    if string.find(package, 'com.tgc.sky.android.test') then
-        gg.toast('[Beta]HellBoy-OOBs')
-        if version == sky.beta.version then
-            emitoffsets = bemitoffsets
-            guioffsets = bguioffsets
-            liboffsets = bliboffsets
-        elseif version > sky.beta.version then
-            gg.alert("Sky version mismatch\nWait for the script to be updated")
-            os.exit()
-        elseif version < sky.beta.version then
-            gg.alert("Sky version mismatch\nUpdate your game")
-            os.exit()
-        else
-            gg.alert("Sky package mismatch\nSelect the right process")
-            os.exit()
-        end
-    elseif string.find(package, 'com.tgc.sky.android') then
-        gg.toast('[Live]HellBoy-OOBs')
-        if version == sky.live.version then
-            emitoffsets = lemitoffsets
-            guioffsets = lguioffsets
-            liboffsets = lliboffsets
-        elseif version > sky.live.version then
-            gg.alert("Sky version mismatch\nWait for the script to be updated")
-            os.exit()
-        elseif version < sky.live.version then
-            gg.alert("Sky version mismatch\nUpdate your game")
-            os.exit()
-        end
-    elseif string.find(package, 'git.artdeell') then
-        gg.toast('[Canvas]HellBoy-OOBs')
-        if version == sky.canvas.version then
-            emitoffsets = lemitoffsets
-            guioffsets = lguioffsets
-            liboffsets = lliboffsets
-        elseif version > sky.live.version then
-            gg.alert("Canvas version mismatch\nWait for the script to be updated")
-            os.exit()
-        elseif version < sky.live.version then
-            gg.alert("Canvas version mismatch\nUpdate your game")
-            os.exit()
-        end
-    end
-end
-]]
-    local gtmap = [[
-kj = {}
-function kj.getValue(add, flag)
-    local var = {{
-        address = add,
-        flags = flag,
-    }}
-    return gg.getValues(var)[1].value
-end
-function kj.margin(par)
-    local temp = {}
-    local x
-    if type(par) == 'string' then
-        x = string.len(par)
-    elseif type(par) == 'number' then
-        x = par
-    else
-        return
-    end
-    for i = 1, x do
-        table.insert(temp, '-')
-    end
-    return table.concat(temp)
-end
-function getLevel()
-    mapBTable = {}
-    mapLTable = {}
-    for i = 0, 30, 1 do
-        table.insert(mapBTable, kj.getValue(guioffsets.map + i, 1))
-        if  mapBTable[i - 1] == 0 then
-            mapBTable[i - 1] = nil 
-            break 
-        end
-    end
-    for i, v in ipairs(mapBTable) do
-        mapLTable[i] = string.char(mapBTable[i])
-    end
-    skidLevel = table.concat(mapLTable)
-    header = "Current level: " .. skidLevel
-   
-    header = header  .. '\n' .. kj.margin(header) .. kj.margin(skidLevel) .. '\nExtracted By: ' .. "]] .. configs.user .. '"\n'
- .. [[end]] .. '\n'
-
-    local main = [[
-function getPosition()
-    local temp = {
-        {
-            address = emitoffsets.xpos,
-            flags = gg.TYPE_FLOAT,
-        },
-        {
-            address = emitoffsets.ypos,
-            flags = gg.TYPE_FLOAT,
-        },
-        {
-            address = emitoffsets.zpos,
-            flags = gg.TYPE_FLOAT,
-        },
-    }
-    local cords = gg.getValues(temp)
-    for i, v in ipairs(cords) do
-        cords[i] = v.value
-    end
-    return cords
-end
-function offseter()
-    bootloader = gg.getRangesList("libBootloader.so")[1].start
-    emit = kj.getValue(bootloader + liboffsets.emitptr, 32)
-    gui = kj.getValue(bootloader + liboffsets.guiptr, 32)
-    for i, v in pairs(emitoffsets) do
-        emitoffsets[i] = emit + v
-    end
-    for i, v in pairs(guioffsets) do 
-        guioffsets[i] = gui + v
-    end
-    for i, v in pairs(liboffsets) do
-        liboffsets[i] = bootloader + v
-    end
-end
-function setPosition(pos)
-    cords = {
-        {
-            address = emitoffsets.xpos,
-            flags = gg.TYPE_FLOAT,
-            value = pos[1],
-        },
-        {
-            address = emitoffsets.ypos,
-            flags = gg.TYPE_FLOAT,
-            value = pos[2],
-        },
-        {
-            address = emitoffsets.zpos,
-            flags = gg.TYPE_FLOAT,
-            value = pos[3],
-        },
-    }
-    gg.setValues(cords)
-end
-function oobls()
-    getLevel()
-    local oBG = gg
-    miniOOB = {}
-    miniCord = {}
-        do
-            do
-            table.insert(miniOOB, 1, "[💾]Pin Current Possition")
-            table.insert(miniOOB, 2, "[🏃🏻‍♂️]Goto Pinned Possition")
-            if SkidLock == nil then
-                SkidLock = skidLevel
-            end
-            end
-        end local c = 0
-        for i, v in pairs(scrSoul) do
-            if v.Level_name == skidLevel then
-                c = c + 1
-                table.insert(miniOOB, c .. ". " .. v.Location_name)
-                table.insert(miniCord, {
-                    v.x,
-                    v.y,
-                    v.z,
-                })
-            end
-        end
-    table.insert(miniOOB, "[👋]End")
-    if SkidLock ~= skidLevel or svpo == nil then
-        SkidLock = skidLevel
-        miniOOB[2] = nil
-        svpo = nil
-    end
-    tear = oBG.choice(miniOOB, nil, header)
-    if #miniOOB == 1 then
-        bp = 3
-    else
-        bp = #miniOOB
-    end
-    if tear == bp then 
-    os.exit()
-    elseif tear == 1 then 
-        svpo = getPosition()
-    zzz = "{" .. svpo[1] .. ', '.. svpo[2] .. ', ' .. svpo[3] .. "},"
-    print(zzz)
-    elseif tear == 2 then 
-        pcall(setPosition, svpo)
-    elseif tear ~= nil then
-        getLevel()
-        pcall(setPosition, miniCord[tear - 2])
-    end
-end]]
- .. '\nprint[['
- .. '\n🪐╭╮╭━╮'
- .. '\n☄️┃┃┃╭╯╱╱╱╱╭╮'
- .. '\n🪐┃╰╯╯╭┳━━╮╰╋━━┳━━┳━╮'
- .. '\n☄️┃╭╮┃┣┫╭╮┃╭┫┃━┫┃━┫╭╮╮'
- .. '\n🪐┃┃┃╰┫┃╰╯┃┃┃┃━┫┃━┫┃┃┃'
- .. '\n☄️╰╯╰━┻┻━━╯┃┣━━┻━━┻╯╰╯'
- .. '\n🪐╱╱╱╱╱╱╱╱╭╯┃'
- .. '\n☄️╱╱╱╱╱╱╱╱╰━╯'
- .. '\n]]\n'
- .. [[
-function launch()
-    gg.setVisible(false)
-]] .. 'gg.alert([[\n'
-    .. '\t'  .. [[[☣️]Hellboy OOBs
-    ---------------------------------------------
-    mini Script made with Hellboy OOBs tool.
-    Contains a list of all the OOBs coordinates
-    in the script and the list for the user saved list
-    Supported apps:]]
-    .. "\n\tSky Live version: sky.live.version"
-    .. "\n\tSky Beta version: sky.beta.version"
-    .. "\n\tCanvas Launcher: sky.canvas.version"
-    .. ']])\n'
- .. [[
-    version_check()
-    offseter()
-    while true do
-        if gg.isVisible(true) then
-            gg.setVisible(false)
-            oobls()
-        end
-    end
-end
-launch()  
-]]
-    local coords = getAllOOBs()
-    local file = io.open('/storage/emulated/0/Download/Hellboy-MiniOOB.lua', 'w')
-    file:write('sky = ' .. kj.tableToString(sky))
-    file:write(Offsets)
-    file:write('scrSoul = ' .. kj.tableToString(coords))
-    file:write('\n' .. vcheck)
-    file:write(gtmap)
-    file:write(main)
-    file:close()
-end
 function getPosition()
     coords = {
         kj.getValue(emitoffsets.xpos, 'F'),
@@ -10802,8 +10477,8 @@ function getPosition()
 end
 function sres()
     local srsG = gg
-    def_width = kj.removePoint(kj.getValue(guioffsets.scrres + 1656, 'F'))
-    def_height = kj.removePoint(kj.getValue(guioffsets.scrres + 1660, 'F'))
+    def_width = kj.removePoint(kj.getValue(guioffsets.scrres + 1912, 'F'))
+    def_height = kj.removePoint(kj.getValue(guioffsets.scrres + 1916, 'F'))
     tear = srsG.prompt({'[📸]Set screenshot resulotion\nChanging the graphics resets it\nWidth:', 'Height:'}, {def_width, def_height}, {'number', 'number'})
     if tear ~= nil then
         local uu = {
@@ -10895,82 +10570,106 @@ function bwall(bdis)
         gg.setVisible(false)
     end
   end
-  function magicList()
-    sMagics = {
-        sign = {},
-        spell = {},
-        id = {},
-        type = {},
-    }
-    local gXG = gg 
-    STAY = 'magicList'
-    tear = gg.choice(yellow[6].content, nil, "‍[️🧙]️Magic: Only three are visible at a time")
-    if tear == #yellow[6].content then 
-        yellowTears()
-    elseif tear == eye[3] then 
-        capeauto = kj.toggler(capeauto)
+function magicF()
+    STAY = magicF;
+    local content = {
+        "[🔮]Magic Spells",
+        "[✨]Sparks" .. kj.statSwitch(configs.ssparks),
+        "[✨]Shouts Loop",
+        "[🔁]Auto Capes",
+    };
+    content = kj.prepareMenu(content, true);
+    table.insert(content, "[❌]Remove All Spells");
+    local tear = gg.choice(content, nil, header);
+    if tear == eye[1] then
+        return yellowTears();
+    elseif tear == eye[2] then
+        return selectSpell();
+    elseif tear == eye[3] then
+        configs.ssparks = kj.toggler(configs.ssparks);
+        saveconfigs();
+        return magicF();
     elseif tear == eye[4] then
-        for i = 1, configs.sockets do
-            setspell(0, i)
-        end dontRemove = "BY: Kiojeen" 
-    elseif tear == eye[1] or tear == eye[2] then
-        if tear == 1 then 
-            spark = 360
-        elseif tear == 2 then 
-            spark = 0
+        local tear = gg.prompt({'[✨]Specify the number of shouts'}, {1}, {'number'});
+        if tear ~= nil then
+            tear[1] = tonumber(tear[1]);
+            if type(tear[1]) == 'number' then
+                for i = 1, tear[1] do
+                    setspell(1725047129, 7, true);
+                    gg.sleep(100);
+                end
+            else
+                gg.toast("Please type properly") ;
+            end
+            setspell(0, 7);
         end
-        msocket = {}
-        for i = 1, configs.sockets do
-            cs = kj.getValue(emitoffsets.magic + i * distances.magx - distances.magx, 'D')
-            for d, u in ipairs(magics) do
-                for a, b in ipairs(magics[d].content) do
-                    if magics[d].content[a][2] == cs then
-                        sMagics.sign[i] = "   " ..  magics[d][1] .. magics[d].content[a][1]
-                    end
+    elseif tear == eye[5] then
+        capeauto = kj.toggler(capeauto);
+    elseif tear == eye[6] then
+        for i = 1, 20 do
+            setspell(0, i);
+        end dontRemove = "BY: Kiojeen";
+    end
+end
+function selectSpell()
+    STAY = selectSpell;
+    local content = {};
+    local msocket = {};
+    content[1] = {};
+    for i = 1, configs.sockets do
+        local cs = kj.getValue(emitoffsets.magic + i * distances.magx - distances.magx, 'D');
+        for d, u in ipairs(magics) do
+            for a, b in ipairs(u.content) do
+                if b[2] == cs then
+                    content[1][i] = "  " ..  u[1] .. b[1];
                 end
             end
-            if sMagics.sign[i] == nil then
-                sMagics.sign[i] = "   None"
-            end
-            if i < 10 then 
-                o = 0 
-            else 
-                o = '' 
-            end
-            msocket[i] = "[🔮]Spell [" .. o .. i .. "]: " .. sMagics.sign[i]
         end
-        table.insert(msocket, "[❌]Remove All")
-        table.insert(msocket, back[1])
-        tear = gXG.choice(msocket, nil, "‍[️🧙]️Magic: Only three are visible at a time")
-        if tear == configs.sockets + eye[1] then
-            for i, v in ipairs(msocket) do
-                setspell(0, i)
-            end dontRemove = "BY: Kiojeen" 
-        elseif tear == configs.sockets + eye[2] then magicList()
+        if content[1][i] == nil then
+            content[1][i] = "  [❌]None";
+        end
+        if i < 10 then o = 0; else o = ""; end
+        table.insert(msocket, "| [🔮]Spell [" .. o .. i .. "]: " .. content[1][i]);
+    end
+    table.insert(msocket, 1, back[1]);
+    table.insert(msocket, 2, "[❌]Remove All");
+    local tear = gg.choice(msocket, nil, "‍[️🧙]️Magic Spells: Only three are visible at a time");
+    if tear == eye[1] then
+        return magicF();
+    elseif tear == eye[2] then
+        for i = 1, 20 do
+            setspell(0, i);
+        end dontRemove = "BY: Kiojeen";
+    elseif tear ~= nil then
+        local x = tear - 2;
+        content[2] = {};
+        table.insert(content[2], 1, back[1]);
+        table.insert(content[2], 2, "[❌]Remove");
+        for i, v in ipairs(magics) do
+            table.insert(content[2], v[1] .. v[2]);
+        end
+        tear = gg.choice(content[2], nil, "[🔮]Spell [" .. x .. "]  |   " .. content[1][x]);
+        if tear == eye[1] then
+            return selectSpell();
+        elseif tear == eye[2] then
+            return setspell(0, x);
         elseif tear ~= nil then
-            socket = tear 
-            local fhdr = tear
-            for i, v in ipairs(magics) do
-                sMagics.type[i] = magics[i][1] .. magics[i][2]
+            content[1] = {};
+            content[2] = {};
+            local y = tear - 2;
+            for i, v in ipairs(magics[y].content) do
+                content[1][i] = magics[y][1] .. v[1];
+                content[2][i] = v[2];
             end
-            table.insert(sMagics.type, "[❌]Remove")
-            tear = gXG.choice(sMagics.type, nil, "[🔮]Spell [" .. fhdr .. "]:" .. sMagics.sign[fhdr])
-            if tear == #sMagics.type then 
-                setspell(0, socket)
+            content[1] = kj.prepareMenu(content[1], true);
+            tear = gg.choice(content[1], nil, content[1][tear - 1]);
+            if tear == eye[1] then
+                selectSpell();
             elseif tear ~= nil then
-                for i, v in ipairs(magics[tear].content) do
-                    sMagics.spell[i] = magics[tear][1] .. magics[tear].content[i][1]
-                    sMagics.id[i] = magics[tear].content[i][2]
-                end
-                    do local fhdr = tear
-                    tear = gXG.choice(sMagics.spell, eye[65], sMagics.type[fhdr])
-                    if tear ~= nil then
-                        setspell(sMagics.id[tear], socket, spark)
-                    end
-                end
+                return setspell(content[2][tear - 1], x, configs.ssparks);
             end
         end
-    end                                            
+    end                                           
 end
 mtracer = 0
 function autoCape()
@@ -10988,7 +10687,7 @@ function lighter()
     if kj.getValue(emitoffsets.pashout, 'D') == 1 then
         setspell(-1463943689, 4)
         gg.sleep(100)
-        setspell(0, 4, 0)
+        setspell(0, 4, true)
     end
 end
 function cptrick()
@@ -11002,12 +10701,15 @@ function cptrick()
     end
 end
 function setspell(id, socket, spark)
-    if spark == nil then spark = 360 end
-    socket = socket * distances.magx - distances.magx
-    local mProcess = {}
-    mProcess = {
+    if spark then
+        vspark = 0;
+    else
+        vspark = 360;
+    end
+    local socket = socket * distances.magx - distances.magx;
+    gg.setValues({
         {
-            address = emitoffsets.magic + 3072,
+            address = emitoffsets.magic + distances.mcount,
             flags = kj.dT('D'),
             value = 20,
         },
@@ -11024,13 +10726,12 @@ function setspell(id, socket, spark)
         {
             address = emitoffsets.magic + 40 + socket,
             flags = kj.dT('D'),
-            value = spark,
+            value = vspark,
         },
-    }
-    gg.setValues(mProcess)
+    })
 end
 function savelocat()
-    STAY = 'savelocat'
+    STAY = savelocat;
     getLevel()
     local name = {}
     local remove = {}
@@ -11046,7 +10747,7 @@ function savelocat()
     table.insert(name, back[1])
     tear = gg.choice(name, nil, header)
     if tear ==  #name then 
-        tpmenu()
+        teleports()
     elseif tear == eye[1] then
         local temp = {}
         local userinput = 'Location: ' .. #remove + 1
@@ -11095,24 +10796,25 @@ function savelocat()
 end
 function getQuests()
     if #gquests < 3 then
-        gg.setRanges(gg.REGION_OTHER| gg.REGION_C_ALLOC)
-        gquest = emitoffsets.gquest - 4
-        gg.searchNumber('812671252D;1819178294D::5', kj.dT('D'), false, gg.SIGN_EQUAL, gquest, gquest + 83528, 0)
+        gg.setRanges(gg.REGION_OTHER| gg.REGION_C_ALLOC);
+        gquest = emitoffsets.gquest - 4;
+        gg.clearResults();
+        gg.searchNumber('812671252D;1819178294D::5', kj.dT('D'), false, gg.SIGN_EQUAL, gquest, gquest + 83528, 0);
         gg.refineNumber('812671252', kj.dT('D'))
-        gquests = gg.getResults(gg.getResultsCount())
-        gg.clearResults()
+        gquests = gg.getResults(gg.getResultsCount());
+        gg.clearResults();
         for i, v in ipairs(gquests) do
-            v.address = v.address + 8
-            table.remove(v, value)
+            v.address = v.address + 8;
+            table.remove(v, value);
         end
-        gquests = gg.getValues(gquests)
+        gquests = gg.getValues(gquests);
         if #gquests > 3 then
-            return true
+            return true;
         else
-            return false
+            return false;
         end
     else
-        return true
+        return true;
     end
 end
 function modQuest(bool)
@@ -11144,46 +10846,23 @@ function modQuest(bool)
     return
   end 
 end
-function doTroll()
-    STAY = 'doTroll'
-    tear = gg.choice(yellow[8].content, nil, "Be careful")
-    if tear == #yellow[8].content then 
-        yellowTears()
-    elseif tear == eye[1] then
-        kj.groupFreezeSwitch(showCandle, "Force Candles")
+function Players()
+    STAY = Players;
+    local tear = gg.choice(yellow[current_menu].content, nil, "Be careful");
+    if tear == eye[1] then 
+        yellowTears();
     elseif tear == eye[2] then
-        setspell(-1463943689, 1)
-        kj.freezeSwitch(emitoffsets.magic + 40, '0 D', "Spamming Magic")
-    elseif tear == eye[3] then
-        tear = gg.prompt({'[✨]Specify the number of shouts'}, {1}, {'number'})
-        if tear ~= nil then
-            tear[1] = tonumber(tear[1])
-            if type(tear[1]) == 'number' then
-                for i = 1, tear[1] do
-                    setspell(1725047129, 7, 0)
-                    gg.sleep(100)
-                end
-            else
-                gg.toast("Please type properly") 
-            end
-            setspell(0, 7)
-        end
+        kj.groupFreezeSwitch(showCandle, "Force Candles");
     end
  end
- for i = 1, #yellow[9].content - 1 do
-    do
-        do
-          table.insert(yellow[9].content[i].content, back[1])
-        end
-      end  
-  end
  function setsmap(str)
+    local temp = kj.getValue(guioffsets.gamespeed, "F")
     tps = emitoffsets.mportal
     kj.setString(tps, '.' .. str, 30)
     setspeed(100)
-    setspell(224110574, 8, 0)
+    setspell(224110574, 8, true)
     gg.sleep(1500)
-    setspeed(1)
+    setspeed(temp)
     kj.setString(tps, '.Rain_Cave', 30)
     setspell(0, 8)
  end
@@ -11300,29 +10979,29 @@ function getNPC()
     return nc, nm
  end
  function drawNPC()
-    STAY = 'drawNPC'
-    getLevel()
-    local x, y = getNPC()
-    local description
+    STAY = drawNPC;
+    getLevel();
+    local x, y = getNPC();
+    local description;
     if #x < 1 then
-       description = "There is no NPC here to move"
-       description = description .. '\n' .. kj.margin(40)
+       description = "There are no NPCs here to move";
+       description = description .. '\n' .. kj.margin(40);
     else
-       description = header
+       description = header;
     end
       do
         do
-         table.insert(y, back[1]) 
+         table.insert(y, 1, back[1]);
         end
       end
-    local tear = gg.choice(y, nil, description)
-    if tear == #y then 
-        cords_changer()
+    local tear = gg.choice(y, nil, description);
+    if tear == eye[1] then 
+        moveObjects();
     elseif tear ~= nil then
        for i = 1, 3 do
-          x[tear][i].value = getPosition()[i]
+          x[tear - 1][i].value = getPosition()[i];
        end
-       gg.setValues(x[tear])
+       gg.setValues(x[tear - 1]);
     end
  end
 function abswaxpro()
@@ -11457,7 +11136,7 @@ end
                 flags = kj.dT('D'), 
                 value = 1, 
                 freeze = true
-        })
+            })
         end
      end
    end
@@ -11485,7 +11164,7 @@ end
       end
     end
 end
-function tpmortal(bto)
+function selectLevel(bto)
     getLevel()
     if _bto_ == nil then
         _bto_ = bto
@@ -11493,15 +11172,15 @@ function tpmortal(bto)
     if bto ~= nil then
         _bto_ = bto
     end
-    if _bto_ == 'tpmenu()' then
-        STAY = 'tpmortal'
+    if _bto_ == "teleports()" or _bto_ == "yellowStar()" then
+        STAY = selectLevel;
     end
       do
         do
         realms = {}
-        table.insert(realms, "1 . [🏠]Home")
+        table.insert(realms, "1 | [🏠]Home")
             for i, v in ipairs(world) do
-                table.insert(realms, i + 1 .. ". " .. v[1] .. v[2])
+                table.insert(realms, i + 1 .. " | " .. v[1] .. v[2])
             end
         end
      end
@@ -11533,7 +11212,7 @@ function tpmortal(bto)
             table.insert(realms, back[1])
             tear = gg.choice(realms, nil, world[fhdr][1] .. world[fhdr][2])
             if tear == #realms then
-                tpmortal(_bto_)
+                selectLevel(_bto_)
             elseif tear ~= nil then
                 setsmap(name[tear])
             end
@@ -11891,26 +11570,6 @@ function offseter()
         liboffsets[i] = bootloader + v
     end
 end
-function isfrozen(add)
-    local temp = gg.getListItems()
-    for i, v in ipairs(temp) do
-        if v.address == add then
-            if v.freeze == true then
-                return true
-            elseif v.freeze == false then
-                return false
-            end
-        end
-    end
-end
-function debugoldconfigs()
-    if savedlocats then
-        if #savedlocats > 0 then
-            slocs = treatSavedLocats()
-            saveconfigs()
-        end
-    end
-end
 function saveconfigs()
     local cfgs = io.open('/sdcard/Hellboy.kj', 'w')
     cfgs:write('configs = '.. kj.tableToString(configs))
@@ -11942,60 +11601,71 @@ function loadconfigs()
     else
         saveconfigs()
     end
-    debugoldconfigs()
 end
-function version_check()
-    package = gg.getTargetPackage()
-    version = gg.getTargetInfo().versionCode
+function vcompare(x, y, str)
+    if x ~= y then
+        if x > y then
+            gg.alert("Sky version mismatch\nWait for the script to be updated\nScript Version: Sky " .. str .. "[" .. y .. "]\nCurrent Version: Sky " .. str .. "[" .. x .. "]");
+        elseif y < x then
+            gg.alert("Sky version mismatch\nUpdate your game\nScript Version: Sky " .. str .. "[" .. y .. "]\nCurrent Version: Sky " .. str .. "[" .. x .. "]");
+        end
+        os.exit();
+    else 
+        return true;
+    end
+end
+function vcheck()
+    local package = gg.getTargetPackage();
+    local version = gg.getTargetInfo().versionCode;
+    local hellboy = "-[" .. debug.getinfo(launch).lastlinedefined + 1 .. "]-";
     if string.find(package, 'com.tgc.sky.android.test') then
-        hellboy = "-[" .. debug.getinfo(launch).lastlinedefined + 1 .. "]-"
-        gg.toast('[Beta]HellBoy' .. hellboy)
-        if version == sky.beta.version then
-            emitoffsets = bemitoffsets
-            guioffsets = bguioffsets
-            distances = bdistances
-            liboffsets = bliboffsets
-        elseif version > sky.beta.version then
-            gg.alert("Sky version mismatch\nWait for the script to be updated")
-            os.exit()
-        elseif version < sky.beta.version then
-            gg.alert("Sky version mismatch\nUpdate your game")
-            os.exit()
-        else
-            gg.alert("Sky package mismatch\nSelect the right process")
-            os.exit()
+        gg.toast('[Beta]HellBoy' .. hellboy);
+        if vcompare(version, sky.beta.version, "Beta") then
+            emitoffsets = kj.tableClone(bemitoffsets);
+            guioffsets = kj.tableClone(bguioffsets);
+            distances = kj.tableClone(bdistances);
+            liboffsets = kj.tableClone(bliboffsets); 
         end
     elseif string.find(package, 'com.tgc.sky.android.h') then
-        hellboy = "-[" .. debug.getinfo(launch).lastlinedefined + 1 .. "]-"
-        gg.toast('[Huawei]HellBoy' .. hellboy)
-        if version == sky.huawei.version then
-            emitoffsets = hemitoffsets
-            guioffsets = hguioffsets
-            distances = hdistances
-            liboffsets = hliboffsets
-        elseif version > sky.huawei.version then
-            gg.alert("Canvas version mismatch\nWait for the script to be updated")
-            os.exit()
-        elseif version < sky.huawei.version then
-            gg.alert("Canvas version mismatch\nUpdate your game")
-            os.exit()
+        gg.toast('[Huawei]HellBoy' .. hellboy);
+        if vcompare(version, sky.huawei.version, "Huawei") then
+            emitoffsets = kj.tableClone(hemitoffsets);
+            guioffsets = kj.tableClone(hguioffsets);
+            distances = kj.tableClone(hdistances);
+            liboffsets = kj.tableClone(hliboffsets);
         end
     elseif string.find(package, 'com.tgc.sky.android') then
-        hellboy = "-[" .. debug.getinfo(launch).lastlinedefined + 1 .. "]-"
         gg.toast('[Live]HellBoy' .. hellboy)
-        if version == sky.live.version then
-            emitoffsets = lemitoffsets
-            guioffsets = lguioffsets
-            distances = ldistances
-            liboffsets = lliboffsets
-        elseif version > sky.live.version then
-            gg.alert("Sky version mismatch\nWait for the script to be updated")
-            os.exit()
-        elseif version < sky.live.version then
-            gg.alert("Sky version mismatch\nUpdate your game")
-            os.exit()
+        if vcompare(version, sky.live.version, "Live") then
+            emitoffsets = kj.tableClone(lemitoffsets);
+            guioffsets = kj.tableClone(lguioffsets);
+            distances = kj.tableClone(ldistances);
+            liboffsets = kj.tableClone(lliboffsets);
         end
+    else
+        gg.alert("Sky package mismatch\nSelect the right process\nCurrent process: " .. package);
+        os.exit();
     end
+end
+function vacuum()
+    bemitoffsets = nil;
+    bguioffsets = nil;
+    bdistances = nil;
+    bliboffsets = nil;
+    hemitoffsets = nil;
+    hguioffsets = nil;
+    hdistances = nil;
+    hliboffsets = nil;
+    lemitoffsets = nil;
+    lguioffsets = nil;
+    ldistances = nil;
+    lliboffsets = nil;
+    sky = nil;
+    vcheck = nil;
+    vcompare = nil;
+    startUpTrigger = nil;
+    teaMake = nil;
+    configz = nil;
 end
 function noUiTrigger()
     if capeauto then
@@ -12031,7 +11701,7 @@ function startUpTrigger()
       slocs = {}
       saveconfigs()
   end
-  version_check()
+  vcheck()
     do
       do
         offseter()
@@ -12066,12 +11736,13 @@ function startUpTrigger()
     end
  end
 function launch()
-    startUpTrigger()       
+    startUpTrigger()
+    vacuum();  
     function demode()
         while true do
             if gg.isClickedUiButton() then
                 gg.addListItems(offseters)
-                load(STAY .. '()')()
+                STAY();
             end
             noUiTrigger()
         end
@@ -12080,7 +11751,7 @@ function launch()
         while true do
             if gg.isVisible(true) then
                 gg.setVisible(false)
-                load(STAY .. '()')()
+                STAY();
             end
             noUiTrigger()
         end
@@ -12095,9 +11766,8 @@ function launch()
         end
     end
     while true do
-        local almG = gg
-        if almG.isVisible(true) then
-            almG.setVisible(false)
+        if gg.isVisible(true) then
+            gg.setVisible(false)
             getLevel()
             break
         end
