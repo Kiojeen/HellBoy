@@ -1,20 +1,5 @@
 ---@diagnostic disable: lowercase-global, undefined-global
---[[
-    These offsets are not to be taken and added to other scripts (; so find your own stuff
-    we spent ages finding and learning to make something that you can have fun with
-    so don't abuse the makers :D
-    enjoy..
-]]
---[[
-    ----------------------------------------------------------------------------
-    Hellboy is a free open source script to use and read and to learn from.
-    You are allowed to get inspiration from the way it is written but not
-    to copy the code as it is written from zero by me 'Kiojeen'.
-    Also selling it will get you in troubles so be careful.
-    ----------------------------------------------------------------------------
-    If you have any hacks that you want to send, https://discord.gg/2AHfEQJggX
-    ----------------------------------------------------------------------------
-]]
+
 stime = 3500
 hellboy = 8065
 sky = {
